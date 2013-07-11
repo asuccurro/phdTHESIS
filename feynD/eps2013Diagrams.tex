@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{feynmf}
+%\usepackage{feynmp}
+\unitlength=1mm
+%when compiling, do
+%latex file.tex
+%mf '\mode:=localfont; input fmf1'
+%latex file.tex
+\usepackage[hdivide={1cm, *, 1cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+
+
+\begin{document}
+
+\begin{fmffile}{fmf1}
+
+\begin{fmfgraph*}(60,50)
+  \fmfleft{i0,i1,ib,ia,i2,i3}
+  \fmfright{o1,o2,o3,o4,o5,o6,o7,o8,o9,o10,o11,o12,o13,o14,o15,o16}
+  \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  %\fmflabel{$b$}{}
+%%%%
+  \fmf{phantom}{o1,v2,v3,v4,v5,v1,v0,i1}
+  \fmf{phantom}{o2,v2,v3,v4,v5,v1,v0,i1}
+  \fmf{phantom}{o3,v6a,v3,v4,v5,v1,v0,i1}
+  \fmf{phantom}{o4,v6a,v3,v4,v5,v1,v0,i1}
+%%%%
+  \fmf{phantom}{o5,v6,v7,v4,v5,v1,v0,i1}
+  \fmf{phantom}{o6,v6,v7,v4,v5,v1,v0,i1}
+  \fmf{phantom}{o7,v8,v7,v4,v5,v1,v0,i1}
+  \fmf{phantom}{o8,v8,v7,v4,v5,v1,v0,i1}
+%%%%
+  \fmflabel{$\bar{t}, \bar{t}, \bar{b}$}{v6a}
+  \fmflabel{$Z, H, W^-$}{v6}
+  \fmf{plain}{v4,v6a}
+  \fmf{photon}{v6,v4}
+%%%%
+  \fmf{phantom}{o9,v9,v10,v11,v5,v1,v0,i2}
+  \fmf{phantom}{o10,v9,v10,v11,v5,v1,v0,i2}
+  \fmf{phantom}{o11,v12,v10,v11,v5,v1,v0,i2}
+  \fmf{phantom}{o12,v12,v10,v11,v5,v1,v0,i2}
+%%%%
+  \fmf{phantom}{o13,v13,v14,v11,v5,v1,v0,i2}
+  \fmf{phantom}{o14,v13,v14,v11,v5,v1,v0,i2}
+  \fmf{phantom}{o15,v15,v14,v11,v5,v1,v0,i2}
+  \fmf{phantom}{o16,v15,v14,v11,v5,v1,v0,i2}
+%%%%
+  \fmf{plain,label=$t$}{v14,v11}
+  \fmf{plain,label=$T$,l.dist=-6thick}{v5,v11}
+
+  \fmf{plain}{v14,o12}
+  \fmflabel{$b$}{o12}
+  %\fmf{plain}{v14,v13}
+  %\fmflabel{$b$}{v13}
+
+  %\fmf{photon,label=$W^+$}{v14,v15}
+  %\fmf{plain}{o16,v15,o15}
+  %\fmflabel{$l^+$}{o16}
+  %\fmflabel{$\bar{\nu}_l$}{o15}
+%%%%%bad placement
+%  \fmf{photon,label=$W^+$,l.dist=-1thick}{v14,v13}
+  \fmf{photon}{v14,v13}
+  \fmf{phantom,label=$W^+$,l.dist=-5thick}{v14,o16}
+  \fmf{plain}{o13,v13,o14}
+  \fmflabel{$l^+$}{o14}
+  \fmflabel{$\bar{\nu}_l$}{o13}
+
+  \fmf{photon,label=$H$,l.dist=-6thick}{v9,v11}
+  \fmf{plain}{o9,v9,o10}
+  \fmflabel{$b$}{o10}
+  \fmflabel{$\bar{b}$}{o9}
+  %\fmf{photon,label=$H$}{v10,v11}
+  %\fmf{plain}{v9,v10,v12}
+  %\fmflabel{$b$}{v9}
+  %\fmflabel{$\bar{b}$}{v12}
+  \fmf{plain,label=$\bar{T}$,l.dist=-8thick}{v4,v5}
+  \fmf{curly}{i1,v0}
+  \fmf{curly}{i2,v0}
+  \fmf{curly,label=$g$,l.dist=-6thick}{v0,v5}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+
+
+
+
+
+
+
+
+\begin{fmffile}{fmf2}
+
+\begin{fmfgraph*}(80,70)
+  \fmfleft{i0,i1,i2,i3}
+  \fmfright{o1,o2,o3,o4,o5,o6,o7,o8,o9,o10,o11,o12,o13,o14,o15,o16}
+  \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  %\fmflabel{$b$}{}
+%%%%
+  \fmf{plain}{o1,v2,v3,v4,v5,v1,i1}
+  \fmf{plain}{o2,v2,v3,v4,v5,v1,i1}
+  \fmf{plain}{o3,v6a,v3,v4,v5,v1,i1}
+  \fmf{plain}{o4,v6a,v3,v4,v5,v1,i1}
+%%%%
+  \fmf{plain}{o5,v6,v7,v4,v5,v1,i1}
+  \fmf{plain}{o6,v6,v7,v4,v5,v1,i1}
+  \fmf{plain}{o7,v8,v7,v4,v5,v1,i1}
+  \fmf{plain}{o8,v8,v7,v4,v5,v1,i1}
+%%%%
+%%%%
+  \fmf{plain}{o9,v9,v10,v11,v5,v1,i2}
+  \fmf{plain}{o10,v9,v10,v11,v5,v1,i2}
+  \fmf{plain}{o11,v12,v10,v11,v5,v1,i2}
+  \fmf{plain}{o12,v12,v10,v11,v5,v1,i2}
+%%%%
+  \fmf{plain}{o13,v13,v14,v11,v5,v1,i2}
+  \fmf{plain}{o14,v13,v14,v11,v5,v1,i2}
+  \fmf{plain}{o15,v15,v14,v11,v5,v1,i2}
+  \fmf{plain}{o16,v15,v14,v11,v5,v1,i2}
+%%%%
+  \fmf{curly}{i1,v1}
+  \fmf{curly}{i2,v1}
+  \fmf{curly,label=$g$}{v1,v5}
+  \fmflabel{$l^+$}{o16}
+  \fmflabel{$\bar{\nu}_l$}{o15}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+
+\end{document}

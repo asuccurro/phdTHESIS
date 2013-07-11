@@ -1,0 +1,275 @@
+\documentclass[12pt]{article}
+%\usepackage{feynmf}
+\usepackage{feynmp}
+\unitlength=1mm
+%when compiling, do
+%latex file.tex
+%mf '\mode:=localfont; input fmf1'
+%latex file.tex
+\usepackage[hdivide={1cm, *, 1cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+
+
+\begin{document}
+
+\begin{fmffile}{fmf1}
+\begin{fmfgraph*}(30,15)\fmfkeep{higgsTopLoop}
+  \fmfleftn{i}{1} 
+  \fmfrightn{o}{1} 
+  \fmf{dashes,label=$H$}{i1,v1}
+  \fmf{fermion,left,tension=.3,label=$t$}{v1,v2}
+  \fmf{fermion,left,tension=.3,label=$\bar t$}{v2,v1}
+  \fmf{dashes,label=$H$}{v2,o1}
+\end{fmfgraph*}
+\hspace{.5cm}
+\begin{fmfgraph*}(30,15)\fmfkeep{higgsStopLoop}
+  \fmfleftn{i}{1} 
+  \fmfrightn{o}{1} 
+  \fmf{dashes,label=$H$}{i1,v1}
+  \fmf{scalar,left,tension=.3,label=$\tilde{t}$}{v1,v2}
+  \fmf{scalar,left,tension=.3,label=$\overline{\tilde{t}}$}{v2,v1}
+  \fmf{dashes,label=$H$}{v2,o1}
+\end{fmfgraph*}
+
+%\epigraph{If you are out to describe the truth, leave elegance to the tailor}{A Einstein}
+%\epigraph{Not everything that can be counted counts, and not everything that counts can be counted}{A Einstein}
+%\epigraph{Trial and error has been and remains the method of choice}{R. Wigmans}
+%\epigraph{Truth is what stands the test of experience}{A Einstein}
+
+
+\vspace{2cm}
+\begin{fmfgraph*}(40,15)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  \fmf{curly}{i1,v1}
+  \fmf{curly}{i2,v1}
+  \fmf{curly,label=$g$,l.dist=6thick}{v1,v3}
+  \fmflabel{$\tilde{t}$}{o1}
+  \fmflabel{$\tilde{t}^*$}{o2}
+  \fmf{scalar}{v3,o1}
+  \fmf{scalar}{v3,o2}
+\end{fmfgraph*}\hspace{.5cm}
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  \fmf{curly}{i1,v1}
+  \fmf{curly}{i2,v1}
+  \fmflabel{$\tilde{t}$}{o1}
+  \fmflabel{$\tilde{t}^*$}{o2}
+  \fmf{scalar}{v1,o1}
+  \fmf{scalar}{v1,o2}
+\end{fmfgraph*}\hspace{.5cm}
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+%  \fmfbottom{i1,o1}
+%  \fmftop{i2,o2}
+  \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  \fmf{curly}{i1,v1}
+  \fmf{curly}{i2,v2}
+  \fmflabel{$\tilde{t}$}{o1}
+  \fmflabel{$\tilde{t}^*$}{o2}
+  \fmf{scalar}{v1,o1}
+  \fmf{scalar}{v2,o2}
+  \fmffreeze
+  \fmf{scalar,label=$\tilde{q}$,l.side=right}{v1,v2}
+\end{fmfgraph*}\hspace{.5cm}
+\begin{fmfgraph*}(50,15)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  \fmf{curly}{i1,v1}
+  \fmf{curly}{i2,v2}
+  \fmflabel{$\tilde{t}$}{o1}
+  \fmflabel{$\tilde{t}^*$}{o2}
+  \fmf{phantom}{v1,o1}
+  \fmf{phantom}{v2,o2}
+  \fmffreeze
+  \fmf{dashes}{v2,v3}
+  \fmf{dashes}{v1,v3}
+  \fmf{scalar}{v3,o1}
+  \fmf{scalar,rubout}{v3,o2}
+  \fmf{scalar,label=$\tilde{q}$,l.side=right}{v1,v2}
+\end{fmfgraph*}
+
+
+\vspace{2cm}
+\begin{fmfgraph*}(40,15)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$q$}{i1}
+  \fmflabel{$\bar q$}{i2}
+  \fmf{fermion}{i1,v1}
+  \fmf{fermion}{i2,v1}
+  \fmf{curly,label=$g$,l.dist=6thick}{v1,v3}
+  \fmflabel{$\tilde{t}$}{o1}
+  \fmflabel{$\tilde{t}^*$}{o2}
+  \fmf{scalar}{v3,o1}
+  \fmf{scalar}{v3,o2}
+\end{fmfgraph*}\hspace{.5cm}
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+%  \fmfbottom{i1,o1}
+%  \fmftop{i2,o2}
+  \fmflabel{$q$}{i1}
+  \fmflabel{$\bar q$}{i2}
+  \fmf{fermion}{i1,v1}
+  \fmf{fermion}{i2,v2}
+  \fmflabel{$\tilde{t}$}{o1}
+  \fmflabel{$\tilde{t}^*$}{o2}
+  \fmf{scalar}{v1,o1}
+  \fmf{scalar}{v2,o2}
+  \fmffreeze
+  \fmf{gluon,label=$g$,l.side=right,l.dist=6thick}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+
+\vspace{2cm}
+\begin{fmffile}{fmf4}
+\begin{fmfgraph*}(50,25)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$\tilde{\chi}^0$}{i1}
+  \fmf{fermion}{i1,v1}
+  \fmf{scalar}{i2,v1}
+  \fmflabel{$\tilde{f}$}{i2}
+  %\fmflabel{$f'$}{o1}
+  \fmf{fermion,label=$f'$}{v1,v2}
+  \fmflabel{$f'$}{o1}
+  \fmflabel{$\gamma,Z$}{o2}
+  \fmf{fermion}{v2,o1}
+  \fmf{photon}{v2,o2}
+\end{fmfgraph*}\hspace{1cm}
+\begin{fmfgraph*}(30,25)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$\tilde{\chi}^0$}{i1}
+  \fmflabel{$\tilde{\chi}^0$}{i2}
+  \fmf{fermion}{i1,v1}
+  \fmf{fermion}{i2,v2}
+  \fmflabel{$f'$}{o1}
+  \fmflabel{$f'$}{o2}
+  \fmf{fermion}{v1,o1}
+  \fmf{fermion}{v2,o2}
+  \fmf{scalar,label=$\tilde{f}$,l.side=right}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+\vspace{2cm}
+\begin{fmffile}{fmf2}
+\begin{fmfgraph*}(40,25)
+  \fmfleft{i}
+  \fmfright{o1,o2,o3}
+  %\fmflabel{$\tilde{t}_1$}{i}
+  \fmfforce{(.4w,.5h)}{v1}
+  \fmf{dashes,label=$\tilde{t}_1$}{i,v1}
+  \fmf{plain}{o3,v1,v2}
+  \fmf{plain}{v2,o2}
+  %\fmflabel{$f'$}{o1}
+  \fmflabel{$\tilde{\chi}^0$}{o3}
+  \fmflabel{$b$}{o2}
+  \fmflabel{$W^+,H^+$}{o1}
+  \fmf{dashes}{v2,o1}
+\end{fmfgraph*}\hspace{1cm}\begin{fmfgraph*}(40,25)
+  \fmfleft{i}
+  \fmfright{o1,o2,o3}
+  %\fmflabel{$\tilde{t}_1$}{i}
+  \fmfforce{(.4w,.5h)}{v1}
+  \fmf{dashes,label=$\tilde{t}_1$}{i,v1}
+  \fmf{plain}{o3,v1,v2}
+  \fmf{plain}{v2,o2}
+  %\fmflabel{$f'$}{o1}
+  \fmflabel{$\tilde{\chi}^0$}{o3}
+  \fmflabel{$b$}{o2}
+  \fmflabel{$W^+,H^+$}{o1}
+  \fmf{dashes}{v2,o1}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+\vspace{2cm}
+\begin{fmffile}{fmf3}
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i}
+  \fmfright{o1,o2}
+  %\fmflabel{$\tilde{t}_1$}{i}
+  \fmflabel{$t$}{o2}
+  \fmflabel{$\tilde{\chi}^0$}{o1}
+  \fmf{dashes,label=$\tilde{t}_1$,l.dist=-10thick}{i,v1}
+  \fmf{plain}{v1,o1}
+  \fmf{plain}{v1,o2}
+\end{fmfgraph*}\hspace{1cm}
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i}
+  \fmfright{o1,o2}
+  %\fmflabel{$\tilde{t}_1$}{i}
+  \fmflabel{$b$}{o2}
+  \fmflabel{$\tilde{\chi}^+$}{o1}
+  \fmf{dashes,label=$\tilde{t}_1$,l.dist=-10thick}{i,v1}
+  \fmf{plain}{v1,o1}
+  \fmf{plain}{v1,o2}
+\end{fmfgraph*}\hspace{1cm}
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i}
+  \fmfright{o1,o2}
+  %\fmflabel{$\tilde{t}_1$}{i}
+  \fmflabel{$c$}{o2}
+  \fmflabel{$\tilde{\chi}^0$}{o1}
+  \fmf{dashes,label=$\tilde{t}_1$,l.dist=-10thick}{i,v1}
+  \fmf{plain}{v1,o1}
+  \fmf{plain}{v1,o2}
+  \fmfblob{.15w}{v1}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+
+%STOP PAIRS SEMILEP
+
+\vspace{2cm}
+\begin{fmffile}{fmf5}
+\begin{fmfgraph*}(60,40)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2,o3,o4,o5,o6,o7,o8}
+  \fmfforce{(.01w,.2h)}{i1}
+  \fmfforce{(.01w,.7h)}{i2}
+ \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  \fmf{curly}{i1,v1}
+  \fmf{curly}{i2,v1}
+  \fmfforce{(.3w,.5h)}{v2}
+  \fmf{curly,label=$g$,l.dist=6thick}{v1,v2}
+  \fmf{plain}{o1,v3,v4,v2,v5,v6,o8}
+  %\fmf{scalar,label=$\tilde{t}$}{v2,v4}
+  %\fmf{scalar,label=$\overline{\tilde{t}}$}{v2,v5}
+\fmffreeze
+  \fmf{plain,foreground=red}{o2,v3,o3}
+  \fmf{plain,label=$b$}{v4,o4}
+  \fmf{plain}{o7,v6,o6}
+  \fmf{plain,label=$\bar b$,l.dist=-7thick}{v5,o5}
+\fmf{plain,label=$\tilde{t}$,l.dist=-10thick}{v2,v4}
+\fmf{plain,label=$\overline{\tilde{t}}$,l.dist=-10thick}{v2,v5}
+\fmf{plain,label=$\tilde\chi_1^+$,l.dist=-10thick}{v4,v3}
+\fmf{plain,label=$\tilde\chi_1^-$,l.dist=-10thick}{v5,v6}
+ \fmflabel{$q$}{o3}
+ \fmflabel{$q$}{o2}
+ \fmflabel{$\tilde\chi_0$}{o1}
+ \fmflabel{$l$}{o6}
+ \fmflabel{$\nu_l$}{o7}
+ \fmflabel{$\tilde\chi_0$}{o8}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+\end{document}
