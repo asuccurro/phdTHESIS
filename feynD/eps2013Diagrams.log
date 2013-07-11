@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.3.19)  11 JUL 2013 20:01
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.3.19)  11 JUL 2013 20:31
 entering extended mode
  %&-line parsing enabled.
 **eps2013Diagrams.tex
@@ -160,6 +160,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
 )
+\openout4 = `fmf1.t2'.
+
+ (./fmf1.t2)
 
 feynmf: File fmf2.tfm found.
 feynmf: Nevertheless, if the picture has changed, reprocess fmf2.mf.
@@ -172,12 +175,12 @@ feynmf: Process fmf2.mf with METAFONT and then reprocess this file.
 
 ] (./eps2013Diagrams.aux) ) 
 Here is how much of TeX's memory you used:
- 1274 strings out of 495062
- 16666 string characters out of 1182644
- 66994 words of memory out of 3000000
- 4480 multiletter control sequences out of 15000+50000
- 6404 words of font info for 25 fonts, out of 3000000 for 9000
+ 1278 strings out of 495062
+ 16693 string characters out of 1182644
+ 67994 words of memory out of 3000000
+ 4481 multiletter control sequences out of 15000+50000
+ 6406 words of font info for 25 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,6n,36p,210b,159s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,7n,36p,210b,167s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on eps2013Diagrams.dvi (1 page, 1040 bytes).
+Output written on eps2013Diagrams.dvi (1 page, 1360 bytes).
