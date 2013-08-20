@@ -1,0 +1,28 @@
+This is METAFONT, Version 2.718281 (TeX Live 2009/Debian) (base=mf 2013.3.19)  12 JUL 2013 15:30
+**\mode:=localfont; input fmfss
+(fmfss.mf (/usr/share/texmf-texlive/metafont/feynmf/feynmf.mf)
+:1:\fmfL(42.83142,4.99391,lb){$\bar {t}$}%
+:1:\fmfL(35.49089,11.59573,t){$\bar {B}$}%
+:1:\fmfL(35.23279,19.43254,b){$B$}%
+:1:\fmfL(23.80249,20.31102,t){$g$}%
+:1:\fmfL(46.70766,17.33928,t){$t$}%
+:1:\fmfL(4.18425,-1.13506,rt){$g$}%
+:1:\fmfL(4.18425,31.14955,rb){$g$}%
+:1:\fmfL(55.80241,-1.13506,lt){$\bar {b}$}%
+:1:\fmfL(58.83589,2.94194,lt){\textcolor {red}{$W^{-}$}}%
+:1:\fmfL(61.99025,12.45964,l){\textcolor {blue}{$W^{+}$}}%
+:1:\fmfL(61.99017,17.55565,l){$b$}%
+:1:\fmfL(60.91847,22.48883,l){\textcolor {blue}{$W^{+}$}}%
+:1:\fmfL(55.80241,31.14955,lb){\textcolor {red}{$W^{-}$}}% [1] ) 
+Here is how much of METAFONT's memory you used:
+ 683 strings out of 5275
+ 7798 string characters out of 70080
+ 47627 words of memory out of 3000000
+ 1378 symbolic tokens out of 9500
+ 13i,67n,106r,26p,123b stack positions out of 300i,300n,1000r,150p,200000b
+ 
+(You used 2w,2h,1d,1i,0l,0k,0e,0p metric file positions
+  out of 256w,16h,16d,64i,15000l,2500k,256e,60p)
+
+Font metrics written on fmfss.tfm.
+Output written on fmfss.600gf (1 character, 9372 bytes).

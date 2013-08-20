@@ -1,0 +1,15 @@
+% fmfss.t1 -- generated automatically from fmfss.log
+% Think twice before editing THIS file!
+\fmfL(42.83142,4.99391,lb){$\bar {t}$}
+\fmfL(35.49089,11.59573,t){$\bar {B}$}
+\fmfL(35.23279,19.43254,b){$B$}
+\fmfL(23.80249,20.31102,t){$g$}
+\fmfL(46.70766,17.33928,t){$t$}
+\fmfL(4.18425,-1.13506,rt){$g$}
+\fmfL(4.18425,31.14955,rb){$g$}
+\fmfL(55.80241,-1.13506,lt){$\bar {b}$}
+\fmfL(58.83589,2.94194,lt){\textcolor {red}{$W^{-}$}}
+\fmfL(61.99025,12.45964,l){\textcolor {blue}{$W^{+}$}}
+\fmfL(61.99017,17.55565,l){$b$}
+\fmfL(60.91847,22.48883,l){\textcolor {blue}{$W^{+}$}}
+\fmfL(55.80241,31.14955,lb){\textcolor {red}{$W^{-}$}}

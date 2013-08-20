@@ -181,16 +181,14 @@ keepaspectratio]{smallstuff/frontespizio}%
 \input{detector/atlas}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
+
 \input{theory/bsm}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\input{objectsreconstruction/objects}
+\input{wbx_analysis/wbx}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\input{montecarlo/mc}
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\input{vlq_analysis/vlq}
+\input{htx_analysis/htx}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \input{statisticaltreatment/results}
@@ -212,10 +210,6 @@ keepaspectratio]{smallstuff/frontespizio}%
 \input{appendices/B}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\input{wbx_analysis_7tev/wbx7tev}
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\input{htx_analysis_14ifb/htx}
 
 %\phantomsection
 %\addcontentsline{toc}{chapter}{Ringraziamenti}
@@ -231,7 +225,7 @@ keepaspectratio]{smallstuff/frontespizio}%
 \addcontentsline{toc}{chapter}{Bibliography}
 
 \bibliographystyle{woc}
-\bibliography{bibliography/biblio}
+\bibliography{bibliografy/biblio}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
