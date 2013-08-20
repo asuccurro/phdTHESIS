@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.3.19)  12 JUL 2013 14:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.3.19)  12 JUL 2013 15:30
 entering extended mode
  %&-line parsing enabled.
-**eps2013Diagrams.tex
-(./eps2013Diagrams.tex
+**samesign.tex
+(./samesign.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, loaded.
@@ -85,9 +85,8 @@ Package color Info: Driver file: dvips.def on input line 130.
 
 (/usr/share/texmf-texlive/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
-))
-(./eps2013Diagrams.aux)
-\openout1 = `eps2013Diagrams.aux'.
+)) (./samesign.aux)
+\openout1 = `samesign.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
@@ -145,42 +144,30 @@ driver: dvips
 -----------------------
 
 
-feynmf: File fmf1.tfm found.
-feynmf: Nevertheless, if the picture has changed, reprocess fmf1.mf.
-feynmf: If dimension have changed, reprocess fmf1.mf and eps2013Diagrams.tex.
-\openout3 = `fmf1.mf'.
+feynmf: File fmfss.tfm found.
+feynmf: Nevertheless, if the picture has changed, reprocess fmfss.mf.
+feynmf: If dimension have changed, reprocess fmfss.mf and samesign.tex.
+\openout3 = `fmfss.mf'.
 
-\openout4 = `fmf1.t1'.
+\openout4 = `fmfss.t1'.
 
-(./fmf1.t1
+(./fmfss.t1
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-)
-\openout4 = `fmf1.t2'.
+) [1
 
- (./fmf1.t2)
-
-feynmf: File fmf2.tfm found.
-feynmf: Nevertheless, if the picture has changed, reprocess fmf2.mf.
-feynmf: If dimension have changed, reprocess fmf2.mf and eps2013Diagrams.tex.
-\openout3 = `fmf2.mf'.
-
-feynmf: Label file fmf2.t1 not found:
-feynmf: Process fmf2.mf with METAFONT and then reprocess this file.
-[1
-
-] (./eps2013Diagrams.aux) ) 
+] (./samesign.aux) ) 
 Here is how much of TeX's memory you used:
- 1278 strings out of 495062
- 16693 string characters out of 1182644
- 67994 words of memory out of 3000000
- 4481 multiletter control sequences out of 15000+50000
- 6406 words of font info for 25 fonts, out of 3000000 for 9000
+ 1271 strings out of 495062
+ 16588 string characters out of 1182644
+ 66994 words of memory out of 3000000
+ 4479 multiletter control sequences out of 15000+50000
+ 6390 words of font info for 24 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,7n,36p,210b,167s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,6n,36p,203b,159s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on eps2013Diagrams.dvi (1 page, 1360 bytes).
+Output written on samesign.dvi (1 page, 972 bytes).

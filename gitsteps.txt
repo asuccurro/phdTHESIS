@@ -1,0 +1,12 @@
+to be done once only
+git config --global user.name asuccurro
+git config --global user.email a.succurro@gmail.com
+git config --global credential.helper 'cache --timeout=3600'
+git remote add origin https://github.com/asuccurro/phdTHESIS.git
+
+
+to be done everytime add stuff
+git add stuff stuff morestuff
+git commit -m 'message'
+git push origin master
+
