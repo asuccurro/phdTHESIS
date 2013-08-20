@@ -1,0 +1,13 @@
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\chapter{Search for vector-like top partners decaying to $Wb+X$ in the single lepton final state}\label{chap:wbx}
+
+\section{Data sample}\label{sec:data}
+
+\section{Monte Carlo simulated samples}\label{sec:MCbkg}
+
+\subsection{SM processes}\label{sec:MCsmbkg}
+
+\subsection{Signal samples}\label{sec:MCsignal}
+
+\section{Multi-jet background}\label{sec:qcdbkg}
