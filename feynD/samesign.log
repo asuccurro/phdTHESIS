@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.3.19)  12 JUL 2013 15:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.3.19)  1 SEP 2013 13:41
 entering extended mode
  %&-line parsing enabled.
 **samesign.tex
@@ -8,8 +8,8 @@ Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/size12.clo
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -85,21 +85,73 @@ Package color Info: Driver file: dvips.def on input line 130.
 
 (/usr/share/texmf-texlive/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+(/usr/share/texmf-texlive/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2008/11/26 v0.40 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/share/texmf-texlive/tex/generic/pstricks/pstricks.tex
+`PSTricks' v1.29  <2009/05/19> (tvz)
+\pst@dima=\dimen109
+\pst@dimb=\dimen110
+\pst@dimc=\dimen111
+\pst@dimd=\dimen112
+\pst@dimg=\dimen113
+\pst@dimh=\dimen114
+\pst@hbox=\box26
+\pst@boxg=\box27
+\pst@cnta=\count91
+\pst@cntb=\count92
+\pst@cntc=\count93
+\pst@cntd=\count94
+\pst@cntg=\count95
+\pst@cnth=\count96
+\pst@toks=\toks17
+(/usr/share/texmf-texlive/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen115
+\psxunit=\dimen116
+\psyunit=\dimen117
+\pslinewidth=\dimen118
+\pst@customdefs=\toks18
+\pslinearc=\dimen119
+\everypsbox=\toks19
+\psframesep=\dimen120
+\pslabelsep=\dimen121
+\pst@shift=\dimen122
+\theoverlaybox=\box28
+)
+File: pstricks.tex 2009/05/19 v1.29 `PSTricks' (tvz,hv)
+
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )) (./samesign.aux)
 \openout1 = `samesign.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry auto-detecting driver*
 *geometry detected driver: dvips*
@@ -132,10 +184,10 @@ driver: dvips
 \headheight 12.0pt
 \headsep    25.0pt
 \footskip   30.0pt
-\marginparwidth 44.0pt
-\marginparsep   10.0pt
+\marginparwidth 65.0pt
+\marginparsep   11.0pt
 \columnsep  10.0pt
-\skip\footins  10.8pt plus 4.0pt minus 2.0pt
+\skip\footins  9.0pt plus 4.0pt minus 2.0pt
 \hoffset 0.0pt
 \voffset 0.0pt
 \mag 1000
@@ -153,21 +205,17 @@ feynmf: If dimension have changed, reprocess fmfss.mf and samesign.tex.
 
 (./fmfss.t1
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
-) [1
-
-] (./samesign.aux) ) 
+(Font)              <5> on input line 3.
+) [1] (./samesign.aux) ) 
 Here is how much of TeX's memory you used:
- 1271 strings out of 495062
- 16588 string characters out of 1182644
- 66994 words of memory out of 3000000
- 4479 multiletter control sequences out of 15000+50000
- 6390 words of font info for 24 fonts, out of 3000000 for 9000
+ 2637 strings out of 495062
+ 32074 string characters out of 1182644
+ 104907 words of memory out of 3000000
+ 5834 multiletter control sequences out of 15000+50000
+ 3654 words of font info for 15 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,6n,36p,203b,159s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,8n,37p,203b,246s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on samesign.dvi (1 page, 972 bytes).
+Output written on samesign.dvi (1 page, 1072 bytes).

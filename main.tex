@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 \usepackage{epigraph}
 \usepackage{atlasphysics}
-
+\usepackage{subfigure}
 \usepackage{lineno}
 %\linespread{1.2}                        %comando per impostare l'interlinea
 
@@ -80,6 +80,18 @@ colorlinks=true,linkcolor=webred]{hyperref}
 keepaspectratio]{smallstuff/frontespizio}%
 \vfill
 }}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%% LAZYNESS-DRIVEN DEFS
+%%%%%%%%%%%%%%%%%%%%%%%%
+\def\cme{center of mass energy\ }
+
+
+
+
 
 \def\bra#1{\mathinner{\langle{#1}|}}
 \def\ket#1{\mathinner{|{#1}\rangle}}
@@ -178,10 +190,10 @@ keepaspectratio]{smallstuff/frontespizio}%
 
 \mainmatter
 
-\input{detector/atlas}
+\input{theory/bsm}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\input{theory/bsm}
+\input{detector/atlas}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \input{objectsreconstruction/objects}

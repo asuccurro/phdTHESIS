@@ -1,4 +1,4 @@
-% fmfss.mf -- do not edit, generated automatically by samesign.tex
+% fmfss.mf -- do not edit, generated automatically by feyndiag_BB_ssdilep.tex
 input feynmf
 require_RCS_revision "1.30";
 beginchar(1, 60*2.84526pt#, 30*2.84526pt#, 0);

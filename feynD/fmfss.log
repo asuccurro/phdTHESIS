@@ -1,6 +1,6 @@
-This is METAFONT, Version 2.718281 (TeX Live 2009/Debian) (base=mf 2013.3.19)  12 JUL 2013 15:30
+This is METAFONT, Version 2.718281 (TeX Live 2009/Debian) (base=mf 2013.3.19)  1 SEP 2013 13:58
 **\mode:=localfont; input fmfss
-(fmfss.mf (/usr/share/texmf-texlive/metafont/feynmf/feynmf.mf)
+(fmfss.mf (/usr/share/texmf/metafont/feynmf/feynmf.mf)
 :1:\fmfL(42.83142,4.99391,lb){$\bar {t}$}%
 :1:\fmfL(35.49089,11.59573,t){$\bar {B}$}%
 :1:\fmfL(35.23279,19.43254,b){$B$}%
@@ -16,7 +16,7 @@ This is METAFONT, Version 2.718281 (TeX Live 2009/Debian) (base=mf 2013.3.19)  1
 :1:\fmfL(55.80241,31.14955,lb){\textcolor {red}{$W^{-}$}}% [1] ) 
 Here is how much of METAFONT's memory you used:
  683 strings out of 5275
- 7798 string characters out of 70080
+ 7782 string characters out of 70080
  47627 words of memory out of 3000000
  1378 symbolic tokens out of 9500
  13i,67n,106r,26p,123b stack positions out of 300i,300n,1000r,150p,200000b
