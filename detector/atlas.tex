@@ -20,12 +20,12 @@ underground in the CERN Swiss site of Meyrin.
 	\caption{A schematic showing the accelerator complex at CERN. Protons are
         extracted from Hydrogen gas and injected in the first machine, the linear 
         accelerator LINAC2 that starts the acceleration chain. When protons reach
-        an energy of 50\mev they are injected into the Proton Synchrotron Booster
-        (PSB) and accelerated up to the energy of 1.4\gev. The second circular
+        an energy of 50~\mev\ they are injected into the Proton Synchrotron Booster
+        (PSB) and accelerated up to the energy of 1.4~\gev. The second circular
         accelerator, the Proton Synchrotron (PS) brings the energy of the protons
-        to 25\gev previous to injecting them into the last machine before the LHC,
-        the Super Proton Synchrotron (SPS). Protons of 450\gev finally enter the
-        LHC where they are boosted to energies of up to 4\tev.
+        to 25~\gev\ previous to injecting them into the last machine before the LHC,
+        the Super Proton Synchrotron (SPS). Protons of 450~\gev\ finally enter the
+        LHC where they are boosted to energies of up to 4~\tev.
         The four main LHC experiments are shown on the collider ring.}
 \end{center}\end{figure}
 
@@ -58,8 +58,6 @@ Geneva, 30 November 2009. CERN's Large Hadron Collider has today become the worl
 
 
 
-
-
 The main performance figure of merit for an accelerator is the luminosity, the 
 instantaneous luminosity $\mathcal L$ being defined as 
 \begin{equation}\label{eq:lumiN}
@@ -74,5 +72,66 @@ Integrating over the accelerator active time (a ``fill'', when stable beams are 
 colliding) gives the \textit{integrated luminosity}, relating the total number 
 of produced events $N_{tot}$ to the cross-section:
 \begin{equation}\label{eq:intLumi}
-\int \mathcal L dt  = \dfrac{N_{tot}}{\sigma} 
+\int \mathcal L dt  = \dfrac{N_{tot}}{\sigma}.
 \end{equation}
+
+
+
+
+%http://accelconf.web.cern.ch/accelconf/IPAC2013/papers/moyab101.pdf
+%http://cerncourier.com/cws/article/cern/54381
+
+\begin{table}\centering
+	\begin{tabular}{lllll}\toprule
+        Parameter                       & designed      &       2010 &  2011     &   2012\\ \midrule
+        Beam energy (\tev/c)            & 7             & 3.5        & 3.5       & 4    \\
+        Beta function $\beta*$ (m)      & 0.55          & 2.0/3.5    & 1.5/1.0   & 0.6  \\
+        Max. No. bunches/beam           & 2808          & 368        & 1380      &1380  \\
+        Max. No. protons/bunch          & 1.15$\times10^{11}$ & 1.2$\times10^{11}$ & 1.45$\times10^{11}$ & 1.7$\times10^{11}$ \\
+        Bunch spacing (ns)              & 25            & 150       & 75/50        & 50 \\
+        Peak luminosity (\cmm2\sm1)     & 1$\times10^{34}$& 2.1$\times10^{32}$& 3.7$\times10^{33}$& 7.7$\times10^{33}$\\
+        Emittance $\varepsilon_{n}$ ($\mu$rad)&3.75     &   2.0      & 2.4      & 2.5   \\
+	\bottomrule\end{tabular}\caption{Overview of some parameters for the LHC performance comparing the design values with their time
+        evolution during the first long run operation in 2010-2013~\cite{Lamont}.}\label{tab:lhcpar}
+\end{table}
+
+\begin{figure}[tb]\begin{center}
+	\subfigure[]{\label{fig:intlumi}
+  	\includegraphics[width=0.48\textwidth]{detector/figures/intlumivstime2012DQ}}
+	\subfigure[]{\label{fig:mu}
+  	\includegraphics[width=0.48\textwidth]{detector/figures/mu_2011_2012-dec}}
+	\caption{(a) Total integrated luminosity versus time delivered by the LHC to ATLAS (in green), recorded by the experiment 
+        (in yellow) and selected as ``good data'' for analysis (in blue) for p-p collisions at \rts=8~\tev.
+        (b) Mean number of interactions per beam crossing during 2011 and 2012 LHC runs, where 
+        $\mu = \mathcal L\times \sigma_{\rm inelastic}/f$ depends on the instantaneous luminosity $\mathcal L$, the p-p inelastic
+        cross section $\sigma_{\rm inelastic}$ and the revolution frequency $f$.~\cite{lumi}}
+%Number of Interactions per CrossingMore details on this can be found in arXiv:1101.2185. 
+\end{center}\end{figure}
+
+In 2012 LHC reached a peak luminosity of 7.7$\times10^{33}$~\cmm2\sm1\ which is
+more than half the design luminosity, as shown in Table~\ref{tab:lhcpar} together
+with other parameters relevant for the accelerator performance. Over the last
+year of data taking before the long shutdown\footnote{LHC terminated the p-p program
+at the end of 2012, operated proton-heavy ion collisions for two months at the beginning
+of 2013 and then stopped for what is called the first long shutdown. During this two-years
+time the accelerator and the experiments as well will undergo substantial maintenance and 
+upgrade works, in order to be re-operated in 2015 with higher performance at an higher
+\cme for particle collisions.}
+ATLAS collected about 20\ifb\ of p-p collision data at \rts=8~\tev.
+Figure~\ref{fig:intlumi} shows the delivered luminosity from the start of stable beams until beam dump and the luminosity recorded by
+ATLAS during stable beam conditions, the difference with respect to the delivered luminosity being due to Data Aquisition (DAQ)
+inefficiencies. Of the recorded luminosity, only a part is usable for analysis, and is what is called ``good data'', i.e. 
+the data that satisfy Data Quality (DQ) requirements assessed after reprocessing.
+
+In order to increase the luminosity LHC operates with higher number of protons per bunch as well as higher
+ number of bunches per beam and reduces the inter-bunch latency time.
+This overall defines a set of challenges that physics analysis will face associated to the high luminosity.
+Even at the detector design stage, the high frequency of collision environment foreseen influenced
+the choice of radiation resistance material for the experiment sub-systems. Concerning directly the physics
+instead we can list the main problematics as being \textit{underlying events} and \textit{pile-up}
+
+Underlying events are the product of the hadronic character of p-p hard interaction, where 
+
+
+\section{The ATLAS detector}\label{sec:atlas}
+

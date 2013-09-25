@@ -7,7 +7,9 @@
 \usepackage{atlasphysics}
 \usepackage{subfigure}
 \usepackage{lineno}
-%\linespread{1.2}                        %comando per impostare l'interlinea
+\usepackage{setspace}
+\input{commands}
+\linespread{1.2}                        %comando per impostare l'interlinea
 
 
 %\usepackage{ulem} %sostituisce l'effetto sottolineatura all'effetto corsivo nel comando \emph{} e risolve il problema delle righe che non si spezzano
@@ -15,10 +17,12 @@
 \usepackage{multirow}
 \usepackage{enumerate}
 
-\usepackage[hdivide={3cm, *, 3cm}, vscale=0.65, bindingoffset=1cm]{geometry}
+\usepackage[hdivide={3cm, *, 3cm}, vscale=0.75, bindingoffset=1cm]{geometry}
 \usepackage{chngpage}
 
-\usepackage[format=hang,indention=-2cm,labelfont=bf]{caption}%per delle caption più carine
+\usepackage[margin=7pt,font=small,labelfont=bf]{caption}
+%\usepackage[margin=10pt,font=small,labelfont=bf]{caption}
+%\usepackage[format=hang,indention=-2cm,labelfont=bf]{caption}%per delle caption più carine
 \usepackage{booktabs}
 \usepackage{longtable}
 %\usepackage{pdflscape} 
@@ -83,25 +87,6 @@ keepaspectratio]{smallstuff/frontespizio}%
 
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%% LAZYNESS-DRIVEN DEFS
-%%%%%%%%%%%%%%%%%%%%%%%%
-\def\cme{center of mass energy\ }
-
-
-
-
-
-\def\bra#1{\mathinner{\langle{#1}|}}
-\def\ket#1{\mathinner{|{#1}\rangle}}
-\def\braket#1{\mathinner{\langle{#1}\rangle}}
-\def\Bra#1{\left<#1\right|}
-\def\Ket#1{\left|#1\right>} 
-\newcommand{\Overline}[2][1]{%
-  {}\mkern#1mu \overline{\mkern-#1mu #2 \mkern-#1mu}\mkern#1mu {}} 
-\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
-
 %per avere l'indice senza numeri di pagina
 \makeatletter 
  \newcommand{\cleantableofcontents}{% 
@@ -113,6 +98,7 @@ keepaspectratio]{smallstuff/frontespizio}%
 %per lo stile dei capitoli
 \makeatletter
 \def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+%chstyle
 \def\@makechapterhead#1{%
   \vspace*{10\p@}%
   {\parindent \z@ 
@@ -121,11 +107,12 @@ keepaspectratio]{smallstuff/frontespizio}%
     \par\nobreak
     \vspace*{30\p@}
     \interlinepenalty\@M
-    {\raggedright \Huge \bfseries #1}%
+    {\begin{spacing}{1.1} \raggedright \huge \bfseries #1\end{spacing}}%
+    %{\doublespacing \raggedright \huge \bfseries #1}%
     \par\nobreak
     \hrulefill
     \par\nobreak
-    \vskip 100\p@
+    \vskip 90\p@
   }}
 \def\@makeschapterhead#1{%
   \vspace*{10\p@}%
@@ -135,12 +122,14 @@ keepaspectratio]{smallstuff/frontespizio}%
     \par\nobreak
     \vspace*{30\p@}
     \interlinepenalty\@M
-    {\raggedright \Huge \bfseries #1}%
+    {\begin{spacing}{1.1} \raggedright \huge \bfseries #1\end{spacing}}%
     \par\nobreak
     \hrulefill
     \par\nobreak
-    \vskip 100\p@
+    \vskip 90\p@
   }}
+
+
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter. \ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
@@ -226,8 +215,8 @@ keepaspectratio]{smallstuff/frontespizio}%
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \input{wbx_analysis_7tev/wbx7tev}
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\input{htx_analysis_14ifb/htx}
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\input{htx_analysis_14ifb/htx}
 
 %\phantomsection
 %\addcontentsline{toc}{chapter}{Ringraziamenti}
@@ -242,7 +231,8 @@ keepaspectratio]{smallstuff/frontespizio}%
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 
-\bibliographystyle{woc}
+%\bibliographystyle{woc}
+\bibliographystyle{unsrt}
 \bibliography{bibliography/biblio}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
