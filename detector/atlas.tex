@@ -15,7 +15,7 @@ and French territory, while the cave where ATLAS is allocated is about 100~meter
 underground in the CERN Swiss site of Meyrin. 
 
 \begin{figure}[tb]\begin{center}
-	\subfigure{\label{fig:lhcring}
+	\subfigure{
   	\includegraphics[width=0.8\textwidth]{detector/figures/ring.eps}}
 	\caption{A schematic showing the accelerator complex at CERN. Protons are
         extracted from Hydrogen gas and injected in the first machine, the linear 
@@ -26,7 +26,7 @@ underground in the CERN Swiss site of Meyrin.
         to 25~\gev\ previous to injecting them into the last machine before the LHC,
         the Super Proton Synchrotron (SPS). Protons of 450~\gev\ finally enter the
         LHC where they are boosted to energies of up to 4~\tev.
-        The four main LHC experiments are shown on the collider ring.}
+        The four main LHC experiments are shown on the collider ring.\label{fig:lhcring}}
 \end{center}\end{figure}
 
 The LHC program was approved by CERN Council in 1994, followed by the approval of
@@ -115,7 +115,7 @@ year of data taking before the long shutdown\footnote{LHC terminated the p-p pro
 at the end of 2012, operated proton-heavy ion collisions for two months at the beginning
 of 2013 and then stopped for what is called the first long shutdown. During this two-years
 time the accelerator and the experiments as well will undergo substantial maintenance and 
-upgrade works, in order to be re-operated in 2015 with higher performance at an higher
+upgrade works, in order to be re-operated in 2015 with higher performance at a higher
 \cme for particle collisions.}
 ATLAS collected about 20\ifb\ of p-p collision data at \rts=8~\tev.
 Figure~\ref{fig:intlumi} shows the delivered luminosity from the start of stable beams until beam dump and the luminosity recorded by
@@ -169,9 +169,9 @@ piece of detector, embedded in a huge toroidal magnet. The detector complex is p
 as a schematic in Figure~\ref{fig:atlas}. 
 
 \begin{figure}[tb]\begin{center}
-	\subfigure{\label{fig:atlas}
+	\subfigure{
   	\includegraphics[width=0.9\textwidth]{detector/figures/atlas}}
-	\caption{Schematic drawing of the ATLAS experiment. The detector subsystem are indicated as well as the total dimensions.}
+	\caption{Schematic drawing of the ATLAS experiment. The detector subsystem are indicated as well as the total dimensions.\label{fig:atlas}}
 \end{center}\end{figure}
 
 \subsection{Coordinate system}
@@ -338,14 +338,21 @@ $\sim$50\% for tracks with $\pt\sim$1~\tev.
 
 Particles leaving the ID and surviving the crossing of the central solenoid magnet
 will face the calorimeter system, depicted in Figure~\ref{fig:calorimeters}.
-Different technologies are used in the barrel and end-cap regions for both the
-Electromagnetic and the Hadronic calorimeters.
+Different technologies are used in the barrel, end-cap and forward regions for both the
+Electromagnetic and the Hadronic calorimeters. The system is characterized by a coverage
+in pseudorapidity up to $|\eta|<5$ and an almost full coverage in $\phi$. With its 
+22~$X_0$ and 24~$X_0$ of material in the barrel and end-cap regions respectively 
+it is also able to stop most of the non-muon particles from the interaction.
 
 \begin{figure}[tb]\begin{center}
-	\subfigure{\label{fig:calorimeters}
+	\subfigure{
   	\includegraphics[width=0.8\textwidth]{detector/figures/caloBarrel}}
-	\caption{Schematic of the calorimeter complex of the ATLAS detector.}
+	\caption{Schematic of the calorimeter complex of the ATLAS detector.\label{fig:calorimeters}}
 \end{center}\end{figure}
+
+
+\subsubsection{Electromagnetic barrel calorimeter}\label{sec:emcalbarrel}
+
 
 \begin{figure}[tb]\begin{center}
 	\subfigure[]{\label{fig:calolar}
@@ -356,8 +363,83 @@ Electromagnetic and the Hadronic calorimeters.
         (b) Schematic drawing of a module of the Hadronic barrel calorimeter.}
 \end{center}\end{figure}
 
+\subsubsection{Electromagnetic end-cap calorimeter}\label{sec:emcalendcap}
+
+
+\subsubsection{Hadronic end-cap calorimeter}\label{sec:hadcalendcap}
+
+
+\subsubsection{Forward calorimeter}\label{sec:calforward}
+
+
+\subsubsection{Hadronic barrel calorimeter}\label{sec:hadcalbarrel}
+
 
 \subsection{Muon spectrometer}\label{sec:muonspec}
 
 \subsection{Trigger system}\label{sec:trigger}
+
+It was already introduced at the beginning of this Chapter the issue
+faced by LHC experiments of dealing with a huge amounts of events
+at very high frequencies. We remind that considering the nominal LHC
+luminosity of \highL\ a rate of interactions of 1~GHz is expected!
+This poses serious technical difficulties as the maximum frequency
+at which data can be recorded is limited to 200~Hz considering the
+limited capacity for storage.
+
+ATLAS developed a trigger system able to reduce by a factor of 10$^6$
+the amount of data to be kept by selecting only interesting physics events.
+The system is divided in three levels characterized by increasing sofistication
+and diminishing speed. At the very first indeed we will need a really quick and
+simple criterium to reject useless events. The reduced information can then be
+processed with somehow slower logic by the other two High Level Triggers (HLT).
+A drawing of the system is shown in Figure~\ref{fig:trigger}.
+
+\begin{figure}[tb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.5\textwidth]{detector/figures/triggerscheme}}
+	\caption{Schematic drawing of the three-level trigger system of ATLAS.\label{fig:trigger}}
+\end{center}\end{figure}
+
+Most of the trigger chains used for physics are un-scaled in the
+sense that all the events passing the selection are kept, but there
+are also pre-scaled trigger chains that contain either too many events
+or events considered not physically interesting. These trigger chains
+are used for checks or calibration rather than physics analysis.
+
+
+\subsubsection{Level 1 trigger}\label{sec:lvl1}
+
+The Level 1 trigger (L1) is completely based on the hardware of the detector,
+taking information from calorimeters and from the muon spectrometer trigger
+systems RPC and TGC (Section~\ref{sec:muonspec}) at 40~MHz (the frequency of
+the beam crossing) and reducing it to 75~kHz by choosing events with high
+transverse momentum or high missing transverse energy.
+
+Using dedicated fast front-end electronics (the typical decision time being less than
+2~$\mu$s), calorimeter cells are analogically 
+summed to build calorimetric towers which, if having an energy higher than a 
+certain threshold, will activate a trigger chain.
+
+These trigger chains will then be combined with the information from the
+muon spectrometer to form the so-called Region of Interest (RoI) that is
+passed to the next trigger level.
+
+
+\subsubsection{Level 2 trigger}\label{sec:lvl2}
+
+Starting from the RoI, the Level 2 trigger (L2) will reduce the 75~kHz to
+3.5~kHz of events with an average decision time of 40~ms. At this
+stage the information from the trackers is incorporated to the RoI
+to build candidate object (electrons, photons, muons) and 
+better obtain its position and energy with simplified algorithms
+quick enough to respect the limit on the decision time.
+
+\subsubsection{Level 3 trigger}\label{sec:lvl3}
+
+The last trigger, Level 3, is called Event Filter (EF) since
+at this point the physics objects are built using the same
+algorithms as the off-line reconstruction. With an execution time
+amounting to 4~s, the EF reduces the event rate to the goal value
+of 200~Hz.
 
