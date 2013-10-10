@@ -123,7 +123,7 @@ ATLAS during stable beam conditions, the difference with respect to the delivere
 inefficiencies. Of the recorded luminosity, only a part is usable for analysis, and is what is called ``good data'', i.e. 
 the data that satisfy Data Quality (DQ) requirements assessed after reprocessing.
 
-In order to increase the luminosity LHC operates with higher number of protons per bunch as well as higher
+In order to increase the luminosity LHC operates with a high number of protons per bunch as well as a high
  number of bunches per beam and reduces the inter-bunch latency time.
 This overall defines a set of challenges that physics analysis will face associated to the high luminosity.
 Even at the detector design stage, the high frequency of collision environment foreseen influenced
@@ -188,7 +188,7 @@ positive and negative Z semi-axes. Figure~\ref{fig:coord} shows a schematic of t
         \subfigure[]{\label{fig:spherical}
   	\includegraphics[width=0.3\textwidth]{detector/figures/spherical}}
 	\caption{(a) Drawing of the ATLAS experiment with the cartesian coordinate system. The positive X axis points towards the center of the LHC
-        ring. The positive Z axis points todards the circulating direction of beam 2. (b) Simple schematic showing the spherical coordinates and the
+        ring. The positive Z axis points todards the anti-clockwise circulating direction of beam 2. (b) Simple schematic showing the spherical coordinates and the
         region definition in terms of the absolute value of the pseudorapidity $\eta$. These regions are symmetrical with respect to the transverse
         XY plane.}
 \end{center}\end{figure}
@@ -252,8 +252,17 @@ around the inner detector and produces a 2~T magnetic field along the direction
 parallel to the beam axis. It is only 45~mm thick (equivalent to 0.66 radiation lenghts $X_0$)
 and is cooled with liquid Helium, sharing the cryostat with the electromagnetic calorimeter.
 
-Three toroidal magnets, one in the barrel region and the other two in the end-cap regions,
-produce a magnetic field of 0.5~T and 1~T respectively in the direction orthogonal to the muons trajectory.
+Paired to the muon spectrometer, the superconducting air-core toroid magnet (Figure~\ref{magnets}) 
+has an open structure with eight superconducting toroidal coils in the barrel part and
+two end-cap systems made of eight coils. The field strength varies strongly with $\phi$:
+in the barrel region ($|\eta|<1.4$) is 1.5-5.5 Tesla$\cdot$m; in the end-caps ($1.6<|\eta|<2.7$) 1-7.5 is Tesla$\cdot$m. 
+Such configuration of the magnets gives a field orthogonal to the muons trajectory.
+
+\begin{figure}[hbt]\begin{center}
+\includegraphics[width=.8\textwidth]{detector/figures/magnets}\caption{Toroidal magnet system.}\label{magnets}
+\end{center}\end{figure}
+
+
 
 \subsection{Inner detector}\label{sec:innerdet}
 
@@ -338,11 +347,24 @@ $\sim$50\% for tracks with $\pt\sim$1~\tev.
 
 Particles leaving the ID and surviving the crossing of the central solenoid magnet
 will face the calorimeter system, depicted in Figure~\ref{fig:calorimeters}.
-Different technologies are used in the barrel, end-cap and forward regions for both the
-Electromagnetic and the Hadronic calorimeters. The system is characterized by a coverage
+The full system is characterized by a coverage
 in pseudorapidity up to $|\eta|<5$ and an almost full coverage in $\phi$. With its 
 22~$X_0$ and 24~$X_0$ of material in the barrel and end-cap regions respectively 
 it is also able to stop most of the non-muon particles from the interaction.
+Besides particles energy measurement, the calorimeters provide particle identification
+information, discriminating electrons, photons and jets, and the determination
+of the missing transverse energy.
+
+Different technologies are used in the barrel, end-cap and forward regions for both the
+electromagnetic and the hadronic calorimeters. All of them are sampling calorimeters,
+with a dense medium acting as absorber to stop particles and start showers, and an
+active material to detect the signal from ionization. For the electromagnetic calorimeters
+and the forward hadronic calorimeter liquid argon is used as active medium, while the
+barrel and extended-barrel hadronic calorimeter uses scintillating tiles.
+The liquid argon is cooled at a temperature of about 88~K, with the use of two sets of cryostats:
+the barrel electromagnetic calorimeter shares the cryostat with the central solenoid;
+the end-cap and forward electromagnetic calorimeter and the hadronic end-cap calorimeter
+share a cryostat in the foward region.
 
 \begin{figure}[tb]\begin{center}
 	\subfigure{
@@ -350,9 +372,74 @@ it is also able to stop most of the non-muon particles from the interaction.
 	\caption{Schematic of the calorimeter complex of the ATLAS detector.\label{fig:calorimeters}}
 \end{center}\end{figure}
 
+The processes involved in the shower formation are bremsstrahlung $\epm \to \epm + \gamma$
+and pair production $\gamma \to \epem$. For particles with energies lower than about
+100\mev\ ionization processes are dominating. In general, these cascade of events
+continues until a certain threshold is reached, and the final number of particles
+produced is proportional to the energy of the first particle originating the shower.
 
-\subsubsection{Electromagnetic barrel calorimeter}\label{sec:emcalbarrel}
+%The distinction between electromagnetic and hadronic calorimeters is due to the different phenomenology of the physics involved. The development of electromagnetic showers from an incident electron or photon is well understood and for particles with equal incident energy the variations in shape and measured energy of the showers are quite small. The size of the shower is linearly dependent on the radiation length $X_{0}$ of the material entered, while the size of hadronic showers depends linearly on the nuclear interaction length\footnote{The nuclear interaction length is the average distance traveled by hadrons before inducing a nuclear reaction.} $\lambda_{int}$ of the material. 
 
+The performance for the energy resolution is parametrized by the following formula:
+\begin{equation}\label{eq:resolution}
+\frac{\sigma_{E}}{E} = \frac{a}{\sqrt{E}}\oplus\frac{b}{E}\oplus c,
+\end{equation} 
+where the terms of the sum correspond, respectively, to a statistical term related to how shower develops in the sampling calorimeter; to an instrumental
+term including readout electronic rumor effects; to a systematic term that depends on calibration, shower containment, inactive material and on the
+linearity of the response as well. 
+
+
+The energy resolution measured in test-beam runs for the liquid argon calorimeters is~\cite{lar_readiness}:
+\begin{equation}
+\frac{\sigma_{E}}{E}=\frac{10\%}{\sqrt{E}} \oplus\frac{170\MeV}{E} \oplus 0.7\%,
+\end{equation}
+while for the hadronic barrel calorimeter is~\cite{tile_readiness}:
+\begin{equation}
+\frac{\sigma_{E}}{E}=\frac{50\%}{\sqrt{E}} \oplus 3\%.
+\end{equation}
+
+
+
+\subsubsection{Electromagnetic calorimeter}\label{sec:emcalbarrel}
+
+The electromagnetic calorimeter, also called LAr calorimeter (from Liquid Argon),
+can measure electrons and photons energies in the range from 50~\mev\ and 3\tev.
+In the barrel region it is referred to as EMB (ElectroMagnetic Barrel), is 
+divided into two identical semi-barrels EMBA and EMBC separated at Z=0 by a 6~mm
+gap and covers the pseudorapidity region $|\eta|<1.475$. 
+Two end-cap detectors (EMEC, ElectroMagnetic End-Cap), divided 
+into two coaxial wheels, cover the pseudorapidity 
+regions $1.375<|\eta|<3.2$. A pre-sampler, extended over 
+$|\eta|<1.8$, stands in front of the EMB and allows for the measurement of
+the energy the particles lost before reaching the EMB i.e. crossing the
+material of the ID, the central solenoid and the cryostat.
+
+The absorbing material is lead shaped into an accordion geometry to achieve
+full symmetry in $\phi$, as shown in the drawing of Figure~\ref{fig:calolar}.
+Signal from the ionization produced in the liquid argon is collected
+by an electrode in the middle of the active material region, fixed into
+a honeycomb structure.
+
+Three longitudinal regions in the EMB are designed for different tasks. The first
+sample, 4.3$X_0$ long, is finely segmented in $\eta$ to precisely measure
+the direction in pseudorapidity of the particles with  thin readout strips
+of $\Delta\eta\times\Delta\phi$ = 0.0031$\times$0.098. This helps for
+photon/$\pi^{0}$ discrimination and as well for separate close-by $\gamma$s
+from $\pi^{0}$ decay.
+
+The second piece, 16$X_0$ long, contains the bulk of electrons and photons energy deposit. 
+It is divided in towers with dimension $\Delta\eta\times\Delta\phi$ = 0.025$\times$0.0245
+and provides the position measurement of the cluster. 
+The  95\% of the energy of the shower is deposited in a matrix of 3$\times$7 
+towers $\Delta\eta\times\Delta\phi$.
+
+The third layer, 2$X_0$ long, is coarsely segmentes and collects the last bit of the longitudinal
+development of the electromagnetic showers. Towers in this region have a dimension
+of $\Delta\eta\times\Delta\phi$ = 0.05$\times$0.0245.
+
+Also the EMEC is divided in three longitudinal samples (two in the region $1.375<|\eta|<1.5$),
+and besides the lead, also the thickness of the liquid argon layers are varied in the
+radial direction.
 
 \begin{figure}[tb]\begin{center}
 	\subfigure[]{\label{fig:calolar}
@@ -363,19 +450,123 @@ it is also able to stop most of the non-muon particles from the interaction.
         (b) Schematic drawing of a module of the Hadronic barrel calorimeter.}
 \end{center}\end{figure}
 
-\subsubsection{Electromagnetic end-cap calorimeter}\label{sec:emcalendcap}
-
+The thickness of the absorber layers depend on the pseudorapidity in
+order to make particles entering the system with different incident 
+angles cross the same amount of material.
 
 \subsubsection{Hadronic end-cap calorimeter}\label{sec:hadcalendcap}
 
+The Hadronic End-Cap calorimeters (HEC) use copper as passive material and liquid
+argon as active material, chosen for its radiation hardness in a region ($1.5<|\eta|<3.2$)
+exposed to a significant amount of particle flux. Each HEC is composed by
+two independent wheels with granularity varying with $\eta$: 
+in $1.5<|\eta|<2.5$ $\Delta\eta\times\Delta\phi$ is 0.1$\times$0.1 in the first
+two longitudinal layers,  0.2$\times$0.1 in the last one; in
+$2.5<|\eta|<3.2$ $1.5<|\eta|<2.5$ $\Delta\eta\times\Delta\phi$ = 0.2$\times$0.2
+in all the three samples.
+
+The HECs collect the energy from particles that are not completely contained
+in the EMECs and in particular are used to reconstruct jets and the missing transverse
+energy.
 
 \subsubsection{Forward calorimeter}\label{sec:calforward}
+
+The Forward Calorimeter (FCal) cover the very forward region of pseudorapidity
+$3.1<|\eta|<4.9$ making the calorimeter system achieve its good hermeticity
+and minimize the energy losses.
+It has an electromagnetic part that uses copper as absorber and two hadronic compartments
+with tungsten as passive material. 
 
 
 \subsubsection{Hadronic barrel calorimeter}\label{sec:hadcalbarrel}
 
+The hadronic calorimeter in the barrel and extended barrel region, going up to
+$|\eta|<1.7$, is made of scintillating tiles as active material with lead as absorber
+and is commonly referred to with the name of TileCal. 
+The light in the ultraviolet range that is generated in the tiles is collected through
+wavelenght shifting optical fibres. As can be seen in the drawing of Figure~\ref{fig:calotile},
+the tiles are slightly rotated, to allow showers cross them from the side.
+
+TileCal sits just after the electromagnetic
+calorimeter and measures the energy and position of jets and isolated hadrons.
+It is divided in depth in three layers with varying lenght (1.4, 4.1, 1.8 hadronic interaction
+leghts $\lambda$ in the barrel and 1.5, 2.6, 3.3$\lambda$ in the extended barrel) and segmentation
+($\Delta\eta\times\Delta\phi$ = 0.1$\times$0.1 in the first two layers,
+$\Delta\eta\times\Delta\phi$ = 0.2$\times$0.1 in the third),
+and in 64 slices in $\phi$, each of $\Delta\phi\sim0.1$.
+
+The redout channels are grouped into cells that form a pseudo-projective geometry in $\eta$.
+
 
 \subsection{Muon spectrometer}\label{sec:muonspec}
+
+The most external detector system is the muon spectrometer, a combination
+of toroidal superconducting magnets (Section~\ref{sec:magnets}) and precision
+chambers providing a measurement of the momentum of muons in $|\eta|<2.7$ in addition
+to the measurement from the ID. It is also equipped 
+with an independent trigger system used for the first event triggering
+stage (see Section~\ref{sec:lvl1}) active in the pseudorapidity region $|\eta|<2.4$. 
+
+Four sub-detectors compose the muon system: Monitored Drift-Tube (MDT) chambers, 
+Cathode Strips Chambers (CSC), Resistive Plate Chambers (RPC) and Thin Gap Chambers (TGC).
+The layout changes in the barrel and end-cap regions, and is schematically shown in 
+Figure~\ref{fig:muonSect}: in the  barrel region, chambers are arranged in three cylindrical layers around
+the beam axis, one layer being inside the magnet; in the end-caps these three layers are placed 
+perpendicular to the beam axis.
+
+\begin{figure}[tb]\begin{center}
+	\subfigure[]{\label{fig:muonSect2}
+        \includegraphics[width=.4\textwidth]{detector/figures/muonSect2}}
+	\subfigure[]{\label{fig:muonSect}
+        \includegraphics[width=.5\textwidth]{detector/figures/muonSect}}
+	\caption{(a) Cross section of the barrel muon system. (b) Lateral section of the muon system. 
+        Barrel MDTs are shown in green, end-caps MDTs in light blue, CSC in yellow, 
+        TGCs in magenta, RPCs in white.%  (From \cite{Aad:JINST})
+        }
+\end{center}\end{figure}
+
+
+\subsubsection{Detection chambers}
+
+MDTs and CSCs are used to detect muons in the pseudorapidity regions $|\eta|<2.0$ and
+$2.0<|\eta|<2.7$ respectively. MDTs are proportiional chambers constituted by aluminium
+pressurised drift tubes with a diameter of 30~mm and lenght varying from 0.9~m to 6.2~m. 
+The gas mixture in them is 93\% argon and 7\% carbon dioxyde, the anode is a 50~$\mu$m
+tungsten-rhenium wire producing a radial electric field. Each chamber is composed by 
+a group of six or eight tubes placed transverse to the beam axis. This number of tubes allows
+for a very good track reconstruction and high reduction of the fake tracks from random 
+associations of background hits, providing a resolution on position of 80 $\mu$m.
+%gives a momentum  resolution $\sigma_{p_{T}}/p_{T} < 10^{-4}$~\GeV$^{-1} \cdot p_{T}$ for tracks with $p_{T} > $300~GeV.
+
+
+The CSCs are used at higher $\eta$ to better deal with the higher particle flux.
+They are arranged in a system of two disks with eight chambers each. Each chamber
+contains four multiwire proportional chambers (the CSCs) with wires oriented in the radial direction,
+spaced by 2.5~mm and in the same gas mixture of argon and carbon dioxyde as the MDTs.
+The cathode strips are oriented one perpendicularly to the anode wires (and gives the precision coordinate)
+and the other parallelyto the wires (and gives the transverse coordinate).
+The resolution provided by the interpolation between the charges induced on neighbouring cathode strips
+ranges between 50 and 70 $\mu$m.
+
+\subsubsection{Trigger chamber}
+
+For trigger purposes detectors quicker than drift tubes are needed\footnote{Drift-time in tubes with a diameter of 
+$\mathcal{O}\sim 10$~mm can be of $\sim500$~ns, too long with respect to the 25 ns spacing of the bunch crossings.}.
+MDTs and CSCs are then coupled with special layers of trigger chambers: in the barrel region, the MDT's second layer
+is covered on both sides by RPCs, while MDT's third layer is covered by a RPC alternatively on the inner and outer side;
+in the end–caps, TGCs cover the inner side of MDT's first and third layers. 
+
+A RPC is a detector with a gas-gap between two resistive bakelite plates separated by 2~mm and containing
+a gas mixture of C$_{2}$H$_{2}$F$_{4}$ (94.7\%), Iso-C$_{4}$H$_{10}$ (5\%) and SF$_{6}$ (0.3\%). 
+RPCs measure six points per coordinate for each particle, quickly collecting the avalanches with two 
+orthogonal sets of pick-up strips that provides a position resolution of 1 cm in each plane and 1 ns time resolution,
+allowing for individual bunch crossing discrimination. Also RPCs provide the $\phi$ coordinate for the tracks in
+the final analysis, since MDTs only give the $\eta$ coordinate.
+
+TGCs are similar to CSCs, have 1.8~mm wire-to-wire separation and 
+1.4~mm wire-to-cathode separation. They use a highly quenching gas mixture of CO$_{2}$ 55\% and n-C$_{5}$H$_{12}$ 45\%
+and provide  a spatial resolution of about 1~mm and a time resolution of 5~ns.
+
 
 \subsection{Trigger system}\label{sec:trigger}
 
