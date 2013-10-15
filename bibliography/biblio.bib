@@ -1,3 +1,22 @@
+@string{EPJC="Eur.\ Phys.\ J. C"}
+@string{JP="J.\ Phys."}
+@string{NCA="Nuovo Cimento"}
+@string{NIM="Nucl.\ Instr.\ Meth.\ A"}
+@string{NP="Nucl.\ Phys."}
+@string{PL="Phys.\ Lett."}
+@string{PLB="Phys.\ Lett.\ B"}
+@string{PRL="Phys.\ Rev.\ Lett."}
+@string{RMP="Rev.\ Mod.\ Phys."}
+@string{PR="Phys.\ Rev."}
+@string{ZP="Z.\ Phys."}
+@string{ZPC="Z.\ Phys.\ C"}
+@string{PRD="Phys.\ Rev.\ D"}
+@string{JHEP="JHEP"}
+@string{CC="Comput.\ Phys.\ Commun."}
+@string{JPG="J.\ Phys.\ G"}
+
+
+%%%ATLAS
 @article{cms,
      author    = "{CMS Collaboration}",
      title     = "{The CMS experiment at the CERN LHC}",
@@ -42,19 +61,6 @@
      doi       = "10.1088/1748-0221/3/08/S08003",
      SLACcitation  = "%%CITATION = JINST,3,S08003;%%"
 ,
-}
-
-@article{Aad:2009wy,
-      author         = "Aad, G. and others",
-      title          = "{Expected Performance of the ATLAS Experiment - Detector,
-                        Trigger and Physics}",
-      collaboration  = "The ATLAS Collaboration",
-      year           = "2009",
-      eprint         = "0901.0512",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ex",
-      SLACcitation   = "%%CITATION = ARXIV:0901.0512;%%"
-, 
 }
 
 @article{1748-0221-3-08-S08003,
@@ -112,6 +118,176 @@ using cosmic-ray muons",
      year      = "2010",
      pages     = "1193–1236"
 }
+
+%%%OBJECTS RECO
+@article{Aad:2009wy,
+      author         = "{ATLAS Collaboration}",
+      title          = "{Expected Performance of the ATLAS Experiment - Detector,
+                        Trigger and Physics}",
+      year           = "2009",
+      eprint         = "0901.0512",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "SLAC-R-980, CERN-OPEN-2008-020",
+      SLACcitation   = "%%CITATION = ARXIV:0901.0512;%%",
+}
+
+
+@article{eperf,
+      title    = "{Electron performance measurements with the ATLAS detector using the 2010 LHC proton-proton collision data}",
+      author   = "{ATLAS Collaboration}",
+      year     = "2012",
+      journal=EPJC,
+      volume=72,
+      number=3,
+      pages=1909
+} 
+
+@article{topocluster,
+      author  = "Lampl, W. and others",
+      title          = "{Calorimeter clustering algorithms: Description and performance}",
+      journal = "{ATL-LARG-PUB-2008-002}",
+      year           = "2012",
+      note ="\href{https://cdsweb.cern.ch/record/1099735}{https://cdsweb.cern.ch/record/1099735}"     
+}
+
+@article{LCW1,
+  title = "{Hadronic calibration of the ATLAS liquid argon end-cap calorimeter in the pseudorapidity region $1.6<|\eta|<1.8$ in beam tests}",
+  journal = NIM,
+  volume = "531",
+  pages = "481",
+  year = "2004",
+  doi = "10.1016/j.nima.2004.05.133",
+  author = "C. Cojocaru and others",
+  eprint  = "0407009",
+  archivePrefix = "arXiv",
+  primaryClass  = "physics",   
+}
+
+@article{LCW2,
+  author  = "T. Barillari and others",
+  title          = "{Local hadronic calibration}",
+  journal = "{ATL-LARG-PUB-2009-001}",
+  year = "2009",
+  note ="\href{https://cds.cern.ch/record/1112035}{https://cds.cern.ch/record/1112035}",
+}
+
+
+@article{met,
+      title          = "{Performance of Missing Transverse Momentum
+                        Reconstruction in Proton-Proton Collisions at 7 \tev\ with
+                        ATLAS}",
+      author  = "{ATLAS Collaboration}",
+      year           = "2012",
+      journal=EPJC,
+      volume=72,
+      pages=1844,
+      eprint         = "1108.5602",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CERN-PH-EP-2011-114",
+      SLACcitation   = "%%CITATION = ARXIV:1108.5602;%%",
+}
+
+
+@Article{ref:Cacciari2008,
+   author        = "Matteo Cacciari and Gavin P. Salam and Gregory Soyez",
+   title         = "The anti-$k_{t}$ jet clustering algorithm",
+   journal       = JHEP,
+  year          = "2008",
+  volume        = "04",
+  pages         = "063",
+  archivePrefix = "arXiv",
+  eprint        = "0802.1189v2",
+  doi           = "10.1088/1126-6708/2008/04/063",
+  primaryClass  = "hep-ph"
+}
+
+@Article{ref:Cacciari2006,
+  author        = "Matteo Cacciari and Gavin P. Salam",
+  title         = "Dispelling the $N^3$ myth for the $k_t$ jet-finder",
+  journal       = PL,
+  year          = "2006",
+  volume        = "B641",
+  pages         = "57",
+  doi           = "10.1016/j.physletb.2006.08.037",
+  eprint        = "0512210v2",
+  archivePrefix = "arXiv",
+  primaryClass  = "hep-ph"
+}
+
+@Article{ref:fastjet,
+  author        = "Matteo Cacciari and Gavin P. Salam and Gregorio Soyez",
+  title         = "FastJet User Manual",
+  journal       = "Eur. Phys. J.",
+  year          = "2012",
+  volume        = "C72",
+  pages         = "1896",
+  doi           = "10.1140/epjc/s10052-012-1896-2",
+  eprint        = "1111.6097",
+  archivePrefix = "arXiv",
+  primaryClass  = "hep-ph",
+}
+%  url           = "{http://fastjet.fr/}"
+
+@Article{ref:ATLAS-CONF-2011-102,
+  collaboration = "ATLAS",
+  title         = "Commissioning of the ATLAS high-performance b-tagging algorithms in the 7 TeV collision data",
+  journal = "{ATLAS-CONF-2011-102}",
+  year          = "2011",
+  note ="\href{https://cds.cern.ch/record/1369219}{https://cds.cern.ch/record/1369219}",
+}
+
+@Article{ref:ATLAS-CONF-2011-080,
+  collaboration = "ATLAS",
+  title         = "Reconstruction and Calibration of Missing Transverse Energy and Performance in $Z$ and $W$ events in ATLAS Proton-Proton Collisions at 7 TeV",
+  journal =  "{ATLAS-CONF-2011-080}",
+  year          = "2011",
+  note ="\href{https://cds.cern.ch/record/1355703}{https://cds.cern.ch/record/1355703}",
+}
+
+
+@article{jes,
+      title          = "{Jet energy measurement with the ATLAS detector in
+                        proton-proton collisions at $\sqrt{s} = 7 \tev$}",
+      author  = "{ATLAS Collaboration}",
+      journal        = EPJC,
+      volume         = "73",
+      pages          = "2304",
+      doi            = "10.1140/epjc/s10052-013-2304-2",
+      year           = "2013",
+      eprint         = "1112.6426",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex"
+}
+
+@article{btagging,
+     author = "{ATLAS Collaboration}",
+     title="{Measurement of the $b$-tagging efficiency in a sample of jets containing 
+                 muons with 5 fb$^{-1}$ of data from the ATLAS detector}",
+     journal = "{ATLAS-CONF-2012-043}",
+     year = "2012",
+     note ="\href{https://cdsweb.cern.ch/record/1435197}{https://cdsweb.cern.ch/record/1435197}"
+}
+
+@article{ctagging,
+     author  = "{ATLAS Collaboration}",  
+     title= "{$b$-jet tagging calibration on $c$-jets containing $D^{*+}$ mesons}",
+     journal="{ATLAS-CONF-2012-039}",
+     year = "2012",
+     note ="\href{https://cdsweb.cern.ch/record/1435193}{https://cdsweb.cern.ch/record/1435193}"
+}
+
+@article{ltagging,
+     author = "{ATLAS Collaboration}",
+     title="{Measurement of the mistag rate of $b$-tagging algorithms 
+                with 5 fb$^{-1}$ of data collected by the ATLAS detector}",
+     journal="{ATLAS-CONF-2012-040}",
+     year = "2012",
+     note ="\href{https://cdsweb.cern.ch/record/1435194}{https://cdsweb.cern.ch/record/1435194}"
+}
+
+
 
 
 
@@ -182,38 +358,6 @@ using cosmic-ray muons",
       SLACcitation   = "%%CITATION = ARXIV:1210.5468;%%",
 }
 
-
-@article{Cacciari:2008gp,
-      author         = "Cacciari, Matteo and Salam, Gavin P. and Soyez, Gregory",
-      title          = "{The Anti-k(t) jet clustering algorithm}",
-      journal        = "JHEP",
-      volume         = "0804",
-      pages          = "063",
-      doi            = "10.1088/1126-6708/2008/04/063",
-      year           = "2008",
-      eprint         = "0802.1189",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ph",
-      reportNumber   = "LPTHE-07-03",
-      SLACcitation   = "%%CITATION = ARXIV:0802.1189;%%",
-}
-
-@article{topCommonObjects2012,
-  author        = "Acharyia, B. and others",
-  title         = "{Object selection and calibration, background estimations and MC samples for the Summer 2012 Top Quark analyses with 2011 data}",
-  journal       = "ATL-COM-PHYS-2012-499",
-  year          = "2012",
-}
-
-@article{btagging,
-     author = "{ATLAS Collaboration}",
-     title="{Measurement of the $b$-tagging efficiency in a sample of jets containing muons with 5 fb$^{-1}$ of data from the ATLAS detector}",
-      institution  = "CERN",
-      address      = "Geneva",
-     number ="ATLAS-CONF-2012-043",
-     month = "Mar",
-     year = "2012",
-}
 
 @online{lumi,
       author         = "{ATLAS Collaboration}",

@@ -139,6 +139,10 @@ keepaspectratio]{smallstuff/frontespizio}%
 \fancyhead[RO , LE]{ \thepage}
 
 
+\newif\ifIsINT  % false by default
+\IsINTfalse
+
+
 
 \begin{document}
 \linenumbers
@@ -231,7 +235,8 @@ keepaspectratio]{smallstuff/frontespizio}%
 \addcontentsline{toc}{chapter}{Bibliography}
 
 %\bibliographystyle{woc}
-\bibliographystyle{unsrt}
+%\bibliographystyle{unsrt}
+\bibliographystyle{bibliography/atlasnote}
 \bibliography{bibliography/biblio}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
