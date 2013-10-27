@@ -48,7 +48,7 @@ triggered one. As basic preselectio, four jets satisfying the conditions
 described in Section~\ref{sec:jets} are required, at least one of them
 being tagged as a \bjet.
 
-In order to suppress the multijet background from QCD processes,
+In order to suppress the multi-jet background from QCD processes,
 combined cuts on the \met\ and on the tranverse mass of the 
 leptonically decaying $W$ boson \mt\footnote{$\mt = \sqrt{2 p^\ell_{\rm T} \met (1-\cos\Delta\phi)}$, with
 $p^\ell_{\rm T}$  being the transverse momentum (energy) of the muon (electron) and $\Delta\phi$ the
@@ -98,7 +98,7 @@ further corrections to match the data are applied, due to a mismodeling in the
 heavy- and light-flavour content of the simulated sample (see Section~\ref{sec:htxEVT}).
 
 $W$ boson production  in association with jets ($W$+jets in the following) 
-and multijet events from QCD processed also contributes, the latter
+and multi-jet events from QCD processed also contributes, the latter
 sneaking into the event selection via the misidentification of a jet or a photon as an
 electron or the presence of a non-prompt lepton from, e.g., semileptonic $b$- or $c$-hadron decay.
 Other background smaller components are single top quark, $Z$+jets, diboson
@@ -202,6 +202,27 @@ events generated from the matrix element calculation and those
 generated from parton-shower evolution in the $W/Z$+light jets
 samples is avoided via an algorithm analogous to the one used
 for $t\bar{t}$ Alpgen.
+
+For the $W$+jets background, a normalisation from data for the shapes 
+obtained from the simulation is derived since the simulation 
+overestimates the number of $W$+jets events
+by up to $\sim$20\%, depending on the jet multiplicity.
+
+By exploiting the predicted asymmetry between
+$W^+$+jets and $W^-$+jets production in p-p collisions~\cite{wasym},
+the total number of $W$+jets events in data ($N_W=N_{W^+}+N_{W^-}$), 
+can be estimated based on the measured
+difference between the number of positively- and negatively-charged $W$
+bosons, $(N_{W^+}-N_{W^-})_{\rm meas}$, and the asymmetry predicted from the simulation:
+\begin{equation}
+N_W = \left(\frac{N_{W^+}+N_{W^-}}{N_{W^+}-N_{W^-}}\right )_{\rm MC}(N_{W^+}-N_{W^-})_{\rm meas}
+\label{eq:nw}
+\end{equation}
+
+Events are categorised in terms of  multiplicity of $b$ and $c$ jets and scale factors are
+derived using Equation~\ref{eq:nw}.
+The fraction of $W$+light jets events is scaled accordingly
+in order to preserve the overall normalisation of the $W$+jets background before $b$ tagging.
 
 
 \subsubsection{Other backgrounds}\label{subsec:otherbkg}
@@ -319,22 +340,19 @@ of $m_{T}$ as computed by {\sc Hathor}, and scale and PDF uncertainties.}
 
 \subsection{Multi-jet background}\label{sec:qcdbkg}
 
-The contribution to the background from multijet events is
-estimated via data-driven methods~\cite{ttbar_3pb}.
+QCD production can pass the event selection in the electron
+channel as non-prompt electrons or as ``fake'' electrons, i.e.
+either electrons from photon conversions or mis-identified jets
+that left a high amount of energy in the electromagnetic calorimeter.
+For events in the muon channel the main contributions come from
+non-prompt leptons from semileptonic $b$- and $c$-hadron decays.
 
 
-  For the $W$+jets
-background, predictions for the shape of kinematic variables are obtained from the simulation but the
-normalisation is determined from the data, using the predicted asymmetry between
-$W^+$+jets and $W^-$+jets production in $pp$ collisions~\cite{wasym}, and 
-separating the events into categories based on the multiplicity of $b$ and $c$ jets.
-Details of the estimation of the multijet and
-$W$+jets backgrounds are given in Section~\ref{sec:DataDrivenBackground}.
-The rest of the backgrounds, as well as the signal, are estimated from 
-the simulation and normalised using their theoretical cross sections. 
-
-
-%\section{Object definition}\label{sec:objects}
+The contribution to the background from multi-jet events is
+estimated via data-driven methods, since
+simulation is not expected to predict this contribution
+with the desired level of accuracy.
+The technique used is called ``Matrix Method'' (MM in the following)~\cite{ttbar_3pb}.  
 
 \input{vlq_analysis/wbx}
 
