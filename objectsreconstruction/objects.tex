@@ -23,6 +23,16 @@ a particle identification final leg where the full detector information elaborat
 is combined to match a candidate physics object 
 (electrons, muons, jets and the missing transverse energy \met).
 
+The expected signatures for the various particles in terms of interaction
+with the detector system are schematically shown in Figure~\ref{fig:decaychart}.
+
+\begin{figure}[tb]\begin{center}
+        \subfigure{
+  	\includegraphics[width=0.7\textwidth]{objectsreconstruction/figures/particles}}
+	\caption{Drawing illustrating how particles are detected in the ATLAS sub-systems.
+	\label{fig:decaychart}}
+\end{center}\end{figure}
+
 %In addition, some details from
 %selections specific for the analyses presented in this dissertation will be given.
 
@@ -38,7 +48,7 @@ or perigee with respect to the Z axis in the XY plane; $z_0$, Z component of the
 These parameters are shown in the double-view drawing of Figure~\ref{fig:trackpar}.
 
 \begin{figure}[tb]\begin{center}
-	\subfigure[]{
+	\subfigure{
   	\includegraphics[width=0.7\textwidth]{objectsreconstruction/figures/tracks}}
 	\caption[bla]{Schematic drawings of the parameters used for track reconstruction in the XY and $R$Z planes (left and right respectively)
           where the origin is the beam spot, i.e. where the protons collide and interact.
@@ -53,15 +63,16 @@ From there, a path is formed along the seed directional information adding
 space points one by one. This is done by using a Kalman filter algorithm~\cite{Frühwirth1987444}
 which checks progressively the compatibility between the track (also progressively updated)
 and the new point. The five track parameters described before are also computed at this step.
-
-As basic requirements, the candidate track must be formed by at least seven points
-measured in the silicon detectors, $d_0$ must be lower than 10~mm and the 
-transverse momentum must be higher than 150~\mev.  A cleaning procedure then 
+%As basic requirements, the candidate track must be formed by at least seven points
+%measured in the silicon detectors, $d_0$ must be lower than 10~mm and the 
+%transverse momentum must be higher than 150~\mev.  
+A cleaning procedure then 
 rejects incomplete tracks or tracks sharing hits with others, or composed by
 false space points. The candidate tracks are extended
 into the TRT and re-fitted taking into account the effects from the interaction
-of the charged particle with the detector material. If at least ten TRT hits
-within 10~mm from the extrapolated points the track is kept and re-fitted.
+of the charged particle with the detector material. 
+%If at least ten TRT hits
+%within 10~mm from the extrapolated points the track is kept and re-fitted.
 
 A second algorithm, called {\it outside-in}, is applied in order to better
 reconstruct tracks from secondary charged particles. This algorithm does
@@ -70,7 +81,7 @@ ones not associated to any track candidate in by the inside-out reconstruction)
 and extrapolating back to the SCT and pixel detector.
 
 
-\section{Primary vertex}\label{sec:primaryvertex}
+\section{Primary vertices}\label{sec:primaryvertex}
 
 In general, a primary vertex (PV) is identified by the tracks associated to it.
 The reconstruction is performed via an iterative procedure~\cite{ATLAS-CONF-2010-069}
@@ -94,26 +105,148 @@ of distinct vertices as a single one~\cite{ATLAS-CONF-2012-042}.
 
 %\footnotetext{Of the reconstructed verteces consistently in the beam collision region in the XY plane with at least five associated tracks, the one with the highest number of tracks is taken as the primary one.}
 
+
+\section{Energy clusters}\label{sec:clusters}
+
+With the name ``energy cluster'' we generically refer to energy deposits in the calorimeter
+cells that are grouped together on the basis of some criteria~\cite{topocluster}.
+In particular, we are interested in {\it topological clusters} and {\it electromagnetic towers},
+used respectively for jets and electron/photon reconstruction.
+
+Topological clusters, abbreviated as ``topoclusters'', are 
+built from neighboring calorimeter cells starting from a seed deposit with a signal 
+($S$, the cell measured energy) to noise ($N$, the RMS of the cell noise distribution) ratio
+higher than a certain threshold. Cells with $S/N\geq 4$ are taken as seeds, and starting from the
+one with the highest $S/N$ all the neighboring cells with $S/N\geq 2$ are added to the topocluster.
+Topoclusters are treated as massless and their energy at the electromagnatic 
+scale is the sum of the constituent cells. Their position and direction parameters
+are obtained from a weighted sum of the constituent cells' pseudorapidity and azimuth angle
+based on the absolute value cell's energy. Since energy measurement can be negative (due to
+noise fluctuations), clusters with negative energies are rejected.
+
+Towers are built using the {\it sliding window} algorithm~\cite{eperf} starting from
+single energy deposits in the EM calorimeter middle layer of size
+$\Delta\eta\times\Delta\phi=0.025\times0.025$. As schematically shown in Figure~\ref{fig:sliding},
+a window of  $3\times5$ cell units is defined, centered on the maximum of
+energy and finally expanded to optimize the cluster reconstruction, with a size
+that depends on the object (electron or photon) and the position in the detector
+($3\times7$ in regions with $|\eta|<1.4$ and $5\times5$ elsewhere).
+
+\begin{figure}[tb]\begin{center}
+        \subfigure{
+  	\includegraphics[width=0.85\textwidth]{objectsreconstruction/figures/slidingwindow}}
+	\caption{The three steps of the sliding window algorithm.
+	\label{fig:sliding}}
+\end{center}\end{figure}
+
 \section{Electrons}\label{sec:electrons}
-Electrons~\cite{eperf} are reconstructed for pseudorapidities up to $|\eta| = 2.5$, where
-information from the ID is available, matching a track with an energy deposit
-(cluster) in the electromagnetic calorimeter. 
 
-Clusters~\cite{topocluster} are built starting from
-$\Delta\eta\times\Delta\phi=0.025\times0.025$ single energy deposits summing
-up into towers. Adjacent towers form clusters of $3\times7$ cells units in $\eta\times\phi$
-in $|\eta|<1.4$ and $5\times5$ further. Of all the candidate reconstructed tracks,
-those extrapolated to the calorimeter with the smallest $\dr$ with respect to the
-energy cluster is chosen.
+Electrons~\cite{eperf} are reconstructed for pseudorapidities up to $|\eta| = 2.47$, where
+information from the ID is available, matching a track (see Section~\ref{sec:tracks}) 
+with a cluster in the electromagnetic calorimeter reconstructed with the sliding window 
+algorithm (see Section~\ref{sec:clusters}).
+In order to account for bremsstrahlung losses the matching is done within a region
+of dimension $\Delta\eta\times\Delta\phi=0.05\times0.10$ and if more candidate
+tracks are matched, of all the ones with hits in the silicon detectors
+the track with the smallest $\dr$ with respect to the
+energy cluster is chosen. In addition, the track momentum has to be compatible
+with the cluster energy, which is calibrated to the electromagnetic scale
+derived from Monte Carlo based corrections (to account for dead material losses),
+test-beam studies and calibration from $Z\to ee$ events~\cite{Abat:1900zz,AAA103104}.
 
-For our analyses, electrons in the transition region $1.37<|\eta_{\rm cluster}| <1.52$
-with inactive material are excluded. Electrons are also required to have 
-$\et = E_{\rm cluster}/\cosh\eta_{\rm track} > 25\gev$ and $z_0<2~$mm.
-They have to be separated from any jet (Section~\ref{sec:jets}) selected by at least $\dr =0.4$.
-90\% efficient isolation cuts to reduce the background from non-prompt electrons coming from
-hadron decays are defined, one based on the energy from calorimeter cells surrounding the candidate in
-a cone of radius $R=0.2$ and the other based on the track transverse momenta sum in a cone of radius $R=0.3$ around
-the electron.
+In general, electron can be distinguished from hadrons thanks to various characteristics
+of their shower development: electrons deposit the most of their energy in the second layer of
+the EM calorimeter; the width of their shower is narrower; they have smaller
+hadronic leakage\footnote{The hadronic leakage is the ratio of the transverse energy reconstructed
+in the first layer of the hadronic calorimeter to the total  transverse energy reconstructed in the 
+EM calorimeter.}; the $E/p$ variable (ration of cluster energy and track momentum) is higher.
+
+Some difficulties arise when dealing with $\pi^0$ and $\eta$ particles, which decay into two $\gamma$s
+that produce two close showers reconstructed as a single one in the second layer of the EM
+calorimeter, and in general with jets faking electrons from, e.g. QCD processes.
+There are then six different electron definitions to help separate real electrons from fake ones,
+described in the following ordered from the looser requirements to the tightest.
+Performance studies on electron reconstruction and identification where done using 2010 data and Monte
+Carlo $Z\to ee$ and $W\to e\nu$ events~\cite{eperf}. 
+
+\texttt{Loose} electrons lie in the pseudorapidity region $|\eta| < 2.47$ and have 
+low hadronic leakage and requirements on the variables defining the shower shape.
+The identification efficiency is high but the jet rejection is low (about 500).
+
+\texttt{Loose++} electrons are \texttt{loose} electrons whose track has at least one hit in 
+the pixel detector and at least 7 hits in the combined silicon detectors and the
+$|\eta_{\rm first EM}|$ distance between the track estrapolated to the first EM layer and
+the matched cluster is lower than 0.015. The identification
+efficiency is similar to the loose one but the rejection is ten times higher.
+
+\texttt{Medium} electrons are \texttt{loose++} electrons where additional requirements on shower shape
+are made as well as on their tracks: $|d_0|<$5~mm and $|\eta_{\rm first EM}|<0.01$.
+The efficiency drops to 88\% and the rejection is
+higher than the previous.
+
+\texttt{Medium++} electrons are \texttt{medium} electrons whose track has at least one hit in the
+first pixel detector layer, a requirement that allows to reject electrons from
+photon conversion. Charged hadrons contamination is reduced by discarding candidates
+whose track has a low fraction of high-threshold TRT hits. In addition, $|\eta_{\rm first EM}|<0.005$ 
+and stricter cuts are applied to shower shaper of clusters in $|\eta|<2.01$. The
+efficiency is about 85\% and rejection is about 50$\times 10^3$.
+
+\texttt{Tight} electrons are \texttt{medium++} electrons with additional requirements on the distance
+between the track and the matched cluster ($|\Delta\phi|<0.02$, $|\Delta\eta|<0.005$) and on the $E/p$
+variable. Stricter cuts are imposed on the fraction of high-threshold TRT hits and on the impact parameter
+($|d_0|<$1~mm). The efficiency drops to 75\% and the rejection is higher than the previous one.
+
+\texttt{Tight++} electrons are \texttt{tight} electrons with asymmetric $\Delta\phi$ cuts, which give
+both better efficiency and rejection.
+
+\begin{figure}[tb]\begin{center}
+	\subfigure[]{\label{fig:eleeffET}
+  	\includegraphics[width=0.45\textwidth]{objectsreconstruction/figures/Figures_EffZee_ET_tight_v2}}
+	\subfigure[]{\label{fig:eleeffETA}
+  	\includegraphics[width=0.45\textwidth]{objectsreconstruction/figures/Figures_EffZee_eta_tight_20to50_v2}}
+	\caption{\texttt{Tight} electron identification efficiencies measured from $Z\to ee$ events and predicted by MC as a function (left) of~\ET\ (integrated over $|\eta|< 2.47$ excluding the transition region $1.37< |\eta|<1.52$ and (right) of~$\eta$ and integrated over $20< \ET<50$~GeV.~\cite{eperf}}
+\end{center}\end{figure}
+
+
+
+In addition, to suppress further the QCD multijet background, 
+isolation cuts are imposed both as calorimeter (using the energy in a cone of size $\Delta R<0.2$, \texttt{EtCone20})
+and track isolation (using the scalar sum of $p_T$s from tracks within a cone of $\Delta R<0.3$, \texttt{PtCone30}).
+
+%isolation cuts to reduce the background from non-prompt electrons coming from
+%hadron decays are defined, one based on the energy from calorimeter cells surrounding the candidate in
+%a cone of radius $R=0.2$ and the other based on the track transverse momenta sum in a cone of radius $R=0.3$ around
+%the electron.
+
+\subsection{Scale factors and energy corrections for analysis}
+
+For our analyses~\cite{Acharya:1509562}, electrons in the transition region $1.37<|\eta_{\rm cluster}| <1.52$
+with inactive material are excluded. Electrons are required to satisfy \texttt{tight++} criteria and to
+ have $\et = E_{\rm cluster}/\cosh\eta_{\rm track} > 25\gev$ and $z_0<2~$mm.
+The \texttt{EtCone20} and \texttt{PtCone30} isolation cuts are chosen to give
+90\% efficiency.
+In addition, jets (see Section~\ref{sec:jets}) within $\dr =0.2$ of the selected electron are 
+discarded, and if an additional jet with $p_T>25~$\gev\  and $|JVF|>0.5$ is found within $\dr =0.4$,
+then the electron is rejected.
+The electron is matched to the single electron trigger \texttt{EF\_e24vhi\_medium1}
+combined with a logical \texttt{OR} to the \texttt{EF\_e60\_medium1} trigger, which
+recovers some efficiency loss at $\ET > 80$~GeV.
+
+The efficiency in selecting electrons can be factorized as:
+\begin{equation}\label{eq:eleeff}
+\varepsilon = \varepsilon_{\rm reco} \cdot\varepsilon_{\rm tight++} \cdot\varepsilon_{\rm isolation} \cdot\varepsilon_{\rm trigger} 
+	\end{equation}
+where the various components represent respectively: the efficiency in recostructing the electron 
+in terms of track-cluster match, track quality and hadronic leakage; the efficiency
+for the \texttt{tight++} identification criteria; the efficiency for the isolation cuts;
+the efficiency from trigger selection. Scale factors are derived in bins of $(\eta, \ET)$,
+and the trigger scale factors are separated into four data-taking periods 
+(\texttt{A-B3}, \texttt{B4-D3} without \texttt{C1-C5}, \texttt{C1-C5} and \texttt{D4+}).
+The efficiency scale factors are applied as weights to Monte Carlo events.
+
+The electron energies in data are corrected using scale factors $\alpha(\eta)$ derived
+from data-to-simulation comparison in $Z\to ee$ events in order to match the $Z$ boson 
+mass peak.
 
 \section{Muons}\label{sec:muons}
 %\subsection{Muons}\label{sec:muons}
@@ -129,16 +262,19 @@ must be less than 5\% of the muon $\pt$.
 This isolation requirement works well also in high pile-up events
 or in the case the muon is close to a jet.
 
+\subsection{Scale factors and energy corrections}
+
+\subsection{Analysis requirements}
+
+
+
 \section{Jets}\label{sec:jets}
 %\subsection{Jets}\label{sec:jets}
 
 Jets from quark hadronization are reconstructed using the anti-$k_t$
 algorithm~\cite{ref:Cacciari2008,ref:Cacciari2006,ref:fastjet} with a
 radius parameter $R=0.4$ (from which the algorithm is often referred to as anti-$k_t$4) 
-using calorimeter energy deposits\footnote{Topological clusters, abbreviated as ``topo-clusters'', are 
-built from neighboring calorimeter cells starting from a seed deposit with a signal to noise ratio
-higher than a certain threshold. Topo-clusters are treated as massless and their energy at the electromagnatic 
-scale is the sum of the constituent cells.}
+using calorimeter energy deposits\footnote{}
 corrected for effects of non-compensation,
 dead detector material and out-of-cluster leakage using local cluster calibrations~\cite{LCW1,LCW2}.
 
@@ -159,6 +295,11 @@ if jets are found within $\Delta R$ of 0.2 of a selected electron, the
 jet closest to the lepton is discarded in order to avoid double-counting of electrons as jets.
 After this one jet has been removed, electrons that lie within $\Delta R< 0.4$ of 
 the jets remaining are removed.
+
+\subsection{Scale factors and energy corrections}
+
+\subsection{Analysis requirements}
+
 
 \subsection{$b$-taggin}~\label{sec:btagging}
 
@@ -189,3 +330,6 @@ that did not get associated with any  high-$\pt$ object are calibrated for energ
 dead material regions and for the different response to the electromagnetic and hadronic
 components of particle showers. Finally the \met\ is computed from the combinetion of the vector 
 sum of the calibrated cluster momenta and a term associated with muon momenta.
+
+
+\subsection{Analysis requirements}
