@@ -2,35 +2,83 @@
 
 \chapter{The ATLAS experiment at the Large Hadron Collider}\label{chap:atlas}
 
-The analyses presented in this dissertation have been performed analyzing data from 
-proton-proton (p-p) collisions at the \cme $\rts=8\tev$ recorded during the year 2012 
-at the ATLAS experiment~\cite{Aad:2008zzm}. In the following Chapter we will briefly 
-describe the main features of the detector, located at the CERN laboratories in Geneva,
+The time when particle physics experiments could fit in one's
+loft is well passed, if it ever existed. The reason is simple,
+as the deeper we want to investigate matter, the highest the energy
+we need. According to the Standard Model, we now know all the
+particles composing ordinary matter present in nature, so if we
+want to see something new, we need to produce it. The way to
+do it is suggested by one of the fundamental principles of relativity,
+$E=mc^2$, according to which we can smash massive particles
+and observe what other kind of matter comes out of the
+available energy.
+Soon enough after the discovery of the muon, after observing all
+the observable from cosmic rays, physicist
+started to do that using particle accelerators, the last of
+them in history being the Large Hadron Collider.
+
+The Large Hadron Collider, built to collide protons at a \cme\ of 14~\tev, 
+is the world's highest energy particle accelerator, overcoming the Tevatron
+proton-antiproton collider where the top quark was discovered
+in 1995~\cite{PhysRevLett.74.2422,PhysRevLett.74.2626}.
+The ATLAS experiment is one of the collaborations that take advantage
+of the collisions provided by the Large Hadron Collider,
+and has been conceived to pursuit a challenging physics program with,
+at the head of the list, the discovery of the Higgs boson, achieved
+in 2012~\cite{2012gk}.
+
+In the following Chapter we will briefly describe the main features of 
+the accelerator and with some more details the ATLAS detector, 
+both located at the CERN laboratories in Geneva,
 Switzerland.
 
-The experimental facilities are situated at Point~1 along the Large Hadron Collider 
-(LHC)~\cite{lhc} 27~km long ring, shown in Figure~\ref{fig:lhcring}. The accelerator
+
+\section{The Large Hadron Collider at CERN}\label{sec:lhc}
+
+The ATLAS experiment~\cite{Aad:2008zzm} is situated at Point~1 along the Large Hadron Collider 
+(LHC)~\cite{lhc} 27~km long ring (Figure~\ref{fig:nicepics}).
+The accelerator
 tunnel can reach an underground depth of 175~meters and is spread between Swiss
 and French territory, while the cave where ATLAS is allocated is about 100~meters 
-underground in the CERN Swiss site of Meyrin. 
+underground in the CERN Swiss site of Meyrin.
+
+
+\begin{figure}[tb]\begin{center}
+	\subfigure[]{\label{fig:atlasmural}
+  	\includegraphics[width=0.47\textwidth]{detector/figures/mural}}
+	\subfigure[]{\label{fig:lhcdraw}
+  	\includegraphics[width=0.42\textwidth]{detector/figures/lhc_diagram}}
+	\caption[bla]{Left: View of Point 1, just above the ATLAS cavern, with a mural painting 
+        of the detector, reproduced at a scale of about 1:3
+        by artist Josef Kristofoletti\footnotemark.
+        Right: A drawing of the LHC complex.\label{fig:nicepics}}
+\end{center}\end{figure}
+
+
+The LHC accelerates protons up to 4~\tev, but is designed to reach 7~\tev\ per beam
+when it will be operated at his full potential. This energy is reached 
+through a chain of processes shown in Figure~\ref{fig:lhcring}.
+First, protons are extracted from Hydrogen gas and injected in the first machine, the linear 
+accelerator LINAC2 that starts the acceleration chain. When protons reach
+an energy of 50~\mev\ they are injected into the Proton Synchrotron Booster
+(PSB) and accelerated up to the energy of 1.4~\gev. The second circular
+accelerator, the Proton Synchrotron (PS) brings the energy of the protons
+to 25~\gev\ previous to injecting them into the last machine before the LHC,
+the Super Proton Synchrotron (SPS). Protons of 450~\gev\ finally enter the
+LHC where they are boosted to energies of up to 4~\tev.
+The four main LHC experiments are shown on the collider ring.
 
 \begin{figure}[tb]\begin{center}
 	\subfigure{
   	\includegraphics[width=0.8\textwidth]{detector/figures/ring.eps}}
-	\caption{A schematic showing the accelerator complex at CERN. Protons are
-        extracted from Hydrogen gas and injected in the first machine, the linear 
-        accelerator LINAC2 that starts the acceleration chain. When protons reach
-        an energy of 50~\mev\ they are injected into the Proton Synchrotron Booster
-        (PSB) and accelerated up to the energy of 1.4~\gev. The second circular
-        accelerator, the Proton Synchrotron (PS) brings the energy of the protons
-        to 25~\gev\ previous to injecting them into the last machine before the LHC,
-        the Super Proton Synchrotron (SPS). Protons of 450~\gev\ finally enter the
-        LHC where they are boosted to energies of up to 4~\tev.
-        The four main LHC experiments are shown on the collider ring.\label{fig:lhcring}}
+	\caption{A schematic showing the accelerator complex at CERN.\label{fig:lhcring}}
 \end{center}\end{figure}
 
+
+\footnotetext{More info at: \url{http://www.atlas.ch/mural/}.}
+
 The LHC program was approved by CERN Council in 1994, followed by the approval of
-the four main experiments physics programs: ATLAS~\cite{Aad:2008zzm} and CMS~\cite{cms}
+the four main experiments: ATLAS~\cite{Aad:2008zzm} and CMS~\cite{cms}
 in 1996; ALICE~\cite{alice} in 1997; LHCb~\cite{lhcb} in 1998.
 Works towards the installation of the most powerful particle accelerator of the world
 started when the Large Electron Positron Collider (LEP) was dismantled in 2000 to 
@@ -57,8 +105,7 @@ Geneva, 30 November 2009. CERN's Large Hadron Collider has today become the worl
 \end{quotation}
 
 
-
-The main performance figure of merit for an accelerator is the luminosity, the 
+One of the main characteristics for an accelerator is the luminosity, the 
 instantaneous luminosity $\mathcal L$ being defined as 
 \begin{equation}\label{eq:lumiN}
 \mathcal{L}\times\sigma=\dfrac{dN}{dt}=f\times n\dfrac{N_1\times N_2}{A}\times\sigma.
@@ -67,6 +114,8 @@ Here $dN/dt $ is the event rate of a certain process and $\sigma$ is its cross
 section. This rate is directly proportional to the the frequency $f$, the number 
 of bunches $n$ and the number of particles in the two bunches $N_1, N_2$, and
 inversely proportional to the beam cross-section $A$.
+The instantaneous luminosity is measured by dedicated subdetectors that are
+described in Section~\ref{sec:forward}.
 
 Integrating over the accelerator active time (a ``fill'', when stable beams are kept
 colliding) gives the \textit{integrated luminosity}, relating the total number 
@@ -91,6 +140,7 @@ of produced events $N_{tot}$ to the cross-section:
         Bunch spacing (ns)              & 25            & 150       & 75/50        & 50 \\
         Peak luminosity (\cmm2\sm1)     & 1$\times10^{34}$& 2.1$\times10^{32}$& 3.7$\times10^{33}$& 7.7$\times10^{33}$\\
         Emittance $\varepsilon_{n}$ ($\mu$rad)&3.75     &   2.0      & 2.4      & 2.5   \\
+        Max. $<\mu>$                    & 19            & 4             & 17         & 37       \\
 	\bottomrule\end{tabular}\caption{Overview of some parameters for the LHC performance comparing the design values with their time
         evolution during the first long run operation in 2010-2013~\cite{Lamont}.}\label{tab:lhcpar}
 \end{table}
@@ -108,45 +158,51 @@ of produced events $N_{tot}$ to the cross-section:
 %Number of Interactions per CrossingMore details on this can be found in arXiv:1101.2185. 
 \end{center}\end{figure}
 
-In 2012 LHC reached a peak luminosity of 7.7$\times10^{33}$~\cmm2\sm1\ which is
+In 2010 ATLAS collected about 45~\ipb of p-p collision data at \rts=7~\tev, and in
+2011 reached about 5~\ifb of the same data.
+In 2012, with  \rts=8~\tev\ collisions, LHC reached a peak luminosity of 7.7$\times10^{33}$~\cmm2\sm1\ which is
 more than half the design luminosity, as shown in Table~\ref{tab:lhcpar} together
-with other parameters relevant for the accelerator performance. Over the last
+with other parameters relevant for the accelerator performance. 
+Over 2012, the last
 year of data taking before the long shutdown\footnote{LHC terminated the p-p program
 at the end of 2012, operated proton-heavy ion collisions for two months at the beginning
 of 2013 and then stopped for what is called the first long shutdown. During this two-years
 time the accelerator and the experiments as well will undergo substantial maintenance and 
 upgrade works, in order to be re-operated in 2015 with higher performance at a higher
-\cme for particle collisions.}
-ATLAS collected about 20\ifb\ of p-p collision data at \rts=8~\tev.
+\cme for particle collisions.},
+ATLAS collected about 20~\ifb\ of p-p collision data at \rts=8~\tev.
 Figure~\ref{fig:intlumi} shows the delivered luminosity from the start of stable beams until beam dump and the luminosity recorded by
 ATLAS during stable beam conditions, the difference with respect to the delivered luminosity being due to Data AQuisition (DAQ)
 inefficiencies. Of the recorded luminosity, only a part is usable for analysis, and is what is called ``good data'', i.e. 
-the data that satisfy Data Quality (DQ) requirements assessed after reprocessing.
+the data that satisfy Data Quality (DQ) requirements assessed after reprocessing (see Section~\ref{sec:daq}).
 
 In order to increase the luminosity LHC operates with a high number of protons per bunch as well as a high
  number of bunches per beam and reduces the inter-bunch latency time.
 This overall defines a set of challenges that physics analysis will face associated to the high luminosity.
 Even at the detector design stage, the high frequency of collision environment foreseen influenced
 the choice of radiation resistance material for the experiment sub-systems. Concerning directly the physics
-instead we can list the main problematics as being \textit{underlying events} and \textit{pile-up}
-
-Underlying events are the product of the hadronic character of p-p hard interaction, where the main collision process
-is accompanied by secondary parton interactions at low transfered momentum (soft QCD) and are flavor- and color-connected to the
-hard scattering. They are observed as jets of particles close to the direction of the beam and are in general not 
-separable from the event of interest. Their contribution can be studied with Monte Carlo techniques tuned with data from 
-\textit{minimum bias} events, as perturbative theory does not properly model low momentum QCD.
-%%%%%%%%%%AAAAAAAAAAAAAAAAA
-
+%instead we can list the main problematics as being \textit{underlying events} and \textit{pile-up}
+instead, the main problematic is \textit{pile-up}.
 
 Pile-up events are distinguished between \textit{in-time} and \textit{out-of-time} pile-up. The first ones come 
 from the multiple inelastic scatterings of protons in the same bunch, as if we consider a cross-section of 80~mb
 at the nominal luminosity of $10^{34}$~\cmm2\sm1 the number of events per second will be something like
 a billion. This translate, at a collision frequency of one crossing every 25~ns, to about 20 interactions per
-crossing that will be detected simultaneously. On the other hand, the inter-bunch time interval is so short
+crossing that will be detected simultaneously. A useful observable to estimate in-time pile-up is
+the number of reconstructed primary vertices (see Section~\ref{sec:primaryvertex}) $N_{\rm PV}$.
+In addition, on the other hand, the inter-bunch time interval is so short
 that the electronics reading the detector might not keep up with the frequency of collisions, leading to the
-cumulation of events that happened in different beam crossings.
+cumulation of events that happened in different beam crossings. This is the effect we refer to as 
+out-of-time pile-up, and a good estimator for it is the average number of p-p interactions
+per bunch crossing at the time of the event, $<\mu>$, which recalling Equation~\ref{eq:lumiN} is defined as:
+\begin{equation}\label{eq:mu}
+<\mu> = \dfrac{LA}{nf},
+\end{equation}
+with $L$ being the average instantaneous luminosity over a time period $\Delta t\gg 600$~ns.
+The maximum values reached by the variable $<\mu>$ during the three years of data taking
+are reported in Table~\ref{tab:lhcpar}.
 
-ATLAS makes use of a three-level trigger system (described in Section~\ref{sec:trigger}) to identify
+Finally, ATLAS makes use of a three-level trigger system (described in Section~\ref{sec:trigger}) to identify
 and record only the events of interest, while the pile-up issues are dealt with at the analysis 
 reconstruction level.
 
@@ -155,24 +211,34 @@ reconstruction level.
 \section{The ATLAS detector}\label{sec:atlas}
 
 ATLAS (A Toroidal LHC ApparatuS)~\cite{Aad:2008zzm} is a general purpose experiment
-aimed at exploring a vast range of physics scenarios. It is characterized by
+aimed at exploring a vast range of physics scenarios and designed to measure the particles
+produced in p-p collisions at the LHC at unprecedented energies and instantaneous luminosities. 
+It is the biggest detector of its kind ever built (it's 46~m long and 25~m high) is characterized by
 a full coverage of the space around the p-p interaction point and complete
 containment of the particles produced in the collision. Different subsystems are
 layered concentrically one after the other, each of them pursuing a specific task. 
 Right around the interaction point
 (IP) where the LHC makes protons collide there is the Vertex Detector, reconstructing
-charged particles trajectories that are bended by the first solenoid magnet surrounding
+charged particles trajectories that are bent by the first solenoid magnet surrounding
 the Vertex Detector. Particles going through it then encounter the two calorimeter systems,
 the Electromagnetic and the Hadronic one. Muons are the only particles that will pass
 the calorimeters material (beyond neutrinos) and a dedicated Muon Spectrometer is the last
 piece of detector, embedded in a huge toroidal magnet. The detector complex is presented
-as a schematic in Figure~\ref{fig:atlas}. 
+as a schematic in Figure~\ref{fig:atlas}, and a drawing of particle detection in the various
+subdetector systems is shown in Figure~\ref{fig:detection}. 
 
-\begin{figure}[tb]\begin{center}
+\begin{figure}[htb]\begin{center}
 	\subfigure{
   	\includegraphics[width=0.9\textwidth]{detector/figures/atlas}}
 	\caption{Schematic drawing of the ATLAS experiment. The detector subsystem are indicated as well as the total dimensions.\label{fig:atlas}}
 \end{center}\end{figure}
+
+\begin{figure}[htb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.75\textwidth]{detector/figures/detection}}
+	\caption{Drawing of the detection of particles going from the interaction point through the whole detector.\label{fig:detection}}
+\end{center}\end{figure}
+
 
 \subsection{Coordinate system}
 
@@ -223,7 +289,7 @@ and $\Delta y$ and $\Delta \eta$ are Lorentz invariant. The pseudorapidity is pr
 to the rapidity as it does not require knowing the particle mass but only its polar position.
 The distance between two particles is often referred to in terms of $\Delta R$:
 \begin{equation}\label{eq:deltar}
-\Delta R = \sqrt{\Delta^{2}\eta + \Delta^{2}\phi}.
+\Delta R = \sqrt{(\Delta\eta)^{2} + (\Delta\phi)^{2}}.
 	\end{equation}
 
 
@@ -247,13 +313,14 @@ $\eta$ & $\infty$ & 3.13 & 2.44 & 1.74 & 1.31 & 0.88 & 0.55 & 0.175 & 0\\\bottom
 ATLAS is provided with four superconducting magnets that allow the measurement of
 charged particles momenta by curving their trajectory. 
 
-A central solenoid sits 
+A central solenoid, 5.3~m long and 2.4~m in diameter, sits 
 around the inner detector and produces a 2~T magnetic field along the direction
 parallel to the beam axis. It is only 45~mm thick (equivalent to 0.66 radiation lenghts $X_0$)
 and is cooled with liquid Helium, sharing the cryostat with the electromagnetic calorimeter.
 
 Paired to the muon spectrometer, the superconducting air-core toroid magnet (Figure~\ref{magnets}) 
-has an open structure with eight superconducting toroidal coils in the barrel part and
+has an open structure with eight superconducting toroidal coils in the barrel part (each 25.3~m long, located
+at the outer diameter of 20.1~m) and
 two end-cap systems made of eight coils. The field strength varies strongly with $\phi$:
 in the barrel region ($|\eta|<1.4$) is 1.5-5.5 Tesla$\cdot$m; in the end-caps ($1.6<|\eta|<2.7$) 1-7.5 is Tesla$\cdot$m. 
 Such configuration of the magnets gives a field orthogonal to the muons trajectory.
@@ -567,8 +634,9 @@ TGCs are similar to CSCs, have 1.8~mm wire-to-wire separation and
 1.4~mm wire-to-cathode separation. They use a highly quenching gas mixture of CO$_{2}$ 55\% and n-C$_{5}$H$_{12}$ 45\%
 and provide  a spatial resolution of about 1~mm and a time resolution of 5~ns.
 
+\section{Forward sub-detectors}\label{sec:forward}
 
-\subsection{Trigger system}\label{sec:trigger}
+\section{Trigger system}\label{sec:trigger}
 
 It was already introduced at the beginning of this Chapter the issue
 faced by LHC experiments of dealing with a huge amounts of events
@@ -599,7 +667,7 @@ or events considered not physically interesting. These trigger chains
 are used for checks or calibration rather than physics analysis.
 
 
-\subsubsection{Level 1 trigger}\label{sec:lvl1}
+\subsection{Level 1 trigger}\label{sec:lvl1}
 
 The Level 1 trigger (L1) is completely based on the hardware of the detector,
 taking information from calorimeters and from the muon spectrometer trigger
@@ -617,7 +685,7 @@ muon spectrometer to form the so-called Region of Interest (RoI) that is
 passed to the next trigger level.
 
 
-\subsubsection{Level 2 trigger}\label{sec:lvl2}
+\subsection{Level 2 trigger}\label{sec:lvl2}
 
 Starting from the RoI, the Level 2 trigger (L2) will reduce the 75~kHz to
 3.5~kHz of events with an average decision time of 40~ms. At this
@@ -626,7 +694,7 @@ to build candidate object (electrons, photons, muons) and
 better obtain its position and energy with simplified algorithms
 quick enough to respect the limit on the decision time.
 
-\subsubsection{Level 3 trigger}\label{sec:lvl3}
+\subsection{Level 3 trigger}\label{sec:lvl3}
 
 The last trigger, Level 3, is called Event Filter (EF) since
 at this point the physics objects are built using the same
@@ -634,3 +702,5 @@ algorithms as the off-line reconstruction. With an execution time
 amounting to 4~s, the EF reduces the event rate to the goal value
 of 200~Hz.
 
+
+\section{Data Quality}\label{sec:daq}

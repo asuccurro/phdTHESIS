@@ -1,7 +1,6 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
-\chapter{Object reconstruction}\label{chap:objects}
-%\section{Object reconstruction}\label{sec:objects}
+\chapter{Event reconstruction}\label{chap:objects}
 
 After having described the ATLAS detector in Chapter~\ref{chap:atlas} 
 and the procedure for Monte Carlo simulation of events in Chapter~\ref{chap:mc},
@@ -404,10 +403,10 @@ constituents with higher momentum, and produces jets with a conical
 structure (see Figure~\ref{fig:jetshapes}).
 
 \begin{figure}[tb]\begin{center}
-	\subfigure{\label{fig:jetshapes}
-  	\includegraphics[width=0.47\textwidth]{objectsreconstruction/figures/jetshapes}}
-        \subfigure{\label{fig:corr_jet}
-        \includegraphics[width=0.5\textwidth]{objectsreconstruction/figures/corr_jet.eps}}
+	\subfigure[]{\label{fig:jetshapes}
+  	\includegraphics[width=0.5\textwidth]{objectsreconstruction/figures/jetshapes}}
+        \subfigure[]{\label{fig:corr_jet}
+        \includegraphics[width=0.47\textwidth]{objectsreconstruction/figures/corr_jet_lcw.eps}}
         \caption{Left: The same input produces different results in terms of jet reconstruction using 
         various jet algorithms~\cite{Salam:2009jx}. Right: Average jet energy response from simualted events
         at the LCW scale for various calibrated energies ($E$) as a function of
@@ -513,7 +512,8 @@ chosen (see Figure~\ref{fig:btageffs}).
 \begin{figure}[tb]\begin{center}
 	\subfigure{
   	\includegraphics[width=0.8\textwidth]{objectsreconstruction/figures/btageffs}}
-	\caption{these values refer to jets with $\pt >15\gev$ and 
+	\caption{Light- (left) and $c-$jet (right) rejection as a function of the \bjet\ tagging efficiency
+        for different tagging algorithms. These values refer to jets with $\pt >15\gev$ and 
 $|\eta|<2.5$ in simulated $t\bar{t}$ events~\cite{btagging}.\label{fig:btageffs}}
 \end{center}\end{figure}
 
