@@ -338,8 +338,9 @@ This quantity varies between 0.5 and 2.5~$X_0$ depending on the pseudorapidity r
 is responsible for photon conversions and electron bremsstrahlung.
 
 The ID is surrounded by the central solenoid magnet (Section~\ref{sec:magnets}) and is composed by three subsystems, 
-from the closest to the furthest from the IP: a pixel detector, a silicon strip detector and
-a straw detector (Figures~\ref{fig:innerdet1} and~\ref{fig:innerdet2}).
+from the closest to the furthest from the IP: the pixel detector, the SemiConductor Tracker (SCT) and
+the Transition Radiation Tracker (TRT).
+%silicon strip detector and a straw detector (Figures~\ref{fig:innerdet1} and~\ref{fig:innerdet2}).
 
 \begin{figure}[tb]\begin{center}
 	\subfigure[]{\label{fig:innerdet1}
@@ -351,7 +352,7 @@ a straw detector (Figures~\ref{fig:innerdet1} and~\ref{fig:innerdet2}).
 \end{center}\end{figure}
 
 
-\subsubsection{Silicon Detectors}
+\subsubsection{Pixel detector}
 
 The first subsystem covers the region $|\eta|<2.5$ and  is composed by three cylindrical layers in the barrel region, each of them distant from the beam by
 50.5~mm, 88.5~mm and 122.5~mm respectively, and by three concentric discs in the end-cap region, each of them distant from the beam by
@@ -364,14 +365,15 @@ region respectively.
 The very first layer is called $B-$layer as, thanks to its position really close to the IP,
 allows for the reconstruction of secondary vertices associated with the production of
  short lived particles such as $B-$hadrons. This information is very useful to identify
-particle jets from $b$ quarks\footnote{The $b-$tagging technique will be discussed in %AAAAAAAAAAAAAAAAAAAA
-}.
+jets originating from the fragmentation of $b$ quarks.
+
+\subsubsection{Semiconductor tracker}
 
 After the three layers of pixel detectors, come four layers of  silicon strip detectors. The SemiConductor
 Tracker (SCT) also covers the region $|\eta|<2.5$ with a barrel and end-cap design similar to the 
-pixel detector one, being composed by eight silicon bands (two per layer) 128~mm long and 80~$\mu$m large.
+pixel detector one, being composed by eight silicon strips (two per layer) 128~mm long and 80~$\mu$m large.
 It makes use of $\sim$6.3 millions readout channels and the resolution achieved is of 17~$\mu$m 
-in $R\phi$  and 580~$\mu$m in Z and $R$ in the barrel and end-cap region respectively.
+in $R\phi$  and 580~$\mu$m in Z ($R$) in the barrel (end-cap) region.
 
 By allowing for four redundant position measurements\footnote{One of the coupled layers is rotated of $40$mrad with respect
 to the other, which is parallel to the axis, giving a small stereo angle for a redundancy in the $\phi$ coordinate measurement.}, 
@@ -394,7 +396,7 @@ to layers of straws. The resolution achieved is of 130~$\mu$m in $R\phi$ and Z$\
 The covered pseudorapidity region is of $|\eta|<2.0$ and the readout is composed by $\sim$351000 channels.
 
 About 36 measurements per track are taken, and since each channel provides two independent thresholds per hit,
-it is possible to discriminate between electrons and pions, since the firsts will more probably reach the
+it is possible to discriminate between electrons and pions, since the former will more likely reach the
 high threshold.
 
 In the end, the combination of the three ID subsystems gives very precise $R\phi$ and Z measurements, as well as good track pattern recognition.
@@ -414,7 +416,7 @@ Particles leaving the ID and surviving the crossing of the central solenoid magn
 will face the calorimeter system, depicted in Figure~\ref{fig:calorimeters}.
 The full system is characterized by a coverage
 in pseudorapidity up to $|\eta|<5$ and an almost full coverage in $\phi$. With its 
-22~$X_0$ and 24~$X_0$ of material in the barrel and end-cap regions respectively 
+22~$X_0$ and 24~$X_0$ radiation lengths of material in the barrel and end-cap regions respectively 
 it is also able to stop most of the non-muon particles from the interaction.
 Besides particles energy measurement, the calorimeters provide particle identification
 information, discriminating electrons, photons and jets, and the determination
@@ -437,38 +439,73 @@ share a cryostat in the foward region.
 	\caption{Schematic of the calorimeter complex of the ATLAS detector.\label{fig:calorimeters}}
 \end{center}\end{figure}
 
-The processes involved in the shower formation are bremsstrahlung $\epm \to \epm + \gamma$
-and pair production $\gamma \to \epem$. For particles with energies lower than about
-100\mev\ ionization processes are dominating. In general, these cascade of events
+Particles interact both with the passive and active material, but only the energy released
+in the active samples will be detected. 
+%The balance, chosen at the design stage, between
+%the two elements will determine how much the calorimenter compensate for the 
+The processes involved in the shower formation are several and mainly electromagnetic.
+Photons in matter can undergo the photoelectric effect, Compton scattering and $\gamma \to \epem$
+pair formation. The general contribution of these processes depends both on the photon energy
+and on the atomic number $Z$ of the material, and is shown in Figure~\ref{fig:photonsmatter}.
+Electrons and positrons can ionize atoms and molecules, produce bremsstrahlung $\epm \to \epm + \gamma$
+and emit Cerenkov radiation. Unless the calorimeter has been specifically designed for it,
+ Cerenkov radiation does not contribute much, while ionization is the main process for energies
+up to $\sim 100$~\mev, where bremsstrahlung starts to dominate.
+
+In general, these cascade of events
 continues until a certain threshold is reached, and the final number of particles
 produced is proportional to the energy of the first particle originating the shower.
+
+\begin{figure}[tb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.6\textwidth]{detector/figures/photonsmatter}}
+	\caption{Domains in term of photon energy and $Z$ number of the absorber material
+        in which photoelectric eﬀect, Compton scattering and pair production are the 
+        favorite processes for energy loss~\cite{Wigmans}.\label{fig:photonsmatter}}
+\end{center}\end{figure}
+
+Also hadrons interact with matter, either ionizing it (if charged) or by nuclear interactions.
+The problem of the latter process is that this energy release is often not directly detectable,
+like in nuclear breakups and excitations, and is therefore called ``invisible energy''.
+Secondary hadrons will be produced, forming the hadronic part of the shower, but sooner
+or later something like $\pi^0\to \gamma\gamma$ will happen and the shower will
+develop electromagnetically further on.
+
+The average fraction of electromagnetic and hadronic shower components is a characteristic
+of the sampling calorimeter and depends on the choice of the passive and active material
+and on the design. Calorimeters are said to be {\it non-compensating} if, like the ATLAS
+calorimeters, the detection of hadronic showers is less efficient than the one of 
+electromagnetic showers. Calorimeters with a similar response for the two components
+are called  {\it compensating}, while calorimeters more efficient when revealing
+hadronic showers are  {\it over-compensating}.
 
 %The distinction between electromagnetic and hadronic calorimeters is due to the different phenomenology of the physics involved. The development of electromagnetic showers from an incident electron or photon is well understood and for particles with equal incident energy the variations in shape and measured energy of the showers are quite small. The size of the shower is linearly dependent on the radiation length $X_{0}$ of the material entered, while the size of hadronic showers depends linearly on the nuclear interaction length\footnote{The nuclear interaction length is the average distance traveled by hadrons before inducing a nuclear reaction.} $\lambda_{int}$ of the material. 
 
 The performance for the energy resolution is parametrized by the following formula:
 \begin{equation}\label{eq:resolution}
-\frac{\sigma_{E}}{E} = \frac{a}{\sqrt{E}}\oplus\frac{b}{E}\oplus c,
+\frac{\sigma_{E}}{E} = \frac{S}{\sqrt{E}}\oplus\frac{N}{E}\oplus C,
 \end{equation} 
-where the terms of the sum correspond, respectively, to a statistical term related to how shower develops in the sampling calorimeter; to an instrumental
-term including readout electronic rumor effects; to a systematic term that depends on calibration, shower containment, inactive material and on the
+where the terms of the sum correspond, respectively, to a ``stocastic'' term related to how shower develops in the sampling calorimeter; to a ``noise''
+term including the contribution from electronic noise and pile-up energy fluctuation; 
+to a systematic term that depends on calibration, shower containment, inactive material and on the
 linearity of the response as well. 
 
-
-The energy resolution measured in test-beam runs for the liquid argon calorimeters is~\cite{lar_readiness}:
+The goal energy resolution for the liquid argon calorimeters is~\cite{lar_readiness}:
 \begin{equation}
 \frac{\sigma_{E}}{E}=\frac{10\%}{\sqrt{E}} \oplus\frac{170\MeV}{E} \oplus 0.7\%,
 \end{equation}
 while for the hadronic barrel calorimeter is~\cite{tile_readiness}:
 \begin{equation}
-\frac{\sigma_{E}}{E}=\frac{50\%}{\sqrt{E}} \oplus 3\%.
+\frac{\sigma_{E}}{E}=\frac{50\%}{\sqrt{E}} \oplus 5\%.
 \end{equation}
-
+Test-beam runs to measure the response of the two calorimeters to electrons
+and single pions respectively have shown results comparable to the goal resolutions.
 
 
 \subsubsection{Electromagnetic calorimeter}\label{sec:emcalbarrel}
 
-The electromagnetic calorimeter, also called LAr calorimeter (from Liquid Argon),
-can measure electrons and photons energies in the range from 50~\mev\ and 3\tev.
+The electromagnetic calorimeter, also called LAr calorimeter (from Liquid Argon, the active material),
+can measure electrons and photons energies in the range from 50~\mev\ to 3~\tev.
 In the barrel region it is referred to as EMB (ElectroMagnetic Barrel), is 
 divided into two identical semi-barrels EMBA and EMBC separated at Z=0 by a 6~mm
 gap and covers the pseudorapidity region $|\eta|<1.475$. 
@@ -479,26 +516,18 @@ $|\eta|<1.8$, stands in front of the EMB and allows for the measurement of
 the energy the particles lost before reaching the EMB i.e. crossing the
 material of the ID, the central solenoid and the cryostat.
 
-The absorbing material is lead shaped into an accordion geometry to achieve
-full symmetry in $\phi$, as shown in the drawing of Figure~\ref{fig:calolar}.
-Signal from the ionization produced in the liquid argon is collected
-by an electrode in the middle of the active material region, fixed into
-a honeycomb structure.
-
-Three longitudinal regions in the EMB are designed for different tasks. The first
+Three longitudinal samples in the EMB are designed for different tasks. The first
 sample, 4.3$X_0$ long, is finely segmented in $\eta$ to precisely measure
 the direction in pseudorapidity of the particles with  thin readout strips
 of $\Delta\eta\times\Delta\phi$ = 0.0031$\times$0.098. This helps for
 photon/$\pi^{0}$ discrimination and as well for separate close-by $\gamma$s
 from $\pi^{0}$ decay.
-
-The second piece, 16$X_0$ long, contains the bulk of electrons and photons energy deposit. 
+The second sample, 16$X_0$ long, contains the bulk of electrons and photons energy deposit. 
 It is divided in towers with dimension $\Delta\eta\times\Delta\phi$ = 0.025$\times$0.0245
 and provides the position measurement of the cluster. 
 The  95\% of the energy of the shower is deposited in a matrix of 3$\times$7 
 towers $\Delta\eta\times\Delta\phi$.
-
-The third layer, 2$X_0$ long, is coarsely segmentes and collects the last bit of the longitudinal
+The third sample, 2$X_0$ long, is coarsely segmentes and collects the last bit of the longitudinal
 development of the electromagnetic showers. Towers in this region have a dimension
 of $\Delta\eta\times\Delta\phi$ = 0.05$\times$0.0245.
 
@@ -515,9 +544,45 @@ radial direction.
         (b) Schematic drawing of a module of the Hadronic barrel calorimeter.}
 \end{center}\end{figure}
 
+
+The absorbing material is lead shaped into an accordion geometry to achieve
+full symmetry in $\phi$, as shown in the drawing of Figure~\ref{fig:calolar}.
+Signal from the ionization produced in the liquid argon is collected
+by an electrode in the middle of the active material region, fixed into
+a honeycomb structure.
+
 The thickness of the absorber layers depend on the pseudorapidity in
 order to make particles entering the system with different incident 
 angles cross the same amount of material.
+
+\subsubsection{Hadronic calorimeters}\label{sec:hadcal}
+
+Hadronic showers have typically a much longer shape than
+electromagnetic ones, and need therefore in general more
+interaction lenghts of material to be fully contained.
+Hadronic calorimeters are therefore designed to completely
+absorb high-energy hadrons, which will deposit only some (small) part of their energy 
+in the electromagnetic calorimeter.
+
+
+
+\subsubsection{Hadronic barrel calorimeter}\label{sec:hadcalbarrel}
+
+The hadronic calorimeter in the barrel and extended barrel region, going up to
+$|\eta|<1.7$, is made of scintillating tiles as active material with lead as absorber
+and is commonly referred to with the name of TileCal. 
+The light in the ultraviolet range that is generated in the tiles is collected through
+wavelenght shifting optical fibre (Figure~\ref{fig:calotile}).
+
+TileCal sits just after the electromagnetic
+calorimeter and measures the energy and position of jets and isolated hadrons.
+It is divided in depth in three layers with varying lenght (1.4, 4.1, 1.8 hadronic interaction
+leghts $\lambda$ in the barrel and 1.5, 2.6, 3.3$\lambda$ in the extended barrel) and segmentation
+($\Delta\eta\times\Delta\phi$ = 0.1$\times$0.1 in the first two layers,
+$\Delta\eta\times\Delta\phi$ = 0.2$\times$0.1 in the third),
+and in 64 slices in $\phi$, each of $\Delta\phi\sim0.1$.
+
+The redout channels are grouped into cells that form a pseudo-projective geometry in $\eta$.
 
 \subsubsection{Hadronic end-cap calorimeter}\label{sec:hadcalendcap}
 
@@ -543,24 +608,6 @@ It has an electromagnetic part that uses copper as absorber and two hadronic com
 with tungsten as passive material. 
 
 
-\subsubsection{Hadronic barrel calorimeter}\label{sec:hadcalbarrel}
-
-The hadronic calorimeter in the barrel and extended barrel region, going up to
-$|\eta|<1.7$, is made of scintillating tiles as active material with lead as absorber
-and is commonly referred to with the name of TileCal. 
-The light in the ultraviolet range that is generated in the tiles is collected through
-wavelenght shifting optical fibres. As can be seen in the drawing of Figure~\ref{fig:calotile},
-the tiles are slightly rotated, to allow showers cross them from the side.
-
-TileCal sits just after the electromagnetic
-calorimeter and measures the energy and position of jets and isolated hadrons.
-It is divided in depth in three layers with varying lenght (1.4, 4.1, 1.8 hadronic interaction
-leghts $\lambda$ in the barrel and 1.5, 2.6, 3.3$\lambda$ in the extended barrel) and segmentation
-($\Delta\eta\times\Delta\phi$ = 0.1$\times$0.1 in the first two layers,
-$\Delta\eta\times\Delta\phi$ = 0.2$\times$0.1 in the third),
-and in 64 slices in $\phi$, each of $\Delta\phi\sim0.1$.
-
-The redout channels are grouped into cells that form a pseudo-projective geometry in $\eta$.
 
 
 \subsection{Muon spectrometer}\label{sec:muonspec}
@@ -594,8 +641,8 @@ perpendicular to the beam axis.
 \subsubsection{Detection chambers}
 
 MDTs and CSCs are used to detect muons in the pseudorapidity regions $|\eta|<2.0$ and
-$2.0<|\eta|<2.7$ respectively. MDTs are proportiional chambers constituted by aluminium
-pressurised drift tubes with a diameter of 30~mm and lenght varying from 0.9~m to 6.2~m. 
+$2.0<|\eta|<2.7$ respectively. MDTs are proportional chambers constituted by 
+pressurised drift tubes made of aluminium with a diameter of 30~mm and lenght varying from 0.9~m to 6.2~m. 
 The gas mixture in them is 93\% argon and 7\% carbon dioxyde, the anode is a 50~$\mu$m
 tungsten-rhenium wire producing a radial electric field. Each chamber is composed by 
 a group of six or eight tubes placed transverse to the beam axis. This number of tubes allows
@@ -604,18 +651,18 @@ associations of background hits, providing a resolution on position of 80 $\mu$m
 %gives a momentum  resolution $\sigma_{p_{T}}/p_{T} < 10^{-4}$~\GeV$^{-1} \cdot p_{T}$ for tracks with $p_{T} > $300~GeV.
 
 
-The CSCs are used at higher $\eta$ to better deal with the higher particle flux.
+The CSCs are used at higher $\eta$ to better cope with the higher particle flux.
 They are arranged in a system of two disks with eight chambers each. Each chamber
 contains four multiwire proportional chambers (the CSCs) with wires oriented in the radial direction,
 spaced by 2.5~mm and in the same gas mixture of argon and carbon dioxyde as the MDTs.
 The cathode strips are oriented one perpendicularly to the anode wires (and gives the precision coordinate)
-and the other parallelyto the wires (and gives the transverse coordinate).
+and the other parallel to the wires (and gives the transverse coordinate).
 The resolution provided by the interpolation between the charges induced on neighbouring cathode strips
 ranges between 50 and 70 $\mu$m.
 
-\subsubsection{Trigger chamber}
+\subsubsection{Trigger chambers}
 
-For trigger purposes detectors quicker than drift tubes are needed\footnote{Drift-time in tubes with a diameter of 
+For trigger purposes detectors with faster response than drift tubes are needed\footnote{Drift-time in tubes with a diameter of 
 $\mathcal{O}\sim 10$~mm can be of $\sim500$~ns, too long with respect to the 25 ns spacing of the bunch crossings.}.
 MDTs and CSCs are then coupled with special layers of trigger chambers: in the barrel region, the MDT's second layer
 is covered on both sides by RPCs, while MDT's third layer is covered by a RPC alternatively on the inner and outer side;
@@ -634,12 +681,46 @@ and provide  a spatial resolution of about 1~mm and a time resolution of 5~ns.
 
 \section{Forward sub-detectors}\label{sec:forward}
 
+ATLAS is equipped with some detectors in the forward regions to perform additional measurements or
+monitoring studies. In particular, the Minimum Bias Trigger Scintillators (MBTS), that are somehow
+embedded in the structure of TileCal extended barrel modules (see Figure~\ref{fig:extendedbarrel})
+and share with it the readout electronics, as they are also read by wavelenght-shifting fibers.
+The MBTS consist of 32 scintillator paddles assembled in two disks covering the pseudorapidity region
+$2.09<|\eta|<3.84$ and are used for trigger purposes to detect minimum bias activity during the first
+runs of the LHC. 
+
+MBTS are also used for relative luminosity measurements, but there are two detectors specifically
+built to determine the luminosity delivered to ATLAS: LUCID and ALFA. LUCID (LUminosity measurements
+using Cerenkov Integrating Detector) is made of 32 tubes surrounding the beam pipe 17~m
+far from the interaction point on both sides of ATLAS and measures the luminosity bunch by bunch.
+ALFA (Absolute Luminosity For ATLAS) is only activated during special runs, and consists of 8 
+scintillating fibers detectors placed at 240~m from the interaction point inside roman pots, above and
+below the beam pipe.
+
+Another luminosity monitorer is the Zero-Degree Calorimeter, whose main purpose is to determine the centrality of heavy-ion
+collisions. Placed at 140~m from the interaction point on both sides of the beam axis, is made of quartz rods
+alternated with tungsten plates.
+
+Finally, the Beam Condition Monitor (BCM) is made of two sets of diamond sensors located 184~cm close
+to the interaction point along the beam and 5.5~cm close along $R$. Its task is to detect beam losses,
+potentially harmful for ATLAS, and in that case to alert LHC in order to stop the accelerator.
+
+
+
+\begin{figure}[tb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.\textwidth]{detector/figures/extendedbarrel}}
+	\caption{Schematic of a section of TileCal barrel and extended barrel modules, with the
+        cells division. The parts labelled with ``E'' are the MBTS.\label{fig:extendedbarrel}}
+\end{center}\end{figure}
+
+
 \section{Trigger system}\label{sec:trigger}
 
 It was already introduced at the beginning of this Chapter the issue
 faced by LHC experiments of dealing with a huge amounts of events
 at very high frequencies. We remind that considering the nominal LHC
-luminosity of \highL\ a rate of interactions of 1~GHz is expected!
+luminosity of \highL\ a rate of interactions of 40~MHz is expected!
 This poses serious technical difficulties as the maximum frequency
 at which data can be recorded is limited to 200~Hz considering the
 limited capacity for storage.
@@ -648,7 +729,7 @@ ATLAS developed a trigger system able to reduce by a factor of 10$^6$
 the amount of data to be kept by selecting only interesting physics events.
 The system is divided in three levels characterized by increasing sofistication
 and diminishing speed. At the very first indeed we will need a really quick and
-simple criterium to reject useless events. The reduced information can then be
+simple criterium to reject uninteresting events. The reduced information can then be
 processed with somehow slower logic by the other two High Level Triggers (HLT).
 A drawing of the system is shown in Figure~\ref{fig:trigger}.
 
@@ -662,15 +743,43 @@ Most of the trigger chains used for physics are un-scaled in the
 sense that all the events passing the selection are kept, but there
 are also pre-scaled trigger chains that contain either too many events
 or events considered not physically interesting. These trigger chains
-are used for checks or calibration rather than physics analysis.
+are used for checks or calibration rather than physics analysis, and the
+prescaling value $P$ means that of all the events that would have passed 
+the trigger, $1/P$ were accepted.
+
+With the term ``trigger chain'' we refer to the sequence of selections
+defining a certain trigger object, with a naming convention like:
+\begin{equation*}\label{eq:}
+{\rm [LEVEL][N][TYPE(S)][THRESHOLD][ISOLATION][QUALITY]},
+\end{equation*}
+where the components, from left to right, are: the trigger level used; the
+multiplicity of the type; the object candidate; the threshold applied to
+the transverse momentum or energy of the object candidate; the object isolation;
+the severity of the final algorithm requirements (this applies only to the Event
+Filter level).
+
+Trigger chains define a {\it trigger menu}, where they are associated to their
+prescale value $P$, and which is chosen based on the physics program of the
+data taking period taking into account the LHC luminosity. 
+
+Defining the data taking period time unit as ``Luminosity Block'' (LB), typically
+a few minutes of  data taking, information on beam conditions, detector performance 
+and events passing any of the trigger chains of the trigger menu are stored
+to be then used in the analyses. All the LB occurring between the start and the
+end of a stable beam collision period compose a ``run''. Runs are finally grouped
+in ``Data Periods'', labelled with capital letters (``Period A'', ``Period B'', {\it etc}.),
+when they pertain to the same general detector condition, machine configuration and
+trigger menu.
+
+
 
 
 \subsection{Level 1 trigger}\label{sec:lvl1}
 
 The Level 1 trigger (L1) is completely based on the hardware of the detector,
-taking information from calorimeters and from the muon spectrometer trigger
-systems RPC and TGC (Section~\ref{sec:muonspec}) at 40~MHz (the frequency of
-the beam crossing) and reducing it to 75~kHz by choosing events with high
+taking information from calorimeters, from the muon spectrometer trigger
+systems RPC and TGC (Section~\ref{sec:muonspec}) and from the MBTS (Section~\ref{sec:forward}) 
+at 40~MHz (the frequency of the beam crossing) and reducing it to 75~kHz by choosing events with high
 transverse momentum or high missing transverse energy.
 
 Using dedicated fast front-end electronics (the typical decision time being less than
@@ -692,13 +801,31 @@ to build candidate object (electrons, photons, muons) and
 better obtain its position and energy with simplified algorithms
 quick enough to respect the limit on the decision time.
 
-\subsection{Level 3 trigger}\label{sec:lvl3}
+\subsection{Event filter}\label{sec:lvl3}
 
 The last trigger, Level 3, is called Event Filter (EF) since
 at this point the physics objects are built using the same
-algorithms as the off-line reconstruction. With an execution time
+algorithms as the off-line reconstruction, with looser selections. With an execution time
 amounting to 4~s, the EF reduces the event rate to the goal value
 of 200~Hz.
+Events passing the EF are assigned to {\it streams} defined to separate
+the events into different datasets for different analysis interests, e.g.
+electron streams, muon streams, jet streams {\it etc}.
 
+As an example, one of the trigger chains used in our analysis is 
+\texttt{EF\_mu24i\_tight}: it selects events at the EF level with one 
+muon with $p_T>24$~\gev\ and some isolation requirement which passes
+the muon reconstruction algorithm cuts defined as ``tight''
+(more on event reconstruction is reported in the dedicated Chapter~\ref{chap:objects}).
 
 \section{Data Quality}\label{sec:daq}
+
+The totality of p-p collisions recorded by ATLAS, which differs from the amount
+delivered by the LHC because of data-taking inefficiencies, is still
+not 100\% usable by physics analyses. Indeed, every subdetector needs to
+perform some routine checks %(usually done by PhD students) 
+on the quality of the data they recorded in order to certify that its performace
+was conform to the expectations. So-called ``Good Runs Lists'' (GRL) are
+compiled stating for each LB what was ``OK'' and what not.
+The single analyses will then decide which GRL to use, based on their specific
+needs of the individual subsystems.
