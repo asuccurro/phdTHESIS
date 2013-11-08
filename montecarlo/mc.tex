@@ -254,27 +254,182 @@ which is also written as a sum over Feynman diagrams:
 Parton shower adds higher order corrections to the hard scatter using an approximation scheme,
 since real radiative corrections to any inclusive quantity (like the hard cross section as computed at
 fixed order in pQCD) are divergent. The dominant contributions below a cut-off parameter, associated to 
-collinear parton splitting or soft gluon emission, are included ordered in sequence of smaller emission angles.
+collinear parton splitting or soft gluon emission, are included iteratively ordered in sequence of, typically, smaller emission angles.
 %The Kinoshita-Lee-Nauemberg theorem assures that virtual corrections cancel.
 
-There are three possible processes for QCD emission: $q\to gq$, $g\to gg$ and $g\to q\bar{q}$.
-The cross section then factorizes into the product of the parent parton production cross section times
- a splitting factor. Considering e.g. the $q\to gq$ splitting from a tree level process with $n+1$
-final state particles we have:
+There are three possible processes for QCD emission: 
+$q\to gq$, $g\to gg$ and $g\to q\bar{q}$.
+The cross section then factorizes into the product of 
+the parent parton production cross section times
+ a splitting factor. Considering e.g. the $q\to gq$ 
+splitting from a tree level process with $n+1$
+final state particles we can graphically represent it as
+in Figure~\ref{fig:factorization}, with the quark $k$ and the
+gluon $l$ being emitted at a small angle $\theta$.
+Mathematically we have:
 \begin{equation}
   \big|\mathcal{M}_{n+1}\big|^2{\rm d}\Phi_{n+1} \to 
   \big|\mathcal{M}_{n}\big|^2{\rm d}\Phi_{n} \dfrac{\alphas}{2\pi}\dfrac{{\rm d}t}{t}P_{q,qg}(z)\dfrac{{\rm d}\phi}{2\pi},
 \label{eq:splitting1}
 \end{equation}
+where $\phi$ is the azimuth defined by $\vec{k}$ and$\vec{l}$ around the $\vec{k+l}$
+direction, $z$ is an arbitrary parameter in general defined as a ratio between the
+energy of the particles emitted:
+\begin{equation}
+  \label{eq:zfromk0} z = \frac{k^0}{k^0 + l^0},
+\end{equation}
+and $t$ is the {\it hardness} parameter characterizing the divergence
+and the ordering of the splittings. It has the dimensions of a mass, and 
+the preference is to take it as $t = E^2\theta^2$. 
+The values for $\phi$, $z$ and $t$ are generated randomly during the Monte
+Carlo simulation process. 
+The function $P_{q,qg}(z)$ is
+the Altarelli-Parisi splitting function, and is the only term that changes in
+Equation~\ref{eq:splitting1} between $q\to gq$, $g\to gg$ and $g\to q\bar{q}$ 
+splittings.
 
+\begin{figure}[hbt]\begin{center}
+	\subfigure[]{\label{fig:factorization}
+  	\includegraphics[width=0.45\textwidth]{montecarlo/figures/factorization}}\hskip5ex
+	\subfigure[]{\label{fig:splitkin}
+  	\includegraphics[width=0.4\textwidth]{montecarlo/figures/splitkin}}
+	\caption{Left: graphical representation of the $q\to qg$ splitting. The
+        black circles represent the $\mathcal{M}_{n+1}$ and $\mathcal{M}_{n}$
+        amplitudes of the tree-level processes. Right: kinematic of the splitting~\cite{Ambroglini:2009nz}.}
+\end{center}\end{figure}
+
+Factorization holds if the virtuality of the splitting parton $q^2 = (k+l)^2$ 
+is negligible with respect to the energies entering the process, and 
+can be applied iteratively as shown graphically in Figure~\ref{fig:factorization2}.
+At this point, allowing for $n$ splitting processes, the cross section can be written as:
+\begin{equation}
+  \label{eq:leadinglog} 
+  %\sigma_0 \alpha_S^n \int \frac{d t_1}{t_1}  \frac{d  t_2}{t_2} \ldots \frac{d t_n}{t_n} \times \theta (Q^2 > t_1 > t_2 > \ldots >  t_n > \lambda^2) = 
+  \sigma_0 \frac{1}{n!} \alpha_S^n \log^n
+  \frac{Q^2}{\lambda^2},
+\end{equation}
+where $Q$ is the upper cut-off scale called {\it annihilation energy} that determines
+when the showering starts, and $\lambda$ is the infrared cut-off. The shower ends
+when the virtuality $q^2$ reaches the {\it hadronization scale}, which is of the
+order of $1~\gev^2$. From the cross section expression of Equation~\ref{eq:leadinglog},
+this procedure is called ``leading log approximation''.
+
+\begin{figure}[tb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.6\textwidth]{montecarlo/figures/factorization2}}
+	\caption{Recursive application of factorization, with the angles ordered
+        as  $\theta' \gg \theta \rightarrow 0$~\cite{Ambroglini:2009nz}.\label{fig:factorization2}}
+\end{center}\end{figure}
+
+Once the shower is developed, the vertices and lines of the final configuration are
+assigned weights, which are for each vertex:
+  \begin{equation}
+    \label{eq:splitvert} \theta (t - t_0) \hspace{0.75em} \frac{\alpha_S
+    (t)}{2 \pi} \hspace{0.25em} \frac{dt}{t} \hspace{0.25em} P_{i, j l} (z)
+    \hspace{0.25em} dz \hspace{0.25em} \frac{d \phi}{2 \pi},
+  \end{equation}
+and for each line are the so-called {\it Sudakov form factors}:
+  \begin{equation}
+    \label{eq:sudadef} \Delta_i (t', t'') = \exp \left[ - \sum_{(j l)}
+    \int_{t''}^{t'} \frac{dt}{t} \int_0^1 d z \hspace{0.75em} \frac{\alpha_S
+    (t)}{2 \pi} \hspace{0.25em} \hspace{0.25em} P_{i, j l} (z) \right]
+  \end{equation}
+where $t'$ is the value of $t$ at the upstream vertex, and $t''$ 
+at the downstream vertex. If we reached the end of the graph,
+$t''$ is substituted by a cut-off $t_0$.
+The Sudakov form factors specify the range of the $z$ parameter for 
+which the splitting is resolvable and represent the probability
+of {\it not} splitting. Figure~\ref{fig:showergraph} shows
+the typical graph shape of a shower evolved with splittings
+strongly ordered in angle.
+
+\begin{figure}[hbt]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.6\textwidth]{montecarlo/figures/MCWSShower}}
+	\caption{An example of a typical shower final graph~\cite{Ambroglini:2009nz}.\label{fig:showergraph}}
+\end{center}\end{figure}
 
 \subsubsection{Initial and final state radiation}\label{sec:isrfsr}
 
+We discussed up to now the development of parton shower arising
+from the emission from hadrons produced in the hard scattering, i.e. 
+starting in general at an high annihilation scale $Q^2$ and progressively
+reaching the hadronization scale. This process goes under the name of
+{\it final state radiation} (FSR), as it is generated from outgoing
+partons of the hard interaction.
+
+Parton shower can of course also happen before the hard interaction, and
+is called {\it initial state radiation} (ISR) as the incoming partons
+of the hard scattering originate the emission. In this case
+there is an important difference in the shower evolution, that is
+that the final energy of the showering is the hard interaction energy
+scale. To respect this fact, Monte Carlo simulation of ISR adopts a 
+``backward evolution'', first setting the correct parton momentum distributions
+for the hard scatter, and then developing the shower backward, with the 
+intermediate partons aquiring energy at each emission. The Sudakov form 
+factors are then slightly different from Equation~\ref{eq:sudadef}, being
+rescaled by a factor that takes into account the PDFs of the parton at the
+two vertices.
 
 
 \subsubsection{Matrix element and parton shower matching}\label{sec:matching}
 
 \subsection{Hadronization}\label{sec:hadronization}
+
+When partons reach the hadronization scale energy $Q\sim 1\gev$ after showering,
+they recombine in bound colorless states according to the confinement
+principle, holding at low momentum. The so-called {\it parton-hadron duality}
+assumes that no high momentum transfer is needed in the recombination,
+as it happens  close in phase space. This is a property of QCD
+experimentally observed, but there are no theoretical arguments
+explaining the hadronization. The solution is then to rely on
+phenomenological models.
+
+The principle at the basis of hadronization models used in Monte Carlo is the 
+{\it large $N_c$ limit}, or {\it planar limit}, where $N_c$ is the number
+of colors and we consider the QCD value $N_c = 3$ as just the dominant
+contribution. Simple rules are then defined: color and anticolor indices
+go from 1 to $N_c$; quark and antiquark lines are oriented and assigned
+a color and anticolor index respectively; gluon lines are oriented and assigned
+a pair of color-anticolor indices to achieve color neutrality. 
+The color structure of the three splitting
+processes according to these rules are shown in Figure~\ref{fig:planarrules}.
+
+%%%AAAAAAAAAA
+The string model uses string dynamics to describe the color flux between quarks. 
+It assumes that the string between two quarks produces a linear
+confinement potential. If the quarks separate 
+from each other, when the string energy exceeds the mass of a quark
+pair, the quark pair is created and the 
+string is broken into two ``shorter'' strings of color-singlet
+states. The cluster model is based on the color 
+pre-confinement of the branching processes. 
+Gluons that remain after parton shower are split into quark-antiquark 
+pairs. Neighboring quarks and antiquarks (not from the same gluon) 
+are grouped in color-singlet clusters which 
+typically decay into two hadrons.
+During the last decades, different measurements at colliders have
+been used to tune these models to properly describe 
+the hadron multiplicity in the final state.
+
+\begin{figure}[hbt]\begin{center}
+	\subfigure[]{\label{fig:planarrules}
+  	\includegraphics[width=0.45\textwidth, height=0.18\textwidth]{montecarlo/figures/planarrules}}\hskip5ex
+	\subfigure[]{\label{fig:colourflow}
+  	\includegraphics[width=0.45\textwidth]{montecarlo/figures/colour2}}
+	\caption{~\cite{Ambroglini:2009nz}.}
+\end{center}\end{figure}
+
+
+
+\begin{figure}[hbt]\begin{center}
+	\subfigure[]{\label{fig:had_string}
+  	\includegraphics[width=0.4\textwidth]{montecarlo/figures/had_string}}
+	\subfigure[]{\label{fig:had_cluster}
+  	\includegraphics[width=0.4\textwidth]{montecarlo/figures/had_cluster}}
+	\caption{Drawing of a parton shower completed with hadronization from the Lund string model (a) and the cluster model (b)~\cite{Mangano:933464}.}
+\end{center}\end{figure}
+
 
 
 \subsection{Underlying-event}\label{sec:underlyingevent}
