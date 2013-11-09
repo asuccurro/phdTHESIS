@@ -394,40 +394,65 @@ a color and anticolor index respectively; gluon lines are oriented and assigned
 a pair of color-anticolor indices to achieve color neutrality. 
 The color structure of the three splitting
 processes according to these rules are shown in Figure~\ref{fig:planarrules}.
+While the assignment of color connections in the case of $q\to qg$ and
+$g\to q\bar{q}$ splittings is univocal, for $g\to gg$ there are two possible
+configurations (where by inverting the two final state gluons transform one
+into the other) and when the color connections are reconstructed they are chosen
+with a 50\% probability each. The final picture looks e.g. like the graph
+in Figure~\ref{fig:colourflow}, where the important information is not the
+specific color assigned to the final state parton, but rather the {\it color flow}.
 
-%%%AAAAAAAAAA
-The string model uses string dynamics to describe the color flux between quarks. 
-It assumes that the string between two quarks produces a linear
-confinement potential. If the quarks separate 
-from each other, when the string energy exceeds the mass of a quark
-pair, the quark pair is created and the 
-string is broken into two ``shorter'' strings of color-singlet
-states. The cluster model is based on the color 
-pre-confinement of the branching processes. 
-Gluons that remain after parton shower are split into quark-antiquark 
-pairs. Neighboring quarks and antiquarks (not from the same gluon) 
-are grouped in color-singlet clusters which 
-typically decay into two hadrons.
-During the last decades, different measurements at colliders have
-been used to tune these models to properly describe 
-the hadron multiplicity in the final state.
 
 \begin{figure}[hbt]\begin{center}
 	\subfigure[]{\label{fig:planarrules}
   	\includegraphics[width=0.45\textwidth, height=0.18\textwidth]{montecarlo/figures/planarrules}}\hskip5ex
 	\subfigure[]{\label{fig:colourflow}
   	\includegraphics[width=0.45\textwidth]{montecarlo/figures/colour2}}
-	\caption{~\cite{Ambroglini:2009nz}.}
+	\caption{Left: rules to assign color connections in the splittings
+        $q\to qg$ (top left), $g\to q\bar{q}$ (top right) and $g\to gg$ 
+        (bottom). Right: example of a color connected shower~\cite{Ambroglini:2009nz}.}
 \end{center}\end{figure}
 
+At this point, two possible phenomenological fragmentation models come in the game
+to bound partons into hadrons starting from the color connected final state.
+They both have been tuned using collider measurements over the last decades
+to properly describe the final state hadron multiplicity and need in general
+a large number of parameters.
+
+The first hadronization scheme is called {\it Lund string model} and ties a quark
+with an antiquark plus a number of intermediate gluons, like
+stretching a string (or a ``color flux tube'') from the quark
+to its color-connected antiquark taking in the gluons that
+lie inbetween them. This can be see as an illustration in 
+Figure~\ref{fig:had_colorflow} and Figure~\ref{fig:had_string}:
+the first string collects the quark with color $c_1$, the antiquark
+with color $\bar{c}_4$ and all the final state gluons along the path.
+ uses string dynamics to describe the color flux between quarks. 
+In other words, the string between the quark and antiquark produces a linear
+confinement potential.
+
+The other hadronization scheme is the {\it cluster model}, where
+final state gluons are forced to split into a quark-antiquark pair
+and then color connected quark-antiquark pairs are bounded together.
+Figure~\ref{fig:had_cluster} presents a graphical illustration of the
+concept. Because of {\it preconfinement} (the fact that color connected pairs
+with large invariant masses are Sudakov suppressed in angular ordered showers)
+the cluster can be associated with an hadronic two-body system. 
+
+During the last decades, different measurements at colliders have
+been used to tune these models to properly describe 
+the hadron multiplicity in the final state.
 
 
 \begin{figure}[hbt]\begin{center}
+	\subfigure[]{\label{fig:had_colorflow}
+\def\svgwidth{0.3\textwidth}
+\input{montecarlo/figures/had_colorflow.eps_tex}}
 	\subfigure[]{\label{fig:had_string}
-  	\includegraphics[width=0.4\textwidth]{montecarlo/figures/had_string}}
+  	\includegraphics[width=0.3\textwidth]{montecarlo/figures/had_string}}
 	\subfigure[]{\label{fig:had_cluster}
-  	\includegraphics[width=0.4\textwidth]{montecarlo/figures/had_cluster}}
-	\caption{Drawing of a parton shower completed with hadronization from the Lund string model (a) and the cluster model (b)~\cite{Mangano:933464}.}
+  	\includegraphics[width=0.3\textwidth]{montecarlo/figures/had_cluster}}
+	\caption{Drawing of a color connected parton shower graph (a) completed with hadronization from the Lund string model (b) and the cluster model (c)~\cite{Mangano:933464}.}
 \end{center}\end{figure}
 
 
