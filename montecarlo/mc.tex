@@ -374,6 +374,78 @@ two vertices.
 
 \subsubsection{Matrix element and parton shower matching}\label{sec:matching}
 
+So far, we introduced two powerful ways to describe a QCD event, one relying
+on our capability to compute the Matrix Elements (ME) in pQCD at the LO and NLO,
+the other exploiting a procedure to develop Parton Showers (PS) including
+soft and collinear emissions. ME can also introduce soft and collinear emissions,
+but the ME weight is in this case divergent, while in the PS scheme divergences
+are eliminated through the Sudakov form factors. We need therefore to set 
+the rules to conveniently split the phase space of the event into two regions,
+one characterized by hard and large angle emission to be described by ME, the
+other of soft and collinear emission to be described by PS. This is achieved
+in the so-called ``ME and PS matching'', where some resolution parameters are
+introduced with the role of soft and collinear cut-offs for ME. 
+
+The baseline idea is to compute the weight of an event using ME and then
+develop PS giving as inputs the ME weight as well as the event kinematics and 
+color flow. A complication arises in this simple approach as the same final
+state can be obtained in multiple ways if ME and PS generated partons are swapped,
+as graphically shown in Figure~\ref{fig:matchfig1}, where the same event 
+has three possible configurations. This issue goes under the name of ``double
+counting'', and the matching scheme aim is to possibly avoid it or, at least, 
+reduce its impact.
+
+\begin{figure}[htb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.7\textwidth]{montecarlo/figures/matchfig1}}
+	\caption{Example of double counting in hadron production. Dashed lines
+        are PS emissions, solid lines are ME emissions. On the left, we have one
+        hard large angle emission from ME and soft collinear emissions from PS.
+        In the middle and on the right, one soft collinear emission from ME 
+        and both hard and soft PS emissions~\cite{Ambroglini:2009nz}.
+        \label{fig:matchfig1}}
+\end{center}\end{figure}
+
+The main requirements on the matching scheme besides avoiding double counting
+are to perform a smooth transition from the ME and PS regions and to make
+sure the appropriate Sudakov form factors reabsorb the divergencies eventually
+introduced by the ME by reweighting the ME weight.
+
+There are two main matching schemes: the Catani-Krauss-Kuhn-Webber 
+(CKKW~\cite{Catani:2001cc}) and the Michelangelo L. Mangano 
+(MLM~\cite{Mangano:2006rw}) methods.
+They separate the phase space into the ME and PS regions by
+introducing resolution parameters that distinguish between
+{\it resolved} and {\it non-resolved} jets, to be described by
+means of the ME and PS respectively.
+
+In the CKKW scheme, the parton-parton separation is measured by defining
+the distances between two final state partons and the distance between the 
+parton and the beam using the $k_\perp$ jet algorithm~\cite{Catani1991432}. 
+For a parton to be resolved, and described through ME,
+both variables have to be greater than a resolution parameter $Y_{\rm sep}$. 
+A branching tree is developed clustering together the two closest partons
+and  ME elements are reweighted first to the strong coupling \alphas\ value 
+at the ME scale and then using a combination of Sudakov form factors.
+Then, PS is evolved and emissions at scales greater than 
+$Y_{\rm sep}$ are vetoed, thus avoiding overlap between configurations. 
+
+In the MLM scheme, partons are first clustered into samples with different 
+multiplicity and then, like in the CKKW method, the $k_\perp$ jet algorithm
+is used to develop a branching tree and ME are reweighted to the proper strong 
+coupling \alphas\ value. At this point PS is performed and a jet finding algorithm
+matches partons into clusters. Jets with 
+$p_T>p_{T_{\rm min}}$, separation $R>R_{\rm min}$ and 
+pseudorapidity $\eta<\eta_{\rm max}$ are considered for matching 
+partons. Events are kept only if there is a one-to-one correspondence 
+of partons to jets, else is rejected and thus double counting is avoided.
+As final step, the ME is reweighted with a Sudakov form factor.
+
+The performance of the two matching methods has been extensively tested
+with data, and in particular it is important that the independence of
+the final result from the resolution parameters is verified.
+
+
 \subsection{Hadronization}\label{sec:hadronization}
 
 When partons reach the hadronization scale energy $Q\sim 1\gev$ after showering,
@@ -468,6 +540,31 @@ of the beam and cannot be modeled with perturbative QCD but is instead
 studied from experimental data on {\it minimum bias} events at low
 momentum.
 
+Besides a backward shower modeling starting from the beam remnants, an
+important contribution to the underlying event are multiple parton interactions,
+i.e. secondary relatively hard collisions between the incoming hadron remnants.
+Phenomenological models are used to simulate the underlying event, and additional
+semi-hard interactions are generated with different primary vertices to account
+for the effect of pile-up.
+
+
 \section{Generators}\label{sec:generators}
+
+Monte Carlo generators can either be {\it multi-purpose} generators,
+i.e. capable of performing the full simulation chain described in this chapter,
+or {\it specialized} generators, i.e. devoted to a single aspect of the
+simulation. As should be clear after the discussion about the modeling
+of hadronic collisions, there are some choices to be done that might result
+being better suited for some particular events or others. Therefore
+the Monte Carlo generators should be chosen according to their performance
+in modeling the event of interest.
+
+We briefly present in the following sections the main characteristics of the generators
+that are used in the analyses that are the object of this dissertation.
+
+
+
+
+
 
 \section{ATLAS simulation}\label{sec:MCdetector}
