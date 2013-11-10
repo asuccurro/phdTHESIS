@@ -563,8 +563,145 @@ We briefly present in the following sections the main characteristics of the gen
 that are used in the analyses that are the object of this dissertation.
 
 
+\subsubsection*{PYTHIA}
+
+\texttt{PYTHIA}~\cite{PYTHIA} is a multi-purpose Monte Carlo generator
+using ME computed at LO for $2 \to n$ ($n\leq 3$) events and PS with emissions
+ordered in $p_T$ instead of angle. The Lund string model is used for hadronization
+and UE simulation is included.
+% as scattering between proton remnants in  $2 \to 2$ ME computed at LO.
+Minimum bias events with $p_T>\hat{\pt}_{min}$ are used to model interactions
+between proton remnants.
+
+
+\subsubsection*{HERWIG}
+
+\texttt{HERWIG}~\cite{HERWIG} is a multi-purpose Monte Carlo generator
+using ME computed at LO for $2 \to 2$ events and PS with emissions ordered in angle. 
+The cluster model is used for hadronization and for the UE description, \texttt{HERWIG}
+is typically interfaced with the external package \texttt{JIMMY}~\cite{jimmy} which
+simulates UE as scattering between proton remnants in  $2 \to 2$ ME computed at LO.
+
+
+\subsubsection*{ALPGEN}
+
+\texttt{ALPGEN}~\cite{ALPGEN} is a Monte Carlo generator specialized for
+ME computation of $2 \to n$ ($n\leq 9$) events at LO, with cross sections 
+computed using the ALPHA algorithm \cite{ALPGEN_0}. It is interfaced either
+with \texttt{PYTHIA} or \texttt{HERWIG} for PS development and ME/PS matching
+is done in the MLM scheme, where the resolution parameter $p_{T_{\rm min}}$ is
+called {\it jet matching scale}.
+Hadronization and UE are simulated through \texttt{HERWIG}
+and hence \texttt{JIMMY}.
+
+The various parton multiplicity samples are then normalized to their LO cross section
+and combined into an inclusive sample, which is finally typically normalized 
+to an inclusive cross section calculated at higher order in pQCD. 
+For the inclusive production of $Z$ and $W$ bosons in p-p collisions, the 
+MCFM~\cite{MCFM} and FEWZ~\cite{Gavin:2010az} programs are used to predict 
+cross sections at NLO and NNLO respectively.
+
+
+\subsubsection*{MC@NLO}
+
+\texttt{MC@NLO}~\cite{mcatnlo} is a Monte Carlo generator simulating ME at
+NLO, where the use of 1-loop corrections introduce the possibility of having
+negative weighted events. Theoretical uncertainties on the inclusive cross
+section is reduced thanks to the use of full NLO corrections, but higher multiplicity
+parton emission is simulated through PS in \texttt{HERWIG} which has
+a poorer description of hard emissions. 
+Hadronization and UE are also simulated through \texttt{HERWIG}
+(and hence \texttt{JIMMY}).
+
+\subsubsection*{SHERPA}
+
+\texttt{SHERPA}~\cite{sherpa} is a multi-purpose Monte Carlo generator
+interfaced with \texttt{PYTHIA} for the parton shower. ME/PS matching
+is performed with the CKKW scheme.
+A modular design for \texttt{SHERPA} allows for  simple implementation
+of other techniques, e.g. NLO corrections can be introduced in the
+CKKW matching scheme using a NLO Monte Carlo generator with the
+\texttt{MENLOPS} procedure~\cite{MENLOPS}.
+Hadronization is done within \texttt{PYTHIA} and a multiple parton 
+scattering model for UE simulation.
+
+
+\subsubsection*{POWHEG}
+
+\texttt{POWHEG}~\cite{powheg} is a Monte Carlo generator computing
+ME at NLO and typically interfaced either with \texttt{PYTHIA} or 
+\texttt{HERWIG} for the modeling of PS, hadronization and UE.
+
+
+\subsubsection*{MADGRAPH}
+
+\texttt{MADGRAPH}~\cite{madgraph} is a Monte Carlo generator 
+specialized for ME computation of $2 \to n$ ($n\leq 6$) events at LO
+interfaced with \texttt{PYTHIA} for the modeling of PS, hadronization and UE.
+
+
+\subsubsection*{ACERMC}
+
+\texttt{ACERMC}~\cite{acermc} is a Monte Carlo generator computing
+ME at LO and typically interfaced either with \texttt{PYTHIA} or 
+\texttt{HERWIG} for the modeling of PS, hadronization and UE.
 
 
 
+\section{ATLAS detector simulation}\label{sec:MCdetector}
 
-\section{ATLAS simulation}\label{sec:MCdetector}
+Events generated with Monte Carlo simulation can be directly
+used at {\it parton level}, i.e. without any further operation on the
+generated partons, or be reconstructed either at {\it truth level}, where
+the particles go through object reconstruction (see Chapter~\ref{chap:objects})
+without interacting in the detector material and the original kinematics is
+maintened, or go through detector simulation~\cite{atlas_sim} and after that through object
+reconstruction, to obtain the so-called {\it reconstructed level}.
+
+The detector material, geometry and response %simulation~\cite{atlas_sim} 
+are modeled using the {\tt GEANT4}~\cite{geant} package.
+The interaction of particles with ATLAS subsystems is converted
+into detector signals of the same sort of the real read-out and
+at this point the same kind of reconstruction algorithms shape
+the detector output into physical objects. During test-beam periods
+the \texttt{GEANT4} parameters have been tuned to best simulate
+the ATLAS configuration and the performance of detector simulation
+has been extensively checked also with data calibrations.
+
+The detector simulation relies on the usage of two databases: the 
+{\it geometry database} contains the information on the detector volumes
+like dimensions, geometry, position and material composition, while
+the {\it conditions database} is constantly updated with the information
+on the real detector real-time conditions as dead channels, misalignments,
+temperature. Since conditions vary from run to run, it is important that
+the detector simulation reproduces as close as possible the real status
+of ATLAS during a particular data period. Also for this reason, Monte
+Carlo samples are regularly reproduced consistently with {\it data reprocessings}
+or {\it data releases}.  For the analyses presented in this dissertation,
+the Monte Carlo production tagged as \texttt{mc12} is used, performed
+within release 17 of the ATLAS analysis framework \texttt{ATHENA}~\cite{athena}.
+
+
+
+\section{Monte Carlo samples corrections}\label{sec:mcweights}
+
+At the end of the full Monte Carlo simulation chain, after the detector simulation
+and event reconstruction steps, the generated samples need some corrections to
+better model data. The main event reweighting is to correct Monte Carlo samples to
+the correct theoretical cross section of the process and to the number of expected
+data events, which comes from the luminosity measurements. As typical in Monte
+Carlo techniques, an higher number of randomly produced events assures a better modeling
+of the system under study, and therefore usually a very high number of events are
+produced for each sample to maximize the confidence that all the relevant configurations
+have been copiously simulated. The event weight $w$ to be applied (event by event) is defined
+as:
+\begin{equation}\label{eq:mcweight}
+w = \dfrac{\sigma\times k}{N}\int \mathcal L dt,
+\end{equation}
+where $\sigma$ is the process theoretical cross section, $N$ is the number of Monte
+Carlo events, $\int \mathcal L dt$ the integrated luminosity and $k$ is the so-called
+$k-$factor, which is a correction to higher orders as, e.g., to bring the accuracy
+of a LO cross section computation to the NLO.
+
+Furthermore, a weight to account for pile-up effect is to be applied, to match the
+expected number of interactions per bunch crossing $<\mu>$ in real data-taking conditions. 
