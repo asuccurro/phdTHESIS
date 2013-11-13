@@ -16,6 +16,9 @@
 \definecolor{light-gray}{gray}{0.9}
 \usepackage{pgf,pgfarrows,pgfnodes}
 
+\usepackage[percent]{overpic}
+
+
 \newcommand{\nocontentsline}[3]{}
 \newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
 
@@ -70,7 +73,8 @@
 \usepackage{eso-pic}
 
 \usepackage{url}
-\usepackage[ps2pdf,bookmarks=true,bookmarksnumbered=false,% true means bookmarks in left window are numbered
+\usepackage[bookmarks=true,bookmarksnumbered=false,% true means bookmarks in left window are numbered
+%dvips,%ps2pdf,
 bookmarksopen=false, % true means only level 1 are displayed.
 colorlinks=true,linkcolor=webred]{hyperref}
 %\usepackage[pdfborder={0 0 0 0}]{hyperref}
@@ -222,7 +226,7 @@ keepaspectratio]{smallstuff/frontespizio}%
 
 \appendix
 
-\input{appendices/A}
+\input{appendices/qcdmm}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 

@@ -176,17 +176,28 @@ rejected\footnote{As will be explained later in Section~\ref{sec:htxEVT}, anothe
 cut will be applied in the low \bjet\ multiplicity channel of the \htx\ analysis.}.
 
 \begin{table}\centering
-	\begin{tabular}{lccc}\toprule
-	 & $Wb$ & $Ht$ & $Zt$ \\\midrule
-             &\cellcolor{lightgray} & & \cellcolor{lightgray}\\
-	\multirow{-2}{*}{$Wb$} & \cellcolor{lightgray}\multirow{-2}{*}{\bf 4 (2)} & \multirow{-2}{*}{6 (4)} & \cellcolor{lightgray}\multirow{-2}{*}{{\bf 6} ({\bf2}/4)} \\
-        \multirow{2}{*}{$Ht$} & \multirow{2}{*}{6 (4)} & \multirow{2}{*}{8 (6)} & max: 8 (4/6)\\
-             & & & \cellcolor{lightgray}min: {\bf6 (2)}\\
-        \multirow{2}{*}{$Zt$} & \cellcolor{lightgray}& max: 8 (4/6) & \cellcolor{lightgray}max: {\bf8} ({\bf2}/6) \\
-             & \cellcolor{lightgray}\multirow{-2}{*}{\bf6 (2/4)} & \cellcolor{lightgray}min: {\bf6 (2)} & \cellcolor{lightgray}min: {\bf6} ({\bf2}/4)\\
-	\bottomrule\end{tabular}\caption{Jets (\bjet s) multiplicities in the various possible final states. $Z$ boson decays 55\% hadronically, 15\% of the 
-        times into \bbbar, therefore the min/max number of \bjet s is reported. Highlighted are the channels that after the orthogonality cut
-        will contribute to the \wbx\ analysis.}\label{tab:jetmult}
+\begin{tabular}{lccc}\toprule
+& $Wb$ & $Ht$ & $Zt$ \\\midrule
+&\cellcolor{lightgray} & & \cellcolor{lightgray}\\
+\multirow{-2}{*}{$Wb$} & 
+\cellcolor{lightgray}\multirow{-2}{*}{\bf 4 (2)} & 
+\multirow{-2}{*}{6 (4)} & 
+\cellcolor{lightgray}\multirow{-2}{*}{{\bf 6} ({\bf2}/4)} \\
+\multirow{2}{*}{$Ht$} & 
+\multirow{2}{*}{6 (4)} & 
+\multirow{2}{*}{8 (6)} & max: 8 (4/6)\\
+& & & \cellcolor{lightgray}min: {\bf6 (2)}\\
+\multirow{2}{*}{$Zt$} & 
+\cellcolor{lightgray}& max: 8 (4/6) & 
+\cellcolor{lightgray}max: {\bf8} ({\bf2}/6) \\
+& \cellcolor{lightgray}\multirow{-2}{*}{\bf6 (2/4)} & 
+\cellcolor{lightgray}min: {\bf6 (2)} & 
+\cellcolor{lightgray}min: {\bf6} ({\bf2}/4)\\
+\bottomrule\end{tabular}\caption{Jets (\bjet s) multiplicities in 
+the various possible final states. $Z$ boson decays 55\% hadronically, 
+15\% of the times into \bbbar, therefore the min/max number of \bjet s 
+is reported. Highlighted in bold characters are the channels that after the orthogonality 
+cut will contribute to the \wbx\ analysis.}\label{tab:jetmult}
 \end{table}
 
 
@@ -226,7 +237,9 @@ the calorimeter response is used.
 
 All simulated samples are then processed through the same reconstruction 
 software as the data and are reweighted to match 
-the instantaneous luminosity profile in data. 
+the instantaneous luminosity profile in data. For more details
+on the Monte Carlo simulation chain we refer the reader to
+Chapter~\ref{chap:mc} and in particular to Section~\ref{sec:generators}.
 
 %Additional corrections are applied so that the 
 %object identification efficiencies, energy
@@ -245,8 +258,8 @@ with the parton-shower and fragmentation steps being performed by
 The top quark mass is assumed to be equal to $172.5\gev$ and 
 the samples are normalized to approximate next-to-next-to-leading-order 
 (NNLO) theoretical cross section~\cite{ttbarxs}; the cross section used 
-has been computed with {\tt Hathor} 1.2~\cite{ttbarxs} using the {\tt MSTW2008}
-NNLO PDF set~\cite{mstw} and is $\sigma_{t\bar{t}}= 238^{+22}_{-24}$~pb, 
+has been computed with {\tt HATHOR 1.2}~\cite{ttbarxs} using the {\tt MSTW2008}
+NNLO PDF set~\cite{Martin:2009iq} and is $\sigma_{t\bar{t}}= 238^{+22}_{-24}$~pb, 
 where the total uncertainty results from the sum in quadrature of the 
 scale and PDF+$\alpha_S$ uncertainties according to 
 the {\tt MSTW} prescription~\cite{mstw2}. 
@@ -255,7 +268,7 @@ This is the $t\bar{t}$ used in the \wbx\ analysis.
 \subsubsection{$t\bar{t}$ Alpgen}\label{subsec:alpgen}
 Simulated samples of $t\bar{t}$+jets are generated using
 %and $W/Z$+jets events are generated using
- the {\tt Alpgen v2.13}~\cite{alpgen} leading-order (LO) generator and the 
+the {\tt ALPGEN v2.13}~\cite{ALPGEN} leading-order (LO) generator and the 
 {\tt CTEQ6L1} PDF set~\cite{cteq6}, with parton shower and fragmentation  
 modelled through {\tt HERWIG} v6.520~\cite{HERWIG}.
 
@@ -287,11 +300,11 @@ NNLO theoretical cross section is used (see~\ref{subsec:MC@NLO})
 
 Simulated samples of $W/Z$ boson production in association with jets
 ($W/Z$+jets in the following) are generated with up to five additional 
-partons using the {\tt Alpgen v2.13}~\cite{alpgen} LO generator and the 
+partons using the {\tt ALPGEN v2.13}~\cite{ALPGEN} LO generator and the 
 {\tt CTEQ6L1} PDF set~\cite{cteq6}, interfaced to {\tt HERWIG} v6.520 
 for parton showering and fragmentation.
 
-``MLM matching'' is used also here to avoid double-counting of partonic configurations 
+The MLM matching scheme is used also here to avoid double-counting of partonic configurations 
 between  matrix-element  calculation and parton showering.
 
 The $W$+jets samples are generated separately for $W$+light jets, 
@@ -337,23 +350,23 @@ Simulated samples of single top quark backgrounds corresponding to the
 $s$-channel and $Wt$ production mechanisms are generated with {\tt
 MC@NLO} v4.01~\cite{mcatnlo_1,mcatnlo_2,mcatnlo_3} using the {\tt
 CT10} PDF set~\cite{ct10}.  In the case of $t$-channel single top
-quark production, the {\tt AcerMC} v3.8 LO generator~\cite{acermc}
+quark production, the {\tt ACERMC v3.8} LO generator~\cite{acermc}
 with the {\tt MRST LO**} PDF set is used.
 
 Simulated samples of $t\bar{t}$ produced in association with a $W$ or $Z$ boson
-($t\bar{t}V$ $(V=W,Z)$ in the following) are generated with the {\tt Madgraph v5} LO
+($t\bar{t}V$ $(V=W,Z)$ in the following) are generated with the {\tt MADGRAPH v5} LO
 generator~\cite{madgraph} and the {\tt CTEQ6L1} PDF set.  
 
 Samples of $t\bar{t}$ produced in association with a Higgs boson
 ($t\bar{t}H$ in the following) are generated with the 
-{\tt Pythia} 6.425~\cite{py6} LO generator and the {\tt MRST LO**} PDF set~\cite{mrst},
+{\tt PYTHIA} 6.425~\cite{py6} LO generator and the {\tt MRST LO**} PDF set~\cite{mrst},
 assuming a Higgs boson mass of $125\gev$ and considering the 
 $H\to b\bar{b}$, $c\bar{c}$, $gg$, and $W^+W^-$ decay modes.
 
 Parton shower and fragmentation are modelled with {\tt HERWIG}
-v6.520~\cite{HERWIG} in the case of {\tt MC@NLO}, with {\tt Pythia}
-6.421 in the case of {\tt AcerMC}, and with {\tt Pythia} 6.425 in the
-case of {\tt Madgraph}.  All these samples are generated assuming a top
+v6.520~\cite{HERWIG} in the case of {\tt MC@NLO}, with {\tt PYTHIA}
+6.421 in the case of {\tt ACERMC}, and with {\tt PYTHIA 6.425} in the
+case of {\tt MADGRAPH}.  All these samples are generated assuming a top
 quark mass of $172.5\gev$. The single top quark samples are normalised to
 the approximate NNLO theoretical cross sections~\cite{stopxs,stopxs_2}
 using the {\tt MSTW2008} NNLO PDF set, while the $t\bar{t}V$ samples
@@ -368,9 +381,9 @@ theoretical cross sections~\cite{dibosonxs}.
 
 
 For vector-like $T$ signals, samples corresponding to a singlet $T$ quark 
-decaying to $Wb$, $Zt$ and $Ht$ are generated with the {\tt Protos} v2.2 
+decaying to $Wb$, $Zt$ and $Ht$ are generated with the {\tt PROTOS v2.2} 
 LO generator~\cite{jaas,protos} 
-using the  {\tt MSTW2008} LO PDF set, and interfaced to {\tt Pythia} for 
+using the  {\tt MSTW2008} LO PDF set, and interfaced to {\tt PYTHIA} for 
 the parton shower and fragmentation. 
 
 For each decay channel ($Wb$, $Zt$ and $Ht$) the branching ratio has been 
@@ -392,12 +405,12 @@ The cross section values used are summarized in Table~\ref{tab:sigmaTT}.
 
 \begin{table}[h!]
 \begin{center}
+\resizebox{1.\textwidth}{!}{
 \begin{tabular}{c c c c c c c}
-\hline
-\hline
+\toprule
  & \multicolumn{3}{c}{Singlet} &  \multicolumn{3}{c}{Doublet} \\
  $m_{T}$ ($\gev$) & $BR(T \to Wb)$ & $BR(T \to Zt)$ & $BR(T \to Ht)$ & $BR(T \to Wb)$ & $BR(T \to Zt)$ & $BR(T \to Ht)$\\
-\hline
+\midrule
 350 	&  0.545 	&  0.116 	&  0.338	&  0.000 	&  0.255 	&  0.745 	\\ 
 400 	&  0.513 	&  0.139 	&  0.348	&  0.000 	&  0.285 	&  0.715 	\\
 450 	&  0.502 	&  0.158 	&  0.341	&  0.000 	&  0.316 	&  0.684 	\\ 
@@ -409,21 +422,21 @@ The cross section values used are summarized in Table~\ref{tab:sigmaTT}.
 750 	&  0.494 	&  0.214 	&  0.292	&  0.000 	&  0.422 	&  0.578 	\\ 
 800 	&  0.494 	&  0.218 	&  0.288	&  0.000 	&  0.431 	&  0.569 	\\
 850 	&  0.494 	&  0.222 	&  0.284	&  0.000 	&  0.439 	&  0.561 	\\ 
-\hline
-\hline
-\end{tabular}
+\bottomrule
+\end{tabular}}
 \caption{\label{tab:BRT} Branching ratios for $T$ decay as a function
-of $m_{T}$ as computed with {\tt Protos} in the weak-isospin singlet and doublet scenarios.}
+of $m_{T}$ as computed with {\tt PROTOS} in the weak-isospin singlet and doublet scenarios.
+The same values are used in the graphical representation of Figure~\ref{fig:vlqBRs}}
 \end{center}
 \end{table}
 %%%%%%%%
 \begin{table}[h!]
 \begin{center}
+\resizebox{1.\textwidth}{!}{
 \begin{tabular}{c c c c c}
-\hline
-\hline
+\toprule
  $m_{T}$ ($\gev$) & $\sigma(TT)$ (pb) & Scale uncertainties (pb) & PDF+$\alpha_s$ uncertainties (pb) & Total uncertainty (pb)\\
-\hline
+\midrule
 350 	&  5.083 		&  +0.140/-0.285 		&  + 0.569/-0.488 		&  +0.586/-0.565		\\
 400 	&  2.296 		&  +0.066/-0.130 		&  + 0.269/-0.221 		&  +0.277/-0.257		\\
 450 	&  1.113 		&  +0.034/-0.063 		&  + 0.136/-0.107 		&  +0.140/-0.125		\\
@@ -435,11 +448,11 @@ of $m_{T}$ as computed with {\tt Protos} in the weak-isospin singlet and doublet
 750 	&  0.03411 	&  +0.00135/-0.00204 	&  + 0.00513/-0.00343 	&  +0.00530/-0.00400	\\
 800 	&  0.02080 	&  +0.00085/-0.00126 	&  + 0.00329/-0.00216 	&  +0.00340/-0.00250	\\
 850 	&  0.01287 	&  +0.00054/-0.00079 	&  + 0.00215/-0.00138 	&  +0.00222/-0.00159 	\\
-\hline
-\hline
-\end{tabular}
+\bottomrule
+\end{tabular}}
 \caption{\label{tab:sigmaTT} Theoretical cross section at NNLO  for $TT$ production as a function
-of $m_{T}$ as computed by {\tt Hathor}, and scale and PDF uncertainties.}
+of $m_{T}$ as computed by {\tt HATHOR}, and scale and PDF uncertainties.
+The same values are used in the graphical representation of Figure~\ref{fig:vlqxsec}.}
 \end{center}
 \end{table}
 %%%%%%%%
@@ -453,15 +466,106 @@ that left a high amount of energy in the electromagnetic calorimeter.
 For events in the muon channel the main contributions come from
 non-prompt leptons from semileptonic $b$- and $c$-hadron decays.
 
-
-The contribution to the background from multi-jet events is
-estimated via data-driven methods, since
-simulation is not expected to predict this contribution
+Even though these kind of events rarely pass the quality cuts 
+required at the lepton reconstruction stage, the production cross section
+is so high (orders  of magnitude more than \ttbar\ pair production)
+that the contribution to the background from multi-jet events is
+no more negligible. The rate of what we will call in the following
+``fake events'' (against ``real events'') is estimated via data-driven 
+methods, since simulation is not expected to predict this contribution
 with the desired level of accuracy.
+
 The technique used is called ``Matrix Method'' (MM in the following)~\cite{ttbar_3pb}.  
+The basic principle is to divide the data sample into two categories, one
+of events passing our standard selection criteria (``tight'' events), the
+other including also leptons satisfying looser requirements (``loose'' events).
+We can reasonably think that loose leptons are either real leptons or fake leptons,
+and that most of our real leptons will pass the tight selection. We consider then
+a good evaluation of multi-jet contamination that fraction of fake events going
+through the tight requirements. A pictorial representation of the sampling space 
+is shown in Figure~\ref{fig:mmspace}.
+
+\begin{figure}[htb]\begin{center}
+	\subfigure[]{\label{fig:mmspace}
+  	\includegraphics[width=0.4\textwidth]{vlq_analysis/figures/mm_regions}}
+	\caption{The events passing loose selection criteria can be real or fake leptons.
+        Tighter requirements are added to the loose selection ones to define a sample of
+        tight event which will contain real leptons as well as multi-jet background events.}
+\end{center}\end{figure}
+
+Defining $N^\mathrm{loose}_\mathrm{real}$ ($N^\mathrm{loose}_\mathrm{fake}$) as the number of
+real (fake) leptons events satisfying the loose selection requirements, and
+$N^\mathrm{tight}_\mathrm{real}$ ($N^\mathrm{tight}_\mathrm{fake}$) as the number of
+real (fake) leptons events satisfying the tight selection requirements, we can write:
+
+\begin{eqnarray}
+\label{eqn:intro-mm-Nloose}
+N^\mathrm{loose} & = & N^\mathrm{loose}_\mathrm{real} + N^{loose}_\mathrm{fake}, \\
+\label{eqn:intro-mm-Ntight}
+N^\mathrm{tight} & = & \epsilon_\mathrm{real}N^\mathrm{loose}_\mathrm{real} + \epsilon_\mathrm{fake}N^\mathrm{loose}_\mathrm{fake}.
+\end{eqnarray}
+where $\epsilon_\mathrm{real}$ ($\epsilon_\mathrm{fake}$) is the 
+{\it efficiency} of selecting real (fake) loose leptons as tight leptons, i.e.:
+\begin{eqnarray}
+\label{eqn:intro-mm-real}
+\epsilon_\mathrm{real} & = & \dfrac{N^\mathrm{tight}_\mathrm{real}}{N^\mathrm{loose}_\mathrm{real}}, \\
+\label{eqn:intro-mm-fake}
+\epsilon_\mathrm{fake} & = & \dfrac{N^\mathrm{tight}_\mathrm{fake}}{N^\mathrm{loose}_\mathrm{fake}}.
+\end{eqnarray}
+
+
+The number we are interested in to estimate the background from
+multi-jet events is the amount of fake leptons leaking into the 
+tight selection region, which comes out from elaborating
+the previous equations and is:
+
+\begin{equation}
+N^\mathrm{tight}_\mathrm{fake} = \frac{\epsilon_\mathrm{fake}}{\epsilon_\mathrm{real} - \epsilon_\mathrm{fake}}(N^\mathrm{loose} \epsilon_\mathrm{real} - N^\mathrm{tight}).
+\label{eqn:intro-mm-tight_fake}
+\end{equation}
+
+An important condition for this method to work is that 
+$\epsilon_\mathrm{real} \gg \epsilon_\mathrm{fake}$, which 
+holds as $\epsilon_\mathrm{real}\sim 1$, while $\epsilon_\mathrm{fake}$
+is in general well below 1.
+$\epsilon_\mathrm{real}$ is in general measured from
+tag and probe measuremets on $Z$ boson decays to two leptons,
+while $\epsilon_\mathrm{fake}$ is measured in control regions
+enriched in multi-jet event contributions.
+
+In Appendix~\ref{app:qcdmm} the MM used for the estimation
+of multi-jet background in the muon single lepton channel is
+described in some more details, as the author of this dissertation
+directly contributed to its development.
+
+\section{Systematical uncertainties treatment}\label{sec:systematics}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %\input{vlq_analysis/wbx}
 %\input{vlq_analysis/htx}
-
-
-\section{Systematical uncertainties treatment}\label{sec:systematics}
