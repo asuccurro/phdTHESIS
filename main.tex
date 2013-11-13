@@ -12,7 +12,12 @@
 \linespread{1.2}                        %comando per impostare l'interlinea
 \usepackage{feynmf}
 \usepackage{psfrag}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{light-gray}{gray}{0.9}
+\usepackage{pgf,pgfarrows,pgfnodes}
 
+\newcommand{\nocontentsline}[3]{}
+\newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
 
 %\usepackage{ulem} %sostituisce l'effetto sottolineatura all'effetto corsivo nel comando \emph{} e risolve il problema delle righe che non si spezzano
 
@@ -55,7 +60,6 @@
 \usepackage{amsthm}
  \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
 \usepackage{slashed}
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 
 %\usepackage[T1]{fontenc}
 %\usepackage{microtype}

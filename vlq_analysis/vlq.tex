@@ -11,37 +11,134 @@ decay of a $W$ boson with its associated neutrino, which is considered
 to be the only particle contributing to the transverse missing energy \met.} channel. 
 These analyses
 are optimized for different final states and are thus complementary.
-The analyses are performed using a partial dataset of p-p collisions at the \cme\ 
+The analyses are performed using a partial dataset of the p-p collisions at the \cme\ 
 of \rts=8~\tev\ collected during 2012 at the ATLAS detector, consinsting in  14.3~\ifb.
-The first search focuses on  vector-like top partners decay channels with high BR to $Wb$, 
-while the second search is optimized for events with high BR to $Ht$.
+The first search focuses on  vector-like top partners decay channels with high 
+Branching Ratio (BR) to 
+a $W$ boson and a bottom quark, while the second search is optimized for events with 
+high BR to a Higgs boson and a top quark.
 %and is performed using the full dataset of p-p collisions at the \cme of \rts=8~\tev\ collected during 2012 at the ATLAS detector, consinsting in 20.34~\ifb, while
 %search for vector-like top partners with high BR to $Ht$
 %uses a partial dataset of the same data, amounting to 14.3~\ifb.
 
-This chapter is devoted to present the general aspects that are common to 
+This chapter is devoted to the presentation of the general features that are common to 
 the two analyses and is organized as follows: first in Section~\ref{sec:strategy}
 we review the common strategy adopted in the ATLAS collaboration Exotics group
 for vector-like quark searches; Section~\ref{sec:presel}
-introduces the common event preselection for data and few general concepts in the
+summarises the common event preselection for data and few general concepts in the
 analyses design; Section~\ref{sec:MCbkg}
 presents the Monte Carlo samples used in the searches, which
 are in general common to both analyses with only few exceptions that are reported;
 Section~\ref{sec:qcdbkg} describes how the multi-jet background from QCD events is
-obtained.
-
+obtained; Section~\ref{sec:systematics} introduces the general treatment of systematics.
 The two analyses are then presented in details in Chapeter~\ref{chap:wbx} 
 (\TTbar\ pairs decaying to $Wb+X$) and in Chapter~\ref{chap:htx}
 (\TTbar\ pairs decaying to $Ht+X$). The final results are presented 
 in Chapter~\ref{chap:results}.
 
-\section{General strategy for \TTbar\ pairs searches}\label{sec:strategy}
+\section{General strategy for vector-like quark pairs searches}\label{sec:strategy}
+
+The phenomenology for vector-like quarks was described already in Section~\ref{sec:THvlq}
+of this dissertation, here we will only briefly re-introduce the concepts on which
+the strategy for the searches has been built. Table~\ref{tab:vlqdecays} collects the 
+decay modes for vector-like quarks in the singlet and doublet models. It is evident
+from the richness of the final state phase space, combined with the unpredicted mass
+of the heavy objects that could span from few hundreds of \gev s (down to the values exluded by
+previous searches) up to  order of one \tev\ (since we focus on pair production of vector-like
+quarks, which is favoured up to this mass scale as shown in Figure~\ref{fig:vlqxsec}), that is 
+impossible to cover it with a single inclusive search.
+
+\begin{table}[htb]\centering
+\begin{tabular}{|lc|lc|}\toprule
+\hskip2ex VLQ &  Decay & \hskip2ex VLQ  & Decay \\ 
+\hskip1ex Singlets &  modes & \hskip1ex Doublets & modes\\
+& & &\\
+$T(+2/3)$ & $W^+b,\, Ht,\, Zt$ & \multirow{2}{*}{$\quad\bigg(\begin{array}{c}T \\ B\end{array}\bigg)$} & $W^+b,\, Ht,\, Zt$\\ 
+& & & $ W^-t,\, Hb,\, Zb$\\
+$B(-1/3)$ & $ W^-t,\, Hb,\, Zb$ & & \\
+& & \multirow{2}{*}{$\quad\bigg(\begin{array}{c}T \\ X\end{array}\bigg)$} & $Ht,\, Zt$\\
+$X(+5/3)$ & $W^+t$ & & $W^+t$\\
+& & &\\
+$Y(-4/3)$ & $W^-b$ & \multirow{2}{*}{$\quad\bigg(\begin{array}{c}B \\ Y\end{array}\bigg)$} & $Hb,\, Zb$\\
+& & & $W^-b$\\\bottomrule
+\end{tabular}
+\caption{Allowed decay modes for vector-like singlets and doublets.}\label{tab:vlqdecays}
+\end{table}
+
+\begin{figure}[htb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.65\textwidth, angle=270]{vlq_analysis/figures/xsec-8}}
+	\caption{\label{fig:vlqxsec} Pair and single production cross sections  for heavy 
+        quarks in proton-proton collisions at $\sqrt{s}=8$~TeV~\cite{Aguilar-Saavedra:2013qpa}.}
+\end{center}\end{figure}
+
+The BR of vector-like top and bottom partners to the allowed decay modes depends
+on the mass of the heavy quark and on the considered model (in our case, singlet or doublet
+scenario), as shown in Figure~\ref{fig:vlqBRs}.
+Each decay mode has specific features that allow to define powerful, optimized searches.
+Therefore in order to exploit this opportunity and at the same time stay as model independent
+as possible, different searches for vector-like quarks are performed at ATLAS
+to be later combined, each of them sensitive to specific channels.
+To ensure a comprehensive coverage of the phase space, a two-dimensional plane is defined 
+(Figure~\ref{fig:2dplane}) as follows:
+along the Y axes is the BR of the decay 
+modes with a Higgs boson in the final state; along the X axis is the BR 
+of the decay modes with a $W$ boson in the final state.
+The BR to the channel with a $Z$ boson in the final state is then fixed by the 
+unitarity requirement BR($T/B\to  Zt/b$) = 1 - BR($T/B\to Ht/b$) - BR($T/B\to Wb/t$).
+A plane of this kind is defined for every vector-like quark mass point considered 
+in the analysis. Each point of each plane therefore represents a 
+uniquely defined model, and analyses are performed for every configuration
+to either find deviations from expectations or to set a 95\% Confidence Level (CL) exclusion.
+The final objective of the joint strategy is to cover the full plane.
+
+\begin{figure}[h!tb]\begin{center}
+	\subfigure[]{\label{fig:vltBRs}
+  	\includegraphics[width=0.47\textwidth]{vlq_analysis/figures/fig_02a.eps}}
+	\subfigure[]{\label{fig:vlbBRs}
+  	\includegraphics[width=0.47\textwidth]{vlq_analysis/figures/fig_02b.eps}}
+	\caption{Branching ratio of vector-like top (a) and bottom (b) partners as a function of the heavy quark mass $m_T$ and $m_B$ respectively~\cite{ATLAS-CONF-2013-056} for singlet and doublet models.\label{fig:vlqBRs}}
+\end{center}\end{figure}
+
+\begin{figure}[htb]\begin{center}
+	\subfigure{
+        \input{vlq_analysis/plane}}
+       	\caption{Two dimensional plane used to represend the comprehensive scan of model mixing. Searches 
+        with a Higgs boson in the final state cover the top left corner; searches with a $Z$ boson in the 
+        final state cover the bottom left corner; searches with a $W$ boson in the final state cover the 
+        bottom right corner. The shaded area labelled as ``forbidden'' is the unphysical region where
+        BR($T/B\to Ht/b$) + BR($T/B\to Wb/t$) + BR($T/B\to  Zt/b$) $>1$ \label{fig:2dplane}}
+\end{center}\end{figure}
+
+
+Up to the date of the writing of this dissertation, four complementary 
+and quasi model-independent analyses have been performed by the Exotics working
+group on the partial dataset of 14.3~\ifb\ of proton-proton collision data at 
+$\sqrt{s}=8\tev$.  
+Two analyses investigated dilepton channels, one requiring a pair of same-charge 
+leptons~\cite{ATLAS-CONF-2013-051}, 
+the other a pair of opposite-charge leptons~\cite{ATLAS-CONF-2013-056}. These two analyses 
+are sensitive to
+both vector-like top and bottom partners, and the first in particular is also 
+sensitive to four-top production $pp\to t\bar{t}t\bar{t}$, 
+either through the Standard Model process or a beyond-SM source such as 
+pair production of scalar color-octets (sgluons) or gluinos, with subsequent decays to top quark pairs.
+While the first search approach is to select via restrictive cuts the eventual signal
+and compare the final counts with the expected yields from background sources, the
+second search focuses on reconstructing the $Z$ boson from the opposite-charge  lepton
+pair and uses the invariant mass of the $Z$ boson candidate paired  with the highest $p_T$ $b$-jet
+as final discriminant variable to perform the statistical analysis.
+
+We will in the following treat in details the two searches for vector-like 
+top partners performed in the single lepton channels, starting with the
+discussion of the common features between the two analyses.
+
 
 \section{Data sample and common event preselection}\label{sec:presel}
 
 The data from p-p collision events recorded at the ATLAS experiment during
 2012 at a \cme\ of $\rts=8\tev$ are considered. Physics object definitions 
-were previously discussed in Section~\ref{chap:objects}.
+were previously discussed in Chapter~\ref{chap:objects}.
 Events collected during
 stable beam periods are required to pass data quality requirements and
 single lepton trigger selection. In order to maximize trigger
@@ -49,7 +146,7 @@ efficiency, different transverse momentum threshold triggers are combined
 through a logical \OR, with the lower \pt\ ones including isolation requirements
 that result in inefficiencies for high \pt\ lepton candidates, recovered with
 the use of the higher threshold triggers. The electron triggers have
-\pt\ thresholds of 24 and 60\gev, the muon ones of 24 and 36\gev.
+\pt\ thresholds of 24 and 60~\gev, the muon ones of 24 and 36~\gev\ (Section~\ref{sec:REQtrigger}).
 
 After passing trigger requirements, events with more than one lepton are
 discarded. In addition, the only lepton of the event has to match within $\dr<0.15$ the
@@ -113,16 +210,16 @@ electron or the presence of a non-prompt lepton from, e.g., semileptonic $b$- or
 Other background smaller components are single top quark, $Z$+jets, diboson
 ($WW,WZ,ZZ$), and $t\bar{t}$ production associated with a vector or Higgs boson.
 
-All event generators using {\sc Herwig}~\cite{herwig} are also interfaced to {\sc
-Jimmy} v4.31~\cite{jimmy} to simulate the underlying event.  
+All event generators using {\tt HERWIG}~\cite{HERWIG} are also interfaced to {\tt
+JIMMY v4.31}~\cite{jimmy} to simulate the underlying event.  
 With the exception of the 
 signal samples, all simulated 
-samples utilise {\sc Photos 2.15}~\cite{PhotosPaper} to model
-photon radiation and {\sc Tauola 1.20}~\cite{TauolaPaper} to model
+samples utilise {\tt PHOTOS 2.15}~\cite{PhotosPaper} to model
+photon radiation and {\tt TAUOLA 1.20}~\cite{TauolaPaper} to model
 $\tau$ decays.  
 
 All simulated samples include multiple p-p
-interactions and go through the  {\sc Geant4}~\cite{geant}
+interactions and go through the  {\tt GEANT4}~\cite{geant}
 detector geometry and response simulation~\cite{atlas_sim}
 with the exception of the signal samples, for which a fast simulation of
 the calorimeter response is used.
@@ -142,25 +239,25 @@ the instantaneous luminosity profile in data.
 \subsubsection{$t\bar{t}$ MC@NLO}\label{subsec:MC@NLO}
 Simulated samples of $t\bar{t}$ pair production  in association with jets 
 ($t\bar{t}$+jets or simply $t\bar{t}$ in the following)
-are generated with {\sc MC@NLO} v4.01~\cite{mcatnlo_1,mcatnlo_2,mcatnlo_3} using the {\sc CT10} set of parton distribution functions (PDFs)~\cite{ct10},
+are generated with {\tt MC@NLO} v4.01~\cite{mcatnlo_1,mcatnlo_2,mcatnlo_3} using the {\tt CT10} set of parton distribution functions (PDFs)~\cite{ct10},
 with the parton-shower and fragmentation steps being performed by 
-{\sc Herwig} v6.520~\cite{herwig}.
+{\tt HERWIG} v6.520~\cite{HERWIG}.
 The top quark mass is assumed to be equal to $172.5\gev$ and 
 the samples are normalized to approximate next-to-next-to-leading-order 
 (NNLO) theoretical cross section~\cite{ttbarxs}; the cross section used 
-has been computed with {\sc Hathor} 1.2~\cite{ttbarxs} using the {\sc MSTW2008}
+has been computed with {\tt Hathor} 1.2~\cite{ttbarxs} using the {\tt MSTW2008}
 NNLO PDF set~\cite{mstw} and is $\sigma_{t\bar{t}}= 238^{+22}_{-24}$~pb, 
 where the total uncertainty results from the sum in quadrature of the 
 scale and PDF+$\alpha_S$ uncertainties according to 
-the {\sc MSTW} prescription~\cite{mstw2}. 
+the {\tt MSTW} prescription~\cite{mstw2}. 
 This is the $t\bar{t}$ used in the \wbx\ analysis.
 
 \subsubsection{$t\bar{t}$ Alpgen}\label{subsec:alpgen}
 Simulated samples of $t\bar{t}$+jets are generated using
 %and $W/Z$+jets events are generated using
- the {\sc Alpgen v2.13}~\cite{alpgen} leading-order (LO) generator and the 
-{\sc CTEQ6L1} PDF set~\cite{cteq6}, with parton shower and fragmentation  
-modelled through {\sc Herwig} v6.520~\cite{herwig}.
+ the {\tt Alpgen v2.13}~\cite{alpgen} leading-order (LO) generator and the 
+{\tt CTEQ6L1} PDF set~\cite{cteq6}, with parton shower and fragmentation  
+modelled through {\tt HERWIG} v6.520~\cite{HERWIG}.
 
 A parton-jet matching scheme called ``MLM matching''~\cite{mlm} is used
 in orderd to avoid double-counting  of partonic configurations
@@ -190,8 +287,8 @@ NNLO theoretical cross section is used (see~\ref{subsec:MC@NLO})
 
 Simulated samples of $W/Z$ boson production in association with jets
 ($W/Z$+jets in the following) are generated with up to five additional 
-partons using the {\sc Alpgen v2.13}~\cite{alpgen} LO generator and the 
-{\sc CTEQ6L1} PDF set~\cite{cteq6}, interfaced to {\sc Herwig} v6.520 
+partons using the {\tt Alpgen v2.13}~\cite{alpgen} LO generator and the 
+{\tt CTEQ6L1} PDF set~\cite{cteq6}, interfaced to {\tt HERWIG} v6.520 
 for parton showering and fragmentation.
 
 ``MLM matching'' is used also here to avoid double-counting of partonic configurations 
@@ -237,43 +334,43 @@ in order to preserve the overall normalisation of the $W$+jets background before
 \subsubsection{Other backgrounds}\label{subsec:otherbkg}
 %,tchanxs,Wtchanxs,schanxs}. 
 Simulated samples of single top quark backgrounds corresponding to the
-$s$-channel and $Wt$ production mechanisms are generated with {\sc
-MC@NLO} v4.01~\cite{mcatnlo_1,mcatnlo_2,mcatnlo_3} using the {\sc
+$s$-channel and $Wt$ production mechanisms are generated with {\tt
+MC@NLO} v4.01~\cite{mcatnlo_1,mcatnlo_2,mcatnlo_3} using the {\tt
 CT10} PDF set~\cite{ct10}.  In the case of $t$-channel single top
-quark production, the {\sc AcerMC} v3.8 LO generator~\cite{acermc}
-with the {\sc MRST LO**} PDF set is used.
+quark production, the {\tt AcerMC} v3.8 LO generator~\cite{acermc}
+with the {\tt MRST LO**} PDF set is used.
 
 Simulated samples of $t\bar{t}$ produced in association with a $W$ or $Z$ boson
-($t\bar{t}V$ $(V=W,Z)$ in the following) are generated with the {\sc Madgraph v5} LO
-generator~\cite{madgraph} and the {\sc CTEQ6L1} PDF set.  
+($t\bar{t}V$ $(V=W,Z)$ in the following) are generated with the {\tt Madgraph v5} LO
+generator~\cite{madgraph} and the {\tt CTEQ6L1} PDF set.  
 
 Samples of $t\bar{t}$ produced in association with a Higgs boson
 ($t\bar{t}H$ in the following) are generated with the 
-{\sc Pythia} 6.425~\cite{py6} LO generator and the {\sc MRST LO**} PDF set~\cite{mrst},
+{\tt Pythia} 6.425~\cite{py6} LO generator and the {\tt MRST LO**} PDF set~\cite{mrst},
 assuming a Higgs boson mass of $125\gev$ and considering the 
 $H\to b\bar{b}$, $c\bar{c}$, $gg$, and $W^+W^-$ decay modes.
 
-Parton shower and fragmentation are modelled with {\sc Herwig}
-v6.520~\cite{herwig} in the case of {\sc MC@NLO}, with {\sc Pythia}
-6.421 in the case of {\sc AcerMC}, and with {\sc Pythia} 6.425 in the
-case of {\sc Madgraph}.  All these samples are generated assuming a top
+Parton shower and fragmentation are modelled with {\tt HERWIG}
+v6.520~\cite{HERWIG} in the case of {\tt MC@NLO}, with {\tt Pythia}
+6.421 in the case of {\tt AcerMC}, and with {\tt Pythia} 6.425 in the
+case of {\tt Madgraph}.  All these samples are generated assuming a top
 quark mass of $172.5\gev$. The single top quark samples are normalised to
 the approximate NNLO theoretical cross sections~\cite{stopxs,stopxs_2}
-using the {\sc MSTW2008} NNLO PDF set, while the $t\bar{t}V$ samples
+using the {\tt MSTW2008} NNLO PDF set, while the $t\bar{t}V$ samples
 are normalised to the NLO cross section predictions~\cite{ttbarVxs1,ttbarVxs2}.
 The $t\bar{t}H$ sample is normalised using the NLO theoretical cross section 
 and branching ratio predictions~\cite{lhcxs}.
-Finally, the diboson backgrounds are modelled using {\sc Herwig} with
-the {\sc MRST LO**} PDF set, and are normalised to their NLO
+Finally, the diboson backgrounds are modelled using {\tt HERWIG} with
+the {\tt MRST LO**} PDF set, and are normalised to their NLO
 theoretical cross sections~\cite{dibosonxs}.
 
 \subsubsection{Signal samples}\label{subsec:MCsignal}
 
 
 For vector-like $T$ signals, samples corresponding to a singlet $T$ quark 
-decaying to $Wb$, $Zt$ and $Ht$ are generated with the {\sc Protos} v2.2 
+decaying to $Wb$, $Zt$ and $Ht$ are generated with the {\tt Protos} v2.2 
 LO generator~\cite{jaas,protos} 
-using the  {\sc MSTW2008} LO PDF set, and interfaced to {\sc Pythia} for 
+using the  {\tt MSTW2008} LO PDF set, and interfaced to {\tt Pythia} for 
 the parton shower and fragmentation. 
 
 For each decay channel ($Wb$, $Zt$ and $Ht$) the branching ratio has been 
@@ -286,9 +383,9 @@ a function of $m_{T}$ are given in Table~\ref{tab:BRT}.
 The $m_{T}$ values considered range from $350\gev$ to $850\gev$ in steps of $50\gev$, 
 with the Higgs boson mass assumed 
 to be $125\gev$. All Higgs boson decay modes are considered, 
-with branching ratios as predicted by {\sc hdecay}~\cite{hdecay}.
+with branching ratios as predicted by {\tt hdecay}~\cite{hdecay}.
 
-Signal samples are normalized to the approximate NNLO theoretical cross sections~\cite{ttbarxs} using the {\sc MSTW2008} NNLO PDF set.
+Signal samples are normalized to the approximate NNLO theoretical cross sections~\cite{ttbarxs} using the {\tt MSTW2008} NNLO PDF set.
 The cross section values used are summarized in Table~\ref{tab:sigmaTT}.
 
 
@@ -316,7 +413,7 @@ The cross section values used are summarized in Table~\ref{tab:sigmaTT}.
 \hline
 \end{tabular}
 \caption{\label{tab:BRT} Branching ratios for $T$ decay as a function
-of $m_{T}$ as computed with {\sc Protos} in the weak-isospin singlet and doublet scenarios.}
+of $m_{T}$ as computed with {\tt Protos} in the weak-isospin singlet and doublet scenarios.}
 \end{center}
 \end{table}
 %%%%%%%%
@@ -342,7 +439,7 @@ of $m_{T}$ as computed with {\sc Protos} in the weak-isospin singlet and doublet
 \hline
 \end{tabular}
 \caption{\label{tab:sigmaTT} Theoretical cross section at NNLO  for $TT$ production as a function
-of $m_{T}$ as computed by {\sc Hathor}, and scale and PDF uncertainties.}
+of $m_{T}$ as computed by {\tt Hathor}, and scale and PDF uncertainties.}
 \end{center}
 \end{table}
 %%%%%%%%
@@ -367,4 +464,4 @@ The technique used is called ``Matrix Method'' (MM in the following)~\cite{ttbar
 %\input{vlq_analysis/htx}
 
 
-\section{Systematical uncertainties treatment}
+\section{Systematical uncertainties treatment}\label{sec:systematics}
