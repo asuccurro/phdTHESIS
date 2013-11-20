@@ -13,7 +13,7 @@ hence help us e.g. understanding the detector response and developing analysis
 strategies by predicting the sensitivity to the physics under study.
 
 In this chapter, we will first go through a very brief overview of some concepts of the 
-Quantum Chromodynamics theory useful to understand the evolution of a p-p collision
+Quantum Chromodynamics theory useful to understand the evolution of a pp collision
 event (Section~\ref{sec:MCphenomenology}). Thanks to perturbation theory we can predict hard 
 scattering cross sections, which is what is done as the first step of the Monte Carlo 
 simulation chain, described in Section~\ref{sec:matrixelement}.
@@ -35,7 +35,7 @@ At this point objects are reconstructed in the same way for Monte Carlo
 and real data, as discussed in Chapter~\ref{chap:objects}.
  
 
-\section{Phenomenology of p-p collisions}\label{sec:MCphenomenology}
+\section{Phenomenology of pp collisions}\label{sec:MCphenomenology}
 
 Of the interactions making up the processes, for Monte Carlo simulating
 hadron colliders physics the most challenging part is related to the
@@ -130,14 +130,14 @@ Here, $f_i$ ($i=a,b$) are the standard PDFs for partons $a,b = \{g,u,\bar{u},d,.
 of the proton longitudinal momentum, and $\sigma_{{\rm pp}\to{\rm X}}$ is the partonic scattering cross-section 
 calculated in fixed-order perturbation theory. The $\mu_{F}$ coefficient is newly introduced {\it factorization scale}, 
 $\mu_{R}$ is the renormalization scale for the QCD running coupling. Figure~\ref{fig:hardscatter} shows a pictorial
-representation of the generic p-p process.
+representation of the generic pp process.
 
 %which can be thought of as the scale that separates the long and short-distance physics, and $\mu_{R}$ is the renormalization scale for the QCD running coupling. Formally, the cross-section calculated to all orders in perturbation theory is invariant under changes in these parameters, but in practice it is not possible to dispose  of a complete set of higher order corrections. It is then necessary to make a specific choice   for the two scales in order to make cross-section predictions. The usual prescription consists in choosing a central value $\mu_R$ for both scales equal to some sensible energy scale in the process (e.g. \mH for Higgs boson production, \mZ for Drell-Yan events, etc.). A range of variation of the renormalization and factorization scales of $\mu_R/2 \le \mu_{R},\mu_{F} \le 2\cdot\mu_R$ is used to determine the uncertainty in the cross-section calculation due to missing higher-order QCD radiative corrections.
 
 \begin{figure}[hbt]\begin{center}
         \myskip\input{montecarlo/figures/hardscatter}\myskip
   	%\includegraphics[width=0.5\textwidth]{montecarlo/figures/fmfhardscatter}}
-	\caption{Diagram of a generic hard scattering process. The partons, extracted from the colliding p-p pair,
+	\caption{Diagram of a generic hard scattering process. The partons, extracted from the colliding pp pair,
   carry a momentum fraction with respect to the proton energy described by a parton distribution function. 
   The scattering of the partons is computed perturbatively and hence the kinematic properties of the final state object $X$ are predicted. \label{fig:hardscatter}}
 \end{center}\end{figure}
@@ -155,7 +155,7 @@ The cross section calculations are done in pQCD are in general either provided a
 or at Next-to-LO (NLO). NLO calculations include corrections from virtual exchange or emission of a massless parton.
 
 
-\section{Simulation of p-p collisions}\label{sec:MCsimulation}
+\section{Simulation of pp collisions}\label{sec:MCsimulation}
 
 The most interesting phenomena under study are scattering events with 
 large momentum transfer or with production of massive particles, also
@@ -163,7 +163,7 @@ called ``hard scattering'' events.
 Typical pQCD calculations can only provide an inclusive description of
 the process, while Monte Carlo programs give an exclusive picture
 of the event. 
-A p-p collision event in Monte Carlo simulation
+A pp collision event in Monte Carlo simulation
 is the combination of different sub-processes,
 illustrated in Figure~\ref{fig:collision}: %The core of the event, the hard interaction, produces a scattering at large angle of the colliding partons or new particles. 
 %Generally speaking, Monte Carlo simulation is a
@@ -597,7 +597,7 @@ and hence \texttt{JIMMY}.
 The various parton multiplicity samples are then normalized to their LO cross section
 and combined into an inclusive sample, which is finally typically normalized 
 to an inclusive cross section calculated at higher order in pQCD. 
-For the inclusive production of $Z$ and $W$ bosons in p-p collisions, the 
+For the inclusive production of $Z$ and $W$ bosons in pp collisions, the 
 MCFM~\cite{MCFM} and FEWZ~\cite{Gavin:2010az} programs are used to predict 
 cross sections at NLO and NNLO respectively.
 

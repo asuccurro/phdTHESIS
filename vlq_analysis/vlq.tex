@@ -3,50 +3,50 @@
 \chapter{Searches for vector-like top partner pairs in the single lepton channel}~\label{chap:vlq}
 
 Starting from this chapter, and continuing in Chapter~\ref{chap:wbx} 
-and Chapter~\ref{chap:htx}, we are going to describe two preliminary 
+and Chapter~\ref{chap:htx}, we are going to describe two 
 searches for vector-like top partners \TTbar\ pairs performed in the single 
-lepton\footnote{From now on, with the word ``lepton'' we will 
-mean only either electron or muon, assumed to come from the leptonic
-decay of a $W$ boson with its associated neutrino, which is considered
-to be the only particle contributing to the transverse missing energy \met.} channel. 
-These analyses
+lepton\footnote{In the following, with the word ``lepton'' we will 
+refer either to an electron or a muon, assumed to come from the leptonic
+decay of a $W$ boson or a leptonic $\tau$ decay.}
+%with its associated neutrino, which is considered to be the only particle contributing to the transverse missing energy \met.}
+ channel. These analyses
 are optimized for different final states and are thus complementary.
-The analyses are performed using a partial dataset of the p-p collisions at the \cme\ 
-of \rts=8~\tev\ collected during 2012 at the ATLAS detector, consinsting in  14.3~\ifb.
+The analyses are performed using a partial dataset of the pp collisions at the \cme\ 
+of \rts=8~\tev\ collected during 2012 at the ATLAS detector, corresponding to an integrated luminosity of  14.3~\ifb.
 The first search focuses on  vector-like top partners decay channels with high 
 Branching Ratio (BR) to 
 a $W$ boson and a bottom quark, while the second search is optimized for events with 
 high BR to a Higgs boson and a top quark.
-%and is performed using the full dataset of p-p collisions at the \cme of \rts=8~\tev\ collected during 2012 at the ATLAS detector, consinsting in 20.34~\ifb, while
+%and is performed using the full dataset of pp collisions at the \cme of \rts=8~\tev\ collected during 2012 at the ATLAS detector, consinsting in 20.34~\ifb, while
 %search for vector-like top partners with high BR to $Ht$
 %uses a partial dataset of the same data, amounting to 14.3~\ifb.
 
 This chapter is devoted to the presentation of the general features that are common to 
 the two analyses and is organized as follows: first in Section~\ref{sec:strategy}
-we review the common strategy adopted in the ATLAS collaboration Exotics group
-for vector-like quark searches; Section~\ref{sec:presel}
+we review the strategy for vector-like quark searches adopted 
+by the Exotics group of the ATLAS collaboration; Section~\ref{sec:presel}
 summarises the common event preselection for data and few general concepts in the
-analyses design; Section~\ref{sec:MCbkg}
-presents the Monte Carlo samples used in the searches, which
-are in general common to both analyses with only few exceptions that are reported;
-Section~\ref{sec:qcdbkg} describes how the multi-jet background from QCD events is
-obtained; Section~\ref{sec:systematics} introduces the general treatment of systematics.
-The two analyses are then presented in details in Chapeter~\ref{chap:wbx} 
-(\TTbar\ pairs decaying to $Wb+X$) and in Chapter~\ref{chap:htx}
-(\TTbar\ pairs decaying to $Ht+X$). The final results are presented 
-in Chapter~\ref{chap:results}.
+analyses design; Section~\ref{sec:datasets}
+describes the Monte Carlo samples used in the searches, which
+are in general common to both analyses with only few exceptions that are reported,
+and how the multi-jet background from QCD events is
+obtained; Section~\ref{sec:systematics} introduces the general treatment of systematic uncertainties.
+%The two analyses are then presented in details in Chapter~\ref{chap:wbx} 
+%(\TTbar\ pairs decaying to $Wb+X$) and in Chapter~\ref{chap:htx}
+%(\TTbar\ pairs decaying to $Ht+X$). The final results are presented 
+%in Chapter~\ref{chap:results}.
 
 \section{General strategy for vector-like quark pairs searches}\label{sec:strategy}
 
 The phenomenology for vector-like quarks was described already in Section~\ref{sec:THvlq}
-of this dissertation, here we will only briefly re-introduce the concepts on which
+of this dissertation. Here we will only briefly re-introduce the concepts on which
 the strategy for the searches has been built. Table~\ref{tab:vlqdecays} collects the 
 decay modes for vector-like quarks in the singlet and doublet models. It is evident
 from the richness of the final state phase space, combined with the unpredicted mass
 of the heavy objects that could span from few hundreds of \gev s (down to the values exluded by
-previous searches) up to  order of one \tev\ (since we focus on pair production of vector-like
-quarks, which is favoured up to this mass scale as shown in Figure~\ref{fig:vlqxsec}), that is 
-impossible to cover it with a single inclusive search.
+previous searches) up to  $\sim 1$~\tev\ (since we focus on pair production of vector-like
+quarks, which is favoured up to this mass scale)% as shown in Figure~\ref{fig:vlqxsec}), 
+that is impossible to cover it with a single inclusive search.
 
 \begin{table}[htb]\centering
 \begin{tabular}{|lc|lc|}\toprule
@@ -65,12 +65,12 @@ $Y(-4/3)$ & $W^-b$ & \multirow{2}{*}{$\quad\bigg(\begin{array}{c}B \\ Y\end{arra
 \caption{Allowed decay modes for vector-like singlets and doublets.}\label{tab:vlqdecays}
 \end{table}
 
-\begin{figure}[htb]\begin{center}
-	\subfigure{
-  	\includegraphics[width=0.65\textwidth, angle=270]{vlq_analysis/figures/xsec-8}}
-	\caption{\label{fig:vlqxsec} Pair and single production cross sections  for heavy 
-        quarks in proton-proton collisions at $\sqrt{s}=8$~TeV~\cite{Aguilar-Saavedra:2013qpa}.}
-\end{center}\end{figure}
+%\begin{figure}[htb]\begin{center}
+%	\subfigure{
+%  	\includegraphics[width=0.65\textwidth, angle=270]{vlq_analysis/figures/xsec-8}}
+%	\caption{\label{fig:vlqxsec} Pair and single production cross sections  for heavy 
+%        quarks in proton-proton collisions at $\sqrt{s}=8$~TeV~\cite{Aguilar-Saavedra:2013qpa}.}
+%\end{center}\end{figure}
 
 The BR of vector-like top and bottom partners to the allowed decay modes depends
 on the mass of the heavy quark and on the considered model (in our case, singlet or doublet
@@ -90,7 +90,8 @@ A plane of this kind is defined for every vector-like quark mass point considere
 in the analysis. Each point of each plane therefore represents a 
 uniquely defined model, and analyses are performed for every configuration
 to either find deviations from expectations or to set a 95\% Confidence Level (CL) exclusion.
-The final objective of the joint strategy is to cover the full plane.
+The final objective of the joint strategy is to cover the full plane by combining
+analyses probing the different signatures.
 
 \begin{figure}[h!tb]\begin{center}
 	\subfigure[]{\label{fig:vltBRs}
@@ -100,7 +101,7 @@ The final objective of the joint strategy is to cover the full plane.
 	\caption{Branching ratio of vector-like top (a) and bottom (b) partners as a function of the heavy quark mass $m_T$ and $m_B$ respectively~\cite{ATLAS-CONF-2013-056} for singlet and doublet models.\label{fig:vlqBRs}}
 \end{center}\end{figure}
 
-\begin{figure}[htb]\begin{center}
+\begin{figure}[h!bt]\begin{center}
 	\subfigure{
         \input{vlq_analysis/plane}}
        	\caption{Two dimensional plane used to represend the comprehensive scan of model mixing. Searches 
@@ -115,19 +116,81 @@ Up to the date of the writing of this dissertation, four complementary
 and quasi model-independent analyses have been performed by the Exotics working
 group on the partial dataset of 14.3~\ifb\ of proton-proton collision data at 
 $\sqrt{s}=8\tev$.  
-Two analyses investigated dilepton channels, one requiring a pair of same-charge 
-leptons~\cite{ATLAS-CONF-2013-051}, 
-the other a pair of opposite-charge leptons~\cite{ATLAS-CONF-2013-056}. These two analyses 
-are sensitive to
-both vector-like top and bottom partners, and the first in particular is also 
-sensitive to four-top production $pp\to t\bar{t}t\bar{t}$, 
+Two analyses investigated dilepton channels and two probed single lepton channels.
+
+The search for vector-like bottom and top partners in the same-sign 
+dilepton channel~\cite{ATLAS-CONF-2013-051}
+investigates a channel
+with very small contamination from Standard Model backgrounds and
+is also sensitive to four-top production $pp\to t\bar{t}t\bar{t}$, 
 either through the Standard Model process or a beyond-SM source such as 
-pair production of scalar color-octets (sgluons) or gluinos, with subsequent decays to top quark pairs.
-While the first search approach is to select via restrictive cuts the eventual signal
-and compare the final counts with the expected yields from background sources, the
-second search focuses on reconstructing the $Z$ boson from the opposite-charge  lepton
-pair and uses the invariant mass of the $Z$ boson candidate paired  with the highest $p_T$ $b$-jet
-as final discriminant variable to perform the statistical analysis.
+pair production of scalar color-octets (sgluons) or gluinos, with subsequent 
+decays to top quark pairs.
+The approach of this search is to select via restrictive cuts (that also
+impose a veto on a $Z\to l\bar{l}$ boson) the eventual signal
+and compare the final counts with the expected yields from background sources.
+Figure~\ref{fig:feyndSS} shows how the decays of vector-like bottom and top partner
+pairs can contribute to the same-sign dilepton signature. From this it is easy to
+understand that this search will be mainly covering the bottom right corner
+of the \BBbar\ two dimensional plane of Figure~\ref{fig:2dplane} and the top 
+left corner of the same plane for \TTbar.
+%Data-driven techniques are used to evaluate the background contribution to the signal region coming from charge misidentification and fakes, the two main sources of background. In the end 3, 10 and 2 events are observed in the $ee$, $e\mu$ and $\mu\mu$ channels respectively. The observed counts are consistent with the expected yields in the $ee$ and $\mu\mu$ channel. A small excess of events is observed in the $e\mu$ channel, leading to a slightly weaker limit than expected, but still within a $\pm1\sigma$ band.
+%These counts are consistent with the expected yields, except for the  $e\mu$ channel.
+
+\begin{figure}[hbt]
+\begin{center}
+        \myskip\input{vlq_analysis/figures/feyndiag_BB_ssdilep}\myskip
+	\caption{Feynman diagrams for \BBbar\ (left) and \TTbar\ (right)
+        decays that can result in a final state with two same-sign leptons,
+        in the case that the same-sign $W$ bosons (highlighted in different colors;
+        on the right the anti-top quarks associated to the $Z$ or Higgs bosons are
+        also highlighted as they will originate a $W^{-}$ boson) decay
+        into a lepton and a neutrino. \label{fig:feyndSS}}
+\end{center}
+\end{figure}
+
+
+The search in the opposite-charge dilepton channel~\cite{ATLAS-CONF-2013-056} 
+focuses on vector-like bottom  (top) partners decay channels where at least one 
+heavy quark decays into a $Z$ boson and a bottom (top) quark. 
+Here the strategy is to reconstruct the $Z$ boson from the opposite-charge lepton
+pair and use the invariant mass of the $Z$ boson candidate paired  with the highest 
+$p_T$ $b$-jet as final discriminant variable to perform the statistical analysis.
+It is then straight-forward to expect this search to efficiently cover the bottom
+left corners of both the \BBbar\  and \TTbar\  two dimensional planes of
+Figure~\ref{fig:2dplane}.
+
+
+The searches in the single lepton channel are focused on vector-like top partner
+pairs decays and are optimized for two distinctive signatures. One search
+exploits the boosted kinematics of the $W$ boson from vector-like top partners decays
+to reconstruct it from its hadronic channel final state 
+particles~\cite{ATLAS-CONF-2013-060}. The heavy quark invariant mass is 
+then reconstructed pairing the boosted  $W$ boson  with a \bjet\ and this
+distribution is used to perform the statistical analysis. It is evident that this
+search is going to cover the bottom right corner of the \TTbar\  two dimensional plane 
+of Figure~\ref{fig:2dplane}.
+
+The other search in the single lepton channel considers final states with high
+jet and \bjet\ multiplicities as a result of the decay of at least one heavy quark
+into a Higgs boson (assumed to decay into \bbbar) and a top 
+quark~\cite{ATLAS-CONF-2013-018} (see Figure~\ref{fig:feyndHTX}). The distribution
+of the  total transverse momentum of the event is then used to perform the statistical 
+analysis. This search is mainly sensitive to the top left corner of the \TTbar\  
+two dimensional plane of Figure~\ref{fig:2dplane}.
+
+
+\begin{figure}[hbt]
+\begin{center}
+        \myskip\input{vlq_analysis/figures/feyndiag_TT_HtX}\myskip
+	\caption{Feynman diagrams for the $\TTbar\to Ht+X$
+        decay entering the high jet and \bjet\ multiplicity final states.
+        Assuming the single lepton condition, in this picture all the bosons 
+        produced in the $\Tbar$ decay will decay hadronically.\label{fig:feyndHTX}}
+\end{center}
+\end{figure}
+
+
 
 We will in the following treat in details the two searches for vector-like 
 top partners performed in the single lepton channels, starting with the
@@ -136,9 +199,9 @@ discussion of the common features between the two analyses.
 
 \section{Data sample and common event preselection}\label{sec:presel}
 
-The data from p-p collision events recorded at the ATLAS experiment during
+The data from pp collision events recorded at the ATLAS experiment during
 2012 at a \cme\ of $\rts=8\tev$ are considered. Physics object definitions 
-were previously discussed in Chapter~\ref{chap:objects}.
+were discussed in Chapter~\ref{chap:objects}.
 Events collected during
 stable beam periods are required to pass data quality requirements and
 single lepton trigger selection. In order to maximize trigger
@@ -150,7 +213,7 @@ the use of the higher threshold triggers. The electron triggers have
 
 After passing trigger requirements, events with more than one lepton are
 discarded. In addition, the only lepton of the event has to match within $\dr<0.15$ the
-triggered one. As basic preselectio, four jets satisfying the conditions
+triggered one. As basic preselection, four jets satisfying the conditions
 described in Section~\ref{sec:jets} are required, at least one of them
 being tagged as a \bjet.
 
@@ -163,7 +226,8 @@ the missing transverse momentum.}\
 are defined: $\met>20~\gev$ and $\met+\mt>60~\gev$.
 
 At this point, a simple consideration about the typical expected jet
-(and \bjet) multiplicity is made so as to define an orthogonality
+(and \bjet) multiplicity based on counting the parton multiplicities and their 
+flavor is made so as to define an orthogonality
 cut between the two analyses. Table~\ref{tab:jetmult} shows the 
 number of jets (\bjet s) per decay channel combinations of \TTbar\ pairs, 
 in the case of single lepton selection with at least four jets
@@ -205,32 +269,39 @@ cut will contribute to the \wbx\ analysis.}\label{tab:jetmult}
 
 \section{Background and signal modeling}\label{sec:datasets}
 
+All samples are enterely modeled using Monte Carlo simulation with the exception
+of QCD multi-jet events, which are derived using data-driven techniques, and 
+background from $W$ boson production in association with jets, which is obtained
+from Monte Carlo at first but then is normalized to data.
+
 The main background for both analyses is $t\bar{t}$ 
-production with jets ($t\bar{t}$+jets in the following) 
+production in association with jets ($t\bar{t}$+jets)
 and different choices for the generator are made
 in the analyses because of the specific needs of having well
 modeled regions.
 In the case of the $t\bar{t}$+jets background prediction for the \htx\ analysis 
 further corrections to match the data are applied, due to a mismodeling in the
-heavy- and light-flavour content of the simulated sample (see Section~\ref{sec:htxEVT}).
+heavy- and light-flavour content of the simulated sample 
+(see Section~\ref{sec:htxEVT}).
 
-$W$ boson production  in association with jets ($W$+jets in the following) 
-and multi-jet events from QCD processed also contributes, the latter
-sneaking into the event selection via the misidentification of a jet or a photon as an
+$W$ boson production  in association with jets ($W$+jets) 
+and QCD multi-jet events also contributes, the latter
+entering into the event selection via the misidentification of a jet or a photon as an
 electron or the presence of a non-prompt lepton from, e.g., semileptonic $b$- or $c$-hadron decay.
-Other background smaller components are single top quark, $Z$+jets, diboson
-($WW,WZ,ZZ$), and $t\bar{t}$ production associated with a vector or Higgs boson.
+Small background contributions originate from single top quark, $Z$+jets, diboson
+($WW,WZ,ZZ$), and associated $t\bar{t}V$ ($V=W,Z$) and $t\bar{t}H$ production.
 
-All event generators using {\tt HERWIG}~\cite{HERWIG} are also interfaced to {\tt
-JIMMY v4.31}~\cite{jimmy} to simulate the underlying event.  
+\subsection{Monte Carlo simulated samples}\label{sec:MCbkg}
+
+%All event generators using {\tt HERWIG}~\cite{HERWIG} are also interfaced to {\tt JIMMY v4.31}~\cite{jimmy} to simulate the underlying event.  
 With the exception of the 
 signal samples, all simulated 
 samples utilise {\tt PHOTOS 2.15}~\cite{PhotosPaper} to model
 photon radiation and {\tt TAUOLA 1.20}~\cite{TauolaPaper} to model
 $\tau$ decays.  
 
-All simulated samples include multiple p-p
-interactions and go through the  {\tt GEANT4}~\cite{geant}
+All simulated samples include multiple pp
+interactions and make use of the  {\tt GEANT4}~\cite{geant}
 detector geometry and response simulation~\cite{atlas_sim}
 with the exception of the signal samples, for which a fast simulation of
 the calorimeter response is used.
@@ -246,8 +317,6 @@ Chapter~\ref{chap:mc} and in particular to Section~\ref{sec:generators}.
 %scales and energy resolutions match those determined in data control
 %samples.
 
-
-\subsection{Monte Carlo simulated samples}\label{sec:MCbkg}
 
 \subsubsection{$t\bar{t}$ MC@NLO}\label{subsec:MC@NLO}
 Simulated samples of $t\bar{t}$ pair production  in association with jets 
@@ -303,7 +372,6 @@ Simulated samples of $W/Z$ boson production in association with jets
 partons using the {\tt ALPGEN v2.13}~\cite{ALPGEN} LO generator and the 
 {\tt CTEQ6L1} PDF set~\cite{cteq6}, interfaced to {\tt HERWIG} v6.520 
 for parton showering and fragmentation.
-
 The MLM matching scheme is used also here to avoid double-counting of partonic configurations 
 between  matrix-element  calculation and parton showering.
 
@@ -315,34 +383,11 @@ control samples~\cite{whf}, while
 the $Z$+jets samples are generated separately 
 for $Z$+light jets, $Zb\bar{b}$+jets, and $Zc\bar{c}$+jets and
 normalized to the inclusive NNLO theoretical cross section~\cite{vjetsxs}.
-
 Overlap between $W/Zq\bar{q}$+jets ($q=b,c$) 
 events generated from the matrix element calculation and those
 generated from parton-shower evolution in the $W/Z$+light jets
-samples is avoided via an algorithm analogous to the one used
+samples is avoided via the same algorithm used
 for $t\bar{t}$ Alpgen.
-
-For the $W$+jets background, a normalisation from data for the shapes 
-obtained from the simulation is derived since the simulation 
-overestimates the number of $W$+jets events
-by up to $\sim$20\%, depending on the jet multiplicity.
-
-By exploiting the predicted asymmetry between
-$W^+$+jets and $W^-$+jets production in p-p collisions~\cite{wasym},
-the total number of $W$+jets events in data ($N_W=N_{W^+}+N_{W^-}$), 
-can be estimated based on the measured
-difference between the number of positively- and negatively-charged $W$
-bosons, $(N_{W^+}-N_{W^-})_{\rm meas}$, and the asymmetry predicted from the simulation:
-\begin{equation}
-N_W = \left(\frac{N_{W^+}+N_{W^-}}{N_{W^+}-N_{W^-}}\right )_{\rm MC}(N_{W^+}-N_{W^-})_{\rm meas}
-\label{eq:nw}
-\end{equation}
-
-Events are categorised in terms of  multiplicity of $b$ and $c$ jets and scale factors are
-derived using Equation~\ref{eq:nw}.
-The fraction of $W$+light jets events is scaled accordingly
-in order to preserve the overall normalisation of the $W$+jets background before $b$ tagging.
-
 
 \subsubsection{Other backgrounds}\label{subsec:otherbkg}
 %,tchanxs,Wtchanxs,schanxs}. 
@@ -379,7 +424,6 @@ theoretical cross sections~\cite{dibosonxs}.
 
 \subsubsection{Signal samples}\label{subsec:MCsignal}
 
-
 For vector-like $T$ signals, samples corresponding to a singlet $T$ quark 
 decaying to $Wb$, $Zt$ and $Ht$ are generated with the {\tt PROTOS v2.2} 
 LO generator~\cite{jaas,protos} 
@@ -389,14 +433,13 @@ the parton shower and fragmentation.
 For each decay channel ($Wb$, $Zt$ and $Ht$) the branching ratio has been 
 set to 1/3. Events are reweighted
 in order to reproduce any desired branching ratio configuration. 
-
 The predicted branching ratios in the weak-isospin singlet and doublet scenarios as 
 a function of $m_{T}$ are given in Table~\ref{tab:BRT}.
 
 The $m_{T}$ values considered range from $350\gev$ to $850\gev$ in steps of $50\gev$, 
 with the Higgs boson mass assumed 
 to be $125\gev$. All Higgs boson decay modes are considered, 
-with branching ratios as predicted by {\tt hdecay}~\cite{hdecay}.
+with branching ratios as predicted by {\tt HDECAY}~\cite{hdecay}.
 
 Signal samples are normalized to the approximate NNLO theoretical cross sections~\cite{ttbarxs} using the {\tt MSTW2008} NNLO PDF set.
 The cross section values used are summarized in Table~\ref{tab:sigmaTT}.
@@ -451,37 +494,64 @@ The same values are used in the graphical representation of Figure~\ref{fig:vlqB
 \bottomrule
 \end{tabular}}
 \caption{\label{tab:sigmaTT} Theoretical cross section at NNLO  for $TT$ production as a function
-of $m_{T}$ as computed by {\tt HATHOR}, and scale and PDF uncertainties.
-The same values are used in the graphical representation of Figure~\ref{fig:vlqxsec}.}
+of $m_{T}$ as computed by {\tt HATHOR}, and scale and PDF uncertainties.}
 \end{center}
 \end{table}
 %%%%%%%%
 
+
+
+\subsection{$W$+jets background normalisation}\label{sec:Wjetsnorm}
+
+For the $W$+jets background, a normalisation from data for the shapes 
+obtained from the simulation is derived since the simulation 
+overestimates the number of $W$+jets events
+by up to $\sim$20\%, depending on the jet multiplicity.
+
+By exploiting the predicted asymmetry between
+$W^+$+jets and $W^-$+jets production in pp collisions~\cite{wasym},
+the total number of $W$+jets events in data ($N_W=N_{W^+}+N_{W^-}$), 
+can be estimated based on the measured
+difference between the number of positively- and negatively-charged $W$
+bosons, $(N_{W^+}-N_{W^-})_{\rm meas}$, and the asymmetry predicted from the simulation:
+\begin{equation}
+N_W = \left(\frac{N_{W^+}+N_{W^-}}{N_{W^+}-N_{W^-}}\right )_{\rm MC}(N_{W^+}-N_{W^-})_{\rm meas}
+\label{eq:nw}
+\end{equation}
+
+Events are categorised in terms of  multiplicity of $b$ and $c$ jets and scale factors are
+derived using Equation~\ref{eq:nw}.
+The fraction of $W$+light jets events is scaled accordingly
+in order to preserve the overall normalisation of the $W$+jets background before $b$ tagging.
+
+
+
+
 \subsection{Multi-jet background}\label{sec:qcdbkg}
 
-QCD production can pass the event selection in the electron
+QCD multi-jet production can pass the event selection in the electron
 channel as non-prompt electrons or as ``fake'' electrons, i.e.
 either electrons from photon conversions or mis-identified jets
 that left a high amount of energy in the electromagnetic calorimeter.
 For events in the muon channel the main contributions come from
 non-prompt leptons from semileptonic $b$- and $c$-hadron decays.
 
-Even though these kind of events rarely pass the quality cuts 
+Although these kind of events rarely pass the quality cuts 
 required at the lepton reconstruction stage, the production cross section
-is so high (orders  of magnitude more than \ttbar\ pair production)
-that the contribution to the background from multi-jet events is
-no more negligible. The rate of what we will call in the following
-``fake events'' (against ``real events'') is estimated via data-driven 
+is so high (orders  of magnitude more than \ttbar\ production)
+that the contribution to the background from QCD multi-jet events is
+no longer negligible. The QCD multi-jet contribution
+is estimated via data-driven 
 methods, since simulation is not expected to predict this contribution
 with the desired level of accuracy.
 
 The technique used is called ``Matrix Method'' (MM in the following)~\cite{ttbar_3pb}.  
 The basic principle is to divide the data sample into two categories, one
-of events passing our standard selection criteria (``tight'' events), the
+of events passing the standard selection criteria (``tight'' events), the
 other including also leptons satisfying looser requirements (``loose'' events).
-We can reasonably think that loose leptons are either real leptons or fake leptons,
-and that most of our real leptons will pass the tight selection. We consider then
-a good evaluation of multi-jet contamination that fraction of fake events going
+Loose leptons can reasonably  be considered as either real leptons or fake leptons,
+and it can be assumed that most of the real leptons will pass the tight selection. 
+A good evaluation of multi-jet contamination is then that fraction of fake events going
 through the tight requirements. A pictorial representation of the sampling space 
 is shown in Figure~\ref{fig:mmspace}.
 
@@ -534,24 +604,91 @@ while $\epsilon_\mathrm{fake}$ is measured in control regions
 enriched in multi-jet event contributions.
 
 In Appendix~\ref{app:qcdmm} the MM used for the estimation
-of multi-jet background in the muon single lepton channel is
+of multi-jet background in the muon channel is
 described in some more details, as the author of this dissertation
 directly contributed to its development.
 
-\section{Systematical uncertainties treatment}\label{sec:systematics}
+
+\section{Data to Monte Carlo comparison}\label{sec:datamcpresel}
+
+\input{vlq_analysis/datamcpresel}
 
 
 
 
+\section{Systematic uncertainties}\label{sec:systematics}
+
+In addition to the uncertainty that comes from the stocastical nature
+of events we are subject to other sources that are systematical in the sense
+that they will bias the result towards a definite direction. They can come from
+detector measurements, from the way we reconstruct the objects, from the Monte
+Carlo modelling, and can affect either only the normalization of the total event
+yield (and are called ``normalization-only'' sytematics) or also the shape 
+of the distributions (and are called ``shape and normalization'' systematics).
+
+The individual sources of systematics are treated as uncorrelated, while
+the correlations eventually present in the particual systematic uncertainty are 
+kept for the various processes and channels. Most of the systematic uncertainties
+are common to the two analyses presented with only minor differences, e.g. in the
+$Ht+X$ analysis the systematic uncertainty affecting the jet energy scale is
+split into 9 components, while it has a unique component in the $Wb+X$ analysis. 
+The full list of systematics considered is presented in 
+Table~\ref{tab:SystSummary}, labelling them as  ``normalization-only'' 
+or ``shape and normalization'' systematics and indicating the number of components.
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Systematic uncertainty & \multicolumn{2}{c}{ $Wb+X$ } & \multicolumn{2}{c}{ $Ht+X$ }\\
+ & Status  & Components & Status  & Components\\
+\midrule
+Luminosity                  &  N & 1 &  N & 1\\
+Lepton ID+reco+trigger      &  N & 1 &  N & 1\\
+Jet vertex fraction efficiency & SN & 1 & SN & 1\\
+Jet energy scale            & SN & 1 & SN & 8\\
+Jet energy resolution       & SN & 1 & SN & 1\\
+%Jet mass scale               & - & -\\
+%Jet mass resolution      & - & -\\
+$b$-tagging efficiency      & SN & 9 & SN & 9\\
+$c$-tagging efficiency      & SN & 5 & SN & 5\\
+Light jet-tagging efficiency    & SN & 1 & SN & 1\\
+$t\bar{t}$ cross section    &  N & 1 &  N & 1\\
+$t\bar{t}V$ cross section   &  N & 1 &  N & 1\\
+$t\bar{t}H$ cross section   & - & - &  N & 1\\
+Single top cross section    &  N & 1 &  N & 1\\
+Dibosons cross section      &  N & 1 &  N & 1\\
+$W$+jets normalization      &  N & 5 &  - & -\\
+$Z$+jets normalization      &  N & 1 &  - & -\\
+$V$+jets normalization      &  - & - &  N & 1\\
+Multijet normalization      &  - & - &  N & 1\\
+$t\bar{t}$ modelling        & SN & 3 & SN & 3\\
+$V$+jets modelling         & SN & 1 &  - & -\\
+$t\bar{t}$+heavy-flavour fractions &  - & -& N & 1\\
+%$\TT$ modelling        & - & -\\
+\bottomrule
+\end{tabular}
+\caption{\label{tab:SystSummary} 
+List of systematic uncertainties considered in the two analyses. 
+We label as ``N'' (``SN'') uncertainties taken as ``normalization-only'' 
+(both ``shape'' and ``normalization'')
+for all processes and channels. 
+For backgrounds different from $t\bar{t}$ only the normalization 
+uncertainty is considered. 
+Some of the systematic uncertainties are split into more 
+components for a more
+accurate treatment. }
+\end{table}
 
 
+The systematic uncertainties are treated inside the 
 
 
+~\cite{Heinrich:7587,Junk:8128,Junk:7904}
 
-
-
-
-
+Details on specific treatments of systematics in particular channels will
+be given in the dedicated sections in the analysis chapters (Section~\ref{sec:wbxSYS} 
+and~\ref{sec:htxSYS}).
 
 
 

@@ -1,0 +1,15 @@
+% fmfssBBTT.t2 -- generated automatically from fmfssBBTT.log
+% Think twice before editing THIS file!
+\fmfL(36.72963,7.13654,lb){$\bar {T}$}
+\fmfL(34.5583,18.75452,b){$T$}
+\fmfL(23.33261,9.921,b){$g$}
+\fmfL(46.41699,14.60439,b){$H$}
+\fmfL(43.85722,23.07814,rb){$t$}
+\fmfL(4.18425,-1.13506,rt){$g$}
+\fmfL(4.18425,31.14955,rb){$g$}
+\fmfL(55.80241,-1.13506,lt){\textcolor {red}{$\bar {t}, \bar {t}$}$, \bar {b}$}
+\fmfL(60.91875,7.52641,l){$Z, H,$ \textcolor {red}{$W^-$}}
+\fmfL(61.99017,17.55565,l){\textcolor {red}{$W^{-}$}}
+\fmfL(60.91847,22.48883,l){\textcolor {blue}{$W^{+}$}}
+\fmfL(58.83551,27.07327,lb){$\bar {b}$}
+\fmfL(55.80241,31.14955,lb){\textcolor {blue}{$W^{+}$}}

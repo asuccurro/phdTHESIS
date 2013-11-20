@@ -13,3 +13,83 @@
 %\section{}\label{sec:}
 
 \section{Systematics}\label{sec:wbxSYS}
+
+\subsection{Technical Details}
+
+\subsubsection{Merging of non-$t\bar{t}$ Backgrounds}
+
+Due to the very low statistics of the remaining backgrounds ($W+$jets, $Z+$jets, dibosons, single top, $t\bar{t}V$), we are merging all of them into a single component as it will prevent us from pathological behavior in the treatment of some systematic uncertainties, $e.g.$ when a bin is empty in the nominal case, while an entry appears in a variation. The QCD background prediction from the Matrix Method is negative (but consistent with zero) and is currently being set to zero. The total of all these backgrounds is referred as ``non-$t\bar{t}$" in the following. 
+
+This treatment is believed to be reasonable as we do not expect or see any resonance for these backgrounds. Specific systematic variations of each background, $e.g.$ uncertainties on cross-section normalization, are applied separately to each corresponding component, and then added to the others in the nominal case to form a variational histogram of the sum. This can be seen on Appendix~\ref{app:ShapeSystematics}.
+
+%Contrary to what was described in Table~\ref{tab:sys}, all systematics are considered as normalization only for this small-background component. For the {\sc Tight} selection, we take the values derived from the {\sc Loose} selection, as we do not expect significant difference between the two cases.
+
+\subsubsection{Interpolation Method for Systematic Uncertainties}
+The standard method implemented in {\sc mclimit} is to interpolate the histograms between the nominal and the shifted templates. 
+Thus a shift of $+0.5\sigma$ will correspond to half way between the nominal and $+1\sigma$ shifted template. This is carried out bin-by-bin.
+Such an interpolation method is referred to as vertical morphing using a linear interpolation. Some of the uncertainties produce very 
+asymmetric effects. We use quadratic interpolation to ensure a continuous derivative at zero shift for variations below $1\sigma$ and 
+linear interpolation above. We apply interpolation of all systematic uncertainties and generate pseudo-experiments using these 
+interpolated numbers.
+
+\subsubsection{Statistical uncertainty of the MC samples}
+The statistical uncertainty of the MC samples is taken into account when computing our likelihoods.
+The {\sc mclimit} flag used is 2, meaning we consider the uncertainties as given by the uncertainties of the templates. 
+This allows us to correctly estimate the statistical uncertainty when many templates are merged together with different weights, such as in
+the case of the merged non-$t\bar{t}$ background.
+
+\subsubsection{Profiling of Systematic Uncertainties}
+This analysis does not profile any of the fundamental sources of systematic uncertainty. The only profiled parameter
+in the {\sl loose} analysis is the overall $t\bar{t}$ yield, taking advantage of the background-dominated
+low $M_{reco}$ sideband region, which absorbs the cumulative effect of different possible sources of uncertainty
+affecting the $t\bar{t}$ background normalization. Currently this parameter is free floating (since we still need to fix the
+JES systematic for signal) but eventually it will be assigned as prior uncertainty to the sum in quadrature of all normalization 
+uncertainties (both flat and shaped) affecting the $t\bar{t}$ background (was 24\% in the previous analysis). 
+No profiled parameters are used in the {\sl tight} analysis.
+
+
+
+
+
+
+
+\begin{table}[htb]
+\centering
+\caption{List of all systematic uncertainties (in \%) considered in the analysis, indicating which ones are treated
+as normalisation and/or shape uncertainties, with their impact on normalisation in the case of the 
+{\sl tight} selection, for signal and backgrounds. The signal given here is a chiral fourth-generation $T$ quark with mass $m_{T}=600\gev$.}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+ & $\T\bar{\T}$ ($600\gev$) \rule{0pt}{2.6ex} \rule[-1.2ex]{0pt}{0pt} & $t\bar{t}$ & Non-$t\bar{t}$\\
+\hline
+\multicolumn{4}{c}{Uncertainties [\%] affecting only the normalisation of the $m_{\rm reco}$ distribution:}\\
+Luminosity & +3.6/-3.6 & +3.6/-3.6 & +3.6/-3.6\\
+Lepton trigger, reconstruction and ID efficiency & +2.0/-2.0 & +2.0/-2.0 & +2.0/-2.0\\
+$t\bar{t}$ cross section & -- & +10/-11 & --\\
+\hline
+\multicolumn{4}{c}{Uncertainties [\%] affecting both normalisation and shape of the $m_{\rm reco}$ distribution:}\\
+Jet energy scale & +6.6/-8.4 & +15/-15 & +33/-22\\  
+Jet energy resolution & +8.4/-8.4 & +3.6/-3.6 & +9.3/-9.3\\ 
+Jet identification efficiency & +2.3/-2.7 & +2.3/-2.5 & +1.9/-2.6\\  
+$b$-quark tagging efficiency & +6.7/-7.3 & +6.7/-8.9 & +1.8/-2.2\\  
+$c$-quark tagging efficiency & +1.6/-1.6 & +4.1/-4.1 & +5.6/-5.6\\  
+Light-jet tagging efficiency & +0.3/-0.3 & +0.7/-0.7 & +2.7/-2.7\\  
+$t\bar{t}$ modelling: NLO MC generator & -- & +48/-48 & --\\  
+$t\bar{t}$ modelling: parton shower and fragmentation & -- & +25/-25 & --\\  
+$t\bar{t}$ modelling: initial and final state QCD radiation & -- & +8.8/-8.8 & --\\   
+$W$+jets normalisation & -- & -- & +8.9/-7.8\\  
+$W$+heavy-flavor fractions & -- & -- & +18/-19\\  
+$W$+jets modelling: scale variation & -- & -- & +11/-11\\  
+$Z$+jets cross section & -- & -- & +1.1/-1.1\\ 
+Single top cross section & -- & -- & +1.9/-1.5\\  
+Diboson cross section & -- & -- & $<0.1\%$\\  
+$t\bar{t}V$ cross section & -- & -- & +1.5/-1.5\\  
+\hline
+Total & +14/-15 & +59/-59 & +42/-35\\
+\hline\hline
+\end{tabular}
+%\caption{List of all systematic uncertainties (in \%) considered in the analysis, indicating which ones are treated
+%as normalisation and/or shape uncertainties, with their impact on normalisation in the case of the 
+%{\sl tight} selection, for signal and backgrounds. The signal corresponds to a chiral fourth-generation $\T$ quark with mass $m_{\T}=600\gev$.}
+\label{tab:SystSummary}
+\end{table}

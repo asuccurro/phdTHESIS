@@ -1,0 +1,12 @@
+% fmfhardscatter.t1 -- generated automatically from fmfhardscatter.log
+% Think twice before editing THIS file!
+\fmfL(22.74336,5.45863,b){$p_b$}
+\fmfL(22.74336,39.5409,t){$p_a$}
+\fmfL(40.51321,13.06966,r){$x_bp_b$}
+\fmfL(40.51321,31.92989,r){$x_ap_a$}
+\fmfL(6.69145,-0.9205,rt){p}
+\fmfL(6.69145,45.92001,rb){p}
+\fmfL(82.10966,22.49976,l){X}
+\fmfL(42.01653,2.72484,t){$f_b(x_b)$}
+\fmfL(42.01653,42.27472,b){$f_a(x_a)$}
+\fmfL(37.38843,22.4997,l){$\hat {\sigma }(x_ax_bs)$}
