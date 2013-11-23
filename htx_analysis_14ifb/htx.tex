@@ -2,25 +2,238 @@
 
 \chapter{Preliminary search  for \TTbar\ pairs decaying to $Ht+X$}\label{chap:htx}
 
+
+
 \section{Control regions}\label{sec:htxCR}
 
 \section{Event selection}\label{sec:htxEVT}
 
-%\section{}\label{sec:}
+\subsection{Comparison of signal prediction between singlet and doublet scenarios}
+\label{sec:SingletvsDoublet}
+
+As discussed in Sect.~\ref{sec:SimulatedSamples}, the signal MC samples used in this analysis were
+generated in the singlet scenario, for which the mixing between the $\T$ quark and SM quarks is left-handed.
+For simplicity, these samples are reweighted to reproduce any desired branching-ratio configuration, included
+that corresponding to a doublet scenario. There is a small concern that for the latter the mixing between the $\T$
+quark and SM quarks is right-handed, slightly affecting the kinematics and thus the signal acceptance and shape
+of the $\HT$ distribution. Two MC samples for the doublet scenario, corresponding to $m_{\T}=350$ and $600\gev$, are available, which
+have been used to check this effect. Figure~\ref{fig:HT_checks_SingletvsDoubletComp} compares, for both mass
+points and each of the three analysis channels considered, the yield and shape of the $\HT$ distribution for the 
+predicted signal using the singlet and doublet samples. In both cases the samples were reweighted to reproduce
+the branching ratios corresponding to the doublet model. As it can be appreciated, the shapes of the distributions
+are in reasonable agreement and discrepancies in the yields are below 5\% in the highest-sensitivity channel ($\geq 4$ $b$ tags).
+
+%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+\begin{center}
+\subfigure[]{\label{fig:singletdoublet_2b}
+\includegraphics[width=0.32\textwidth]{htx_analysis_14ifb/figures/doubletcomp_HTAll_ELEMUON_6jetin2btagex_NOMINAL.eps}}
+\subfigure[]{\label{fig:singletdoublet_3b}
+\includegraphics[width=0.32\textwidth]{htx_analysis_14ifb/figures/doubletcomp_HTAll_ELEMUON_6jetin3btagex_NOMINAL.eps}}
+\subfigure[]{\label{fig:singletdoublet_4b}
+\includegraphics[width=0.32\textwidth]{htx_analysis_14ifb/figures/doubletcomp_HTAll_ELEMUON_6jetin4btagin_NOMINAL.eps}}
+\caption{
+Comparison of the yields and shape of the $\HT$ distribution in simulation for $\T$ signal using the singlet samples (symbols) and
+using the doublet samples (histogram). In both cases the signal has been reweighted to reproduce the branching ratios corresponding 
+to the doublet model. The selection used corresponds to the combined $e$+jets and $\mu$+jets channels
+with $\geq 6$ jets and (a) 2 $b$ tags,  (b) 3 $b$-tags and (c) $\geq 4$ $b$ tags. The comparison is made for two 
+different mass points, $m_{\T}=350$ and $600\gev$.
+The last bin in all figures contains the overflow.
+\label{fig:HT_checks_SingletvsDoubletComp}}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%
+
 
 %\section{}\label{sec:}
 
-\section{Systematics}\label{sec:htxSYS}
+%\section{}\label{sec:}
+
+\section{Systematic uncertainties}\label{sec:htxSYS}
+
+Most of the systematic uncertainties were discussed in~\ref{sec:systematics}
+as common to the \wbx\ and \htx\ analyses. 
 
 
+\begin{table}[h!tb]
+\begin{center}
+\resizebox{1.\textwidth}{!}{
+\input{htx_analysis_14ifb/tables/sys_4b}}
+\caption{\label{tab:htxSYS4b} }
+\end{center}
+\end{table}
 
 %%%%NB COPY PASTE
-The total prior systematic uncertainty
-in the background normalisation in the $\geq 4$ $b$-tags channel is 
+The overall systematic uncertainty before the two-parameter fit ({\it pre-fit})
+on the background normalization in the $\geq 4$ $b$-tags channel is 
 $\sim$42\%, with the dominant uncertainties being from $b$ tagging efficiency (16\%),
 $c$ tagging efficiency (11\%), jet energy scale (11\%), $t\bar{t}$ modelling (11\%), 
 $t\bar{t}$+heavy-flavour fractions (32\%) and $t\bar{t}$ cross section (10\%).
+
 As a result of the two-parameter fit, the total background uncertainty is reduced 
 by about 80\% in this channel. The total  systematic uncertainty
 in the signal normalisation in the $\geq 4$ $b$-tags channel is 
 $\sim$21\%, completely dominated by the uncertainty in the $b$ tagging efficiency.
+
+
+
+%%JES
+As can be seen in Table~\ref{tab:SystSummary}, for the \htx\ analysis
+the JES systematic uncertainty is split into 8
+uncorrelated components, each with a different jet $\pt$ and $\eta$
+dependence, which are treated independently.
+The \texttt{JetUncertainties} tool~\cite{jesuncertaintyprovider} allows computation of
+uncertainties corresponding to each of the 8 different eigenvectors.
+By studying the individual sources of uncertainty, we found out the dominant
+contribution comes from the first eigenvector (BASELINE JES). 
+The rest of the
+eigenvectors lead to very small uncertainties, except for low statistics MC samples,
+where the migration of few events in/out of the sample can lead to artificially large
+uncertainties. Given the limited MC statistics available for the leading backgrounds,
+we are currently considering the JES envelope uncertainty (i.e. no JES breakdown)
+in order to attempt to get a physical estimate of the uncertainty in the analysis.
+We believe this actually provides a more accurate assessment of the JES uncertainty
+in this analysis, although we are likely still double-counting statistical uncertainties from
+the MC.
+
+
+
+
+\subsection{Normalisations of Data-Driven Backgrounds}
+\label{sec:syst_normHTX}
+In this section the uncertainties in data-driven background estimates are described.
+
+\subsubsection{\Wboson/\Zboson+jets Normalisation}
+\label{sec:syst_vjetsnormHTX}
+The \Wboson/\Zboson+jets cross sections from {\sc Alpgen} are affected by large uncertainties because they 
+are a leading-order calculation. 
+As discussed in Sect.~\ref{sec:wjets_bkg}, the overall $W$+jets normalisation is obtained via data-driven methods 
+separately for events with exactly 4 and $\geq 5$ jets in order to ensure the best possible central value for the 
+predicted $W$+jets yield. An additional 24\% uncertainty is assigned to the extrapolation of the data-driven
+estimate to events with $\geq 6$ jets.
+
+In addition, the following normalisation uncertainties are considered in
+determining the systematic uncertainty on the estimate of the $W$+jets
+heavy-flavour content:
+\begin{itemize}
+\item the fractions of $Wb\bar{b}$, $Wc\bar{c}$ and $Wc$ are varied by $\pm 20\%$ 
+in a correlated way; the fraction of $W$+light jets is recomputed to
+maintain the overall  $W$+jets normalisation before any $b$-tagging requirement;
+\item  the fractions of $Wb\bar{b}$, $Wc\bar{c}$ are varied by $\pm 20\%$ 
+in a correlated way, while the fraction of $W$+light jets is left untouched; the
+fraction of $Wc$ is recomputed to maintain the overall  $W$+jets normalisation before any $b$-tagging requirement;
+\item a theoretical systematic uncertainty on the $Wb\bar{b}$, $Wc\bar{c}$  and $Wc$ fractions
+from the extrapolation made from 2-jet events, where these fractions are measured in data, 
+to higher jet multiplicity is assessed. This uncertainty is estimated from simulation studies where
+the $W$+heavy-flavour fractions are studied as a function of variations in the {\sc Alpgen} generator parameters.
+For each jet multiplicity above 2 jets, a 25\% uncertainty
+on these fractions is added in quadrature, resulting in a total uncertainty of 35\% for 4 jets, 43\% for 5 jets,
+and 50\% for $\geq 6$ jets. 
+These extrapolation uncertainties on $Wb\bar{b}$ and $Wc\bar{c}$ are
+treated as fully correlated, and both are treated as uncorrelated with respect to
+the extrapolation uncertainty on $Wc$.
+The fraction of $W$+light jets is recomputed to
+maintain the overall  $W$+jets normalisation  before any $b$-tagging requirement.
+\end{itemize}
+%The first two uncertainties result from the propagation of the experimental uncertainties in the
+%measurement of the heavy-flavour fractions in $W$+1 jet and $W$+2 jets data control samples.
+
+The sum in quadrature of the above contributions result in a total uncertainty of $\sim$50\% on
+the estimated $W$+jets normalisation for events with $\geq 6$ jets and $\geq 2$ $b$ tagged jets. 
+This uncertainty is also assigned to the $Z$+jets normalisation.
+
+\subsubsection{Multijet Normalisation}
+\label{sec:qcd_normHTX}
+Systematic uncertainties on the multijet background estimate via the Matrix Method receive
+contributions from the limited data statistics, particularly at high jet and $b$-tag multiplicities, as
+well as from the uncertainty on the method, based on the difference between estimates obtained using 
+different control regions and from the calibration of the method using simulated multijet events.
+The uncertainty due to the method is assessed to be 50\%, which is taken as correlated across jet
+and $b$-tag multiplicity bins. 
+%The statistical uncertainties in the channels with 4 jets
+%are only a few percent and are therefore neglected.
+%The statistical uncertainties in the channels with 5 jets and 6 jets 
+% are in the range of 10\%--54\% and 
+%14\%--66\%, respectively, depending on the $b$-tag multiplicity bin.
+%These uncertainties are treated as uncorrelated across jet and $b$-tag multiplicity bins.
+
+
+
+
+\subsubsection{$t\bar{t}$+jets Modelling}
+\label{sec:syst_ttbarmodelHTX}
+
+A number of systematic uncertainties affecting 
+the modelling of $t\bar{t}$+jets are considered
+in this analysis. Systematic uncertainties associated 
+with the choice of factorisation and renormalisation 
+scales in {\sc Alpgen} are considered. For the former, 
+two different uncertainties are taken into account.
+
+
+\ifIsINT
+\paragraph{$\mathbf{Q_{fac}}$}: 
+\fi
+On the one hand, the factorisation scale for the hard scatter is varied by a factor of two up and down relative to the
+original scale, $Q^2=\sum_{\rm partons} (m^2 + \pt^2)$.
+\ifIsINT 
+Appendix~\ref{app:AlpgenModellingAppendix} describes details of the
+implementations of this uncertainty for the $t\bar{t}$+light partons and $t\bar{t}Q\bar{Q}$ ($Q=b,c$) samples, which are different.
+\fi
+Since sometimes both variations can go in the same direction, the largest of the two is taken and symmetrised.
+\ifIsINT
+\paragraph{Functional form of the factorisation scale (iqopt2):} 
+\fi
+On the other hand, the default choice for the dynamic factorisation scale,
+$Q^2=\sum_{\rm partons} (m^2 + \pt^2)$,  is compared to an alternate choice, $Q^2=x_1 x_2 s$.
+\ifIsINT
+See Appendix~\ref{app:AlpgenModellingAppendix} for more details on the implementations of this uncertainty 
+for the $t\bar{t}$+light jets and $t\bar{t}Q\bar{Q}$ ($Q=b,c$) samples, which are different).
+\fi
+This uncertainty is significantly larger than that obtained by simply scaling the factorization scale up and down by a factor two 
+and is symmetrised to obtain a two-sided uncertainty.
+
+\ifIsINT
+\paragraph{$\mathbf{k_{Tfac}}$}: 
+\fi
+The renormalisation scale associated with the evaluation of $\alpha_s$ at each local
+vertex in the matrix element calculation is varied by a factor of two
+up and down relative to the original scale, $k_{\rm T}$, between two
+partons.  
+\ifIsINT 
+Additional details are described in Appendix~\ref{app:AlpgenModellingAppendix}.
+\fi 
+This uncertainty is only applicable for the $t\bar{t}$+light partons
+sample, since that is the only sample to which the MLM matching prescription~\cite{mlm} is
+applied. As a result, this uncertainty cannot be applied to the events 
+originating from the dedicated $t\bar{t}b\bar{b}$ and $t\bar{t}c\bar{c}$
+simulated samples. However, this uncertainty is applied to the subset of $t\bar{t}b\bar{b}$ and $t\bar{t}c\bar{c}$
+events selected from the $t\bar{t}$+light partons MC samples after the
+heavy-flavour overlap removal procedure.
+
+%\paragraph{Heavy-flavour overlap removal}:  The $\Delta R$ cut between $Q\bar{Q}$ pairs in $t\bar{t}Q\bar{Q}$ ($Q=b,c$)  used to decide
+%whether to take the matrix element or parton shower predictions is varied by $\pm 0.1$ about the nominal value
+%of $\Delta R=0.4$. {\em Caveat: this systematic uncertainty has not been incorporated in the analysis yet.}
+
+\subsubsection{$t\bar{t}$+jets Heavy-Flavour Content}
+\label{sec:syst_ttbarHF}
+The fraction of $t\bar{t}Q\bar{Q}$ ($Q=b,c$) events relative to all $t\bar{t}jj$ events, where $j$ denotes any parton,
+is one of the most important systematic uncertainties in this analysis. 
+Currently there are no available theoretical predictions for the $t\bar{t}$+heavy-flavour fractions in $pp$ collisions at $\sqrt{s}=8\tev$ at NLO matched to a parton shower.
+In order to estimate a systematic uncertainty, the dependence of the ratio of cross sections for $t\bar{t}b\bar{b}$ over
+$t\bar{t}jj$ as a function of the factorisation scale choice is examined in {\sc Alpgen}. These cross
+sections are computed requiring the extra partons to satisfy $\pt>20\gev$, $|\eta|<2.5$ and $\Delta R({\rm j},{\rm j})>0.4$, which are similar requirements
+to those used in this analysis. The ratio of cross sections is computed for the default factorisation scale choice
+in {\sc Alpgen}, $Q^2=\sum_{\rm partons} (m^2 + \pt^2)$, which is then scaled up and down by a factor of two
+in a correlated way for $t\bar{t}b\bar{b}$ and $t\bar{t}jj$.
+The variation in the ratio of cross sections is found to be $\leq 25\%$. A similar conclusion is reached if a
+different dynamic scale,  $Q^2=x_1 x_2 s$, is chosen, and then scaled up and down by a factor of two.
+The systematic uncertainty assigned to the $t\bar{t}$+heavy-flavour fraction is 50\%, conservatively doubling
+the variation found in the generator-level study with {\sc Alpgen}. 
+
+Therefore, the fraction of $t\bar{t}Q\bar{Q}$ ($Q=b,c$) events relative to all $t\bar{t}$+jets events
+is varied up and down by $\pm 50\%$ (relative) with respect to the original {\sc Alpgen} prediction. 
+This uncertainty is taken to be fully correlated between the $t\bar{t}b\bar{b}$ and $t\bar{t}c\bar{c}$ fractions.
+The fraction of $t\bar{t}$+light jet events is adjusted accordingly to preserve the total $t\bar{t}$ yield in each jet multiplicity bin 
+prior to any $b$-tagging requirement.
+

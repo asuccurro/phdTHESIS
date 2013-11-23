@@ -32,8 +32,8 @@ are in general common to both analyses with only few exceptions that are reporte
 and how the multi-jet background from QCD events is
 obtained; Section~\ref{sec:systematics} introduces the general treatment of systematic uncertainties.
 %The two analyses are then presented in details in Chapter~\ref{chap:wbx} 
-%(\TTbar\ pairs decaying to $Wb+X$) and in Chapter~\ref{chap:htx}
-%(\TTbar\ pairs decaying to $Ht+X$). The final results are presented 
+%(\TTbar\ pairs decaying to \wbx\ ) and in Chapter~\ref{chap:htx}
+%(\TTbar\ pairs decaying to \htx\ ). The final results are presented 
 %in Chapter~\ref{chap:results}.
 
 \section{General strategy for vector-like quark pairs searches}\label{sec:strategy}
@@ -511,15 +511,17 @@ by up to $\sim$20\%, depending on the jet multiplicity.
 By exploiting the predicted asymmetry between
 $W^+$+jets and $W^-$+jets production in pp collisions~\cite{wasym},
 the total number of $W$+jets events in data ($N_W=N_{W^+}+N_{W^-}$), 
-can be estimated based on the measured
-difference between the number of positively- and negatively-charged $W$
-bosons, $(N_{W^+}-N_{W^-})_{\rm meas}$, and the asymmetry predicted from the simulation:
+can be estimated measuring the difference between the number 
+of positively- and negatively-charged $W$
+bosons ($(N_{W^+}-N_{W^-})_{\rm meas}$) 
+and comparing with the prediction from Monte Carlo simulation:
 \begin{equation}
 N_W = \left(\frac{N_{W^+}+N_{W^-}}{N_{W^+}-N_{W^-}}\right )_{\rm MC}(N_{W^+}-N_{W^-})_{\rm meas}
 \label{eq:nw}
 \end{equation}
 
-Events are categorised in terms of  multiplicity of $b$ and $c$ jets and scale factors are
+Events are categorised in terms of  multiplicity of $b$ and $c$ 
+jets and scale factors are
 derived using Equation~\ref{eq:nw}.
 The fraction of $W$+light jets events is scaled accordingly
 in order to preserve the overall normalisation of the $W$+jets background before $b$ tagging.
@@ -614,6 +616,10 @@ directly contributed to its development.
 \input{vlq_analysis/datamcpresel}
 
 
+\section{Statistical analysis}\label{sec:cls}
+
+To test the presence or absence of signals from new physics we use the
+\cls{s} method~\cite{cls,cls_2}
 
 
 \section{Systematic uncertainties}\label{sec:systematics}
@@ -630,8 +636,8 @@ The individual sources of systematics are treated as uncorrelated, while
 the correlations eventually present in the particual systematic uncertainty are 
 kept for the various processes and channels. Most of the systematic uncertainties
 are common to the two analyses presented with only minor differences, e.g. in the
-$Ht+X$ analysis the systematic uncertainty affecting the jet energy scale is
-split into 9 components, while it has a unique component in the $Wb+X$ analysis. 
+\htx\  analysis the systematic uncertainty affecting the jet energy scale is
+split into 9 components, while it has a unique component in the \wbx\  analysis. 
 The full list of systematics considered is presented in 
 Table~\ref{tab:SystSummary}, labelling them as  ``normalization-only'' 
 or ``shape and normalization'' systematics and indicating the number of components.
@@ -640,7 +646,7 @@ or ``shape and normalization'' systematics and indicating the number of componen
 \centering
 \begin{tabular}{lcccc}
 \toprule
-Systematic uncertainty & \multicolumn{2}{c}{ $Wb+X$ } & \multicolumn{2}{c}{ $Ht+X$ }\\
+Systematic uncertainty & \multicolumn{2}{c}{ \wbx\  } & \multicolumn{2}{c}{ \htx\  }\\
  & Status  & Components & Status  & Components\\
 \midrule
 Luminosity                  &  N & 1 &  N & 1\\
@@ -673,35 +679,205 @@ List of systematic uncertainties considered in the two analyses.
 We label as ``N'' (``SN'') uncertainties taken as ``normalization-only'' 
 (both ``shape'' and ``normalization'')
 for all processes and channels. 
-For backgrounds different from $t\bar{t}$ only the normalization 
-uncertainty is considered. 
 Some of the systematic uncertainties are split into more 
 components for a more
 accurate treatment. }
 \end{table}
 
-
-The systematic uncertainties are treated inside the 
-
-
-~\cite{Heinrich:7587,Junk:8128,Junk:7904}
+The systematic uncertainties are treated inside the \mclimit\ 
+package~\cite{mclimitATLAS} developed for ATLAS heavy quark
+searches based on the original \mclimit\ code developed
+by the CDF collaboration~\cite{Heinrich:7587,Junk:8128,Junk:7904}.
+Here the  histograms are interpolated between the nominal and the 
+systematically shifted templates bin-by-bin, with a shift of $+0.5\sigma$
+corresponding to half way between the nominal and the $+1\sigma$ shifted template.
+This interpolation method is called vertical morphing and uses a linear 
+bin-by-bin interpolation, but for variations below $1\sigma$ we use
+quadratic interpolation to ensure a continuous derivative at zero shift.
+Pseudoexperiments are generated using these interpolated numbers for
+all systematic uncertainties.
 
 Details on specific treatments of systematics in particular channels will
-be given in the dedicated sections in the analysis chapters (Section~\ref{sec:wbxSYS} 
-and~\ref{sec:htxSYS}).
+be given in the dedicated sections of the corresponding analysis chapters 
+(Section~\ref{sec:wbxSYS} and~\ref{sec:htxSYS}).
 
 
 
+\subsection{Luminosity}
+\label{sec:syst_lumi}
+The uncertainty on the absolute integrated luminosity is estimated to be
+of 3.6\%~\cite{lumi}. This systematic uncertainty
+is applied to all processes except the QCD multi-jet background.
+
+\subsection{Object definitions}
+\label{sec:syst_objects}
+The event reconstruction introduces uncertainties on the definition of
+leptons, jets and on the $b$-, $c$-, and light flavour-tagging. In the
+following the related systematic uncertainties considered are described.
+
+\subsubsection{Lepton reconstruction, identification and trigger scale factors}
+\label{sec:syst_lepID}
+
+In Sections~\ref{sec:electrons} and~\ref{sec:muons} the reconstruction
+of leptons was introduced, explaining the need of adjusting the
+differences between data and simulation in the efficiency for
+reconstruction, identification and trigger. This is done by
+applying to Monte Carlo samples some scale factors derived 
+with tag-and-probe techniques 
+on $Z\to \ell^+\ell^-$ ($\ell=e,\mu$) data and simulated samples.
+For each of these three sources of systematic uncertainty, 
+the overall systematic uncertainty is obtained 
+as the quadratic sum of the statistical
+and systematic uncertainties on the corresponding scale factor.
+
+In the $e$+jets channel, the systematic uncertainties corresponding to
+electron reconstruction, identification and trigger, are 0.3\%, 1.1\% 
+and 0.2\%, respectively.
+In the $\mu$+jets channel, the systematic uncertainties corresponding to
+muon reconstruction, identification and trigger, are 0.2\%, 1.1\% and 1.4\%, 
+respectively.
+A total uncertainty on the signal and background acceptances of 2\% is estimated.
+
+
+\subsubsection{Lepton momentum scale and resolution}
+
+To check the accuracy of the lepton momentum scale and resolution
+simulated samples of $Z\to \ell^+\ell^-$ and $J/\psi \to \ell^+\ell^-$
+are used to reconstruct the particles masses (for electrons also
+ $W\to e\nu$ events are used from  $E/p$  studies).
+The small discrepancies observed between data and simulation are
+corrected adjusting lepton energy scale and resolution in Monte Carlo
+samples only for muons, while for electrons energy resolution corrections
+are also applied only to Monte Carlo samples but energy scale corrections
+are applied to data in all detector regions and to simulation only in 
+the calorimeter transition region.
+The systematic uncertainties on these scale factors are varied
+separately and the result on the total yields are are at the 
+sub-percent level and considered therefore ngligible in the analyses.
+
+\subsubsection{JVF efficiency}
+\label{sec:syst_jvf}
+
+Recalling the cut applied on the JVF variable (Section~\ref{sec:jets}) 
+of $|{\rm JVF}|>0.5$, the per-jet efficiency of this requirement
+is estimated in $Z(\to \ell^+\ell^-)$+1-jet events both in data and
+Monte Carlo simulation. Event enriched in hard-scatter jets are selected
+separately from events enriched in jets from pile-up interactions and
+specific efficiency and inefficiency scale factors are measured.
+Scale factors for pileup jets are estimated to be consistent with 1, while
+efficiency for hard-scatter jets goes from $\sim$1.03 for jets with $\pt=25\gev$
+down to $\sim$1.01 for jets with $\pt>150\gev$.
+An overall event weight is obtained as the product of all per-jet scale factors
+and is applied to the Monte Carlo samples.
+The systematic uncertainty from the propagation of the per-jet scale
+factor uncertainty gives an overall uncertainty on the signal
+and background acceptance of $\sim$2.5\%.
+
+
+\subsubsection{Jet energy scale}
+\label{sec:syst_jes}
+
+The systematic uncertainty on the Jet Energy Scale (JES) 
+has been derived combining the information from both test-beam 
+and collision data and Monte Carlo
+simulation~\cite{ATLASJetEnergyMeasurement, insitu5,insitu6}.  
+Pile-up activity produces an additional source of systematic 
+uncertainty which depends on the number of primary vertices
+and on the average number of interactions per bunch crossing $<\mu>$. 
+%The first estimate of the effect of pile-up on the jet energy scale uncertainty was developed in 2011~\cite{insitu6}, and subsequently validated with in situ momentum balance techniques in studies of the 2012 data.
+Momentum balance techniques in $Z$+jets, $\gamma$+jets and 
+multi-jet events are combined to derive a small residual correction
+for jets in the transverse momentum range $20\gev<\pt<\sim1\tev$.
+
+The overall variation due to JES systematic uncertainty 
+evaluated in the central detector region 
+is $\sim$4\% for jets with $\pt=25\gev$ and improves to $\sim$1\% for  
+jets with $\pt=500\gev$~\cite{jesuncertainty}.
+The effect of this systematic uncertainty is 
+implemented in the analyses by varying in the Monte Carlo samples the 
+transverse momentum of all the selected jets by $\pm$1 standard deviation.
+In each event the missing transverse momentum \met\ is then corrected consistently to 
+the varied $\pt$ of the jets and all the variables involving jets are also
+recomputed.
+
+As can be seen in Table~\ref{tab:SystSummary}, for the \htx\ analysis
+the JES systematic uncertainty is split into 8
+uncorrelated components, each with a different jet $\pt$ and $\eta$
+dependence, which are treated independently.
+The \wbx\ instead uses the total JES uncertainty as a single uncertainty
+resulting from the sum in quadrature of all individual sources.
 
 
 
+\subsubsection{Jet energy resolution}
+\label{sec:syst_jer}
+
+The Jet Energy Resolution (JER) was measured 
+with two {\em in-situ} techniques~\cite{ATLASJetEnergyMeasurement}
+as a function of the jet transverse momentum and pseudo-rapidity.
+It is consistent in data and Monte Carlo simulation and no corrections
+are needed.
+To account for the systematic uncertainty the quadratic difference 
+between the JER in data and in simulated samples is used
+to smear the energy of jets in Monte Carlo simulation and a new
+varied sample is obtained with a different normalisation and 
+variable distributions shapes. The final result is then symmetrised
+to obtain both positive and negative variations.
+%In order to propagate the uncertainty in the $\pt$ resolution, for each jet in the simulation, a random number $r$ is drawn from a Gaussian distribution with mean 0 and sigma equal to the difference in quadrature between the fractional $\pt$ resolution with the tool and the nominal one.  The jet 4-momentum is then scaled by a factor $1+r$. This jet energy resolution uncertainty is assumed to be fully correlated point-by-point.
+%The same rebinning algorithm as discussed in Section~\ref{sec:syst_jes} is applied.
 
 
+\subsubsection{Heavy- and light-flavour tagging}
+\label{sec:syst_btag}
 
 
+The efficiencies in heavy flavour ($b$ and $c$) jets identification with
+the $b$-tagging algorithm are measured in data and depend on the individual
+jet flavour~\cite{BTaggingEfficiency,CTaggingEfficiency,LightTaggingEfficiency}.
+These efficiencies are measured from data and depend on the jet flavour:
+in Monte Carlo events $b$ ($c$) jet efficiencies are corrected with scale factors
+of 0.9--1.0 (1.1--1.2) depending on $\pt$, light jet efficiencies are corrected 
+with a  scale factor of $\sim$1.3.
+Every jet in the Monte Carlo simulated events is corrected depending
+on its flavour, $\pt$ and $\eta$
+The uncertainty on these scale factors is 
+between 7\% and 13\% for $b$ jets, between 15\% and 39\% for $c$ jets,
+and $\sim$25\% for light jets.
+
+As was reported in Table~\ref{tab:SystSummary}, the systematic uncertainty
+on \btag ging (\ctag ging) efficiency is divided into nine (five) independent 
+components that correspond to an eigenvector from the diagonalization of the
+matrix containing the information on the total uncertainty 
+per $\pt$ bin and the bin-to-bin correlations (see~\cite[Appendix P]{VHbb} for
+more details).
+These individual sources of systematic uncertainties 
+are taken as uncorrelated between $b$, $c$ jets, and
+light flavour jets. In Monte Carlo simulated events 
+a per-jet weighting procedure~\cite{IFAEBtagNote}
+is applied in order to propagate the \btag ging calibration
+and related uncertainties.
+
+\subsection{Theoretical cross-sections}
+\label{sec:syst_bkgxsect}
+
+Normalization-only systematic uncertainties on the theoretical
+cross-sections are considered as follows:
++10\%/-11\% for the inclusive $t\bar{t}$
+production cross section evaluated at approximate NNLO using 
+\texttt{HATHOR}~\cite{ttbarxs}; +5\%/-4\% and $\pm 5\%$ 
+for the theoretical cross sections of the single
+top~\cite{stopxs,stopxs_2} and diboson~\cite{dibosonxs} backgrounds
+respectively; +12\%/-17\% and  $\pm 30\%$ 
+for the theoretical cross sections of the $t\bar{t}H$~\cite{lhcxs} and 
+$t\bar{t}V$~\cite{ttbarVxs1,ttbarVxs2} backgrounds respectively.
 
 
+\subsection{Normalizations of data-driven backgrounds and background modeling}
+\label{sec:syst_norm}
 
+Because of the differences between the effects of these systematic uncertainties
+in the \wbx\ and \htx\ analyses, the reader is referred to the specific 
+Sections~\ref{sec:wbxSYS} and~\ref{sec:htxSYS}
 
 
 %\input{vlq_analysis/wbx}
