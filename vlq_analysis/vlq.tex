@@ -507,24 +507,60 @@ For the $W$+jets background, a normalisation from data for the shapes
 obtained from the simulation is derived since the simulation 
 overestimates the number of $W$+jets events
 by up to $\sim$20\%, depending on the jet multiplicity.
+Data driven techniques are also used to correct the heavy flavor (HF)
+composition of the $W$+jets events, such that at the end the scale
+factors applied are the product of the overall normalization scale factor
+and the scale factors obtained for $Wbb$, $Wcc$, $Wcj$ and $Wjj$
+components.
 
-By exploiting the predicted asymmetry between
-$W^+$+jets and $W^-$+jets production in pp collisions~\cite{wasym},
-the total number of $W$+jets events in data ($N_W=N_{W^+}+N_{W^-}$), 
-can be estimated measuring the difference between the number 
+
+In protons the PDF of quarks and anti-quarks are different, hence 
+the production of $W$ bosons in pp collisions will have different 
+cross sections for processes like
+$\sigma(u\bar{d}\to W^+)$ and $\sigma(d\bar{u}\to W^-)$. This charge
+asymmetry in \wjets\ production is predicted theoretically~\cite{wasym}
+and can be measured in data and then used to derive the correct
+overall normalization of the process.
+The total number of $W$+jets events in data ($N_W=N_{W^+}+N_{W^-}$) 
+is estimated measuring the difference between the number 
 of positively- and negatively-charged $W$
 bosons ($(N_{W^+}-N_{W^-})_{\rm meas}$) 
-and comparing with the prediction from Monte Carlo simulation:
+and compared to the prediction from Monte Carlo simulation:
 \begin{equation}
-N_W = \left(\frac{N_{W^+}+N_{W^-}}{N_{W^+}-N_{W^-}}\right )_{\rm MC}(N_{W^+}-N_{W^-})_{\rm meas}
+N_W = \left(\frac{N_{W^+}+N_{W^-}}{N_{W^+}-N_{W^-}}\right )_{\rm MC}(N_{W^+}-N_{W^-})_{\rm meas}.
 \label{eq:nw}
 \end{equation}
 
-Events are categorised in terms of  multiplicity of $b$ and $c$ 
-jets and scale factors are
-derived using Equation~\ref{eq:nw}.
-The fraction of $W$+light jets events is scaled accordingly
-in order to preserve the overall normalisation of the $W$+jets background before $b$ tagging.
+Equation~\ref{eq:nw} is evaluated in the signal region for top searches
+of at least 4 jets without requirements on the \btag ging multiplicity.
+The ratio of event with at least one \btag ged jet is estimated multiplying
+the prediction from Equation~\ref{eq:nw} by the tagging fractions in the different
+jet bins evaluated in data by subtracting the Monte Carlo predictions of
+non-\wjets\ backgorunds.
+
+To account for the different flavor composition, additional scale factors
+are derived in the 2 jets bin considering that the total number of tagged \wjets\ 
+events in the $i$th jet bin is given by:
+\begin{equation}\label{eq:nwt}
+N^{W,{\rm tag}}_{i\ {\rm jets}}  = N^{W,{\rm pretag}}_{i\ {\rm jets}}\bigg(\sum_{\rm x\ flavor} F_{x}P_{x}\bigg)_{i\ {\rm jets}},
+\end{equation}
+where $F_x$ are the flavor fractions $N^{\rm pretag}_x/N^{\rm pretag}$ 
+(which add up to unity for each jet bin) and 
+$P_x$ are the \btag ging probabilities for each flavor type $x = bb, cc, c, light$.
+After evaluating Equation~\ref{eq:nwt} in the 2 jets bin for data
+and Monte Carlo the scale factors
+are obtained as $K_x = F^{\rm data}_x/F^{\rm MC}_x$ and 
+propagated into the other jet multiplicities bins by correcting
+for the different normalization:
+\begin{equation}\label{eq:sfwn}
+\sum_{\rm x\ flavor} K_{x, {\rm 2\ jets}} F_{x, i\ {\rm jets}}^{\rm MC} = A, \qquad \neq 1 {\rm\ if\ } i \neq 2.
+	\end{equation}
+
+%Events are categorised in terms of  multiplicity of $b$ and $c$ 
+%jets and scale factors are
+%derived using Equation~\ref{eq:nw}.
+%The fraction of $W$+light jets events is scaled accordingly
+%in order to preserve the overall normalisation of the $W$+jets background before $b$ tagging.
 
 
 
@@ -614,12 +650,6 @@ directly contributed to its development.
 \section{Data to Monte Carlo comparison}\label{sec:datamcpresel}
 
 \input{vlq_analysis/datamcpresel}
-
-
-\section{Statistical analysis}\label{sec:cls}
-
-To test the presence or absence of signals from new physics we use the
-\cls{s} method~\cite{cls,cls_2}
 
 
 \section{Systematic uncertainties}\label{sec:systematics}
@@ -882,3 +912,96 @@ Sections~\ref{sec:wbxSYS} and~\ref{sec:htxSYS}
 
 %\input{vlq_analysis/wbx}
 %\input{vlq_analysis/htx}
+
+
+\section{Statistical analysis}\label{sec:cls}
+
+To test the presence or absence of signals from new physics we use the
+\cls{s}\ method~\cite{cls,cls_2} originally developed in the context of Higgs
+searches at the LEP collider~\cite{Read:451614}.
+The fundamental principle of this technique is that, in order to 
+exclude or verify a theory predicting some kind of signal over some other kind
+of background, both ``background only'' and ``signal plus background''
+hypotheses have to be tested. Once a test statistic $Q$ has been chosen
+analysis-wise, two confidence levels (CL) are defined for the two hypotheses:
+\begin{eqnarray}\label{eq:clbclsb}
+\cls{b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{b}),\\
+\cls{s+b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{s+b}),
+\end{eqnarray}
+with $Q_{\rm obs}$ being the observed value in data of the 
+test statistic. It is good to identify well separated test statistic
+distributions in order to be able to clearly distinguish between 
+events consistent with the backgroud only prediction and events
+showing deviations consistent with the signal+background hypothesis.
+
+The \cls{s}\ is then defined as the ratio of the two:
+\begin{equation}\label{eq:cls}
+\cls{s} = \cls{s+b}/\cls{b}
+\end{equation}
+and its meaning is given by its relation with the confidence 
+level $CL$ for the exclusion of the signal hypothesis 
+$(1 - \cls{s}) \leq CL$.
+%i.e. values of $\cls{s}<0.05$ 
+Similarly, the confidence level for excluding the background only
+hypothesis is the $p$-value $1 - \cls{b}$ and the value required to claim 
+discovery is of $\sim 10^{-7}$. The motivation that led to
+the definition of \cls{s} instead of using \cls{s+b}, which also
+corresponds to the confidence level in excluding the signal+background
+hypothesis, is that the latter might wrongly exclude scenarios to
+which the analysis is simply not sensitive to like is the general case
+for searches for rare events.
+
+For the two analyses presented in this dissertation, the test statistic
+is defined as a log-likelihood ratio 
+\begin{equation}\label{eq:llr}
+LLR = -2\log \dfrac{\mathcal{L}({\rm data}|\mathcal{H}_{s+b})}{\mathcal{L}({\rm data}|\mathcal{H}_{b})},
+\end{equation}
+where the likelihoods $\mathcal{L}({\rm data}|\mathcal{H}_{s+b})$
+ and $\mathcal{L}({\rm data}|\mathcal{H}_{b})$ for 
+signal+background and background only hypothesis
+are built from the chosen discriminant variable distribution 
+as the bin by bin product of Poisson probabilities to observe the
+data under one or the other hypothesis.
+Eventually more than one channel can be combined (like will be
+the case in the \htx\ analysis) and the complete formula for
+the likelihood computation reads:
+\begin{align}
+-2 \log {\cal L}({\rm data}|\mathcal{H}_x) 
+   & =  
+   %=
+   -2 \log {\cal L}(\vec{n}|R,\vec{s},\vec{b},\vec{\theta}) \notag\\
+   %=
+   & =  
+  -2 \sum_{i=1}^{N_{chan}}\sum_{j=1}^{N_{bins}} (n_{ij}\log \mu_{ij}-\mu_{ij})+\sum_{k=1}^{N_{par}} \theta_k^2.
+\end{align}
+Here the first sum is over the number of channels
+combined in the analysis $N_{chan}\geq 1$ and the 
+second sum is over the number of the discriminant variable
+histogram bins $N_{bins}$. $n_{ij}$ ($\mu_{ij}$) is the 
+number of events in data (expected number of events) 
+for channel $i$ and histogram bin $j$. $\mu_{ij}$ is given by
+$\mu_{ij} = R s_{ij}(\vec{\theta})+ b_{ij}(\vec{\theta})$, 
+where $s_{ij}$  and $b_{ij}$ represent the
+expected signal and background yields, 
+the first being equal to zero in the background only hypothesis.
+$R$ is a scaling 
+parameter applied to the signal
+to test the sensitivity of the search and $\vec{\theta}$
+are the nuisance parameters parametrizing the effect of
+systematic uncertainties. 
+%These parameters are assigned Gaussian penalty terms in the likelihood corresponding
+%to their nominal uncertainties.
+For both hypotheses pseudoexperiments are generated to
+account in each bin for statistical fluctuations (Poisson-distributed)
+and systematic variations (Gaussian-distributed). The effect of
+systematic uncertainties are described by nuisance parameters taken
+at their nominal values and no parameter fitting is performed.
+In the case of the \htx\ analysis it will be explained that
+two additional nuisance parameters are introduced and fitted
+to help costraining the sensitivity degradation due to a poor
+Monte Carlo modeling of \ttbar\ heavy flavor component.
+
+In absence of data excess over background prediction, values of
+$\cls{s}<0.05$ are considered to exclude a signal cross section
+at 95\% CL.
+
