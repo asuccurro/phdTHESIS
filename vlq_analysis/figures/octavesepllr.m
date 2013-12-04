@@ -24,14 +24,16 @@ area(xa2, fa2, 'FaceColor', 'red')
 plot([50 50], [0 0.025], 'LineWidth', 2, 'k')
 plot(x, fx2, 'LineWidth', 2, 'r')
 
-legend('right')
-legend('Background only hypothesis', 'Signal+Background hypothesis',
-       '1 - CL_b', 'CL_{s+b}', 'location', 'northwest');
 
-set(gca, 'fontsize', 30)
+legend('right')
+legend('AAA', 'BBB', 'CCC', 'DDD',
+       'location', 'northwest');
+#legend('Background only hypothesis', 'Signal+Background hypothesis','1 - CL_b', 'CL_{s+b}'
+
+set(gca, 'fontsize', 40)
 #legend('Signal+Background hypothesis', 'location', 'northwest')
 
-xlabel('f(Q)', 'fontsize', 50);
-ylabel('probability density', 'fontsize', 50);
+xlabel('XXX', 'fontsize', 40);
+ylabel('YYY', 'fontsize', 40);
 
-print('separatedLLR.eps', '-depsc2', '-F:25', '-tight') 
+print('separatedLLR.eps', '-depsc2', '-F:50', '-tight') 

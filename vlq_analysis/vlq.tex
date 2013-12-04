@@ -568,9 +568,10 @@ for the different normalization:
 \subsection{Multi-jet background}\label{sec:qcdbkg}
 
 QCD multi-jet production can pass the event selection in the electron
-channel as non-prompt electrons or as ``fake'' electrons, i.e.
-either electrons from photon conversions or mis-identified jets
-that left a high amount of energy in the electromagnetic calorimeter.
+channel as non-prompt electrons from e.g. heavy flavor quark decays, as 
+electrons from photon conversions or as jets mis-identified as electrons
+because they left a high amount of energy in the electromagnetic calorimeter
+like in the case of $\pi^0$ and $\eta$ decays into two close-by photons.
 For events in the muon channel the main contributions come from
 non-prompt leptons from semileptonic $b$- and $c$-hadron decays.
 
@@ -587,11 +588,18 @@ The technique used is called ``Matrix Method'' (MM in the following)~\cite{ttbar
 The basic principle is to divide the data sample into two categories, one
 of events passing the standard selection criteria (``tight'' events), the
 other including also leptons satisfying looser requirements (``loose'' events).
-Loose leptons can reasonably  be considered as either real leptons or fake leptons,
+Loose leptons can reasonably  be considered as either {\it real} leptons or {\it fake} leptons,
 and it can be assumed that most of the real leptons will pass the tight selection. 
 A good evaluation of multi-jet contamination is then that fraction of fake events going
 through the tight requirements. A pictorial representation of the sampling space 
-is shown in Figure~\ref{fig:mmspace}.
+is shown in Figure~\ref{fig:mmspace}. Typically tight selection requirements
+are the same as the ones defined to reconstruct the lepton (Sections~\ref{sec:electrons}
+and~\ref{sec:muons}) where then some cuts are either removed or changed
+to obtain the loose sample. In the case of muons, loose muons are as final 
+leptons but without the mini-isolation requirement. Loose electrons are
+like final electrons where the \texttt{tight++} requirement is replaced
+by the \texttt{medium++} one, isolation requirements are omitted and
+a condition to veto against conversion is added.
 
 \begin{figure}[htb]\begin{center}
 	\subfigure[]{\label{fig:mmspace}
@@ -636,10 +644,23 @@ An important condition for this method to work is that
 $\epsilon_\mathrm{real} \gg \epsilon_\mathrm{fake}$, which 
 holds as $\epsilon_\mathrm{real}\sim 1$, while $\epsilon_\mathrm{fake}$
 is in general well below 1.
-$\epsilon_\mathrm{real}$ is in general measured from
-tag and probe measuremets on $Z$ boson decays to two leptons,
-while $\epsilon_\mathrm{fake}$ is measured in control regions
+Efficiencies for fake and real leptons to pass the 
+tight requirement are measured in dedicated control regions, 
+enriched respectively with fake and real leptons.
+The $\epsilon_\mathrm{fake}$ is measured in control regions
+with small \met\ and \mtw\ (a triangular cut on the
+sum of the two variables is applied), which is
 enriched in multi-jet event contributions.
+The $\epsilon_\mathrm{real}$ is in general measured 
+on the contrary in regions with high \met\ or \mtw\
+to select leptons from a leptonic decay of a $W$
+boson.
+While $\epsilon_\mathrm{real}$ shows basically
+no dependency on the event topology and has
+a stable value close to unity,  $\epsilon_\mathrm{fake}$ 
+needs to be parametrized in terms of some observables
+towards which it shows dependency and its values
+vary, typically, between 0.2 and 0.5.
 
 In Appendix~\ref{app:qcdmm} the MM used for the estimation
 of multi-jet background in the muon channel is
@@ -952,11 +973,18 @@ which the analysis is simply not sensitive to like is the general case
 for searches for rare events.
 
 \begin{figure}[htb]\begin{center}
+        \psfrag{AAA}{\tiny $P(f(Q)|\mathcal{H}_{b})$}
+        \psfrag{BBB}{\tiny $P(f(Q)|\mathcal{H}_{s+b})$}
+        \psfrag{CCC}{\tiny $1 - CL_{b}$}
+        \psfrag{DDD}{\tiny $CL_{s+b}$}
+        \psfrag{XXX}{$f(Q)$}
+        \psfrag{YYY}{\hskip-10ex Probability density}
 	\subfigure[]{\label{fig:sepLLR}
   	\includegraphics[width=0.45\textwidth]{vlq_analysis/figures/separatedLLR}}
 	\subfigure[]{\label{fig:ovrLLR}
   	\includegraphics[width=0.45\textwidth]{vlq_analysis/figures/overlappedLLR}}
-	\caption{Example of (a) sensitive and (b) not sensitive test statistics $f(Q)$.}
+	\caption{Example of (a) sensitive and (b) not sensitive analyses using the test 
+        statistics $f(Q)$, often chosen as $-2\log Q$.}
 \end{center}\end{figure}
 
 
