@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{feynmf}
+%\usepackage{feynmp}
+\unitlength=1mm
+%when compiling, do
+%latex file.tex
+%mf '\mode:=localfont; input fmf1'
+%latex file.tex
+%\usepackage[hdivide={1cm, *, 1cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{fmffile}{fmfvlqpp}
+
+\begin{figure}
+\begin{fmfgraph*}(60,30)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2,o3,o4}
+  \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  %\fmflabel{$b$}{}
+%%%%
+  \fmf{phantom}{o1,v2,v3,v1,i1}
+  \fmf{phantom}{o2,v2,v3,v1,i1}
+  \fmf{phantom}{o3,v4,v3,v1,i2}
+  \fmf{phantom}{o4,v4,v3,v1,i2}
+%%%%
+  \fmflabel{$\bar{q}, \bar{q'}$}{o1}
+%  \fmflabel{$Z, H, W^{\pm}$}{o2}
+  \fmf{plain}{o1,v2,v3}
+  \fmf{photon,label=\phantom{aaaaaaaaaaa}$Z,, H,, W^{\pm}$}{o2,v2}
+%%%%
+  \fmflabel{$q, q'$}{o3}
+  \fmflabel{$Z, H, W^{\mp}$}{o4}
+  \fmf{plain}{o3,v4,v3}
+  \fmf{photon}{o4,v4}
+
+  \fmf{plain,label=$\bar{Q}$,l.dist=-10thick}{v2,v3}
+  \fmf{plain,label=$Q$,l.dist=1thick}{v4,v3}
+  \fmf{curly}{i1,v1}
+  \fmf{curly}{i2,v1}
+  \fmf{curly,label=$g$,l.dist=-6thick}{v1,v3}
+\end{fmfgraph*}
+\end{figure}
+
+\end{fmffile}
+\end{document}

@@ -1,0 +1,4 @@
+rm fmf*
+latex feyndiag_vlqPairProd.tex
+mf '\mode:=localfont; input fmfvlqpp'
+latex feyndiag_vlqPairProd.tex

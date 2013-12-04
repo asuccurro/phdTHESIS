@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+%\usepackage{feynmf}
+\usepackage{feynmp}
+\unitlength=1mm
+%when compiling, do
+%latex file.tex
+%mf '\mode:=localfont; input fmf1'
+%latex file.tex
+\usepackage[hdivide={1cm, *, 1cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+
+
+\begin{document}
+
+
+
+%STOP PAIRS SEMILEP
+
+\vspace{2cm}
+\begin{fmffile}{fmf5}
+\begin{fmfgraph*}(60,40)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2,o3,o4,o5,o6,o7,o8}
+  \fmfforce{(.01w,.2h)}{i1}
+  \fmfforce{(.01w,.7h)}{i2}
+ \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  \fmf{curly}{i1,v1}
+  \fmf{curly}{i2,v1}
+  \fmfforce{(.3w,.5h)}{v2}
+  \fmf{curly,label=$g$,l.dist=6thick}{v1,v2}
+  \fmf{plain}{o1,v3,v4,v2,v5,v6,o8}
+  %\fmf{scalar,label=$\tilde{t}$}{v2,v4}
+  %\fmf{scalar,label=$\overline{\tilde{t}}$}{v2,v5}
+\fmffreeze
+  \fmf{plain,foreground=red}{o2,v3,o3}
+  \fmf{plain,label=$b$,foreground=red}{v4,o4}
+  \fmf{plain,foreground=red}{v6,o6}
+  \fmf{plain}{o7,v6}
+  \fmf{plain,label=$\bar b$,l.dist=-7thick,foreground=red}{v5,o5}
+\fmf{plain,label=$\tilde{t}$,l.dist=-10thick}{v2,v4}
+\fmf{plain,label=$\overline{\tilde{t}}$,l.dist=-10thick}{v2,v5}
+\fmf{plain,label=$\tilde\chi_1^+$,l.dist=-10thick}{v4,v3}
+\fmf{plain,label=$\tilde\chi_1^-$,l.dist=-10thick}{v5,v6}
+ \fmflabel{$q$}{o3}
+ \fmflabel{$q$}{o2}
+ \fmflabel{$\tilde\chi_0$}{o1}
+ \fmflabel{$l$}{o6}
+ \fmflabel{$\nu_l$}{o7}
+ \fmflabel{$\tilde\chi_0$}{o8}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+\end{document}

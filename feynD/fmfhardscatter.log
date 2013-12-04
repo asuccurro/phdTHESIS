@@ -1,0 +1,28 @@
+This is METAFONT, Version 2.718281 (TeX Live 2009/Debian) (base=mf 2013.3.19)  1 NOV 2013 22:08
+**\mode:=localfont; input fmfhardscatter
+(fmfhardscatter.mf (/usr/share/texmf/metafont/feynmf/feynmf.mf)
+feynmf: ignoring option lab.side=left.
+feynmf: ignoring option lab.side=left.
+feynmf: ignoring option lab.side=left.
+:1:\fmfL(24.87396,5.5374,b){$p_b$}%
+:1:\fmfL(24.87396,39.4632,t){$p_a$}%
+:1:\fmfL(48.27798,14.38837,rb){$x_bp_b$}%
+:1:\fmfL(48.27795,30.6123,rt){$x_ap_a$}%
+:1:\fmfL(6.6922,-0.92053,rt){p}%
+:1:\fmfL(6.6922,45.92111,rb){p}%
+:1:\fmfL(82.15096,22.50029,l){X}%
+:1:\fmfL(47.42941,3.0142,t){$f_b(x_b)$}%
+:1:\fmfL(47.42941,41.9864,b){$f_a(x_a)$}%
+:1:\fmfL(49.9498,22.50034,l){$\hat {\sigma }(x_ax_bs)$}% [1] ) 
+Here is how much of METAFONT's memory you used:
+ 696 strings out of 5275
+ 8025 string characters out of 70080
+ 39605 words of memory out of 3000000
+ 1379 symbolic tokens out of 9500
+ 14i,67n,8r,28p,182b stack positions out of 300i,300n,1000r,150p,200000b
+ 
+(You used 2w,2h,1d,1i,0l,0k,0e,0p metric file positions
+  out of 256w,16h,16d,64i,15000l,2500k,256e,60p)
+
+Font metrics written on fmfhardscatter.tfm.
+Output written on fmfhardscatter.600gf (1 character, 12988 bytes).

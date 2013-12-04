@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{feynmf}
+%\usepackage{feynmp}
+\unitlength=1mm
+%when compiling, do
+%latex file.tex
+%mf '\mode:=localfont; input fmf1'
+%latex file.tex
+\usepackage[hdivide={1cm, *, 1cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+
+
+\begin{document}
+
+\begin{fmffile}{fmfss}
+
+\begin{figure}
+\begin{fmfgraph*}(60,30)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2,o3,o4,o5,o6,o7,o8}
+  \fmflabel{$g$}{i1}
+  \fmflabel{$g$}{i2}
+  %\fmflabel{$b$}{}
+%%%%
+  \fmf{phantom}{o1,v4,v3,v2,v1,i1}
+  \fmf{phantom}{o2,v4,v3,v2,v1,i1}
+  \fmf{phantom}{o3,v5,v3,v2,v1,i1}
+  \fmf{phantom}{o4,v5,v3,v2,v1,i1}
+%%%%
+  \fmf{phantom}{o5,v7,v6,v2,v1,i2}
+  \fmf{phantom}{o6,v7,v6,v2,v1,i2}
+  \fmf{phantom}{o7,v8,v6,v2,v1,i2}
+  \fmf{phantom}{o8,v8,v6,v2,v1,i2}
+%%%%
+  \fmflabel{$\bar{b}$}{o1}
+  \fmflabel{\textcolor{red}{$W^{-}$}}{o2}
+  \fmflabel{\textcolor{blue}{$W^{+}$}}{o4}
+  \fmflabel{\textcolor{red}{$W^{-}$}}{o8}
+  \fmflabel{\textcolor{blue}{$W^{+}$}}{o6}
+  \fmflabel{$b$}{o5} 
+  \fmf{plain}{o1,v4}
+  \fmf{photon}{o2,v4}
+%%
+  \fmf{photon}{o4,v3}
+  \fmf{plain}{o5,v7}
+  \fmf{photon}{o6,v7}
+  \fmf{photon}{o8,v6}
+%%%
+  \fmf{plain,label=$\bar{B}$}{v2,v3}
+  \fmf{plain,label=$B$}{v2,v6}
+  \fmf{plain,label=$\bar{t}$,l.dist=-7thick}{v4,v3}
+  \fmf{plain,label=$t$}{v7,v6}
+  \fmf{curly}{i1,v1}
+  \fmf{curly}{i2,v1}
+  \fmf{curly,label=$g$,l.dist=-7thick}{v1,v2}
+\end{fmfgraph*}
+\end{figure}
+
+\end{fmffile}
+\end{document}

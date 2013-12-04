@@ -1,0 +1,24 @@
+This is METAFONT, Version 2.718281 (TeX Live 2009/Debian) (base=mf 2013.3.19)  1 SEP 2013 13:58
+**\mode:=localfont; input fmfvlqpp
+(fmfvlqpp.mf (/usr/share/texmf/metafont/feynmf/feynmf.mf)
+:1:\fmfL(52.88864,11.8496,b){\phantom {aaaaaaaaaaa}$Z, H, W^{\pm }$}%
+:1:\fmfL(38.05557,6.06233,lb){$\bar {Q}$}%
+:1:\fmfL(27.89662,19.28827,t){$g$}%
+:1:\fmfL(40.92197,18.20592,rb){$Q$}%
+:1:\fmfL(4.18425,-1.13506,rt){$g$}%
+:1:\fmfL(4.18425,31.14955,rb){$g$}%
+:1:\fmfL(55.80241,-1.13506,lt){$\bar {q}, \bar {q'}$}%
+:1:\fmfL(61.39124,20.87503,l){$q, q'$}%
+:1:\fmfL(55.80241,31.14955,lb){$Z, H, W^{\mp }$}% [1] ) 
+Here is how much of METAFONT's memory you used:
+ 661 strings out of 5275
+ 7804 string characters out of 70080
+ 44879 words of memory out of 3000000
+ 1378 symbolic tokens out of 9500
+ 13i,67n,106r,26p,126b stack positions out of 300i,300n,1000r,150p,200000b
+ 
+(You used 2w,2h,1d,1i,0l,0k,0e,0p metric file positions
+  out of 256w,16h,16d,64i,15000l,2500k,256e,60p)
+
+Font metrics written on fmfvlqpp.tfm.
+Output written on fmfvlqpp.600gf (1 character, 9284 bytes).
