@@ -1,0 +1,2 @@
+Channel	 Non-t#bar{t}	 t#bar{t}	 T#bar{T}_(600)	 Total_bkg. 	 Data_(#sqrt{s}_=_8_TeV)
+ELEMUON_preselW_NOMINAL	 3135.67 $\pm$ 83.19	 5196.48 $\pm$ 48.40	 153.84 $\pm$ 4.37	 8332.15 $\pm$ 96.24 	 8355
