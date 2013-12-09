@@ -1,0 +1,8 @@
+Channel	 Non-t#bar{t}	 t#bar{t}_MC@NLO	 T#bar{T}_(600)_Chiral	 Total_bkg. 	 Data_(#sqrt{s}_=_8_TeV)
+ELEMUON_cutflow1_NOMINAL	 1416.55 $\pm$ 45.03	 6335.53 $\pm$ 50.55	 168.29 $\pm$ 4.54	 7752.08 $\pm$ 67.70 	 8401
+ELEMUON_cutflow12_NOMINAL	 563.56 $\pm$ 29.77	 1574.87 $\pm$ 26.41	 161.24 $\pm$ 4.46	 2138.43 $\pm$ 39.80 	 2359
+ELEMUON_cutflow123_NOMINAL	 296.14 $\pm$ 20.11	 812.12 $\pm$ 18.76	 138.34 $\pm$ 4.13	 1108.26 $\pm$ 27.50 	 1223
+ELEMUON_cutflow1234_NOMINAL	 121.19 $\pm$ 13.66	 436.85 $\pm$ 13.64	 106.45 $\pm$ 3.63	 558.04 $\pm$ 19.31 	 598
+ELEMUON_cutflow12345_NOMINAL	 52.92 $\pm$ 7.01	 263.72 $\pm$ 10.38	 87.98 $\pm$ 3.31	 316.63 $\pm$ 12.52 	 348
+ELEMUON_cutflow123456_NOMINAL	 21.97 $\pm$ 3.69	 26.67 $\pm$ 3.61	 67.11 $\pm$ 2.90	 48.64 $\pm$ 5.16 	 61
+ELEMUON_cutflow1234567_NOMINAL	 10.77 $\pm$ 3.06	 10.03 $\pm$ 2.49	 53.91 $\pm$ 2.60	 20.79 $\pm$ 3.95 	 37

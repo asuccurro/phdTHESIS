@@ -1,0 +1,90 @@
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\chapter{\wbx\ analysis: SR cut-flow}\label{app:wbxSR}
+
+In this appendix some more information about the cut-flow in the
+signal regions for the \wbx\ analysis is given. We remind in 
+Table~\ref{tab:wbxselectionBIS} the signal regions definition.
+In the following sections the selected number of events selected in the
+electron (Table~\ref{tab:cftabELE}) and muon (Table~\ref{tab:cftabMUON})
+channels are reported, and the distribution of the discriminant variable
+\mreco\ is shown in the various signal regions.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Selection & Signal Region & Requirements \\
+\midrule
+Preselection & & One electron or muon  \\
+             & & $\met >20\gev$, $\met +m_{\rm T}>60\gev$ \\
+             & & $\geq 4$ jets, $\geq 1$ $b$-tagged jets \\
+\midrule
+\loose\ selection & SR0 & Preselection  \\
+                  & SR1 & +\hskip5ex$\geq 1~W_{\rm had}$ candidates \\
+                  & SR2 & +\hskip5ex$\HT>800\gev$ \\
+                  & SR3 & +\hskip5ex $\pt(b_1) > 160\gev$\\
+                  & SR4 & +\hskip5ex$\pt(b_2) >80\gev$ \\
+                  & SR5 ($\equiv$\loose) & +\hskip5ex$\Delta R(\ell,\nu)<1.2$ \\
+\midrule
+\tight\  selection & SR5 & \loose\ selection \\
+     	      & SR6 &  +\hskip5ex min$\Delta R(\ell,b)>1.4$\\
+              & SR7 ($\equiv$\tight) & +\hskip5ex min$\Delta R(W_{\rm had},b)>1.4$ \\
+\bottomrule
+\end{tabular}
+\caption{Summary of event selection requirements.}
+\label{tab:wbxselectionBIS}
+\end{center}
+\end{table}
+
+\newpage
+
+\section{Event yields in the electron and muon channels}\label{app:wbxSR_yields}
+
+
+\begin{table}[h!tb]\centering
+\resizebox{1.\textwidth}{!}{
+        \input{wbx_analysis_14ifb/cftab/LatexTable_cutflow_ELE_noEff.tex}}
+        \caption{Selected number of events with their statistical error
+        in the signal regions in the electron channel.}\label{tab:cftabELE}
+\end{table}
+
+
+\begin{table}[h!tb]\centering
+\resizebox{1.\textwidth}{!}{
+        \input{wbx_analysis_14ifb/cftab/LatexTable_cutflow_MUON_noEff.tex}}
+        \caption{Selected number of events with their statistical error
+        in the signal regions in the muon channel.}\label{tab:cftabMUON}
+\end{table}
+
+
+\section{Reconstructed mass in the SRs}\label{app:wbxSR_mreco}
+
+Figure~\ref{fig:mrecoSRs} shows the progress of signal selection
+and background rejection in the various signal regions that progressively
+approach the final \tight\ selection.
+
+\begin{landscape}
+\begin{figure}[htb]\begin{center}
+	\subfigure[]{\label{fig:mrecoSR1}
+  	\includegraphics[width=0.37\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow1_NOMINAL.eps}}
+	\subfigure[]{\label{fig:mrecoSR2}
+  	\includegraphics[width=0.37\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow12_NOMINAL.eps}}
+	\subfigure[]{\label{fig:mrecoSR3}
+  	\includegraphics[width=0.37\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow123_NOMINAL.eps}}
+	\subfigure[]{\label{fig:mrecoSR4}
+  	\includegraphics[width=0.37\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow1234_NOMINAL.eps}}
+	\subfigure[]{\label{fig:mrecoSR5}
+  	\includegraphics[width=0.4\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow12345_NOMINAL.eps}}
+	\subfigure[]{\label{fig:mrecoSR6}
+  	\includegraphics[width=0.4\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow123456_NOMINAL.eps}}
+	\subfigure[]{\label{fig:mrecoSR7}
+  	\includegraphics[width=0.4\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow1234567_NOMINAL.eps}}
+	\caption[bla]{Distribution of the reconstructed mass \mreco\ in the combined
+        electron and muon channel for the various signal regions: (a) SR1, (b) SR2,
+        (c) SR3, (d) SR4, (e) SR5 also known as \loose\ selection, (f) SR6
+        and (e) SR7 also known as \tight\ selection.
+\input{wbx_analysis_14ifb/figures/confnoteplots/commoncaptionstack.tex}
+\label{fig:mrecoSRs}}
+\end{center}\end{figure}
+\end{landscape}

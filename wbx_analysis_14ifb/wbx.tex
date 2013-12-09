@@ -143,28 +143,30 @@ the selections summarized in Table~\ref{tab:wbxselection} are
 applied with the aim of rejecting as much Standard Model background
 as possible. As can be seen in the table, two final selection called
 \loose\ and \tight\ selections are proposed, the latter being a
-subset of the former with two very restrictive cut applied on it.
+subset of the former with two very restrictive cut applied on top of it.
+The ``Signal Region'' (SR) label is applied to the selections
+progressively reaching the \tight\ selection.
 
-\begin{table}[h!]
+\begin{table}[tb]
 \begin{center}
-\begin{tabular}{ll}
+\begin{tabular}{lll}
 \toprule
-Selection & Requirements \\
+Selection & Signal Region & Requirements \\
 \midrule
-Preselection & One electron or muon  \\
-             & $\met >20\gev$, $\met +m_{\rm T}>60\gev$ \\
-             & $\geq 4$ jets, $\geq 1$ $b$-tagged jets \\
+Preselection & & One electron or muon  \\
+             & & $\met >20\gev$, $\met +m_{\rm T}>60\gev$ \\
+             & & $\geq 4$ jets, $\geq 1$ $b$-tagged jets \\
 \midrule
-\loose\ selection & Preselection  \\
-                  & $\geq 1~W_{\rm had}$ candidates \\
-                  & $\HT>800\gev$ \\
-                  & $\pt(b_1) > 160\gev$\\
-                  & $\pt(b_2) >80\gev$ \\
-                  & $\Delta R(\ell,\nu)<1.2$ \\
+\loose\ selection & SR0 & Preselection  \\
+                  & SR1 & +\hskip5ex$\geq 1~W_{\rm had}$ candidates \\
+                  & SR2 & +\hskip5ex$\HT>800\gev$ \\
+                  & SR3 & +\hskip5ex $\pt(b_1) > 160\gev$\\
+                  & SR4 & +\hskip5ex$\pt(b_2) >80\gev$ \\
+                  & SR5 ($\equiv$\loose) & +\hskip5ex$\Delta R(\ell,\nu)<1.2$ \\
 \midrule
-\tight\  selection & \loose\ selection \\
-     	      &  min$\Delta R(\ell,b)>1.4$\\
-              &  min$\Delta R(W_{\rm had},b)>1.4$ \\
+\tight\  selection & SR5 & \loose\ selection \\
+     	      & SR6 &  +\hskip5ex min$\Delta R(\ell,b)>1.4$\\
+              & SR7 ($\equiv$\tight) & +\hskip5ex min$\Delta R(W_{\rm had},b)>1.4$ \\
 \bottomrule
 \end{tabular}
 \caption{Summary of event selection requirements.}
@@ -173,31 +175,46 @@ Preselection & One electron or muon  \\
 \end{table}
 
 
-After finding at least one \whad\ candidate, a variable called $\HT$ is defined
+After finding at least one \whad\ candidate (SR1), a variable called $\HT$ is defined
 as the scalar sum of the lepton $\pt$, $\met$ and the $\pt$
 of the four  highest-$\pt$ jets. This $\HT$ distribution peaks at 
 $\sim 2 m_{\T}$ for signal events and is therefore pretty useful to
 discriminate between the signal and the background, as clearly shown
-in Figure~\ref{fig:HTAll}. A cut at $\HT>800\gev$ is chosen as particularly
+in Figure~\ref{fig:HTAll}. A cut at $\HT>800\gev$ (SR2) is chosen as particularly
 efficient in rejecting background while keeping signal events.
 Considering then the boost inflicted to the bottom quarks from the heavy
 vector-like top decay, cuts on the \btag ged jets are defined.
 Figures~\ref{fig:pTb1} and~\ref{fig:pTb2} show the transverse momentum distributions
 of the highest-$\pt$ $b$-jet candidate ($b_1$) and 
 the next-to-highest-$\pt$ $b$-jet candidate ($b_2$).
-The cuts chosen are $\pt > 160\gev$ and $\pt >80\gev$ for $b_1$ and $b_2$ respectively.
+The cuts chosen are $\pt(b_1) > 160\gev$ (SR3) and $\pt(b_2) >80\gev$ (SR4).
 To further discriminate between signal and background,
 the angular separation between the lepton and the reconstructed neutrino 
 (shown in Figure~\ref{fig:DRlnu}) is
-required to satisfy $\Delta R(\ell,\nu)<1.2$. What was described up
-to now are the requirements that lead to the \loose\ selection, as was
+required to satisfy $\Delta R(\ell,\nu)<1.2$ (SR5). What was described up to now 
+are the requirements that lead to Signal Region 5, i.e. the \loose\ selection, as was
 also summarized in Table~\ref{tab:wbxselection}. In the \tight\ selection
 two further cuts on the angular separation between the lepton and the \btag ged
 jet giving the minimum value, $\min(\Delta R(\ell, b_{1,2}))$ (Figure~\ref{fig:DRlb}), 
 and between the
 \whad\ candidate and the \btag ged jet giving the minimum value, 
 $\min(\Delta R(W_{\rm had}, b_{1,2}))$ (Figure~\ref{fig:DRWb}) are defined as
- $\min(\Delta R(\ell, b_{1,2}))>1.4$ and $\min(\Delta R(W_{\rm had}, b_{1,2}))>1.4$.  
+ $\min(\Delta R(\ell, b_{1,2}))>1.4$ (SR6) and 
+$\min(\Delta R(W_{\rm had}, b_{1,2}))>1.4$ (SR7, i.e. \tight\ selection).
+In Table~\ref{tab:cftab} the expected and observed yields in these SRs are
+reported for the electron and muon channels combined. In Appendix~\ref{app:wbxSR}
+the final discriminant variable (to be discussed in Section~\ref{sec:wbxDISCR})
+is shown for data, background and signal in the selection steps through the
+signal region.
+
+\begin{table}[htb]\centering
+        \input{wbx_analysis_14ifb/cftab/LatexTable_cutflow_ELEMUON_noEff.tex}
+        \caption{Selected number of events with their statistical error
+        in the Signal Regions (see Table~\ref{tab:wbxselection} for the
+        region definitions).}\label{tab:cftab}
+\end{table}
+
+
 
 Tables~\ref{tab:eff_loose} and~\ref{tab:eff_tight} 
 summarize the acceptance times efficiency for the \loose\ and \tight\ selections, 
@@ -367,7 +384,7 @@ This allows to test regions enough close to the final signal selections
 but still suppressing a potential signal contribution.
 Plots of the comparisons between data and background for 
 selected kinematic variables in each of these SDRs can be found in 
-Appendix~\ref{app:DataMC_SDRs}.
+Appendix~\ref{app:wbxSDRs}.
 In general, a reasonable agreement is found between data and Standard Model
 prediction, with the $t\bar{t}$ contribution being modeled by the Monte Carlo 
 generator \texttt{MC@NLO}, which was chosen after comparison with other
@@ -480,67 +497,30 @@ treated as normalization-only.
 %Contrary to what was described in Table~\ref{tab:sys}, all systematics are considered as normalization only for this small-background component. For the {\sc Tight} selection, we take the values derived from the {\sc Loose} selection, as we do not expect significant difference between the two cases.
 
 \subsubsection{Statistical uncertainty of the MC samples???}
+
 The statistical uncertainty of the MC samples is taken into account when computing our likelihoods.
 The {\sc mclimit} flag used is 2, meaning we consider the uncertainties as given by the uncertainties of the templates. 
 This allows us to correctly estimate the statistical uncertainty when many templates are merged together with different weights, such as in
 the case of the merged non-$t\bar{t}$ background.
 
-\subsubsection{Profiling of Systematic Uncertainties}
+\subsection{Profiling of Systematic Uncertainties}
 
-No systematic uncertainty is profiled in the analysis, except for the overall 
-$t\bar{t}$ yield in the \loose\ channel, exploiting the well defined 
-sideband region at low $M_{reco}$ that is dominated by the \ttbar\ background
-contribution. No profiled parameters are used in the \tight\ analysis.
+In general no profiling of systematic uncertainties is performed, with
+the only exception of the overall \ttbar\ yield in the analysis in the
+\loose\ channel, where the low \mreco\ sideband dominated by the
+\ttbar\ background contribution (see 
+Figure~\ref{fig:mrecoLOOSE}) helps constraining the fluctuations.
 
-\begin{table}[htb]
-\centering
-\caption{List of all systematic uncertainties (in \%) considered in the analysis, indicating which ones are treated
-as normalisation and/or shape uncertainties, with their impact on normalisation in the case of the 
-\tight\ selection, for signal and backgrounds. The signal given here is a chiral fourth-generation $T$ quark with mass $m_{T}=600\gev$.}
-\begin{tabular}{l*{3}{c}}
-\toprule
- & $\T\bar{\T}$ ($600\gev$) \rule{0pt}{2.6ex} \rule[-1.2ex]{0pt}{0pt} & $t\bar{t}$ & Non-$t\bar{t}$\\
-\midrule
-\multicolumn{4}{c}{Uncertainties [\%] affecting only the normalisation of the $m_{\rm reco}$ distribution:}\\
-Luminosity & +3.6/-3.6 & +3.6/-3.6 & +3.6/-3.6\\
-Lepton trigger, reconstruction and ID efficiency & +2.0/-2.0 & +2.0/-2.0 & +2.0/-2.0\\
-$t\bar{t}$ cross section & -- & +10/-11 & --\\
-\midrule
-\multicolumn{4}{c}{Uncertainties [\%] affecting both normalisation and shape of the $m_{\rm reco}$ distribution:}\\
-Jet energy scale & +6.6/-8.4 & +15/-15 & +33/-22\\  
-Jet energy resolution & +8.4/-8.4 & +3.6/-3.6 & +9.3/-9.3\\ 
-Jet identification efficiency & +2.3/-2.7 & +2.3/-2.5 & +1.9/-2.6\\  
-$b$-quark tagging efficiency & +6.7/-7.3 & +6.7/-8.9 & +1.8/-2.2\\  
-$c$-quark tagging efficiency & +1.6/-1.6 & +4.1/-4.1 & +5.6/-5.6\\  
-Light-jet tagging efficiency & +0.3/-0.3 & +0.7/-0.7 & +2.7/-2.7\\  
-$t\bar{t}$ modelling: NLO MC generator & -- & +48/-48 & --\\  
-$t\bar{t}$ modelling: parton shower and fragmentation & -- & +25/-25 & --\\  
-$t\bar{t}$ modelling: initial and final state QCD radiation & -- & +8.8/-8.8 & --\\   
-$W$+jets normalisation & -- & -- & +8.9/-7.8\\  
-$W$+heavy-flavor fractions & -- & -- & +18/-19\\  
-$W$+jets modelling: scale variation & -- & -- & +11/-11\\  
-$Z$+jets cross section & -- & -- & +1.1/-1.1\\ 
-Single top cross section & -- & -- & +1.9/-1.5\\  
-Diboson cross section & -- & -- & $<0.1\%$\\  
-$t\bar{t}V$ cross section & -- & -- & +1.5/-1.5\\  
-\midrule
-Total & +14/-15 & +59/-59 & +42/-35\\
-\bottomrule
-\end{tabular}
-%\caption{List of all systematic uncertainties (in \%) considered in the analysis, indicating which ones are treated
-%as normalisation and/or shape uncertainties, with their impact on normalisation in the case of the 
-%\tight\ selection, for signal and backgrounds. The signal corresponds to a chiral fourth-generation $\T$ quark with mass $m_{\T}=600\gev$.}
-\label{tab:SystSummary}
-\end{table}
+Concerning the analysis performed in the \tight\ channel,
+we recall here (see Section~\ref{sec:syst_jes} for details)
+that it was chosen to treat the systematic uncertainties from
+jet energy scale as a single component. Even with this treatment
+large unphysical bin-to-bin fluctuations are observed
+in the $m_{\rm reco}$ distribution for both $t\bar{t}$ and non-$t\bar{t}$
+backgrounds in the \tight\ selection when the varied distributions
+are compared with the nominal one.
 
-
-
-
-%%%%%%%%%JES
-
-Even with a single JES uncertainty, large unphysical bin-to-bin fluctuations are observed
-in the $m_{\rm reco}$ distribution for $t\bar{t}$ and ``non-$t\bar{t}$" backgrounds in the \tight\ analysis,
-when comparing the varied JES templates with the nominal one. To avoid injecting
+To avoid injecting
 noise in the statistical analysis, the same shape systematic as for the \loose\ analysis,
 which is smoother owing to the higher-statistics MC templates, is applied to the \tight\ 
 analysis in case of the $t\bar{t}$ backrground. In the case of the ``non-$t\bar{t}$" background,
@@ -690,6 +670,52 @@ The variations are implemented via a per-event weight computed as a function of 
 \fi
 
 
+
+
+\subsection{Overall effect of systematic uncertainties}\label{sec:wbxALLSYS}
+
+
+\begin{table}[htb]
+\centering
+\resizebox{1.\textwidth}{!}{
+\begin{tabular}{l*{3}{c}}
+\toprule
+ & $\T\bar{\T}$ ($600\gev$) \rule{0pt}{2.6ex} \rule[-1.2ex]{0pt}{0pt} & $t\bar{t}$ & Non-$t\bar{t}$\\
+\midrule
+\multicolumn{4}{c}{Uncertainties [\%] affecting only the normalisation of the $m_{\rm reco}$ distribution:}\\
+Luminosity & +3.6/-3.6 & +3.6/-3.6 & +3.6/-3.6\\
+Lepton trigger, reconstruction and ID efficiency & +2.0/-2.0 & +2.0/-2.0 & +2.0/-2.0\\
+$t\bar{t}$ cross section & -- & +10/-11 & --\\
+\midrule
+\multicolumn{4}{c}{Uncertainties [\%] affecting both normalisation and shape of the $m_{\rm reco}$ distribution:}\\
+Jet energy scale & +6.6/-8.4 & +15/-15 & +33/-22\\  
+Jet energy resolution & +8.4/-8.4 & +3.6/-3.6 & +9.3/-9.3\\ 
+Jet identification efficiency & +2.3/-2.7 & +2.3/-2.5 & +1.9/-2.6\\  
+$b$-quark tagging efficiency & +6.7/-7.3 & +6.7/-8.9 & +1.8/-2.2\\  
+$c$-quark tagging efficiency & +1.6/-1.6 & +4.1/-4.1 & +5.6/-5.6\\  
+Light-jet tagging efficiency & +0.3/-0.3 & +0.7/-0.7 & +2.7/-2.7\\  
+$t\bar{t}$ modelling: NLO MC generator & -- & +48/-48 & --\\  
+$t\bar{t}$ modelling: parton shower and fragmentation & -- & +25/-25 & --\\  
+$t\bar{t}$ modelling: initial and final state QCD radiation & -- & +8.8/-8.8 & --\\   
+$W$+jets normalisation & -- & -- & +8.9/-7.8\\  
+$W$+heavy-flavor fractions & -- & -- & +18/-19\\  
+$W$+jets modelling: scale variation & -- & -- & +11/-11\\  
+$Z$+jets cross section & -- & -- & +1.1/-1.1\\ 
+Single top cross section & -- & -- & +1.9/-1.5\\  
+Diboson cross section & -- & -- & $<0.1\%$\\  
+$t\bar{t}V$ cross section & -- & -- & +1.5/-1.5\\  
+\midrule
+Total & +14/-15 & +59/-59 & +42/-35\\
+\bottomrule
+\end{tabular}}
+\caption{List of all systematic uncertainties (in \%) considered in the analysis, indicating which ones are treated
+as normalisation and/or shape uncertainties, with their impact on normalisation in the case of the 
+\tight\ selection, for signal and backgrounds. The signal given here is a chiral fourth-generation $T$ quark with mass $m_{T}=600\gev$.}
+%\caption{List of all systematic uncertainties (in \%) considered in the analysis, indicating which ones are treated
+%as normalisation and/or shape uncertainties, with their impact on normalisation in the case of the 
+%\tight\ selection, for signal and backgrounds. The signal corresponds to a chiral fourth-generation $\T$ quark with mass $m_{\T}=600\gev$.}
+\label{tab:SystSummary}
+\end{table}
 
 
 
