@@ -496,7 +496,7 @@ treated as normalization-only.
 
 %Contrary to what was described in Table~\ref{tab:sys}, all systematics are considered as normalization only for this small-background component. For the {\sc Tight} selection, we take the values derived from the {\sc Loose} selection, as we do not expect significant difference between the two cases.
 
-\subsubsection{Statistical uncertainty of the MC samples???}
+\subsection{???Statistical uncertainty of the MC samples???}
 
 The statistical uncertainty of the MC samples is taken into account when computing our likelihoods.
 The {\sc mclimit} flag used is 2, meaning we consider the uncertainties as given by the uncertainties of the templates. 
@@ -511,6 +511,7 @@ the only exception of the overall \ttbar\ yield in the analysis in the
 \ttbar\ background contribution (see 
 Figure~\ref{fig:mrecoLOOSE}) helps constraining the fluctuations.
 
+\subsection{Jet energy scale}\label{sec:wbx_syst_jes}
 Concerning the analysis performed in the \tight\ channel,
 we recall here (see Section~\ref{sec:syst_jes} for details)
 that it was chosen to treat the systematic uncertainties from
@@ -518,28 +519,32 @@ jet energy scale as a single component. Even with this treatment
 large unphysical bin-to-bin fluctuations are observed
 in the $m_{\rm reco}$ distribution for both $t\bar{t}$ and non-$t\bar{t}$
 backgrounds in the \tight\ selection when the varied distributions
-are compared with the nominal one.
-
-To avoid injecting
-noise in the statistical analysis, the same shape systematic as for the \loose\ analysis,
-which is smoother owing to the higher-statistics MC templates, is applied to the \tight\ 
-analysis in case of the $t\bar{t}$ backrground. In the case of the ``non-$t\bar{t}$" background,
-which has a rather flat  $m_{\rm reco}$ distribution, the JES systematic is taken to be
-flat, affecting only the overall acceptance but not the shape.
+are compared with the nominal one. In order to overcome this issue
+and the related noise that it would inject in the analysis, two different
+approaches are followed for the $t\bar{t}$ and the non-$t\bar{t}$ background:
+for the former, the systematic uncertainty shape is taken from the smoother
+(because of the higher statistical population) template of the \loose\
+channel, while in the case of the latter, where no resonances are expected,
+a flat distribution is assumed and the systematic variation is taken as
+normalization-only.
 %Appendix~\ref{app:JEScomp} documents a study on the impact of each of the JES nuisance parameters on the normalisation and shape of the 
 %reconstructed Higgs boson mass and $H_{Thad}$ distributions for $t\bar{t}H$ signal and $t\bar{t}$+jets background background in different
 %jet multiplicity bins used in the analysis.
 %Such study has resulted in a simplified prescription for the JES uncertainty breakdown for this analysis than involves a total
 %of 9 nuisance parameters. 
 
-
+\subsection{Jet energy resolution}
+In addition to the general treatment explained in Section~\ref{sec:syst_jer},
 %%%JER
-In the case of the $t\bar{t}$ and ``non-$t\bar{t}$'' background the same treatment as for
-JES (see Section~\ref{sec:syst_jes}) is applied in order to reduce the impact from
-large statistical fluctuations in the estimated systematic.
+for the $t\bar{t}$ and non-$t\bar{t}$ backgrounds 
+the same behaviour is observed in the \tight\ channel
+as for the systematic variations from the jet energy scale uncertainties.
+Therefore the same treatment as previously outlined in 
+Section~\ref{sec:wbx_syst_jes} is applied in order to 
+reduce the impact on the analysis from
+large unphysical statistical fluctuations.
 
-
-\subsubsection{Jet Mass Scale and Resolution}
+\subsection{Jet Mass Scale and Resolution??? don't we compute it from the 4-vec???}
 The jet mass is used  to identify the most energetic hadronically-decaying $W$ bosons that have been reconstructed as  single jets
 ($W_{\rm had}^{\rm type\;I}$ candidates). The uncertainties affecting the jet mass had been studied in the previous analysis at $\sqrt{s}=7\tev$ 
 (see Section  8.2.7 in Ref.~\cite{atlas_WbWb_5fb_ljets_backup}. At the time, the existing jet mass scale/resolution uncertainties had been derived for larger anti-$k_t$ jets 
@@ -554,34 +559,55 @@ no recommendation for  $R=0.4$ jets currently exists,  this uncertainty is curre
 
 \subsection{\Wboson/\Zboson+jets Normalisation}
 \label{sec:syst_vjetsnormWBX}
-The $W$/$Z$+jets cross sections from {\sc Alpgen} are affected by large uncertainties because they 
-are a leading-order calculation. 
-As discussed in Section~\ref{sec:wjets_bkg}, the overall $W$+jets normalisation is obtained via data-driven methods 
-separately for events with exactly 4 jets and $\geq 5$ jets in order to ensure the best possible central value for the 
-predicted $W$+jets yield. 
-Additional uncertainties are considered on the fractions of $Wb\bar{b}$, $Wc\bar{c}$ and $Wc$,
-as well as the their extrapolation from 2-jet events, where they are measured in data,  to higher jet multiplicity. 
-The sum in quadrature of the above contributions result in a total uncertainty of $\sim$30\% on
-the estimated $W$+jets normalisation for events satisfying the \tight\ selection.
+The $W$/$Z$+jets cross sections as computed at the
+leading-order in the
+\texttt{Alpgen} generator framework
+are affected by large uncertainties.
+It was explained in Section~\ref{sec:Wjetsnorm}
+that the overall $W$+jets normalization is 
+corrected using data-driven methods 
+performing the estimation in each jet multiplicity
+bin (in the case of the \wbx\ analysis, the 4 jet bin
+and the $\geq 5$ jet bin) in order to get the best
+possible evaluation for the $W$+jets background contribution.
+Additional uncertainties come from the fractions of $Wb\bar{b}$, $Wc\bar{c}$ and $Wc$
+events and from their extrapolation from 2-jet events to higher jet multiplicity. 
+The total uncertainty on the estimated $W$+jets normalization
+in the \tight\ channel, as obtained from the  sum in quadrature 
+of the above contributions, is of $\sim$30\%.
 
 
-\subsubsection{$t\bar{t}$ Modelling}
+
+\subsection{$t\bar{t}$ Modelling}
 \label{sec:systematic_ttbarmodel}
-A number of systematic uncertainties affecting the modelling of $t\bar{t}$ are considered
-in this analysis: 
-(1) the choice of NLO event generator,
-(2) the modeling of initial and final state QCD radiation, and
-(3) the choice of parton-shower and fragmentation models.
 
-\paragraph{NLO Event Generator:}
-The effect of uncertainties on the parton-level modeling of $t\bar{t}$ is obtained by comparing the distributions from two 
-NLO MCs, {\sc MC@NLO} and {\sc PowHeg}, both interfaced to {\sc Herwig}.  This choice is based on detailed comparisons
-between data and MC in a number of control regions, often defined starting from the \loose\ selection but with one of
-the cuts inverted to reject a possible signal contribution. In these studies three different $t\bar{t}$ generators, {\sc MC@NLO}, {\sc PowHeg} and
-{\sc Alpgen} were compared. In general, it was found that data was bracketed by {\sc MC@NLO} and {\sc PowHeg} predictions,
-with {\sc MC@NLO} providing the best description overall, which motivated its choice as the main $t\bar{t}$ generator for this analysis. 
-In contrast, {\sc Alpgen} was found to be the most inconsistent model with data, predicting yields above {\sc PowHeg}, which motivated its rejection
-as a valid alternate $t\bar{t}$  model in the kinematic region explored by this analysis.
+In order to evaluate the effect of systematic uncertainties 
+affecting the modelling of the $t\bar{t}$ background from the
+\texttt{MC@NLO} generator, the following factors are considered
+in the \wbx\ analysis: the choice of NLO event generator;
+the modeling of initial and final state radiation from QCD
+precesses; the choice of parton-shower and fragmentation models.
+
+Concerning the NLO event generator choice, the effect of 
+systematics uncertainties on the parton-level modeling of the
+$t\bar{t}$ events is evaluated by comparing the distributions from two 
+NLO Monte Carlo generators, namely \texttt{MC@NLO} (used for the nominal 
+prediction in the \wbx\ 
+analysis) and \texttt{PowHeg}, both interfaced to \texttt{Herwig} for
+parton-showering.  This choice is based on detailed comparisons
+between data and Monte Carlo Standard Model backgrounds in a number 
+of control regions, often defined starting from the \loose\ selection 
+but with one of the cuts inverted to reject a possible signal contribution. 
+In these studies three different $t\bar{t}$ generators, {\sc MC@NLO}, {\sc PowHeg} and
+{\sc Alpgen} were compared. In general, it was found that 
+data was bracketed by {\sc MC@NLO} and {\sc PowHeg} predictions,
+with {\sc MC@NLO} providing the best description overall, which 
+motivated its choice as the main $t\bar{t}$ generator for this analysis. 
+In contrast, {\sc Alpgen} was found to be the most inconsistent 
+model with data, predicting yields above {\sc PowHeg}, which 
+motivated its rejection
+as a valid alternate $t\bar{t}$  model in the kinematic region 
+explored by this analysis.
 
 Differences between {\sc MC@NLO} and {\sc PowHeg} arise from 
 the details on how the NLO calculation is interfaced with the parton shower, resulting in {\sc PowHeg} predicting higher
@@ -653,22 +679,15 @@ Also shown are fits to low-order polynomials in order to derive smooth shape sys
 %%%%%%%%%%%%%%
 \fi
 
-\subsubsection{$V$+jets Modelling}
-\ifIsINT 
-The effect of uncertainties in the modeling of $V$+jets kinematics by {\sc Alpgen}  is assessed by varying a number of {\sc Alpgen} 
-generator parameters. 
-The Top Group recommended variations are changing the factorization scale from the nominal
-choice $Q^2 =m_{\rm W}^2+\sum m_{\rm T}^2$ (default) to $Q^2 =m_{\rm W}^2+p_{\rm T,W}^2$  (iqopt3) and reducing the
-minimum parton $\pt$ from $15\gev$ (default) to $10\gev$ (ptjmin10). 
-\else
-The effect of uncertainties in the modeling of $V$+jets kinematics by {\sc Alpgen}  is assessed by changing the factorization scale from the nominal
-choice, $Q^2 =m_{\rm W}^2+\sum m_{\rm T}^2$, to $Q^2 =m_{\rm W}^2+p_{\rm T,W}^2$. This uncertainty is then symmetrised.
-\fi
-\ifIsINT 
-The variations are implemented via a per-event weight computed as a function of leading jet $\pt$. For more information see Ref.~\cite{WjetsReweighting}.
-{\bf Caveat: currently only the iqopt3 uncertainty is being considered. The ptjmin10 uncertainty will be included in the next iteration.}
-\fi
+\subsection{$V$+jets Modelling}
 
+The effect of systematic uncertainties affecting the 
+modeling of the $V$+jets bacground kinematics by the \texttt{Alpgen}
+generator is assessed by changing the factorization scale from the nominal
+choice, $Q^2 =m_{\rm W}^2+\sum m_{\rm T}^2$, to $Q^2 =m_{\rm W}^2+p_{\rm T,W}^2$. 
+The resulting variation is then symmetrized.
+%The variations are implemented via a per-event weight computed as a function of leading jet $\pt$. For more information see Ref.~\cite{WjetsReweighting}.
+%{\bf Caveat: currently only the iqopt3 uncertainty is being considered. The ptjmin10 uncertainty will be included in the next iteration.}
 
 
 
