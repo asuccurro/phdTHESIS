@@ -586,7 +586,7 @@ affecting the modelling of the $t\bar{t}$ background from the
 \texttt{MC@NLO} generator, the following factors are considered
 in the \wbx\ analysis: the choice of NLO event generator;
 the modeling of initial and final state radiation from QCD
-precesses; the choice of parton-shower and fragmentation models.
+precesses; the choice of parton shower and fragmentation models.
 
 Concerning the NLO event generator choice, the effect of 
 systematics uncertainties on the parton-level modeling of the
@@ -594,55 +594,72 @@ $t\bar{t}$ events is evaluated by comparing the distributions from two
 NLO Monte Carlo generators, namely \texttt{MC@NLO} (used for the nominal 
 prediction in the \wbx\ 
 analysis) and \texttt{PowHeg}, both interfaced to \texttt{Herwig} for
-parton-showering.  This choice is based on detailed comparisons
+parton showering.  This choice is based on detailed comparisons
 between data and Monte Carlo Standard Model backgrounds in a number 
 of control regions, often defined starting from the \loose\ selection 
 but with one of the cuts inverted to reject a possible signal contribution. 
-In these studies three different $t\bar{t}$ generators, {\sc MC@NLO}, {\sc PowHeg} and
-{\sc Alpgen} were compared. In general, it was found that 
-data was bracketed by {\sc MC@NLO} and {\sc PowHeg} predictions,
-with {\sc MC@NLO} providing the best description overall, which 
+In these studies three different $t\bar{t}$ generators, \texttt{MC@NLO}, \texttt{PowHeg} and
+\texttt{Alpgen} were compared. In general, it was found that 
+data was bracketed by \texttt{MC@NLO} and \texttt{PowHeg} predictions,
+with \texttt{MC@NLO} providing the best description overall, which 
 motivated its choice as the main $t\bar{t}$ generator for this analysis. 
-In contrast, {\sc Alpgen} was found to be the most inconsistent 
-model with data, predicting yields above {\sc PowHeg}, which 
+In contrast, \texttt{Alpgen} was found to be the most inconsistent 
+model with data, predicting yields above \texttt{PowHeg}, which 
 motivated its rejection
 as a valid alternate $t\bar{t}$  model in the kinematic region 
 explored by this analysis.
 
-Differences between {\sc MC@NLO} and {\sc PowHeg} arise from 
-the details on how the NLO calculation is interfaced with the parton shower, resulting in {\sc PowHeg} predicting higher
-jet multiplicities than {\sc MC@NLO}. These two samples have been processed through a fast simulation.
-The relative uncertainty between {\sc PowHeg}+{\sc Herwig} and {\sc MC@NLO} fast-simulation samples is symmetrised and propagated to the 
-{\sc MC@NLO} fully simulated sample. The resulting uncertainty on the $t\bar{t}$ yield after the \tight\ selection is 48\%, and constitutes the
-main source of uncertainty on the $t\bar{t}$ background. The corresponding uncertainty after the \loose\ selection is 16\%. The significant
-increase in the uncertainty for the \tight\ selection primarily results from the increased jet multiplicity in {\sc PowHeg} compared to {\sc MC@NLO}, 
-which leads to a larger rate of misreconstruction of the $W_{\rm had}$ candidate, and renders the $\min(\Delta R(W_{\rm had}, b_{1,2}))>1.4$ cut less 
-effective than in the case of  {\sc MC@NLO}.
+Differences between \texttt{MC@NLO} and \texttt{PowHeg} arise from 
+the details on how the NLO calculation is interfaced with the parton 
+shower, resulting in \texttt{PowHeg} predicting higher
+jet multiplicities than \texttt{MC@NLO}. The two samples used for the
+comparison have been processed through a fast simulation of the detector,
+and the difference in shape and normalization from these two samples of
+\texttt{PowHeg}+\texttt{Herwig} 
+and \texttt{MC@NLO} is symmetrised and propagated to the 
+\texttt{MC@NLO} fully simulated sample as systematic uncertainty. 
+The resulting uncertainty on the $t\bar{t}$ yield in the \tight\ selection 
+is 48\%, and is the higher contribution to the total uncertainty
+on the $t\bar{t}$ background. The same uncertainty in the \loose\ selection 
+is 16\%. The significant
+increase in the uncertainty for the \tight\ selection 
+is mainly due to the increase in jet multiplicity in the
+sample simulated with \texttt{PowHeg} with respect to the
+one simulated with \texttt{MC@NLO}, 
+which leads to a larger rate of misreconstructed $W_{\rm had}$ 
+candidates. This makes the final cut of 
+$\min(\Delta R(W_{\rm had}, b_{1,2}))>1.4$ cut less 
+effective in discriminating signal and background than in the 
+case of the nominal \texttt{MC@NLO}.
 
-\paragraph{Initial- and Final-State QCD Radiation:}
-To assess the systematic uncertainty on the modeling of initial-state (ISR) and final-state radiation (FSR), dedicated
-$t\bar{t}$ samples are generated with {\sc AcerMC}+{\sc Pythia} with modified {\sc Pythia} parameters 
-\ifIsINT
+To assess the systematic uncertainty on the modeling of 
+initial state (ISR) and final state radiation (FSR), dedicated
+$t\bar{t}$ samples are generated with \texttt{AcerMC}
+combined with \texttt{Pythia}, using modified \texttt{Pythia} parameters 
+%%%yes?no?
 (PARP(67), PARP(64) and PARP(72)) 
-\fi
 in order to increase or reduce the amount of parton shower. 
-\ifIsINT
-These alternate samples are referred to as ``morePS" and ``lessPS", respectively.
-\fi
-The range of variation for these parameters is chosen to be consistent with existing measurements such as the gap fraction in dileptonic 
-$t\bar{t}$ events~\cite{ttjet}  and jet shapes in QCD multijet events.
-\ifIsINT
-For more details see Ref.~\cite{morelessPS}.  
-\fi
-These samples have been processed through a fast simulation. Half the difference between these alternate samples is symmetrised 
-and propagated to the {\sc MC@NLO} fully-simulated sample, resulting in an uncertainty on the $t\bar{t}$ yield after the \tight\ selection of 8.8\%.
+The range of variation for these parameters is chosen to be 
+consistent with existing measurements such as the gap fraction in dileptonic 
+$t\bar{t}$ events~\cite{ttjet} and jet shapes in QCD multijet events~\cite{morelessPS}.  
+These samples have been processed through a fast simulation
+of the detector. Half the difference between these alternate samples is symmetrized 
+and propagated to the \texttt{MC@NLO} fully-simulated sample, resulting in a
+systematic uncertainty on the $t\bar{t}$ yield in the \tight\ channel of 8.8\%.
 
 \paragraph{Parton-Shower and Fragmentation Models:}
-Uncertainties on the simulation of the parton shower and fragmentation are studied comparing
-two different hadronisation models applied to the same parton level generator: {\sc PowHeg}+{\sc Herwig} vs {\sc PowHeg}+{\sc Pythia}. 
-These two samples have been processed through a fast simulation.
-The relative uncertainty between {\sc PowHeg}+{\sc Herwig} and {\sc PowHeg}+{\sc Pythia} fast-simulation samples is symmetrised and propagated to the 
-{\sc MC@NLO} fully simulated sample, resulting in an uncertainty on the $t\bar{t}$ yield after the \tight\ selection of 25\%. 
+Finally, systematic uncertainties on the simulation 
+of the parton shower and fragmentation models chosen 
+are studied by comparison of two different hadronisation 
+models applied to the same parton level generator: 
+\texttt{PowHeg}+\texttt{Herwig} vs \texttt{PowHeg}+\texttt{Pythia}, 
+both samples being processed through a fast simulation of the detector.
+The relative difference measured between 
+\texttt{PowHeg}+\texttt{Herwig} and \texttt{PowHeg}+\texttt{Pythia} is 
+then symmetrised and propagated to the 
+\texttt{MC@NLO} nominal sample, with a final
+result of a systematic uncertainty on the 
+$t\bar{t}$ yield in the \tight\ selection of 25\%. 
 
 \ifIsINT
 \vspace{1cm}
@@ -668,9 +685,9 @@ In order to try to get smoother uncertainties the following procedure is followe
 \includegraphics[width=0.33\textwidth]{wbx_analysis_14ifb/figures/ttbarModRatio/FRAG_RATIO.eps} \\
 (a) & (b) & (c) \\
 \end{tabular}\caption{\small {Ratio of unit-normalized final discriminant between alternative models:
-(a) {\sc mc@nlo} /{\sc PowHeg+Herwig}  to derive the NLO event generator systematic,
-(b) {\sc AcerMC+lessPS} /{\sc AcerMC+morePS}  to derive the NLO event generator systematic, and
-(c) {\sc PowHeg+Herwig} /{\sc PowHeg+Pythia}  to derive the parton shower+fragmentation systematic.
+(a) \texttt{mc@nlo} /\texttt{PowHeg+Herwig}  to derive the NLO event generator systematic,
+(b) \texttt{AcerMC+lessPS} /\texttt{AcerMC+morePS}  to derive the NLO event generator systematic, and
+(c) \texttt{PowHeg+Herwig} /\texttt{PowHeg+Pythia}  to derive the parton shower+fragmentation systematic.
 All samples used are AFII.
 Also shown are fits to low-order polynomials in order to derive smooth shape systematics.}}
 \label{fig:ttbarmodel_ratios}
@@ -693,6 +710,13 @@ The resulting variation is then symmetrized.
 
 \subsection{Overall effect of systematic uncertainties}\label{sec:wbxALLSYS}
 
+In Table~\ref{tab:SystSummary} the final results on
+the effect of the different systematic uncertainties affecting
+the \wbx\ analysis are reported. It can be seen that the main
+contributions come from jet energy scale and resolution,
+\btag ging efficiency and, in the case of the \ttbar\ 
+background, from the uncertainty on the Monte Carlo modeling
+of the simulated \ttbar\ sample.
 
 \begin{table}[htb]
 \centering
