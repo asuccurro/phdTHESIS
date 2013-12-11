@@ -14,12 +14,13 @@ into two light jets exploiting the different kinematic characteristics
 of $W$ bosons from an heavy object like the vector-like top partner
 and the lighter Standard Model top quark (see Section~\ref{sec:boostedW}
 for the details).
+Section~\ref{sec:wbxEVT} describes the requirements to select the
+final signal region and, as will be explained, two signal regions are identified, 
+one called ``\loose'' and the other ``\tight''.
 In Section~\ref{sec:wbxCR} we define ``control regions'' depleted of
-signal in order to check the good modeling of real data by the various expected
-backgrounds contributions. These control regions gradually approach
-the final signal region, which is described in Section~\ref{sec:wbxEVT}.
-In particular, two signal regions are identified, as will be explained,
-one called \loose\ and the other \tight.
+signal that gradually approach the final signal region in order to 
+check the good modeling of real data by the various expected
+backgrounds contributions. 
 The final discriminant chosen to build the final likelihood is
 the heavy quark reconstructed mass, defined as reported in Section~\ref{sec:wbxDISCR}.
 Finally, Section~\ref{sec:wbxSYS} completes the summary
@@ -88,16 +89,26 @@ are taken as a \wii\ candidate.
 
 \section{Event selection}\label{sec:wbxEVT}
 
+After preselection, as was explained in Section~\ref{sec:presel},
+events with $\geq$6 jets and $\geq$3 \btag ged jets are rejected in order to
+keep the \wbx\ and the \htx\ analyses orthogonal.
+Since in the final selection the Standard Model background contributions
+from $W$+jets, $Z$+jets, diboson, single-top, $\ttbar V$ and multi-jet events
+are very small, it is chosen to show these backgrounds combined into a
+single component called ``non-$t\bar{t}$''.
+In addition, in order to increase the available statistics for these
+non-$t\bar{t}$ backgrounds, instead of a direct cut on the \btag ging algorithm
+weight to select at least one heavy flavor jet, the Tag Rate Function method
+is used for the non-$t\bar{t}$ samples only. The method is detailed in 
+Appendix~\ref{app:trf}, together with a study to validate the consistency
+of this choice.
+
 Once $W$ bosons are reconstructed in the event like explained in 
 Section~\ref{sec:boostedW}, if at least one candidate is found the 
 event is kept and further selection cuts are applied.
 If multiple candidates are found, the one with mass closest 
 to the nominal $W$ boson mass is chosen as the hadronic $W$ boson
 of the event. 
-Since in the final selection the Standard Model background contributions
-from $W$+jets, $Z$+jets, diboson, single-top and multi-jet events
-are very small, it is chosen to show these backgrounds combined into a
-single component called ``non-$t\bar{t}$''.
 Figures~\ref{fig:mwhadI} and~\ref{fig:mwhadII} show the mass distribution
 of the \wi\ and \wii\ candidates before the mass window cut is applied. The
 number of \whad\ candidates after preselection is shown in
@@ -156,6 +167,8 @@ Selection & Signal Region & Requirements \\
 Preselection & & One electron or muon  \\
              & & $\met >20\gev$, $\met +m_{\rm T}>60\gev$ \\
              & & $\geq 4$ jets, $\geq 1$ $b$-tagged jets \\
+             & & orthogonality cut:\\
+             & & reject events with $\geq 6$ jets and $\geq 3$ $b$-tagged jets \\
 \midrule
 \loose\ selection & SR0 & Preselection  \\
                   & SR1 & +\hskip5ex$\geq 1~W_{\rm had}$ candidates \\

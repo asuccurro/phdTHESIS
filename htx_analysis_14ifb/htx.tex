@@ -2,11 +2,35 @@
 
 \chapter{Preliminary search  for \TTbar\ pairs decaying to $Ht+X$}\label{chap:htx}
 
+Having presented in Chapter~\ref{chap:vlq} the general features
+common to the two searches for vector-like top partner pairs
+in the single lepton channel that are the object of this dissertation,
+we present in this chapter the search for \TTbar\ pairs with
+at least one heavy quark decaying to one Standard Model Higgs boson 
+with a mass $m_H= 125~\gev$ and a top
+quark, shortly called \htx\ analysis.
+After outlining the chosen strategy in Section~\ref{sec:htxMULT},
+Section~\ref{sec:htxEVT} describes the event selection and the
+definition of the three channels used for the statistical analysis.
+In Section~\ref{sec:htxCR} the good modeling of Standard Model backgrounds
+is discussed by identifying a set of ``control regions'' depleted of
+signal contamination.
+Section~\ref{sec:wbxSYS} completes the summary of the 
+systematic uncertainties started in Section~\ref{sec:systematics}
+with the the discussion of the uncertainties treated specifically
+in the context of this search.
+The results are finally presented in Section~\ref{sec:htxRES}.
+
+\section{Jets and \btag ged jets multiplicity}\label{sec:htxMULT}
+
+
+\section{Event selection}\label{sec:htxEVT}
+
 
 
 \section{Control regions}\label{sec:htxCR}
 
-\section{Event selection}\label{sec:htxEVT}
+
 
 \subsection{Comparison of signal prediction between singlet and doublet scenarios}
 \label{sec:SingletvsDoublet}
@@ -51,104 +75,71 @@ The last bin in all figures contains the overflow.
 
 \section{Systematic uncertainties}\label{sec:htxSYS}
 
-Most of the systematic uncertainties were discussed in~\ref{sec:systematics}
-as common to the \wbx\ and \htx\ analyses. 
+The general aspects of the systematic uncertainties considered
+in the \wbx\ and \htx\ analyses were illustrated
+in Section~\ref{sec:systematics}, here the traits specific to the
+\htx\ analysis will be described.
 
 
-\begin{table}[h!tb]
-\begin{center}
-\resizebox{1.\textwidth}{!}{
-\input{htx_analysis_14ifb/tables/sys_4b}}
-\caption{\label{tab:htxSYS4b} }
-\end{center}
-\end{table}
-
-%%%%NB COPY PASTE
-The overall systematic uncertainty before the two-parameter fit ({\it pre-fit})
-on the background normalization in the $\geq 4$ $b$-tags channel is 
-$\sim$42\%, with the dominant uncertainties being from $b$ tagging efficiency (16\%),
-$c$ tagging efficiency (11\%), jet energy scale (11\%), $t\bar{t}$ modelling (11\%), 
-$t\bar{t}$+heavy-flavour fractions (32\%) and $t\bar{t}$ cross section (10\%).
-
-As a result of the two-parameter fit, the total background uncertainty is reduced 
-by about 80\% in this channel. The total  systematic uncertainty
-in the signal normalisation in the $\geq 4$ $b$-tags channel is 
-$\sim$21\%, completely dominated by the uncertainty in the $b$ tagging efficiency.
-
-
-
+\subsection{Jet energy scale}\label{sec:htx_syst_jes}
 %%JES
-As can be seen in Table~\ref{tab:SystSummary}, for the \htx\ analysis
+As was seen in Table~\ref{tab:SystSummary}, for the \htx\ analysis
 the JES systematic uncertainty is split into 8
 uncorrelated components, each with a different jet $\pt$ and $\eta$
 dependence, which are treated independently.
-The \texttt{JetUncertainties} tool~\cite{jesuncertaintyprovider} allows computation of
-uncertainties corresponding to each of the 8 different eigenvectors.
-By studying the individual sources of uncertainty, we found out the dominant
-contribution comes from the first eigenvector (BASELINE JES). 
-The rest of the
-eigenvectors lead to very small uncertainties, except for low statistics MC samples,
-where the migration of few events in/out of the sample can lead to artificially large
-uncertainties. Given the limited MC statistics available for the leading backgrounds,
-we are currently considering the JES envelope uncertainty (i.e. no JES breakdown)
-in order to attempt to get a physical estimate of the uncertainty in the analysis.
-We believe this actually provides a more accurate assessment of the JES uncertainty
-in this analysis, although we are likely still double-counting statistical uncertainties from
-the MC.
+%The \texttt{JetUncertainties} tool~\cite{jesuncertaintyprovider} allows computation of
+%uncertainties corresponding to each of the 8 different eigenvectors.
+Looking at the effects of the individual sources of systematic uncertainty, 
+it is evident that the dominant contribution comes from the first 
+eigenvector (``BASELINE''), while the rest of the
+eigenvectors lead in general to very small systematic uncertainties, 
+except for those Monte Carlo samples characterized by low statistics
+in the final selection channels, where unphysical fluctuations
+can lead to artificially large uncertainties. 
+%Given the limited MC statistics available for the leading backgrounds,
+%we are currently considering the JES envelope uncertainty (i.e. no JES breakdown)
+%in order to attempt to get a physical estimate of the uncertainty in the analysis.
+%We believe this actually provides a more accurate assessment of the JES uncertainty
+%in this analysis, although we are likely still double-counting statistical uncertainties from the MC.
 
+\subsection{Normalization of backgrounds}\label{sec:syst_normHTX}
 
-
-
-\subsection{Normalisations of Data-Driven Backgrounds}
-\label{sec:syst_normHTX}
-In this section the uncertainties in data-driven background estimates are described.
-
-\subsubsection{\Wboson/\Zboson+jets Normalisation}
-\label{sec:syst_vjetsnormHTX}
-The \Wboson/\Zboson+jets cross sections from {\sc Alpgen} are affected by large uncertainties because they 
-are a leading-order calculation. 
-As discussed in Sect.~\ref{sec:wjets_bkg}, the overall $W$+jets normalisation is obtained via data-driven methods 
-separately for events with exactly 4 and $\geq 5$ jets in order to ensure the best possible central value for the 
-predicted $W$+jets yield. An additional 24\% uncertainty is assigned to the extrapolation of the data-driven
+The $W$/$Z$+jets cross sections as computed at the
+leading-order in the
+\texttt{Alpgen} generator framework
+are affected by large uncertainties.
+It was explained in Section~\ref{sec:Wjetsnorm}
+that the overall $W$+jets normalization is 
+corrected using data-driven methods 
+performing the estimation in each jet multiplicity
+separately for events with exactly 4 and $\geq 5$ 
+jets in order to ensure the best possible central value for the 
+predicted $W$+jets yield. 
+An additional 24\% uncertainty is assigned to the extrapolation of the data driven
 estimate to events with $\geq 6$ jets.
-
-In addition, the following normalisation uncertainties are considered in
-determining the systematic uncertainty on the estimate of the $W$+jets
-heavy-flavour content:
-\begin{itemize}
-\item the fractions of $Wb\bar{b}$, $Wc\bar{c}$ and $Wc$ are varied by $\pm 20\%$ 
-in a correlated way; the fraction of $W$+light jets is recomputed to
-maintain the overall  $W$+jets normalisation before any $b$-tagging requirement;
-\item  the fractions of $Wb\bar{b}$, $Wc\bar{c}$ are varied by $\pm 20\%$ 
-in a correlated way, while the fraction of $W$+light jets is left untouched; the
-fraction of $Wc$ is recomputed to maintain the overall  $W$+jets normalisation before any $b$-tagging requirement;
-\item a theoretical systematic uncertainty on the $Wb\bar{b}$, $Wc\bar{c}$  and $Wc$ fractions
-from the extrapolation made from 2-jet events, where these fractions are measured in data, 
-to higher jet multiplicity is assessed. This uncertainty is estimated from simulation studies where
-the $W$+heavy-flavour fractions are studied as a function of variations in the {\sc Alpgen} generator parameters.
-For each jet multiplicity above 2 jets, a 25\% uncertainty
-on these fractions is added in quadrature, resulting in a total uncertainty of 35\% for 4 jets, 43\% for 5 jets,
-and 50\% for $\geq 6$ jets. 
-These extrapolation uncertainties on $Wb\bar{b}$ and $Wc\bar{c}$ are
-treated as fully correlated, and both are treated as uncorrelated with respect to
-the extrapolation uncertainty on $Wc$.
-The fraction of $W$+light jets is recomputed to
-maintain the overall  $W$+jets normalisation  before any $b$-tagging requirement.
-\end{itemize}
 %The first two uncertainties result from the propagation of the experimental uncertainties in the
 %measurement of the heavy-flavour fractions in $W$+1 jet and $W$+2 jets data control samples.
+Additional normalization uncertainties are evaluated by varying 
+the fractions of heavy- and light-flavor components of the $W$+jets background
+in different ways and by studying the $W$+heavy-flavour fractions as
+a function of \texttt{Alpgen} paramteters,
+as explained in~\cite{topcommon2013}.
+The sum in quadrature of all the above contributions result in a 
+total uncertainty of $\sim$50\% on
+the estimated $W$+jets normalisation for events 
+with $\geq 6$ jets and $\geq 2$ $b$ tagged jets. 
+The same uncertainty is also assigned to the $Z$+jets normalisation.
 
-The sum in quadrature of the above contributions result in a total uncertainty of $\sim$50\% on
-the estimated $W$+jets normalisation for events with $\geq 6$ jets and $\geq 2$ $b$ tagged jets. 
-This uncertainty is also assigned to the $Z$+jets normalisation.
-
-\subsubsection{Multijet Normalisation}
-\label{sec:qcd_normHTX}
-Systematic uncertainties on the multijet background estimate via the Matrix Method receive
-contributions from the limited data statistics, particularly at high jet and $b$-tag multiplicities, as
-well as from the uncertainty on the method, based on the difference between estimates obtained using 
-different control regions and from the calibration of the method using simulated multijet events.
-The uncertainty due to the method is assessed to be 50\%, which is taken as correlated across jet
+Systematic uncertainties on the QCD multijet background 
+estimate via the Matrix Method receive
+contributions from the limited data statistics, 
+particularly at high jet and $b$-tag multiplicities, as
+well as from the uncertainty on the method, based on 
+the difference between estimates obtained using 
+different control regions and from the calibration 
+of the method using simulated QCD multijet events.
+The uncertainty due to the method is assessed to be 
+50\%, which is taken as correlated across jet
 and $b$-tag multiplicity bins. 
 %The statistical uncertainties in the channels with 4 jets
 %are only a few percent and are therefore neglected.
@@ -160,7 +151,7 @@ and $b$-tag multiplicity bins.
 
 
 
-\subsubsection{$t\bar{t}$+jets Modelling}
+\subsection{$t\bar{t}$+jets Modelling}
 \label{sec:syst_ttbarmodelHTX}
 
 A number of systematic uncertainties affecting 
@@ -215,7 +206,7 @@ heavy-flavour overlap removal procedure.
 %whether to take the matrix element or parton shower predictions is varied by $\pm 0.1$ about the nominal value
 %of $\Delta R=0.4$. {\em Caveat: this systematic uncertainty has not been incorporated in the analysis yet.}
 
-\subsubsection{$t\bar{t}$+jets Heavy-Flavour Content}
+\subsection{$t\bar{t}$+jets Heavy-Flavour Content}
 \label{sec:syst_ttbarHF}
 The fraction of $t\bar{t}Q\bar{Q}$ ($Q=b,c$) events relative to all $t\bar{t}jj$ events, where $j$ denotes any parton,
 is one of the most important systematic uncertainties in this analysis. 
@@ -236,4 +227,96 @@ is varied up and down by $\pm 50\%$ (relative) with respect to the original {\sc
 This uncertainty is taken to be fully correlated between the $t\bar{t}b\bar{b}$ and $t\bar{t}c\bar{c}$ fractions.
 The fraction of $t\bar{t}$+light jet events is adjusted accordingly to preserve the total $t\bar{t}$ yield in each jet multiplicity bin 
 prior to any $b$-tagging requirement.
+
+
+
+\subsection{Overall effect of systematic uncertainties}\label{sec:wbxALLSYS}
+
+In Table~\ref{tab:htxSYS4b}
+\begin{table}[h!tb]
+\begin{center}
+\resizebox{1.\textwidth}{!}{
+\input{htx_analysis_14ifb/tables/sys_4b}}
+\caption{\label{tab:htxSYS4b} }
+\end{center}
+\end{table}
+
+%%%%NB COPY PASTE
+The overall systematic uncertainty before the two-parameter fit ({\it pre-fit})
+on the background normalization in the $\geq 4$ $b$-tags channel is 
+$\sim$42\%, with the dominant uncertainties being from $b$ tagging efficiency (16\%),
+$c$ tagging efficiency (11\%), jet energy scale (11\%), $t\bar{t}$ modelling (11\%), 
+$t\bar{t}$+heavy-flavour fractions (32\%) and $t\bar{t}$ cross section (10\%).
+
+As a result of the two-parameter fit, the total background uncertainty is reduced 
+by about 80\% in this channel. The total  systematic uncertainty
+in the signal normalisation in the $\geq 4$ $b$-tags channel is 
+$\sim$21\%, completely dominated by the uncertainty in the $b$ tagging efficiency.
+
+
+
+
+
+
+
+
+\section{Results}\label{sec:htxRES}
+
+In the \htx\ analysis no significant excess of data over the 
+expected background has been observed in the signal enriched 
+\chiv\ channel of Figure.
+%%%%%%%%%AAAAAAAAAAAAAAAAAAAAAA fix
+
+The observed and expected upper limits on the \TTbar\ production cross section 
+times branching fraction as a function of $m_{\T}$ are shown in 
+Figure~\ref{fig:limits1D_htx} for the two chosen benchmark scenarios,
+namely the weak-isospin singlet and
+doublet models are chosen.
+
+For a vector-like $\T$ quark from a weak-isospin doublet, an observed (expected) 95\%  CL  limit
+$m_{T}>790\,(745)\gev$ is obtained for the central value of the 
+theoretical cross section.
+For a vector-like singlet $\T$ quark, an observed (expected) 95\%  CL  limit 
+$m_{\T}>640\,(615)\gev$ is obtained for the central value of the 
+theoretical cross section.
+
+%It has been verified that the expected signal yield and shape 
+%of the $\HT$ distribution used to obtain the result in the doublet scenario is not
+%significantly affected by the fact that signal MC samples corresponding to the singlet scenario were used (see Section~\ref{sec:SingletvsDoublet}).
+
+The  95\% CL exclusion limits  obtained in the scan of the two-dimensional
+plane by varying the mixing of the three decay channel contributions for
+different values of $m_{\T}$ are shown in Figure~\ref{fig:limits2D_wbx}. 
+This plot reads as follow: taking for instance the $600\gev$ 
+vector-like top partner, a heavy quark with
+$BR(\T\to Ht)>0.3$ is excluded at $\geq 95\%$ CL,
+regardless of the value of the vector-like quark branching ratios to $Wb$ and $Zt$.  
+
+%A comparison of expected limits for different configurations on the number of channels considered and
+%profiled parameters is presented in App.~\ref{sec:expected_limits_Appendix}. 
+
+
+%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=0.45\textwidth]{results/figures/htx/lim_doublet.eps} &
+\includegraphics[width=0.45\textwidth]{results/figures/htx/lim_singlet.eps} \\
+(a) & (b) \\
+\end{tabular}
+\caption{Observed (solid line) and expected (dashed line) 95\% CL upper limits on the $t^\prime \bar{t^\prime}$ cross section times branching fraction
+for a weak-isospin (a) doublet and (b) singlet $\T$ quark  as a function of the $\T$ quark mass. 
+\label{fig:limits1D_htx}}
+\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{results/figures/htx/lim_2D.eps}
+\caption{
+Observed (red filled area) and expected (red dashed line) 95\% CL exclusion in the plane of
+$BR(\T \to Wb)$ versus $BR(\T \to Ht)$, for different values of the vector-like $\T$ quark mass.
+\label{fig:limits2D_htx}}
+\end{figure}
+%%%%%%%%%%%%%%
 
