@@ -1,19 +1,23 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
-\chapter{Search for \TTbar\ pairs decaying to $Wb+X$}\label{chap:wbx}
+\chapter{Search for \TTbar\ decaying to $Wb+X$}\label{chap:wbx}
 
-After a preliminary discussion of the general features
+After an overview of the general features
 common to the two searches for vector-like top partner pairs
-in the single lepton channel that are the object of this dissertation,
-we present in this chapter the search for \TTbar\ pairs with
-at least one heavy quark decaying to one $W$ boson and a bottom
-quark, shortly called \wbx\ analysis.
+in the single-lepton channel that are the object of this dissertation,
+we present in this chapter the search for \TTbar\ production with
+at least one heavy quark decaying to a $W$ boson and a bottom
+quark, referred to as the \wbx\ analysis.
 This search is particularly optimized for the $T\to Wb$ channel
-as the strategy followed is to reconstruct the $W$ boson decaying
+and updates an analysis performed with the data collected
+by ATLAS in 2011 of pp collisions at a \cme of \rts=7~\tev~\cite{ATLAS:2012qe},
+whose main features and results are reported in Appendix~\ref{app:wbx7tev}.
+The strategy followed is to reconstruct the $W$ boson decaying
 into two light jets exploiting the different kinematic characteristics
-of $W$ bosons from an heavy object like the vector-like top partner
-and the lighter Standard Model top quark (see Section~\ref{sec:boostedW}
-for the details).
+of $W$ bosons from a heavy object like the vector-like top partner
+and the lighter Standard Model top quark (see Section~\ref{sec:wbxSTRAT}).
+The reconstruction of the $W$ bosons is illustrated in
+Section~\ref{sec:boostedW}.
 Section~\ref{sec:wbxEVT} describes the requirements to select the
 final signal region and, as will be explained, two signal regions are identified, 
 one called ``\loose'' and the other ``\tight''.
@@ -21,19 +25,18 @@ In Section~\ref{sec:wbxCR} we define ``control regions'' depleted of
 signal that gradually approach the final signal region in order to 
 check the good modeling of real data by the various expected
 backgrounds contributions. 
-The final discriminant chosen to build the final likelihood is
-the heavy quark reconstructed mass, defined as reported in Section~\ref{sec:wbxDISCR}.
-Finally, Section~\ref{sec:wbxSYS} completes the summary
-of the systematic uncertainties started in Section~\ref{sec:systematics}
-with the discussion of the uncertainties treated specifically
-in the context of this search and
+The final discriminant chosen to search for the signal is
+the heavy quark reconstructed mass, defined in Section~\ref{sec:wbxDISCR}.
+Section~\ref{sec:wbxSYS} summarizes the analysis-specific 
+systematic uncertainties considered in this search, which are in addition to
+those described in Section~\ref{sec:systematics}.
 Section~\ref{sec:wbxRES} is devoted to the results.
 %Chapter~\ref{chap:results} is devoted to the results.
 
-\section{Reconstruction of boosted $W$ bosons}\label{sec:boostedW}
+\section{Analysis strategy}\label{sec:wbxSTRAT}
 
 The very high \cme\ available in the pp collisions provided by the LHC
-can either be used by nature to produce massive particles like the heavy 
+can either be used by Nature to produce massive particles like the heavy 
 quarks we are looking for or to provide lighter particles with high momentum.
 In the case of \ttbar\ production, the main and irreducible background
 of this search as both particles decay to a $W$ boson and a bottom quark,
@@ -41,10 +44,11 @@ the particles will receive a boost which is transferred to their decay
 products. This means that the $W$ boson and the bottom quark from a Standard
 Model top quark will be produced close-by along the direction of the parent
 top quark. On the contrary, heavy top-like quarks will be produced almost
-at rest, as the most part of the \cme\ goes into their mass, and their
-decay products will be produced ``almost'' back-to-back. In this events,
-both the $W$ boson and the bottom quark are receiving a good amount of
-momentum, resulting in a high-$p_T$ \bjet\ and close-by light jets (lepton and \met)
+at rest, as most of the \cme\ goes into their mass, and their
+decay products will be produced ``almost'' back-to-back. In this case,
+both the $W$ boson and the bottom quark have the typical high
+momentum of the decay products fo heavy particles, 
+resulting in a high-$p_T$ \bjet\ and close-by light jets (lepton and \met)
 from the $W$ boson decay in the hadronic (leptonic) channel. This
 difference, represented in the drawing of Figure~\ref{fig:boostedkin},
 is at the basis of the \wbx\ search strategy.
@@ -58,16 +62,29 @@ is at the basis of the \wbx\ search strategy.
         boosted objects are the $W$ bosons.\label{fig:boostedkin}}
 \end{center}\end{figure}
 
-In order to exploit this dynamic the angular separation of the final state
+The strategy is therefore settled as follows:
+the two $W$ bosons, one decaying leptonically and
+one decaying hadronically, are reconstructed
+as detailed in Section~\ref{sec:boostedW};
+cuts based on the hardness of the event, as well
+as on the angular separation of the objects, are
+defined in order to achieve a high $S/B$ ratio;
+the heavy quark mass is reconstructed and used
+for the statistical analysis.
+
+\section{$W$ boson reconstruction}\label{sec:boostedW}
+
+In order to exploit the difference between the kinematics
+of signal and background, the angular separation of the final state
 objects is considered. Since the $W$ boson decay
-in the lepton channel cannot be completely resolved because of
-the presence (or better, absence) of a neutrino, the analysis
+in the lepton channel cannot be fully reconstructed because of
+the presence of a neutrino, the analysis
 focuses on the reconstruction of the $W$ boson that decays in the hadronic
-channel, called \whad\ in the following.
+channel (\whad).
 The two jets from the decay of the \whad\ are expected to be
-light flavored jets. At the preselection level at least
+light-flavored jets. At the preselection level at least
 one \btag ged jet is required. Since two \btag ged jets are expected in
-the final state and in order to avoid the loss in acceptance that would follow a strict
+the final state, and in order to avoid the loss in acceptance that would follow a strict
 cut like requiring at least two \btag ged jets\footnote{Considering our choice
 of the working point for the \btag ging \texttt{MV1} algorithm with a 70\%
 efficiency, a selection requiring at least two \btag ged jets would result
@@ -75,7 +92,7 @@ in a 50\% selection efficiency.}, the two jets with the
 highest weight computed from the \btag ging algorithm are considered ``\bjet s''.
 Amongst the light jets two cases are considered: either the two light flavoured
 quarks were produced so close-by that after hadronization the jet reconstruction
-algorithm identifies a single jet, or two jets are found close one to the other.
+algorithm identifies a single jet, or two nearby, distinct jets are reconstructed.
 To account for the first category of events, jets with $\pt>250\gev$ and a mass
 between 60~\gev\ and 120~\gev, an interval chosen to cover both the world-average 
 $W$ and $Z$ boson masses values of $m_W = 80.4$~\gev\ and $m_Z = 91.2$~\gev\ and
@@ -85,27 +102,6 @@ in di-jet systems if their angular separation $\dr(j,j)$ is lower than 0.8 and, 
 $p_T(jj)>200\gev$ and 
 their invariant mass $m_{jj}$ lies in the same window as for the \wi\ candidates, they 
 are taken as a \wii\ candidate.
-
-
-\section{Event selection}\label{sec:wbxEVT}
-
-After preselection, as was explained in Section~\ref{sec:presel},
-events with $\geq$6 jets and $\geq$3 \btag ged jets are rejected in order to
-keep the \wbx\ and the \htx\ analyses orthogonal.
-Since in the final selection the Standard Model background contributions
-from $W$+jets, $Z$+jets, diboson, single-top, $\ttbar V$ and multi-jet events
-are very small, it is chosen to show these backgrounds combined into a
-single component called ``non-$t\bar{t}$''.
-In addition, in order to increase the available statistics for these
-non-$t\bar{t}$ backgrounds, instead of a direct cut on the \btag ging algorithm
-weight to select at least one heavy flavor jet, the Tag Rate Function method
-is used for the non-$t\bar{t}$ samples only. The method is detailed in 
-Appendix~\ref{app:trf}, together with a study to validate the consistency
-of this choice.
-
-Once $W$ bosons are reconstructed in the event like explained in 
-Section~\ref{sec:boostedW}, if at least one candidate is found the 
-event is kept and further selection cuts are applied.
 If multiple candidates are found, the one with mass closest 
 to the nominal $W$ boson mass is chosen as the hadronic $W$ boson
 of the event. 
@@ -114,8 +110,8 @@ of the \wi\ and \wii\ candidates before the mass window cut is applied. The
 number of \whad\ candidates after preselection is shown in
 Figure~\ref{fig:nWhad}. 
 
-For what concerns the $W$ boson decaying in the lepton channel, the \wlep\ candidate,
-it is reconstructed using the lepton of the event and the $\met$, 
+For what concerns the $W$ boson decaying in the leptonically (\wlep),
+it is reconstructed using the lepton and the $\met$, 
 which is considered as the transverse momentum of the neutrino. 
 In order to define the neutrino longitudinal momentum, it is required that
 the invariant mass of the two-body system composed by the lepton and the neutrino 
@@ -126,18 +122,18 @@ while the $Z$ component $p_{Z_\nu}$ is computed from:
 \begin{eqnarray}
 P_W^2 = (P_l + P_{\nu})^2 = M_W^2,
 \end{eqnarray}
-which after some work around gives:
-\begin{eqnarray}
-\alpha &=& \dfrac{1}{2}(M_W^2 - M_l^2) \\
-\beta  &=& \alpha + p_{X_\nu}p_{X_l} + p_{Y_\nu}p_{Y_l} \\
-\gamma &=& -\dfrac{\beta^2 - E_l^2 (p_{X_\nu}^2+p_{Y_\nu}^2)}{E_l^2-p_{Z_l}^2} \\
-\lambda &=& 2\beta \dfrac{p_{Z_l}}{E_l^2-p_{Z_l}^2}\\
-\delta  &=& \lambda^2 - 4\gamma
-\end{eqnarray}
-and finally results in two possible solutions for the 
+resulting in two possible solutions for the 
 $Z$ component of the neutrino momentum:
 \begin{eqnarray}
-p_{Z_\nu} = \frac{\lambda \pm \sqrt{\delta} }{2}.
+p_{Z_\nu} = \frac{\lambda \pm \sqrt{\delta} }{2},
+\end{eqnarray}
+with:
+\begin{eqnarray}
+\lambda &=& 2\beta \dfrac{p_{Z_l}}{E_l^2-p_{Z_l}^2};\\
+\delta  &=& \lambda^2 - 4\gamma;\\
+\gamma &=& -\dfrac{\beta^2 - E_l^2 (p_{X_\nu}^2+p_{Y_\nu}^2)}{E_l^2-p_{Z_l}^2}; \\
+\beta  &=& \alpha + p_{X_\nu}p_{X_l} + p_{Y_\nu}p_{Y_l}; \\
+\alpha &=& \dfrac{1}{2}(M_W^2 - M_l^2).
 \end{eqnarray}
 The chosen solution is the one giving
 %Trying to assign both $p_Z$ to the neutrino 4-momentum, we choose the solution for
@@ -149,12 +145,21 @@ In the case no real solution exists, the neutrino pseudorapidity
 is set equal to that of the lepton, since in the kinematic regime of interest  
 the decay products of the $W$ boson tend to be collinear.
 
+
+\section{Event selection}\label{sec:wbxEVT}
+
+After preselection, as was explained in Section~\ref{sec:presel},
+events with $\geq$6 jets and $\geq$3 \btag ged jets are rejected in order to
+keep the \wbx\ and the \htx\ analyses orthogonal.
+%Once $W$ bosons are reconstructed in the event like explained in 
+%Section~\ref{sec:boostedW}, if at least one candidate is found the 
+%event is kept and further selection cuts are applied.
 Once all the objects taking part to the event are identified,
 the selections summarized in Table~\ref{tab:wbxselection} are
 applied with the aim of rejecting as much Standard Model background
-as possible. As can be seen in the table, two final selection called
-\loose\ and \tight\ selections are proposed, the latter being a
-subset of the former with two very restrictive cut applied on top of it.
+as possible. As can be seen in the table, two final selections referred to as
+\loose\ and \tight\ are defined, the latter being a
+subset of the former with two very restrictive cuts applied on top of it.
 The ``Signal Region'' (SR) label is applied to the selections
 progressively reaching the \tight\ selection.
 
@@ -188,13 +193,13 @@ Preselection & & One electron or muon  \\
 \end{table}
 
 
-After finding at least one \whad\ candidate (SR1), a variable called $\HT$ is defined
+After reconstructing at least one \whad\ candidate (SR1), a variable called $\HT$ is defined
 as the scalar sum of the lepton $\pt$, $\met$ and the $\pt$
 of the four  highest-$\pt$ jets. This $\HT$ distribution peaks at 
-$\sim 2 m_{\T}$ for signal events and is therefore pretty useful to
+$\sim 2 m_{\T}$ for signal events and is therefore very useful to
 discriminate between the signal and the background, as clearly shown
 in Figure~\ref{fig:HTAll}. A cut at $\HT>800\gev$ (SR2) is chosen as particularly
-efficient in rejecting background while keeping signal events.
+efficient in rejecting background while keeping most signal events.
 Considering then the boost inflicted to the bottom quarks from the heavy
 vector-like top decay, cuts on the \btag ged jets are defined.
 Figures~\ref{fig:pTb1} and~\ref{fig:pTb2} show the transverse momentum distributions
@@ -204,27 +209,29 @@ The cuts chosen are $\pt(b_1) > 160\gev$ (SR3) and $\pt(b_2) >80\gev$ (SR4).
 To further discriminate between signal and background,
 the angular separation between the lepton and the reconstructed neutrino 
 (shown in Figure~\ref{fig:DRlnu}) is
-required to satisfy $\Delta R(\ell,\nu)<1.2$ (SR5). What was described up to now 
-are the requirements that lead to Signal Region 5, i.e. the \loose\ selection, as was
-also summarized in Table~\ref{tab:wbxselection}. In the \tight\ selection
-two further cuts on the angular separation between the lepton and the \btag ged
-jet giving the minimum value, $\min(\Delta R(\ell, b_{1,2}))$ (Figure~\ref{fig:DRlb}), 
-and between the
-\whad\ candidate and the \btag ged jet giving the minimum value, 
-$\min(\Delta R(W_{\rm had}, b_{1,2}))$ (Figure~\ref{fig:DRWb}) are defined as
+required to satisfy $\Delta R(\ell,\nu)<1.2$, thus defining the 
+\loose\ selection (SR5). In the \tight\ selection
+two further cuts on the minimum angular separation between the lepton and a \btag ged, 
+$\min(\Delta R(\ell, b_{1,2}))$ (see Figure~\ref{fig:DRlb}), 
+and the minimum angular separation between the
+\whad\ candidate and a \btag ged jet,
+$\min(\Delta R(W_{\rm had}, b_{1,2}))$ (see Figure~\ref{fig:DRWb}) are defined as
  $\min(\Delta R(\ell, b_{1,2}))>1.4$ (SR6) and 
 $\min(\Delta R(W_{\rm had}, b_{1,2}))>1.4$ (SR7, i.e. \tight\ selection).
 In Table~\ref{tab:cftab} the expected and observed yields in these SRs are
 reported for the electron and muon channels combined. In Appendix~\ref{app:wbxSR}
-the final discriminant variable (to be discussed in Section~\ref{sec:wbxDISCR})
-is shown for data, background and signal in the selection steps through the
-signal region.
+the same numbers are reported for the  electron and muon channels separately.
 
 \begin{table}[htb]\centering
         \input{wbx_analysis_14ifb/cftab/LatexTable_cutflow_ELEMUON_noEff.tex}
-        \caption{Selected number of events with their statistical error
-        in the Signal Regions (see Table~\ref{tab:wbxselection} for the
-        region definitions).}\label{tab:cftab}
+        \caption{Number of observed events, integrated 
+          over the whole mass spectrum, compared to the Standard Model expectation for
+          the combined $e$+jets and $\mu$+jets channels 
+          in the Signal Regions (see Table~\ref{tab:wbxselection} for the
+        region definitions).
+          The expected signal yields for a chiral 
+          fourth-generation $\T$ quark with $m_{\T}=600\gev$ are also shown.
+          The quoted uncertainties are only statistical.}\label{tab:cftab}
 \end{table}
 
 
@@ -241,7 +248,7 @@ the selections and as a function of $m_{\T}$.
 \begin{tabular}{l c c c c c c}
 \toprule
  & \multicolumn{6}{c}{Decay mode} \\
-$m_{\T}$ ($\gev$) & $WbWb$ & $WbZt$ & $ZtZt$ & $WbHt$ & $ZtHt$ & $HtHt$ \\
+$m_{\T}$ (GeV) & $WbWb$ & $WbZt$ & $ZtZt$ & $WbHt$ & $ZtHt$ & $HtHt$ \\
 \midrule
 350 & 0.48\% & 0.21\% & 0.11\% & 0.18\% & 0.06\% & 0.08\% \\
 400 & 0.95\% & 0.34\% & 0.13\% & 0.26\% & 0.14\% & 0.08\% \\
@@ -255,7 +262,7 @@ $m_{\T}$ ($\gev$) & $WbWb$ & $WbZt$ & $ZtZt$ & $WbHt$ & $ZtHt$ & $HtHt$ \\
 800 & 5.72\% & 3.35\% & 1.67\% & 2.69\% & 1.43\% & 1.18\% \\
 \bottomrule
 \end{tabular}
-\caption{Acceptance times efficiency for different \TTbar decay modes as a function of $m_{\T}$ for the \loose\ selection.}
+\caption{Acceptance times efficiency for different \TTbar\ decay modes as a function of $m_{\T}$ for the \loose\ selection.}
 \label{tab:eff_loose}
 \end{center}
 \end{table}
@@ -283,8 +290,6 @@ $m_{\T}$ ($\gev$) & $WbWb$ & $WbZt$ & $ZtZt$ & $WbHt$ & $ZtHt$ & $HtHt$ \\
 \label{tab:eff_tight}
 \end{center}
 \end{table}
-
-
 
 
 
@@ -378,6 +383,17 @@ from the Matrix Method gives negative results, consistent with zero,
 and is therefore set to zero.
 It has been checked that its contribution is small ($\sim 0.2\%$ of the total)
 even withouth the $\HT$ requirement, and is therefore considered negligible.
+Since in the final selection the Standard Model background contributions
+from $W$+jets, $Z$+jets, diboson, single-top, $\ttbar V$ and multi-jet events
+are very small, it is chosen to show these backgrounds combined into a
+single component called ``non-$t\bar{t}$''.
+In addition, in order to increase the available statistics for these
+non-$t\bar{t}$ backgrounds, instead of a direct cut on the \btag ging algorithm
+weight to select at least one heavy flavor jet, the Tag Rate Function method
+is used for the non-$t\bar{t}$ samples only. The method is detailed in 
+Appendix~\ref{app:trf}, together with a study to validate the consistency
+of this choice.
+
 
 \input{wbx_analysis_14ifb/loosetightyieltable.tex}
 
@@ -388,15 +404,16 @@ even withouth the $\HT$ requirement, and is therefore considered negligible.
 \section{Control regions}\label{sec:wbxCR}
 
 In order to check the good modeling of Standard Model background
-and its agreement with data in selection regions safely free from
-possible signal presence, a number of ``signal-depleted'' regions (SDR) 
+and its agreement with data a number of ``signal-depleted'' regions (SDR) 
 have been studied. These regions, summarized in Table~\ref{tab:SDRs},
-progressively go from the preselection to the final selections keeping
-away the signal by means of reverting one of the \tight\ selection cuts.
-This allows to test regions enough close to the final signal selections
+progressively go from the preselection to the final selections 
+rejecting the signal by means of reverting one of the \tight\ selection criteria.
+This allows to test regions close enough to the final signal selections
 but still suppressing a potential signal contribution.
-Plots of the comparisons between data and background for 
-selected kinematic variables in each of these SDRs can be found in 
+Comparisons between data and background for 
+selected kinematic variables in SDR4 and SDR5
+are shown in Figure~\ref{fig:sdr4} and Figure~\ref{fig:sdr5} respectively.
+Additional plots for each of these SDRs can be found in 
 Appendix~\ref{app:wbxSDRs}.
 In general, a reasonable agreement is found between data and Standard Model
 prediction, with the $t\bar{t}$ contribution being modeled by the Monte Carlo 
@@ -440,13 +457,15 @@ SDR9 & \tight\ selection, \\
 \end{table}
 %%%%%%%%%%%%%%%
 
+\input{wbx_analysis_14ifb/sdr45.tex}
+
 
 \section{Final discriminant: heavy quark reconstructed mass}\label{sec:wbxDISCR}
 
 The discriminant variable chosen to build the binned log-likelihood ratio
-for the statistical analysis of the search is the reconstructed mass of the
+for the statistical analysis is the reconstructed mass of the
 heavy vector-like top partner quark that decays into the boosted \whad, 
-and is labelled as $m_{\rm reco}$. In order to build this variable the \whad\ 
+referred to as $m_{\rm reco}$. In order to build this variable the \whad\ 
 candidate reconstructed as described in Section~\ref{sec:boostedW} has to
 be paired with the associated bottom quark, to be chosen from the two
 \btag ged jets selected in the analysis.
@@ -456,13 +475,42 @@ The various combinations for the leptonic solution and the \btag ged jets
 pairing are attempted and the one that in the end returns
 the smallest difference between $m_{\rm reco}$ and $m(\wlep,b)$ is chosen
 as final configuration.
+\begin{figure}[h!tb]\begin{center}
+	\subfigure[]{\label{fig:mrecofewSR1}
+  	\includegraphics[width=0.45\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow1_NOMINAL.eps}}
+	\subfigure[]{\label{fig:mrecofewSR2}
+  	\includegraphics[width=0.45\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow12_NOMINAL.eps}}
+	\subfigure[]{\label{fig:mrecofewSR3}
+  	\includegraphics[width=0.45\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow123_NOMINAL.eps}}
+	\subfigure[]{\label{fig:mrecofewSR4}
+  	\includegraphics[width=0.45\textwidth]{wbx_analysis_14ifb/figures/THESIS_c6_cutflow/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow1234_NOMINAL.eps}}
+	\caption[bla]{Distribution of the reconstructed mass \mreco\ in the combined
+        electron and muon channel for the various signal regions: (a) SR1, (b) SR2,
+        (c) SR3, (d) SR4.
+        \input{wbx_analysis_14ifb/figures/confnoteplots/commoncaptionstack.tex}
+        \label{fig:mrecofewSRs}}
+\end{center}\end{figure}
+The evolution of the signal peak in the \mreco\ distribution
+in the first four steps of the signal region selection
+(see Table~\ref{tab:wbxselection} for the definition of the
+requirements) can be appreciated in Figure~\ref{fig:mrecofewSRs}.
 In Figure~\ref{fig:mreco} the \mreco\ distribution in the \loose\
 and \tight\ final selections is shown. From Figure~\ref{fig:mrecoLOOSE}
 it is clear that this variable works well in discriminating between the
-signal from the heavy quark and the backgrounds. Figure~\ref{fig:mrecoTIGHT}
+signal from the heavy quark and the backgrounds, with
+an evident low \mreco\ sideband dominated by the
+\ttbar\ background contribution. This allows a useful
+check of the background modeling and, in case this channel
+were to be used for the statistical analysis, the sideband would
+help constraining the fluctuations.
+Figure~\ref{fig:mrecoTIGHT}
 instead shows a nice and clear peak from a chiral heavy top partner with mass
 of 600~\gev\ with almost no background left after the \tight\ selection
 requirements have been imposed.
+In Appendix~\ref{app:wbxSR}
+the final discriminant variable %(to be discussed in Section~\ref{sec:wbxDISCR})
+is shown for data, background and signal in the selection steps 
+through the signal region of Table~\ref{tab:wbxselection}.
 As will be explained in Section~\ref{sec:wbxRES}, the \tight\ selection
 shows the best sensitivity and therefore the distribution of 
 Figure~\ref{fig:mrecoTIGHT} is the one chosen to derive the final test
@@ -481,7 +529,8 @@ statistics.
 
 %\section{}\label{sec:}
 
-\section{Systematics}\label{sec:wbxSYS}
+%%%\clearpage
+\section{Systematic uncertainties}\label{sec:wbxSYS}
 
 %\subsection{Technical Details}
 The general aspects of the systematic uncertainties considered
@@ -508,21 +557,6 @@ For the \nontt\ background all systematic uncertainties are
 treated as normalization-only.
 
 %Contrary to what was described in Table~\ref{tab:sys}, all systematics are considered as normalization only for this small-background component. For the {\sc Tight} selection, we take the values derived from the {\sc Loose} selection, as we do not expect significant difference between the two cases.
-
-\subsection{???Statistical uncertainty of the MC samples???}
-
-The statistical uncertainty of the MC samples is taken into account when computing our likelihoods.
-The {\sc mclimit} flag used is 2, meaning we consider the uncertainties as given by the uncertainties of the templates. 
-This allows us to correctly estimate the statistical uncertainty when many templates are merged together with different weights, such as in
-the case of the merged non-$t\bar{t}$ background.
-
-\subsection{Profiling of Systematic Uncertainties}
-
-In general no profiling of systematic uncertainties is performed, with
-the only exception of the overall \ttbar\ yield in the analysis in the
-\loose\ channel, where the low \mreco\ sideband dominated by the
-\ttbar\ background contribution (see 
-Figure~\ref{fig:mrecoLOOSE}) helps constraining the fluctuations.
 
 \subsection{Jet energy scale}\label{sec:wbx_syst_jes}
 Concerning the analysis performed in the \tight\ channel,
@@ -557,18 +591,19 @@ Section~\ref{sec:wbx_syst_jes} is applied in order to
 reduce the impact on the analysis from
 large unphysical statistical fluctuations.
 
-\subsection{Jet Mass Scale and Resolution??? don't we compute it from the 4-vec???}
-The jet mass is used  to identify the most energetic hadronically-decaying $W$ bosons that have been reconstructed as  single jets
-($W_{\rm had}^{\rm type\;I}$ candidates). The uncertainties affecting the jet mass had been studied in the previous analysis at $\sqrt{s}=7\tev$ 
-(see Section  8.2.7 in Ref.~\cite{atlas_WbWb_5fb_ljets_backup}. At the time, the existing jet mass scale/resolution uncertainties had been derived for larger anti-$k_t$ jets 
-($R=1.0$) and in release 16~\cite{jet_mass_2011} and were believed to be conservative when applied to smaller $R=0.4$ jets using the 
-refined calibration from release 17.  The jet mass scale uncertainties used in Ref.~\cite{atlas_WbWb_5fb_ljets_backup} were
-4.5\% for jets with $\pt<400\gev$ and 6\% for $\pt>400\gev$ (from Table 18 in Ref.~\cite{jet_mass_2011}). The jet mass resolution
-uncertainty used was 20\%, independent of jet $\pt$ (from Table 18 in Ref.~\cite{jet_mass_2011}). 
-The propagation of these uncertainties in the previous analysis led to a degradation in the expected sensitivity of only a few $\gev$
-(compare yellow and light blue curves in Fig. 25(b) of Ref.~\cite{atlas_WbWb_5fb_ljets_backup}). Given the small impact on the
-sensitivity of an almost identical analysis at $\sqrt{s}=7\tev$ of what was judged to be a conservative uncertainty at the time, and since
-no recommendation for  $R=0.4$ jets currently exists,  this uncertainty is currently being neglected.
+\subsection{Jet mass scale and resolution}
+The jet mass variable is used to identify the most 
+energetic \wi\ candidate.
+Following previous studies carried out in 
+the context of the search for $\TTbar\to WbWb$
+analysis performed with the pp collision data
+at the \cme\ of $\sqrt{s}=7\tev$~\cite{ATLAS:2012qe},
+briefly summarized in Appendix~\ref{app:jetmass},
+given the small impact on the sensitivity of 
+that analysis and since it was judged to be a 
+conservative uncertainty at the time, 
+%and since no recommendation for  $R=0.4$ jets currently exists,  
+this systematic uncertainty is neglected.
 
 \subsection{\Wboson/\Zboson+jets Normalisation}
 \label{sec:syst_vjetsnormWBX}
@@ -781,46 +816,6 @@ as normalisation and/or shape uncertainties, with their impact on normalisation 
 In the \wbx\ analysis no significant excess of data over the 
 expected background has been observed in the \mreco\ spectra 
 of Figure~\ref{fig:mreco}.
-Three configurations have been tested to derive the final
-results of this search, namely: \loose\ selection using $m_{\rm reco}$ and profiling of overall $t\bar{t}$ yield (``\loose''); \tight\ selection using $m_{\rm reco}$
-(``\tight''); \tight\ selection  considering just the overall yield and not 
-the shape of $m_{\rm reco}$ (``\tight\ cut-and-count'').
-The expected value of $CL_{\rm s}$ (see Section~\ref{sec:cls})
-as a function of $m_{\T}$ is
-used to choose the best performing strategy.
-As was shown in Table~\ref{tab:SystSummary}, the prediction for 
-the $t\bar{t}$ background is affected by 
-large systematic uncertainties originating from \btag ged jet 
-identification efficiency, 
-jet energy calibration and resolution and physics modeling in the Monte
-Carlo generators. 
-In the case of the \loose\ selection configuration the low-mass sideband
-region dominated by $t\bar{t}$ can be used to exploit the available data 
-statistics to reduce the degrading 
-impact of systematic uncertainties on the sensitivity of the search. 
-This is accomplished by fitting, during the statistical analysis,
-a single nuisance parameter representing a scaling factor on 
-the overall $t\bar{t}$ yield. Such procedure is
-not possible in the case of the \tight\ selection, where no
-sidebands are present as its selection is designed 
-to achieve a very high background rejection and high signal-to-background ratio.
-
-As can be seen in Figure~\ref{fig:cls_study}, the \tight\ configuration using 
-\mreco\ distribution information achieves an expected
-exclusion for a chiral fourth-generation $\T$ quark which is $\sim 50\gev$ 
-higher than the reach of both the
-\loose\ and \tight\ cut-and-count analyses, whose sensitivies are comparable.
-Therefore, the \tight\ selection is chosen 
-{\it a priori} to obtain the main result of this search.
-
-\begin{figure}[htb]\begin{center}
-	\subfigure{
-  	\includegraphics[width=0.7\textwidth]{results/figures/CLs_versus_Mass.eps}}
-	\caption{Expected $CL_{\rm s}$ as a function of $m_{\T}$ taking into account systematic uncertainties.
-Compared are three possible configurations for the analysis (see text for details).\label{fig:cls_study}}
-\end{center}\end{figure}
-
-
 The observed and expected upper limits on the \TTbar\ production cross section 
 times branching fraction as a function of $m_{\T}$ are shown in 
 Figure~\ref{fig:limits1D_wbx} for the two chosen benchmark scenarios,
@@ -840,7 +835,9 @@ significance of 1.7 standard deviations above the
 background-only prediction, which is, therefore, not significant.
 For a chiral fourth-generation $\T$ quark, an observed (expected) 95\%  CL  limit 
 $m_{\T}>740\,(770)\gev$ is obtained for the central value of the 
-theoretical cross section.
+theoretical cross section, pushing $\sim$100~\gev\ further the
+limit set by the previous analysis using pp collisions
+at the \cme\ of 7~\tev~\cite{ATLAS:2012qe}.
 This result can also be applied to a $Y$ vector-like quark with electric charge of
 $-4/3$ and decaying into a $W^-$ boson and a $b$ quark.
 For a vector-like singlet $\T$ quark, an observed (expected) 95\%  CL  limit 
@@ -866,13 +863,9 @@ for (a) a chiral fourth-generation $\T$ quark and (b) a vector-like singlet $\T$
 \end{figure}
 
 
-Concerning the quasi-model independent strategy, 
-we recall here that in the two-dimensional plane the gray area
-corresponds to the unphysical region where the sum of BRs
-exceeds unity. In every plane two benchmark models are indicated
-as a plain circle and star symbols, corresponding respectively to the
-weak-isospin singlet and doublet scenario BRs values as computed by the
-\texttt{PROTOS} event generator.
+Concerning the quasi-model independent strategy illustrated in Section~\ref{sec:strategy}, 
+we recall here that a the two-dimensional plane was defined in order
+to perform a scan of the allowed BRs.
 To probe the full plane the signal samples are reweighted by the ratio
 of desired branching ratio to the original branching ratio generated
 by \texttt{PROTOS} and the complete analysis are repeated in each point.
@@ -888,26 +881,11 @@ regardless of the value of the vector-like quark branching ratios to $Ht$ and $Z
 %the acceptance times efficiency of the {\sl tight} selection is 2.45\%, 0.64\%, 0.47\%, 0.10\%, 0.18\% and 0.16\%, for 
 %decays to $WbWb$, $WbZt$, $WbHt$, $ZtZt$, $ZtHt$ and $HtHt$, respectively.
 
-
 \begin{figure}[h!bt]
 \begin{center}
 \includegraphics[width=0.9\textwidth]{results/figures/NewttbarMod/lim_Scan2D_tight_Bin1.eps}
-\caption{
-Observed (red filled area) and expected (red dashed line) 95\% CL exclusion in the plane of
-$BR(\T \to Wb)$ versus $BR(\T \to Ht)$, for different values of the vector-like $\T$ quark mass.
+\caption[bla]{\input{results/figures/mixingplanecaption.tex}
 \label{fig:limits2D_wbx}}
 \end{center}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
 

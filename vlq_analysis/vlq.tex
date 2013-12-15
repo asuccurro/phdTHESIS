@@ -1026,6 +1026,13 @@ parameter applied to the signal
 to test the sensitivity of the search and $\vec{\theta}$
 are the nuisance parameters parametrizing the effect of
 systematic uncertainties. 
+The statistical uncertainty of the Monte Carlo samples is 
+also taken into account when computing our likelihoods as
+an uncertainty of the templates, which in the case of
+the non-$t\bar{t}$ background are merged into a single
+template  with different weights.
+%The {\sc mclimit} flag used is 2, meaning we consider the uncertainties as given by the uncertainties of the templates. 
+%This allows us to correctly estimate the statistical uncertainty when many templates are merged together with different weights, such as in the case of the merged non-$t\bar{t}$ background.
 %These parameters are assigned Gaussian penalty terms in the likelihood corresponding
 %to their nominal uncertainties.
 For both hypotheses pseudoexperiments are generated to
