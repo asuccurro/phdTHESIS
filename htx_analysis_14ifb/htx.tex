@@ -206,7 +206,7 @@ particular the heavy-flavor component, two scaling factors are
 introduced, one for \ttlf\ and one for \tthf, and are determined
 by performing a simultaneous fit to the data distributions
 of the $\HT$  variable in the three analysis channels. 
-The measured scaling factors are 
+The measured scaling factors in the blinded channels are 
 $0.87 \pm 0.02\,{\rm (stat.)}$ for \ttlf\ and 
 $1.35 \pm 0.11\,{\rm (stat.)}$ for \tthf.
 The $\HT$ distributions in the \chii, \chiii\ and \chiv\ 
@@ -217,7 +217,7 @@ This rescaled prediction is taken as default from now on.
 
 Considering that the previously defined control regions do not allow
 to investigate the data to Standard Model backgrounds comparison in
-the tails of the $\HT$ distribution where the eventual signal would lie,
+the tails of the $\HT$ distribution where the eventual signal would lay,
 an additional control region is defined as follows: 
 at most two jets with $\pt>60\gev$, $\HT<1.2\tev$, and either 2 or 3 \btag ged jets.
 The  $\geq 4$ \btag ged jets is not considered as it still has 
@@ -225,7 +225,8 @@ a large signal content and too low background statistics to provide
 a useful cross-check.
 A comparison between data and simulation for the $\HT$ distribution 
 in these two additional control regions is shown in 
-Figure~\ref{fig:HT_signalregion_control}.
+Figure~\ref{fig:HT_signalregion_control}. More details are given 
+in Appendix~\ref{app:htx_httail}.
 %for the 2 $b$-tags and 3 $b$-tags channels.
 %Further details can be found in App.~\ref{sec:httails_controlregions}.
 Data are found to be in reasonable agreement with the 
@@ -291,10 +292,40 @@ The selection used corresponds to the combined $e$+jets and $\mu$+jets channels 
 (b) 3 $b$-tags and (c) $\geq 4$ $b$ tags. The last bin in all figures contains the overflow.\label{fig:HT_checks_ttjetsComp}}
 \end{center}\end{figure}
 
+The three search channels, the \chii, \chiii\ and \chiv\ channels,
+are now unblinded (except for the \chii, which is kept orthogonal to the
+\wbx\ analysis signal region) and the fit to data of the two scaling factors for 
+the \tthf\ and \ttlf\ background components is performed over the full range
+of the $\HT$ variable.
+Consistent values are found with respect to the ones measured 
+in the blinded regions, and are $0.88 \pm 0.02\,{\rm (stat.)}$ and 
+$1.21 \pm 0.08\,{\rm (stat.)}$ for $t\bar{t}$+light jets 
+and $t\bar{t}$+heavy-flavour jets, respectively.  
+%A summary of the fitted scaling factors in different configurations can be found in App.~\ref{sec:Fitted_Parameters_Study_Appendix}.
+Figure~\ref{fig:HT_SignalRegion} displays the $\HT$ distribution in each of the 
+search channels considered, 
+showing a large $S/B$ ratio and good discrimination in the \chiv\ channel.
+%This figure displays exactly the same data as in Fig.~\ref{fig:HT_beforefit}, except that the blinding cut of $\HT<700\gev$ has
+%been removed in the 3 and $\geq 4$ $b$-tag channels.
+%The data is found to be consistent with the background prediction and no indications of a signal-like excess is
+%observed. Table~\ref{tab:Yields_SignalRegion} summarizes the corresponding event yields in each of the
+%analyzed channels.
 
-
-
-
+\begin{figure}[htb]\begin{center}
+	\subfigure[]{\label{fig:htall2}
+\includegraphics[width=0.30\textwidth]{htx_analysis_14ifb/figures/final/HTAll_6jetin2btagex_ELEMUON.eps}}
+	\subfigure[]{\label{fig:htall3}
+\includegraphics[width=0.30\textwidth]{htx_analysis_14ifb/figures/final/HTAll_6jetin3btagex_ELEMUON.eps}}
+	\subfigure[]{\label{fig:htall4}
+\includegraphics[width=0.30\textwidth]{htx_analysis_14ifb/figures/final/HTAll_6jetin4btagin_ELEMUON.eps}}
+	\caption{Comparison between data and simulation for $\HT$ in the combined
+$e$+jets and $\mu$+jets (a) \chii\ (b) \chiii\ and (c) \chiv\ channels.
+The $t\bar{t}$ background prediction is after fitting to data using the full $\HT$ spectrum (see text for details).
+Also shown is the expected $\TT$ signal corresponding to $m_{\T}=600\gev$ in the $\T$ doublet scenario.
+The last bin in all figures contains the overflow. The bottom panel displays the ratio between data
+and background prediction. The shaded area represents the total post-fit background uncertainty.
+\label{fig:HT_SignalRegion}}
+\end{center}\end{figure}
 
 %\section{}\label{sec:}
 
@@ -385,21 +416,16 @@ in this analysis. Systematic uncertainties associated
 with the choice of factorisation and renormalisation 
 scales in {\sc Alpgen} are considered. For the former, 
 two different uncertainties are taken into account.
-
-
-\ifIsINT
-\paragraph{$\mathbf{Q_{fac}}$}: 
-\fi
-On the one hand, the factorisation scale for the hard scatter is varied by a factor of two up and down relative to the
+\subsubsection*{$\mathbf{Q_{fac}}$}
+The factorisation scale for the hard scatter is varied by a factor of two up and down relative to the
 original scale, $Q^2=\sum_{\rm partons} (m^2 + \pt^2)$.
 \ifIsINT 
 Appendix~\ref{app:AlpgenModellingAppendix} describes details of the
 implementations of this uncertainty for the $t\bar{t}$+light partons and $t\bar{t}Q\bar{Q}$ ($Q=b,c$) samples, which are different.
 \fi
 Since sometimes both variations can go in the same direction, the largest of the two is taken and symmetrised.
-\ifIsINT
-\paragraph{Functional form of the factorisation scale (iqopt2):} 
-\fi
+
+\subsubsection*{Functional form of the factorisation scale (iqopt2)} 
 On the other hand, the default choice for the dynamic factorisation scale,
 $Q^2=\sum_{\rm partons} (m^2 + \pt^2)$,  is compared to an alternate choice, $Q^2=x_1 x_2 s$.
 \ifIsINT
@@ -409,9 +435,7 @@ for the $t\bar{t}$+light jets and $t\bar{t}Q\bar{Q}$ ($Q=b,c$) samples, which ar
 This uncertainty is significantly larger than that obtained by simply scaling the factorization scale up and down by a factor two 
 and is symmetrised to obtain a two-sided uncertainty.
 
-\ifIsINT
-\paragraph{$\mathbf{k_{Tfac}}$}: 
-\fi
+\subsubsection*{$\mathbf{k_{Tfac}}$}
 The renormalisation scale associated with the evaluation of $\alpha_s$ at each local
 vertex in the matrix element calculation is varied by a factor of two
 up and down relative to the original scale, $k_{\rm T}$, between two
@@ -457,27 +481,31 @@ prior to any $b$-tagging requirement.
 
 \subsection{Overall effect of systematic uncertainties}\label{sec:wbxALLSYS}
 
-In Table~\ref{tab:htxSYS4b}
+In Table~\ref{tab:htxSYS4b} the final results on
+the effect of the different systematic uncertainties affecting
+the \htx\ analysis are reported.
+The overall systematic uncertainty in the \chiv\ channel
+before the two-parameter fit ({\it pre-fit})
+on the background normalization was
+$\sim$42\%, with the dominant uncertainties being from $b$ tagging efficiency (16\%),
+$c$ tagging efficiency (11\%), jet energy scale (11\%), $t\bar{t}$ modelling (11\%), 
+$t\bar{t}$+heavy-flavour fractions (32\%) and $t\bar{t}$ cross section (10\%).
+As a result of the two-parameter fit, the total background uncertainty 
+in this channel is reduced 
+by about 80\%. The total  systematic uncertainty
+in the signal normalisation in the $\geq 4$ $b$-tags channel is 
+$\sim$21\%, completely dominated by the uncertainty in the $b$ tagging efficiency.
+
+
 \begin{table}[h!tb]
 \begin{center}
 \resizebox{1.\textwidth}{!}{
 \input{htx_analysis_14ifb/tables/sys_4b}}
-\caption{\label{tab:htxSYS4b} }
+\caption{List of all systematic uncertainties (in \%) considered in the analysis, indicating which ones are treated
+as normalisation and/or shape uncertainties, with their impact on normalisation in the case of the 
+\chiv\ channel, for signal and backgrounds. \label{tab:htxSYS4b} }
 \end{center}
 \end{table}
-
-%%%%NB COPY PASTE
-The overall systematic uncertainty before the two-parameter fit ({\it pre-fit})
-on the background normalization in the $\geq 4$ $b$-tags channel is 
-$\sim$42\%, with the dominant uncertainties being from $b$ tagging efficiency (16\%),
-$c$ tagging efficiency (11\%), jet energy scale (11\%), $t\bar{t}$ modelling (11\%), 
-$t\bar{t}$+heavy-flavour fractions (32\%) and $t\bar{t}$ cross section (10\%).
-
-As a result of the two-parameter fit, the total background uncertainty is reduced 
-by about 80\% in this channel. The total  systematic uncertainty
-in the signal normalisation in the $\geq 4$ $b$-tags channel is 
-$\sim$21\%, completely dominated by the uncertainty in the $b$ tagging efficiency.
-
 
 
 
@@ -490,25 +518,45 @@ $\sim$21\%, completely dominated by the uncertainty in the $b$ tagging efficienc
 In the \htx\ analysis no significant excess of data over the 
 expected background has been observed in the signal enriched 
 \chiv\ channel of Figure.
-%%%%%%%%%AAAAAAAAAAAAAAAAAAAAAA fix
-
+Since the prediction for the $t\bar{t}$ background
+in the \chiv\ channel (the most sensitive one) is affected by large
+systematic uncertainties originating from \bjet\ identification, jet energy calibration and
+physics modelling, including the fraction of $t\bar{t}$+heavy-flavour jets, 
+two nuisance parameters are introduced.
+These parameters correspond to  scaling factors on the overall yields of 
+\tthf\ and \ttlf, and by allowing them to be fitted to data during the statistical analysis
+particularly in the \chii\ and \chiii\ channels dominated by background,
+the degrading impact of systematic uncertainties on the sensitivity of the search
+is significantly reduced. 
 The observed and expected upper limits on the \TTbar\ production cross section 
 times branching fraction as a function of $m_{\T}$ are shown in 
 Figure~\ref{fig:limits1D_htx} for the two chosen benchmark scenarios,
 namely the weak-isospin singlet and
 doublet models are chosen.
-
-For a vector-like $\T$ quark from a weak-isospin doublet, an observed (expected) 95\%  CL  limit
+These results include both statistical and systematic uncertainties,
+and the consistency of the data with the background prediction is 
+assessed following the concepts presented in Section~\ref{sec:cls}
+by computing the $p$-value under the background-only hypothesis
+(1-$CL_{\rm b}$) for each point of the two-dimensional plane 
+(each point corresponding to a signal scenario) and for every heavy 
+quark mass point considered (one two-dimensional plane is built for each
+$m_T$ value). For a vector-like $\T$ quark from a weak-isospin doublet, an observed (expected) 95\%  CL  limit
 $m_{T}>790\,(745)\gev$ is obtained for the central value of the 
 theoretical cross section.
 For a vector-like singlet $\T$ quark, an observed (expected) 95\%  CL  limit 
 $m_{\T}>640\,(615)\gev$ is obtained for the central value of the 
 theoretical cross section.
-
 %It has been verified that the expected signal yield and shape 
 %of the $\HT$ distribution used to obtain the result in the doublet scenario is not
 %significantly affected by the fact that signal MC samples corresponding to the singlet scenario were used (see Section~\ref{sec:SingletvsDoublet}).
 
+
+Concerning the quasi-model independent strategy illustrated in Section~\ref{sec:strategy}, 
+we recall here that a the two-dimensional plane was defined in order
+to perform a scan of the allowed BRs.
+To probe the full plane the signal samples are reweighted by the ratio
+of desired branching ratio to the original branching ratio generated
+by \texttt{PROTOS} and the complete analysis are repeated in each point.
 The  95\% CL exclusion limits  obtained in the scan of the two-dimensional
 plane by varying the mixing of the three decay channel contributions for
 different values of $m_{\T}$ are shown in Figure~\ref{fig:limits2D_wbx}. 
