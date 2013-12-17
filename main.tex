@@ -163,14 +163,19 @@ keepaspectratio]{smallstuff/frontespizio}%
 %\pagenumbering{roman}
 
 \input{smallstuff/cover}
-\clearpage{\pagestyle{empty}\cleardoublepage}
 
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\phantomsection
+\addcontentsline{toc}{chapter}{Resumen}
+\input{introandconclusions/resumen}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\input{introandconclusions/abstract}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
 \input{smallstuff/dedica}
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\input{introandconclusions/intro_ES}
-
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
@@ -185,14 +190,25 @@ keepaspectratio]{smallstuff/frontespizio}%
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Introduction}
+%\input{introandconclusions/intro}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\mainmatter
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
 \phantomsection
 \addcontentsline{toc}{chapter}{Introduction}
 \input{introandconclusions/intro}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
-
-
-\mainmatter
+\phantomsection
+\addcontentsline{toc}{chapter}{Part I}
+\input{smallstuff/pI.tex}
+%\chapter*{Part I}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \input{theory/bsm}
 
@@ -205,6 +221,11 @@ keepaspectratio]{smallstuff/frontespizio}%
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \input{objectsreconstruction/objects}
 
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\phantomsection
+\addcontentsline{toc}{chapter}{Part II}
+\input{smallstuff/pII.tex}
+%\chapter*{Part II}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \input{vlq_analysis/vlq}
 
