@@ -90,10 +90,18 @@ modification of the vacuum structure, the Yang-Mills field
 became a very accurate description of the weak force interactions. 
 Such unified model was consistently proposed, independently, in the 1960s 
 by Abdus Salam, Sheldon Glashow and Steven 
-Weinberg~\cite{Glashow1961579,PhysRevLett.19.1264}, but it suffered of a problem: 
+Weinberg~\cite{Glashow1961579,PhysRevLett.19.1264}, 
+but it suffered of a problem: 
 as it was a perturbative theory, equations 
 had to be expanded in a power series to be calculated but only the leading order 
-term did not show ultraviolet divergences\footnote{}.
+term did not show ultraviolet divergences\footnote{Divergences in computations
+are classified according to the energy scale at which they appear. Following
+the Planck relation $E=h\nu$ and the relation between the wave lenght and
+the frequency of radiation $\lambda\nu = c$, in natural units 
+($\hbar=c=1$) energies of the order of 1~\tev\ 
+or more lie in the ultraviolet (UV) range: $\lambda({\rm UV})\sim 10^{-9}$~m.
+Divergencies appearing at the energy scale of 1~\gev\ or less are in the 
+infrared (IR) range: $\lambda({\rm IR})\sim 10^{-6}$~m.}.
 
 By the first years of the 1970s Gerard't Hooft demonstrated in his
 PhD thesis under the supervision of  Martinus Veltman the
@@ -206,11 +214,12 @@ Section~\ref{sec:higgs}).}. Furthermore, measurements of its total
 decay width and of its partial decay widths for all processes with a 
 visible final state (i.e. different from $\nu\bar\nu$) allowed to set 
 the number of light neutrino flavours to three, confirming the three-generation 
-SM and excluding the possibility for a fourth family of leptons with masses lower 
-than half of $m_Z$.
+SM and excluding the possibility for a fourth family of leptons with masses
+ lower than half of $m_Z$.
 
 The penultimate discovery inside the SM has been the observation of the 
-top quark in 1995 at the Fermilab's experiments CDF and D0~\cite{PhysRevLett.74.2626,PhysRevLett.74.2422}. 
+top quark in 1995 at the Fermilab's experiments CDF and 
+D0~\cite{PhysRevLett.74.2626,PhysRevLett.74.2422}. 
 The mass of the top quark resulted consistent with the predicted 
 constraints, thus confirming again the SM as an accurate framework. 
 At that point, and for almost 20 years, the last missing piece whose
@@ -220,12 +229,50 @@ of the overall fit of data. When the LEP physics program was terminated,
 direct searches gave, at 95\% CL, a lower limit of 114~\gev\ and an upper 
 limit of 144~\gev\ on the mass of the Higgs boson~\cite{Renton}.
 
-LEP was dismantled, and the LHC was built.
+Then LEP was dismantled, the LHC was built, and in 2012 
+the ATLAS and CMS experiments
+observed a new $\sim$125~\gev\ mass boson~\cite{2012gk,Chatrchyan201230}
+with the same spin-parity as the one expected from a Standard Model
+Higgs boson. A precise {\it identikit} of this new particles, necessary
+in order to say the final word about its nature (is it a Higgs boson?
+Is it the Standard Model Higgs boson? Is it a ``new physics'' Higgs boson?),
+is expected to come within the next decades of activity of the LHC and its
+experiments.
 
 
+\subsection{Building the Standard Model}\label{sec:THsm}
 
-\subsection{Building the electroweak lagrangian}\label{sec:ewlagr}
-The Standard Model is a gauge theory invariant under the symmetry transformation $SU(2)_{L} \otimes U(1)_{Y}$. Using $\psi_{L}$ and $\psi_{R}$ to denote the left-handed and right-handed fermion fields respectively, the bare electroweak Lagrangian of the SM (considering for simplicity only leptons) is made of two terms\begin{equation}\label{eq:bareLagSM}
+The Standard Model (SM) is a gauge theory invariant under the symmetry 
+transformation $SU(3)_{C} \otimes SU(2)_{L} \otimes U(1)_{Y}$. The
+three terms of the product of groups are the matrix representations
+of the forces of Nature
+governing the interactions of particles: $SU(3)_{C}$ is the unbroken {\it color}
+symmetry containing the color triplets and described by Quantum ChromoDynamics 
+(QCD); $SU(2)_{L} \otimes U(1)_{Y}$ is the unified {\it electroweak} broken 
+symmetry, described by Quantum ElectroDynamics (QED), with 
+$SU(2)_{L}$ containing the left-handed weak isospin doublets and 
+$U(1)_{Y}$containing the right-handed isospin singlets.
+The quantum number $Y$, the hypercharge, is defined as $Y=2(Q-I_3)$, 
+where $Q$ is the electric
+charge and $I_3$ the third componend of the isospin.
+Gravity is not (yet) included in the model, and even though
+this is a flaw of the SM that is desirable to be fixed in a 
+Grand Unified Theory (GUT), its action on particles is of many order
+of magnitudes lower than the others' and is, therefore, negligible at the
+fundamental components scale.
+
+
+\subsubsection{Building the electroweak lagrangian}\label{sec:ewlagr}
+
+The Lagrangian of the SM is built by {\it gauging} the symmetries in 
+order to obtain invariance under those transformations.
+Fermions are spin-1/2 particles that can be represented as spinors.
+Using $\psi_{L}$ and 
+$\psi_{R}$ to denote the left-handed and right-handed fermion fields 
+respectively, 
+the bare electroweak Lagrangian of the SM (considering 
+for simplicity only leptons) is made of two terms:
+\begin{equation}\label{eq:bareLagSM}
 \mathcal{L}_{0} = \mathcal{L}_{lept}+ \mathcal{L}_{gauge}
 \end{equation}that are \begin{align}
 &\left \{ \begin{array}{ll}
@@ -239,13 +286,27 @@ B_{\mu\nu} = \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu}\\
 W_{\mu\nu}^{l} = \partial_{\mu}W_{\nu}^{l} - \partial_{\nu}W_{\mu}^{l} - g\varepsilon^{jkl}W_{\mu}^{j}W_{\nu}^{k}
 \end{array} \right. .\label{eq:lagGauge}
 \end{align}
-Equation \ref{eq:lagLep} is the ``free matter'' Lagrangian after symmetries $SU(2)_{L}$ of isospin (with coupling constant $g$) and $U(1)_{Y}$ of hypercharge (with coupling constant $g'/2$) have been gauged through the definition of covariant derivatives, while equation \ref{eq:lagGauge} is the Lagrangian for the vector bosons dynamics. The chirality of the electroweak interactions does not find a theoretical motivation, but $SU(2)_{L} \otimes U(1)_{Y}$ transformations do make distinction between left and right helicity of the spinors:\begin{align}
-&\left \{ \begin{array}{ll}
-\psi_{L} = \frac{1}{2}(1 - \gamma_{5})\phi &\rightarrow \; \psi_{L}' = e^{iY\beta(x) + i\bar{\sigma}\bar{\alpha}(x)}\psi_{L} \\
-\psi_{R} = \frac{1}{2}(1 + \gamma_{5})\phi &\rightarrow \; \psi_{R}' = e^{iY\beta(x)}\psi_{R}
-\end{array} \right. .
-\label{eq:chiral}
-\end{align}
+The gauge invariance is obtained through the definition of the
+covariant derivatives $D$, which are different for the left- and
+right-handed components of the field.
+Equation~\ref{eq:lagLep} is the ``free matter'' Lagrangian 
+describing the transformation under the symmetry $SU(2)_{L}$ of isospin
+with coupling constant $g$, three boson fields $W^{l}_{\mu\nu}$ and
+their weak generators $\bar{\sigma}$, and under the symmetry
+$U(1)_{Y}$ of hypercharge with coupling constant $g'/2$,
+the boson field $B_{\mu\nu}$ and its hypercharge generator $Y$.
+Equation~\ref{eq:lagGauge} is the Lagrangian for the vector bosons 
+dynamics with self-couplings. 
+The chirality of the electroweak interactions does not find 
+a theoretical motivation, but $SU(2)_{L} \otimes U(1)_{Y}$ transformations 
+do make distinction between left and right helicity of the spinors.
+%\begin{align}
+%&\left \{ \begin{array}{ll}
+%\psi_{L} = \frac{1}{2}(1 - \gamma_{5})\phi &\rightarrow \; \psi_{L}' = e^{iY\beta(x) + i\bar{\sigma}\bar{\alpha}(x)}\psi_{L} \\
+%\psi_{R} = \frac{1}{2}(1 + \gamma_{5})\phi &\rightarrow \; \psi_{R}' = e^{iY\beta(x)}\psi_{R}
+%\end{array} \right. .
+%\label{eq:chiral}
+%\end{align}
 
 The Lagrangian \ref{eq:bareLagSM} is invariant under group $SU(2)_{L} \otimes U(1)_{Y}$ transformation, but has the problem of leaving fermions massless. Thus a scalar Lagrangian with a quartic auto-interaction is introduced:
 \begin{equation}\label{eq:lagScalar}
@@ -305,7 +366,7 @@ $0.511\cdot10^{-3} $ & 0.105 & 1.777 & $\sim0$ & 0.0024 & 0.0048 & 1.27 & 0.104 
 
 \subsection{Adding the strong interaction}\label{sec:qcdlagr}
 
-Adding the QCD (see e.g. \cite{Ecker} for more about QCD), the SM is finally described by the symmetry group $SU(2)_{L}\otimes U(1)_{Y}\otimes SU(3)_{C}$ with  $SU(2)_{L}$ containing the left-handed weak isospin doublets, $U(1)_{Y}$ containing the right-handed isospin singlets and $SU(3)_{C}$, the unbroken colour symmetry, containing the color triplets.
+Adding the QCD (see e.g. \cite{Ecker} for more about QCD), the SM is finally described by the symmetry group $SU(2)_{L}\otimes U(1)_{Y}\otimes SU(3)_{C}$ 
 
 
 
