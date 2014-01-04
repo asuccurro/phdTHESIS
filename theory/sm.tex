@@ -291,21 +291,42 @@ the bare electroweak Lagrangian of the SM (considering
 for simplicity only leptons) is made of two terms:
 \begin{equation}\label{eq:bareLagSM}
 \mathcal{L}_{0} = \mathcal{L}_{lept}+ \mathcal{L}_{gauge}
-\end{equation}that are \begin{align}
-&\left \{ \begin{array}{ll}
-\mathcal{L}_{lept} = \bar\psi_{L}i\slashed{D}_{L}\psi_{L} + \bar\psi_{R}i\slashed{D}_{R}\psi_{R}\\
-D_{L}^{\mu} = \partial^{\mu} + ig\dfrac{\bar{\sigma}\cdot\bar{W}^{\mu}}{2} + i\dfrac{g'}{2}Y_{L}B^{\mu}\\
-D_{R}^{\mu} = \partial^{\mu} + i\dfrac{g'}{2}Y_{R}B^{\mu}
+\end{equation}
+that are 
+\begin{align}
+&\left \{ \begin{array}{cl}
+\mathcal{L}_{lept} &=\;\;  \bar\psi_{L}i\slashed{D}_{L}\psi_{L} + \bar\psi_{R}i\slashed{D}_{R}\psi_{R}\\
+D_{L}^{\mu} &=\;\;  \partial^{\mu} + ig\dfrac{\bar{\sigma}\cdot\bar{W}^{\mu}}{2} + i\dfrac{g'}{2}Y_{L}B^{\mu}\\
+D_{R}^{\mu} &=\;\;  \partial^{\mu} + i\dfrac{g'}{2}Y_{R}B^{\mu}
 \end{array} \right. ,\label{eq:lagLep} \\
-&\left \{ \begin{array}{ll}
-\mathcal{L}_{gauge}  = -\frac{1}{4}W_{\mu\nu}^{l}W^{\mu\nu\, l}  -\frac{1}{4}B_{\mu\nu}B^{\mu\nu}\\
-B_{\mu\nu} = \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu}\\
-W_{\mu\nu}^{l} = \partial_{\mu}W_{\nu}^{l} - \partial_{\nu}W_{\mu}^{l} - g\varepsilon^{jkl}W_{\mu}^{j}W_{\nu}^{k}
+&\left \{ \begin{array}{cl}
+\mathcal{L}_{gauge}  &=\;\;  -\frac{1}{4}W_{\mu\nu}^{l}W^{\mu\nu\, l}  -\frac{1}{4}B_{\mu\nu}B^{\mu\nu}\\
+B_{\mu\nu} &=\;\;  \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu}\\
+W_{\mu\nu}^{l} &=\;\;  \partial_{\mu}W_{\nu}^{l} - \partial_{\nu}W_{\mu}^{l} - g\varepsilon^{jkl}W_{\mu}^{j}W_{\nu}^{k}
 \end{array} \right. .\label{eq:lagGauge}
 \end{align}
 The gauge invariance is obtained through the definition of the
-covariant derivatives $D$, which are different for the left- and
+covariant derivatives $\slashed{D} = \gamma_{\mu}D^{\mu}$, 
+which are different for the left- and
 right-handed components of the field.
+The chirality of the electroweak interactions does not find 
+a theoretical motivation, but $SU(2)_{L} \otimes U(1)_{Y}$ transformations 
+do make distinction between left and right helicity of the spinors.
+Introducing the Weyl representation of the $\gamma$ matrices
+\begin{equation}
+\gamma^{0} = \left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \\ \end{array}\right), \quad
+\gamma^{i} = \left(\begin{array}{cc} 0 & \sigma^{i} \\ -\sigma^{i} & 0 \\ \end{array}\right) \quad \textnormal{and} \quad
+\gamma^{5} = \left(\begin{array}{cc} -1 & 0 \\ 0 & 1 \\ \end{array}\right) \quad ,
+\end{equation}
+where $\sigma_{i}$ are the Pauli matrices, the left- and right-handed spinors transform as:
+\begin{align}
+&\left \{ \begin{array}{ll}
+\psi_{L} = \frac{1}{2}(1 - \gamma_{5})\phi &\rightarrow \; \psi_{L}' = e^{iY\beta(x) + i\bar{\sigma}\bar{\alpha}(x)}\psi_{L} \\
+\psi_{R} = \frac{1}{2}(1 + \gamma_{5})\phi &\rightarrow \; \psi_{R}' = e^{iY\beta(x)}\psi_{R}
+\end{array} \right. .
+\label{eq:chiral}
+\end{align}
+
 Equation~\ref{eq:lagLep} is the ``free matter'' Lagrangian 
 describing the transformation under the symmetry $SU(2)_{L}$ of weak isospin
 with coupling constant $g$, three boson fields $W^{l}_{\mu\nu}$ and
@@ -319,23 +340,6 @@ $U(1)_{Y}$ of hypercharge with coupling constant $g'/2$,
 the boson field $B_{\mu\nu}$ and its hypercharge generator $Y$.
 Equation~\ref{eq:lagGauge} is the Lagrangian for the vector bosons 
 dynamics with self-couplings, including trilinear and quadrilinear terms. 
-The chirality of the electroweak interactions does not find 
-a theoretical motivation, but $SU(2)_{L} \otimes U(1)_{Y}$ transformations 
-do make distinction between left and right helicity of the spinors.
-Introducing the Weyl representation of the $\gamma$ matrices
-\begin{equation}
-\gamma^{0} = \left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \\ \end{array}\right), \quad
-\gamma^{i} = \left(\begin{array}{cc} 0 & \sigma^{i} \\ -\sigma^{i} & 0 \\ \end{array}\right) \quad \textnormal{and} \quad
-\gamma^{5} = \left(\begin{array}{cc} -1 & 0 \\ 0 & 1 \\ \end{array}\right) \quad ,
-\end{equation}
-where $\sigma_{i}$ are the Pauli matrices, the letf- and right-handed spinors transform as:
-\begin{align}
-&\left \{ \begin{array}{ll}
-\psi_{L} = \frac{1}{2}(1 - \gamma_{5})\phi &\rightarrow \; \psi_{L}' = e^{iY\beta(x) + i\bar{\sigma}\bar{\alpha}(x)}\psi_{L} \\
-\psi_{R} = \frac{1}{2}(1 + \gamma_{5})\phi &\rightarrow \; \psi_{R}' = e^{iY\beta(x)}\psi_{R}
-\end{array} \right. .
-\label{eq:chiral}
-\end{align}
 
 
 
@@ -344,49 +348,74 @@ $SU(2)_{L} \otimes U(1)_{Y}$ transformation, but has the
 problem of leaving fermions massless. Thus a scalar 
 Lagrangian with a quartic auto-interaction is introduced:
 \begin{equation}\label{eq:lagScalar}
-\left \{ \begin{array}{ll}
-\mathcal{L}_{\phi} =  (D_{\phi}^{\mu} \phi)^{\dag}(D_{\phi\,\mu} \phi) - V(\phi^{\dag}\phi)\\
-V = \mu^{2}\phi^{\dag}\phi + \lambda(\phi^{\dag}\phi)^{2}\\
-D_{\phi}^{\mu} = \partial^{\mu} + ig\dfrac{\bar{\sigma}\cdot\bar{W}^{\mu}}{2} + i\dfrac{g'}{2}Y_{\phi}B^{\mu}
+\left \{ \begin{array}{cl}
+\mathcal{L}_{\phi} &=\;\;  (D_{\phi}^{\mu} \phi)^{\dag}(D_{\phi\,\mu} \phi) - V(\phi^{\dag}\phi)\\
+V &=\;\; \mu^{2}\phi^{\dag}\phi + \lambda(\phi^{\dag}\phi)^{2}\\
+D_{\phi}^{\mu} &=\;\; \partial^{\mu} + ig\dfrac{\bar{\sigma}\cdot\bar{W}^{\mu}}{2} + i\dfrac{g'}{2}Y_{\phi}B^{\mu}
 \end{array}\right. ,
 \end{equation}
 where $\phi$ is an Higgs doublet, accounting for four 
 degrees of freedom needed to give mass to three vector
 bosons (the neutral $Z$ boson and the two $W^{\pm}$ bosons)
-and to a scalar Higgs boson:\begin{equation}\label{eq:higgsDoub}
+and to a scalar Higgs boson:
+\begin{equation}\label{eq:higgsDoub}
 \phi = \begin{pmatrix} \varphi^{+}\\\varphi^{0}
-\end{pmatrix},\quad \varphi^{+}=\frac{1}{\sqrt{2}}(\varphi_{1}+i\varphi_{2}),\quad \varphi^{0}=\frac{1}{\sqrt{2}}(\varphi_{3}+i\varphi_{4}).
+\end{pmatrix} =
+\dfrac{1}{\sqrt{2}} 
+\begin{pmatrix} \varphi_{1}+i\varphi_{2}\\ \varphi_{3}+i\varphi_{4}\end{pmatrix}.
 \end{equation}
 
-
+%Three terms, $\varphi^{+}$, $\varphi^{-}$ and $(\varphi^{0}-\bar\varphi^{0})/\sqrt{2}$, give mass to the three massive vector bosons $W^{\pm}$ and $Z$, leaving a massive Higgs scalar boson $(\varphi^{0}+\bar\varphi^{0})/\sqrt{2}$. 
+The potential $V(\phi)$ depends on two parameters, $\mu^2$ and $\lambda$. 
+The case $\lambda<0$ is unphysical, leading to no stable minima. For 
+$\lambda>0$, two cases arise: $\mu^2>0$ and $\mu^2<0$. In the first case
+(see Figure~\ref{fig:higgs1}) there is a single solution to the minimization
+which corresponds to $|\phi|=0$ and gives as vacuum expectation value
+$\bra{0}\phi \ket{0} = 0$. In the second case (see Figure~\ref{fig:higgs2}) 
+the potential has a non-vanishing vacuum expectation value 
+$\bra{0}\phi \ket{0} = v$ and %the symmetry is spontaneously broken, the minimum not being unique anymore.
+the minimum is not unique anymore. The fundamental vacuum 
+state is no more invariant under $SU(2)_{L} \otimes U(1)_{Y}$, 
+meaning that these two symmetries are now 
+broken\footnote{Instead, the symmetry $U(1)_{elm} \subset SU(2)_{L} \otimes U(1)_{Y}$ 
+is not broken. This means that vacuum is electrically uncharged while 
+it has isospin and hypercharge charges.}: 
+this is the Spontaneous Symmetry Breaking (SSB) mechanism. 
+The vacuum state is chosen as:
 \begin{figure}[htb]\begin{center}
 	\subfigure[]{\label{fig:higgs1}
   	\includegraphics[width=0.45\textwidth]{theory/figures/higgs1.eps}}
 	\subfigure[]{\label{fig:higgs2}
   	\includegraphics[width=0.45\textwidth]{theory/figures/higgs2.eps}}
-	\caption{~\cite{Michael:1569839}}
+	\caption{Vacuum pontential for $\lambda>0$ and (a) $\mu^2>0$ or
+          (b) $\mu^2<0$, with the typical shape of a mexican hat~\cite{Michael:1569839}.}
 \end{center}\end{figure}
 
-%Three terms, $\varphi^{+}$, $\varphi^{-}$ and $(\varphi^{0}-\bar\varphi^{0})/\sqrt{2}$, give mass to the three massive vector bosons $W^{\pm}$ and $Z$, leaving a massive Higgs scalar boson $(\varphi^{0}+\bar\varphi^{0})/\sqrt{2}$. 
-Since now the fundamental vacuum state is no more invariant under $SU(2)_{L} \otimes U(1)_{Y}$, these two symmetries are now broken\footnote{Instead, the symmetry $U(1)_{elm} \subset SU(2)_{L} \otimes U(1)_{Y}$ is not broken. This means that vacuum is electrically uncharged while it has isospin and hypercharge charges.}: this is the Spontaneous Symmetry Breaking (SSB) mechanism. The vacuum state is chosen as\begin{equation}\label{eq:vacuum}
+\begin{equation}\label{eq:vacuum}
 \phi_{0} = \begin{pmatrix} 0 \\ v/\sqrt{2}
 \end{pmatrix}
-\end{equation}where $v = \sqrt{-\mu^{2}/\lambda}$ is the vacuum expectation value. Finally, the only thing left to do is to introduce the scalar-fermion interaction. This is done with
+\end{equation}
+where $v = \sqrt{-\mu^{2}/\lambda}$ is 
+the vacuum expectation value. Finally, since
+only the vector bosons got their mass up to now,
+the only thing left to do is to introduce 
+the scalar-fermion interaction in order to give
+mass to the fermions. This is done defining:
 \begin{equation}\label{eq:lagYukawa}
 \mathcal{L}_{Yukawa} = -G_{lept}\big[\bar\psi_{R}(\phi^{\dag}\psi_{L}) + (\bar\psi_{L}\phi)\psi_{R}\big] .
 \end{equation}Thus the complete electroweak Lagrangian of the SM, that can be generalized also to quarks (see Table \ref{tab:isospin}), is\begin{equation}\label{eq:lagSM}
 \mathcal{L}= \mathcal{L}_{lept} +\mathcal{L}_{gauge} +\mathcal{L}_{\phi} +\mathcal{L}_{Yukawa}.
 \end{equation}
 
-\begin{table}[htb]\centering\begin{tabular}{cccc}
-\multicolumn{4}{c}{Weak isospin left-handed doublets \bfseries $\psi_{L}$} \\ \hline \\ 
+\begin{table}[htb]\centering\begin{tabular}{cccc}\toprule
+\multicolumn{4}{c}{Weak isospin left-handed doublets \bfseries $\psi_{L}$} \\ \midrule \\ 
 $\begin{pmatrix} \nu_{e_{L}} \\ e_{L} \end{pmatrix}$ & $\begin{pmatrix} \nu_{\mu_{L}} \\ \mu_{L} \end{pmatrix}$ &$\begin{pmatrix} \nu_{\tau_{L}} \\ \tau_{L} \end{pmatrix}$ & \bfseries Leptons \\ \\ 
 $\begin{pmatrix} u_{L} \\ d'_{L} \end{pmatrix}$ & $\begin{pmatrix} c_{L} \\ s'_{L} \end{pmatrix}$ &$\begin{pmatrix} t_{L} \\ b'_{L} \end{pmatrix}$ & \bfseries Quarks \\
- \\ \hline \hline\\ 
-\multicolumn{4}{c}{Weak isospin right-handed singlets \bfseries $\psi_{R}$} \\ \hline \\ 
+ \\ \bottomrule\\ \toprule
+\multicolumn{4}{c}{Weak isospin right-handed singlets \bfseries $\psi_{R}$} \\ \midrule \\ 
 $ e_{R} $ & $ \mu_{R}$ &$\tau_{R}$ & \bfseries Leptons \\ \\ 
 $u_{R}$ , $d'_{R} $ & $c_{R}$ , $s'_{R} $ &$ t_{R}$ , $b'_{R}$ & \bfseries Quarks \\
- \\ \hline \hline
+ \\ \bottomrule
 \end{tabular}\caption{Weak isospin multiplets. $q'$ refers to the flavour eigenstate that correspond to the mass eigenstate transformed with the CKM matrix.}\label{tab:isospin} \end{table}
 
 An important consequence of the introduction of the scalar Higgs 
@@ -424,24 +453,90 @@ where the Weinberg angle $\theta_{W}$ is defined through\begin{equation}\label{e
 \dfrac{g}{\sqrt{(g')^{2}+g^{2}}} = \cos\theta_{W} \\
 \dfrac{g'}{\sqrt{(g')^{2}+g^{2}}} = \sin\theta_{W} \end{array}\right. .
 \end{equation} Masses acquired through the Higgs mechanism are listed in Table \ref{tab:mass}.
-\begin{table}[htb]\centering\begin{tabular}{cccc}
+
+
+\begin{table}[htb]\centering
+\begin{tabular}{cccc}\toprule
 \multicolumn{4}{c}{Force Carriers} \\ \midrule
 $\gamma $ &$W^{\pm}$ &$Z$ &$g$ \\
 $0$ & $\sqrt{\dfrac{g^{2}v^{2}}{4}} $& $\sqrt{\dfrac{(g^{2}+g'^{2})v^{2}}{4}} $&  $0$ \\
-$0$ & $80.4$ & $91.2$ & $0$ \\\hline \hline\\
+$0$ & $80.4$ & $91.2$ & $0$ \\\bottomrule\\
 \end{tabular}
-
-\begin{tabular}{cccccccccc}
+\begin{tabular}{cccccccccc}\toprule
 \multicolumn{10}{c}{Leptons and Quarks} \\ \midrule
 $e$ & $\mu$ &$\tau$ &$\nu$ & $u$ & $d$ & $c$ & $s$ &$ t$ & $b$ \\
 \multicolumn{10}{c}{$\dfrac{v}{\sqrt{2}}g_{f}$} \\
-$0.511\cdot10^{-3} $ & 0.105 & 1.777 & $\sim0$ & 0.0024 & 0.0048 & 1.27 & 0.104 & 171.2 & 4.2 \\\hline \hline
+$0.511\cdot10^{-3} $ & 0.105 & 1.777 & $\sim0$ & 0.0024 & 0.0048 & 1.27 & 0.104 & 171.2 & 4.2 \\\bottomrule
 \end{tabular}\caption{Particle Masses in GeV.}\label{tab:mass} \end{table}
 
 
-\subsection{Adding the strong interaction}\label{sec:qcdlagr}
+\subsubsection{Adding the strong interaction}\label{sec:qcdlagr}
 
-Adding the QCD (see e.g. \cite{Ecker} for more about QCD), the SM is finally described by the symmetry group $SU(2)_{L}\otimes U(1)_{Y}\otimes SU(3)_{C}$ 
+Adding the color transformations $SU(3)_{C}$, the Standard Model is
+finally described by the symmetry group 
+$SU(2)_{L}\otimes U(1)_{Y}\otimes SU(3)_{C}$.
+In the same way electromagnetic interactions are 
+described by Quantum ElectroDynamics (QED), 
+strong interactions are described by Quantum ChromoDynamics (QCD~\cite{Ecker}).
+However, while the photon does not carry electric charge,
+the gluon does carry color charge (in particular it exists in
+eight states, being a color octet) and can, therefore, self-interact.
 
+The QCD lagrangian only involves quarks and gluons, and reads:
+\begin{equation}
+\left \{ \begin{array}{cl}
+\mathcal{L}_{QCD} &=\;\; \sum\limits_{f=1}^{6}\bar{q}(i\gamma^\mu D_\mu - m_q)q 
+                    -\frac{1}{4}F^{\mu\nu}_{a}F^{a}_{\mu\nu}\\
+ D_\mu &=\;\; \partial_\mu + ig_sG_\mu^a T^a\\
+  F^{a}_{\mu\nu} &=\;\;  \partial_\mu G_\nu^a - \partial_\nu G_\mu^a - 
+                    gf^{a}_{\ bc}G^b_\mu G^c_\nu
+\end{array} \right.
+\end{equation}
+where $q$ is the quark field and $m_q$ is the quark mass, summed over 
+the six types of quarks, and $a$ runs over the eight degrees of 
+freedom of the gluon field, $T^a$ being the generators
+of the $SU(3)_C$ group. The field tensor $F^{a}_{\mu\nu}$ 
+is derived from the gluon field $G_\mu^a$ and 
+its third term describes the gluon self-interaction, with
+$f^a_{\ bc}$ being the structure constants. 
+%non-abelian nature  of the QCD, and it describes the
+The strong coupling constant $\alpha_s$ is defined
+as  $\alpha_s=g/4\pi$ and its values, large at
+low energies (i.e. large distances), and small at high 
+energies (i.e. short distances), determine the 
+peculiar property called {\it asymptotic freedom} which
+explains the confinement of the quarks inside the hadrons
+(see Figure~\ref{fig:alpha_s}). Indeed, at
+small distances $\alpha_s$ is so low that
+the strong interaction can be treated perturbatively
+and quarks and gluons described as free particles.
+On the other hand, a quark cannot be found
+isolated since at large distances the field strength
+will increase enough to create new quarks 
+from the vacuum and colorless hadrons will be formed.
 
+\begin{figure}[tbph]
+\begin{center}
+\subfigure{
+  \includegraphics[width=0.5\textwidth]{theory/figures/asq-2012.eps}
+}
+\caption{Running of the strong coupling $\alpha_s$ with the energy scale $Q$,
+proven from different measurements~\cite{alpha_s}.}
+\label{fig:alpha_s}
+\end{center}
+\end{figure}
 
+As an example of how quarks behave in hadrons,
+protons are composed of two {\it valence} up quarks
+and one {\it valence} down quark. The quarks continuosly
+exchange gluons, which create in turn quark-antiquark pairs,
+resulting in what is referred to as a ``sea'' 
+of quarks and gluons. 
+%randomly created and annihilated in vacuum fluctuations. 
+As the sum of the rest masses of the valence quarks contributes 
+only to about 1\% of the total nucleon
+mass, what accounts for the missing 99\% is the
+binding energy of gluons and sea quarks.
+Further details on QCD will be given in Section~\ref{sec:MCphenomenology},
+where the phenomenology of proton-proton collision
+is discussed.
