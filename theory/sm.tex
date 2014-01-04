@@ -245,16 +245,33 @@ experiments.
 The Standard Model (SM) is a gauge theory invariant under the symmetry 
 transformation $SU(3)_{C} \otimes SU(2)_{L} \otimes U(1)_{Y}$. The
 three terms of the product of groups are the matrix representations
-of the forces of Nature
-governing the interactions of particles: $SU(3)_{C}$ is the unbroken {\it color}
-symmetry containing the color triplets and described by Quantum ChromoDynamics 
-(QCD); $SU(2)_{L} \otimes U(1)_{Y}$ is the unified {\it electroweak} broken 
-symmetry, described by Quantum ElectroDynamics (QED), with 
-$SU(2)_{L}$ containing the left-handed weak isospin doublets and 
-$U(1)_{Y}$containing the right-handed isospin singlets.
+of the fundamental symmetries acting on the forces of Nature ({\it quantum fields})
+governing the interactions of particles: 
+$SU(3)_{C}$ is the {\it color} unbroken 
+symmetry %containing the color triplets %, described by Quantum ChromoDynamics (QCD) 
+ acting on the gluon field $G_a$; 
+$SU(2)_{L} \otimes U(1)_{Y}$ is the unified {\it electroweak} broken 
+symmetry, %described by Quantum ElectroDynamics (QED), 
+with the weak symmetry $SU(2)_{L}$
+%containing the left-handed weak isospin doublets 
+acting on the vector boson fields $W_{1,2,3}$ and on the scalar Higgs field $\phi$,
+and the electromagnetic symmetry $U(1)_{Y}$ %containing the right-handed isospin singlets.
+acting on the vector boson field $B$ and on the scalar Higgs field $\phi$.
+
+The quantum number $C$, the color charge, is carried only by
+quarks, antiquarks and gluons 
+in three different values labelled ``red'', ``gree'', ``blue''.
+The quantum number $I$, the weak isospin, differentiates between left-handed
+($I=1/2$) and right-handed ($I=0$) fermions, with the latter not undergoing weak interactions.
+ %The quantum number $L$, the flavor charge, is carried by fermions as
+ %{\it lepton number} for leptons and as {\it baryon number} for quarks.
 The quantum number $Y$, the hypercharge, is defined as $Y=2(Q-I_3)$, 
-where $Q$ is the electric
-charge and $I_3$ the third componend of the isospin.
+where $Q$ is the electric charge and $I_3$ the third componend of the isospin,
+which is $I_3=+1/2$ for up-type quarks and negatively charged leptons, and
+ $I_3=-1/2$ for down-type quarks and neutrinos (and {\it vice-versa} for the antiparticles).
+
+%These quantum numbers are the generators for the
+
 Gravity is not (yet) included in the model, and even though
 this is a flaw of the SM that is desirable to be fixed in a 
 Grand Unified Theory (GUT), its action on particles is of many order
@@ -290,36 +307,68 @@ The gauge invariance is obtained through the definition of the
 covariant derivatives $D$, which are different for the left- and
 right-handed components of the field.
 Equation~\ref{eq:lagLep} is the ``free matter'' Lagrangian 
-describing the transformation under the symmetry $SU(2)_{L}$ of isospin
+describing the transformation under the symmetry $SU(2)_{L}$ of weak isospin
 with coupling constant $g$, three boson fields $W^{l}_{\mu\nu}$ and
-their weak generators $\bar{\sigma}$, and under the symmetry
+their weak generators $\bar{\sigma}$\footnote{These are the Pauli matrices: 
+$$
+\sigma_{1} = \left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \\ \end{array}\right), \quad
+\sigma_{2} = \left(\begin{array}{cc} 0 & -i \\ i & 0 \\ \end{array}\right), \quad
+\sigma_{3} = \left(\begin{array}{cc} 1 & 0 \\ 0 & -1 \\ \end{array}\right).
+$$}, and under the symmetry
 $U(1)_{Y}$ of hypercharge with coupling constant $g'/2$,
 the boson field $B_{\mu\nu}$ and its hypercharge generator $Y$.
 Equation~\ref{eq:lagGauge} is the Lagrangian for the vector bosons 
-dynamics with self-couplings. 
+dynamics with self-couplings, including trilinear and quadrilinear terms. 
 The chirality of the electroweak interactions does not find 
 a theoretical motivation, but $SU(2)_{L} \otimes U(1)_{Y}$ transformations 
 do make distinction between left and right helicity of the spinors.
-%\begin{align}
-%&\left \{ \begin{array}{ll}
-%\psi_{L} = \frac{1}{2}(1 - \gamma_{5})\phi &\rightarrow \; \psi_{L}' = e^{iY\beta(x) + i\bar{\sigma}\bar{\alpha}(x)}\psi_{L} \\
-%\psi_{R} = \frac{1}{2}(1 + \gamma_{5})\phi &\rightarrow \; \psi_{R}' = e^{iY\beta(x)}\psi_{R}
-%\end{array} \right. .
-%\label{eq:chiral}
-%\end{align}
+Introducing the Weyl representation of the $\gamma$ matrices
+\begin{equation}
+\gamma^{0} = \left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \\ \end{array}\right), \quad
+\gamma^{i} = \left(\begin{array}{cc} 0 & \sigma^{i} \\ -\sigma^{i} & 0 \\ \end{array}\right) \quad \textnormal{and} \quad
+\gamma^{5} = \left(\begin{array}{cc} -1 & 0 \\ 0 & 1 \\ \end{array}\right) \quad ,
+\end{equation}
+where $\sigma_{i}$ are the Pauli matrices, the letf- and right-handed spinors transform as:
+\begin{align}
+&\left \{ \begin{array}{ll}
+\psi_{L} = \frac{1}{2}(1 - \gamma_{5})\phi &\rightarrow \; \psi_{L}' = e^{iY\beta(x) + i\bar{\sigma}\bar{\alpha}(x)}\psi_{L} \\
+\psi_{R} = \frac{1}{2}(1 + \gamma_{5})\phi &\rightarrow \; \psi_{R}' = e^{iY\beta(x)}\psi_{R}
+\end{array} \right. .
+\label{eq:chiral}
+\end{align}
 
-The Lagrangian \ref{eq:bareLagSM} is invariant under group $SU(2)_{L} \otimes U(1)_{Y}$ transformation, but has the problem of leaving fermions massless. Thus a scalar Lagrangian with a quartic auto-interaction is introduced:
+
+
+The Lagrangian \ref{eq:bareLagSM} is invariant under group 
+$SU(2)_{L} \otimes U(1)_{Y}$ transformation, but has the 
+problem of leaving fermions massless. Thus a scalar 
+Lagrangian with a quartic auto-interaction is introduced:
 \begin{equation}\label{eq:lagScalar}
 \left \{ \begin{array}{ll}
 \mathcal{L}_{\phi} =  (D_{\phi}^{\mu} \phi)^{\dag}(D_{\phi\,\mu} \phi) - V(\phi^{\dag}\phi)\\
 V = \mu^{2}\phi^{\dag}\phi + \lambda(\phi^{\dag}\phi)^{2}\\
 D_{\phi}^{\mu} = \partial^{\mu} + ig\dfrac{\bar{\sigma}\cdot\bar{W}^{\mu}}{2} + i\dfrac{g'}{2}Y_{\phi}B^{\mu}
 \end{array}\right. ,
-\end{equation}where $\phi$ is an Higgs doublet, accounting for four degrees of freedom:\begin{equation}\label{eq:higgsDoub}
+\end{equation}
+where $\phi$ is an Higgs doublet, accounting for four 
+degrees of freedom needed to give mass to three vector
+bosons (the neutral $Z$ boson and the two $W^{\pm}$ bosons)
+and to a scalar Higgs boson:\begin{equation}\label{eq:higgsDoub}
 \phi = \begin{pmatrix} \varphi^{+}\\\varphi^{0}
 \end{pmatrix},\quad \varphi^{+}=\frac{1}{\sqrt{2}}(\varphi_{1}+i\varphi_{2}),\quad \varphi^{0}=\frac{1}{\sqrt{2}}(\varphi_{3}+i\varphi_{4}).
 \end{equation}
-Three terms, $\varphi^{+}$, $\varphi^{-}$ and $(\varphi^{0}-\bar\varphi^{0})/\sqrt{2}$, give mass to the three massive vector bosons $W^{\pm}$ and $Z$, leaving a massive Higgs scalar boson $(\varphi^{0}+\bar\varphi^{0})/\sqrt{2}$. Since now the fundamental vacuum state is no more invariant under $SU(2)_{L} \otimes U(1)_{Y}$, these two symmetries are now broken\footnote{Instead, the symmetry $U(1)_{elm} \subset SU(2)_{L} \otimes U(1)_{Y}$ is not broken. This means that vacuum is electrically uncharged while it has isospin and hypercharge charges.}: this is the Spontaneous Symmetry Breaking (SSB) mechanism. The vacuum state is chosen as\begin{equation}\label{eq:vacuum}
+
+
+\begin{figure}[htb]\begin{center}
+	\subfigure[]{\label{fig:higgs1}
+  	\includegraphics[width=0.45\textwidth]{theory/figures/higgs1.eps}}
+	\subfigure[]{\label{fig:higgs2}
+  	\includegraphics[width=0.45\textwidth]{theory/figures/higgs2.eps}}
+	\caption{~\cite{Michael:1569839}}
+\end{center}\end{figure}
+
+%Three terms, $\varphi^{+}$, $\varphi^{-}$ and $(\varphi^{0}-\bar\varphi^{0})/\sqrt{2}$, give mass to the three massive vector bosons $W^{\pm}$ and $Z$, leaving a massive Higgs scalar boson $(\varphi^{0}+\bar\varphi^{0})/\sqrt{2}$. 
+Since now the fundamental vacuum state is no more invariant under $SU(2)_{L} \otimes U(1)_{Y}$, these two symmetries are now broken\footnote{Instead, the symmetry $U(1)_{elm} \subset SU(2)_{L} \otimes U(1)_{Y}$ is not broken. This means that vacuum is electrically uncharged while it has isospin and hypercharge charges.}: this is the Spontaneous Symmetry Breaking (SSB) mechanism. The vacuum state is chosen as\begin{equation}\label{eq:vacuum}
 \phi_{0} = \begin{pmatrix} 0 \\ v/\sqrt{2}
 \end{pmatrix}
 \end{equation}where $v = \sqrt{-\mu^{2}/\lambda}$ is the vacuum expectation value. Finally, the only thing left to do is to introduce the scalar-fermion interaction. This is done with
@@ -340,11 +389,37 @@ $u_{R}$ , $d'_{R} $ & $c_{R}$ , $s'_{R} $ &$ t_{R}$ , $b'_{R}$ & \bfseries Quark
  \\ \hline \hline
 \end{tabular}\caption{Weak isospin multiplets. $q'$ refers to the flavour eigenstate that correspond to the mass eigenstate transformed with the CKM matrix.}\label{tab:isospin} \end{table}
 
-An important consequence of the introduction of the scalar Higgs field is the mixing of the vector bosons $B^{\mu}$ and $W_{3}^{\mu}$ to give the photon $A^{\mu}$ and the $Z^{\mu}$ boson:\begin{equation}\label{eq:AZ}
-\left \{ \begin{array}{ll}
-A^{\mu} = \cos\theta_{W}B^{\mu} + \sin\theta_{W}W_{3}^{\mu}\\
-Z^{\mu} = -\sin\theta_{W}B^{\mu} + \cos\theta_{W}W_{3}^{\mu}\end{array}\right. ,
-\end{equation}where the Weinberg angle $\theta_{W}$ is defined through\begin{equation}\label{eq:weinb}
+An important consequence of the introduction of the scalar Higgs 
+field and the consequent spontaneous symmetry breaking
+is the mixing of the vector bosons $B_{\mu}$ and $W^{1,2,3}_{\mu}$ 
+to give the photon $A_{\mu}$, the two $W^{\pm}_{\mu}$ and 
+the $Z_{\mu}$ bosons:
+%\begin{equation}\label{eq:AZ}
+%\left \{ \begin{array}{ll}
+%A^{\mu} = \cos\theta_{W}B^{\mu} + \sin\theta_{W}W_{3}^{\mu}\\
+%Z^{\mu} = -\sin\theta_{W}B^{\mu} + \cos\theta_{W}W_{3}^{\mu}\end{array}\right. ,
+%\end{equation}
+\begin{align}
+  W_{\mu}^{\pm} & = \frac{1}{\sqrt{2}}\left(W_{\mu}^{1}\mp i W_{\mu}^{2}\right), \label{eq:Wpm} \\
+  \left(
+  \begin{array}{c}
+  A_{\mu} \\ Z_{\mu}
+  \end{array}
+  \right)
+  & =
+  \left(
+  \begin{array}{cc}
+  \cos\theta_{W} & \sin\theta_{W} \\
+  -\sin\theta_{W} & \cos\theta_{W}
+  \end{array}
+  \right)
+  \left(
+  \begin{array}{c}
+  B_{\mu} \\ W_{\mu}^{3}
+  \end{array}
+  \right) , \label{eq:AZ}
+\end{align}
+where the Weinberg angle $\theta_{W}$ is defined through\begin{equation}\label{eq:weinb}
 \left \{ \begin{array}{ll}
 \dfrac{g}{\sqrt{(g')^{2}+g^{2}}} = \cos\theta_{W} \\
 \dfrac{g'}{\sqrt{(g')^{2}+g^{2}}} = \sin\theta_{W} \end{array}\right. .
