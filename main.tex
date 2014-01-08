@@ -156,7 +156,7 @@ keepaspectratio]{smallstuff/frontespizio}%
 
 
 \begin{document}
-\linenumbers
+%\linenumbers
 
 \frontmatter
 % Inizio Numerazione Romana
@@ -164,15 +164,7 @@ keepaspectratio]{smallstuff/frontespizio}%
 
 \input{smallstuff/cover}
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\phantomsection
-\addcontentsline{toc}{chapter}{Resumen}
-\input{introandconclusions/resumen}
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\phantomsection
-\addcontentsline{toc}{chapter}{Abstract}
-\input{introandconclusions/abstract}
+%\input{introandconclusions/ifabstract}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \input{smallstuff/dedica}
