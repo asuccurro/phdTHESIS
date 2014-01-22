@@ -8,7 +8,7 @@ we understand that what we deal with when we talk about ``data''
 is raw digital signals from the detector,
 either the real one or the simulated one.
 
-In the following Chapter we will explain how, starting from these outputs,
+In this chapter we will explain how, starting from these digital signals,
 objects are reconstructed to be used in physics analyses~\cite{Aad:2009wy}. 
 This process is what is called ``offline event reconstruction'' since
 it is not done in real time, due to the time required by the algorithms
@@ -16,14 +16,21 @@ to perform their tasks.
 
 In general we could describe the full procedure as subdivided into
 three main steps: a pre-reconstruction stage where the electronic signals are
-translated into measurements; a pattern-recognition step where the measurements
+translated into measurements of positions, times, energies; 
+a pattern-recognition step where the measurements
 are assembled into the building blocks of particles, e.g. tracks and energy clusters;
-a particle identification final leg where the full detector information elaborated 
+a particle identification step where the full detector information 
 is combined to match a candidate physics object 
 (electrons, muons, jets and the missing transverse energy \met).
 
 The expected signatures for the various particles in terms of interaction
-with the detector system are schematically shown in Figure~\ref{fig:decaychart}.
+with the detector system are schematically shown in Figure~\ref{fig:decaychart}:
+only charged particles (as electrons, muons, protons) leave tracks in the Inner
+Detector; electrons create particle showers in the Electromagnetic Calorimeter
+and photons too as soon as they emit electrons or convert; heavy hadrons
+start showering in the Hadronic Calorimeter; muons typically cross the whole
+detector material reaching the Muon Spectrometer where their track is measured;
+neutrinos pass by completely undetected.
 
 \begin{figure}[tb]\begin{center}
         \subfigure{
@@ -35,10 +42,21 @@ with the detector system are schematically shown in Figure~\ref{fig:decaychart}.
 %In addition, some details from
 %selections specific for the analyses presented in this dissertation will be given.
 
-\section{ID Tracks}\label{sec:tracks}
+\section{Tracks}\label{sec:tracks}
 
-Particle trajectories (``tracks'') are used both to reconstruct the particle itself, giving the 
-momentum measurement, and to identify the interaction vertices.
+Charged particles interact with the surrounding material by
+leaving nearby matter ionized. In bubble chambers this can be
+seen by eye as the detector material is, typically, gas in liquid
+state at a temperature very close to transition back to gaseous state,
+in a way that charged particles passing through would leave tracks of
+small gas bubbles induced by ionization. In modern silicon detectors
+a charged particle is ``seen'' as an electrical signal induced by the
+ionization. Lorentz law describes how moving charged particles
+feel the action of a magnetic field, resulting in a trajectory with a
+bending proportional to their mass and speed. These properties allow
+to measure direction and momentum of the charged particles crossing
+the ID layers. Particle trajectories (``tracks'') are 
+also used to identify the interaction vertices.
 The parameters describing a track are: $q/p$, the charge divided by the momentum; $\theta$, or more used $\eta$, the angle
 with respect to the Z axis in the $R$Z plane measured from the 
 perigee\footnote{The perigee is the point of the track closest to the origin.}; $\phi_0$, the angle 
@@ -66,8 +84,9 @@ and the new point. The five track parameters described before are also computed 
 %measured in the silicon detectors, $d_0$ must be lower than 10~mm and the 
 %transverse momentum must be higher than 150~\mev.  
 A cleaning procedure then 
-rejects incomplete tracks or tracks sharing hits with others, or composed by
-false space points. The candidate tracks are extended
+rejects incomplete tracks or tracks sharing hits with other tracks,
+or composed by %false space points.
+noise hits. The candidate tracks are extended
 into the TRT and re-fitted taking into account the effects from the interaction
 of the charged particle with the detector material. 
 %If at least ten TRT hits
@@ -76,7 +95,7 @@ of the charged particle with the detector material.
 A second algorithm, called {\it outside-in}, is applied in order to better
 reconstruct tracks from secondary charged particles. This algorithm does
 the opposite of the inside-out one, taking as seeds hits in the TRT (the
-ones not associated to any track candidate in by the inside-out reconstruction)
+ones not associated to any track candidate by the inside-out reconstruction)
 and extrapolating back to the SCT and pixel detector.
 
 
@@ -88,7 +107,7 @@ starting from a seed defined as the maximum in the distribution of the $z_0$ par
 of reconstructed tracks. After tracks are assigned to the PV with the aid of an
 iterative $\chi^2$ fit, the ones that fall out of more than 7$\sigma$ from the PV
 are used to seed another PV until no track is left without being assigned to a vertex
-(one track can be associated to more than one vertex).
+(a track can be associated to more than one vertex).
 
 A PV must have at least two associated tracks and its position must be consistent with 
 the beam collision region in the XY plane. The hard-scatter PV is chosen as the one
@@ -110,18 +129,7 @@ of distinct vertices as a single one~\cite{ATLAS-CONF-2012-042}.
 With the name ``energy cluster'' we generically refer to energy deposits in the calorimeter
 cells that are grouped together on the basis of some criteria~\cite{topocluster}.
 In particular, we are interested in {\it topological clusters} and {\it electromagnetic towers},
-used respectively for jets and electron/photon reconstruction.
-
-Topological clusters, abbreviated as ``topoclusters'', are 
-built from neighboring calorimeter cells starting from a seed deposit with a signal 
-($S$, the cell measured energy) to noise ($N$, the RMS of the cell noise distribution) ratio
-higher than a certain threshold. Cells with $S/N\geq 4$ are taken as seeds, and starting from the
-one with the highest $S/N$ all the neighboring cells with $S/N\geq 2$ are added to the topocluster.
-Topoclusters are treated as massless and their energy at the electromagnatic 
-scale is the sum of the constituent cells. Their position and direction parameters
-are obtained from a weighted sum of the constituent cells' pseudorapidity and azimuth angle
-based on the absolute value cell's energy. Since energy measurement can be negative (due to
-noise fluctuations), clusters with negative energies are rejected.
+used respectively for hadron and electron/photon reconstruction.
 
 Towers are built using the {\it sliding window} algorithm~\cite{eperf} starting from
 single energy deposits in the EM calorimeter middle layer of size
@@ -130,6 +138,25 @@ a window of  $3\times5$ cell units is defined, centered on the maximum of
 energy and finally expanded to optimize the cluster reconstruction, with a size
 that depends on the object (electron or photon) and the position in the detector
 ($3\times7$ in regions with $|\eta|<1.4$ and $5\times5$ elsewhere).
+
+Topological clusters, abbreviated as ``topoclusters'', are 
+built from neighboring calorimeter cells starting from a seed deposit with a signal 
+($|E_{\rm cell}|$, the cell measured energy) to noise 
+($\sigma$, the RMS of the cell noise distribution from electronic noise
+and pile-up) ratio
+higher than a certain threshold. Cells with $|E_{\rm cell}|>4\sigma$ 
+are taken as seeds, and starting from the
+one with the highest $|E_{\rm cell}|/\sigma$ all the neighboring 
+cells with $|E_{\rm cell}| > 2\sigma$ are added to the topocluster.
+When no more cells like these are found, all the neighboring
+cells, without any cut on $|E_{\rm cell}|$, are added to the topocluster,
+according to the scheme commonly referred to as ``4/2/0''.
+Topoclusters are treated as massless and their energy at the electromagnetic 
+scale is the sum of the constituent cells. Their position and direction parameters
+are obtained from a weighted sum of the constituent cells' pseudorapidity and azimuth angle
+based on the absolute value cell's energy. Since energy measurement can be negative (due to
+noise fluctuations), clusters with negative energies are rejected
+when performing jet reconstruction, but still used for \met\ reconstruction.
 
 \begin{figure}[tb]\begin{center}
         \subfigure{
@@ -153,16 +180,18 @@ with the cluster energy, which is calibrated to the electromagnetic scale
 derived from Monte Carlo based corrections (to account for dead material losses),
 test-beam studies and calibration from $Z\to ee$ events~\cite{Abat:1900zz}.
 
-In general, electron can be distinguished from hadrons thanks to various characteristics
-of their shower development: electrons deposit the most of their energy in the second layer of
-the EM calorimeter; the width of their shower is narrower; they have smaller
+In general, electrons can be distinguished from hadrons thanks to various characteristics
+of their shower development: electrons deposit most of their energy in the second layer of
+the EM calorimeter; the width of their shower is smaller; they have smaller
 hadronic leakage\footnote{The hadronic leakage is the ratio of the transverse energy reconstructed
 in the first layer of the hadronic calorimeter to the total  transverse energy reconstructed in the 
-EM calorimeter.}; the $E/p$ variable (ration of cluster energy and track momentum) is higher.
+EM calorimeter for the cluster.}; the $E/p$ variable (ratio of cluster energy and track momentum) is higher.
 
-Some difficulties arise when dealing with $\pi^0$ and $\eta$ particles, which decay into two $\gamma$s
-that produce two close showers reconstructed as a single one in the second layer of the EM
-calorimeter, and in general with jets faking electrons from, e.g. QCD processes.
+Some difficulties arise when dealing with $\pi^0$ and $\eta$ particles, 
+which decay into two photons that produce two close 
+showers reconstructed as a single one in the second layer of the EM
+calorimeter, thus resulting in a jet misidentified as an electron.
+ from, e.g. QCD processes.
 There are then six different electron definitions to help separate real electrons from fake ones,
 described in the following ordered from the looser requirements to the tightest.
 Performance studies on electron reconstruction and identification where done using 2010 data and Monte
@@ -174,26 +203,27 @@ The identification efficiency is high but the jet rejection is low (about 500).
 
 \texttt{Loose++} electrons are \texttt{loose} electrons whose track has at least one hit in 
 the pixel detector and at least 7 hits in the combined silicon detectors and the
-$|\eta_{\rm first EM}|$ distance between the track estrapolated to the first EM layer and
+$|\Delta\eta_{\rm first EM}|$ between the track estrapolated to the first EM layer and
 the matched cluster is lower than 0.015. The identification
 efficiency is similar to the loose one but the rejection is ten times higher.
 
 \texttt{Medium} electrons are \texttt{loose++} electrons where additional requirements on shower shape
-are made as well as on their tracks: $|d_0|<$5~mm and $|\eta_{\rm first EM}|<0.01$.
-The efficiency drops to 88\% and the rejection is
-higher than the previous.
+are made as well as on their tracks: $|d_0|<$5~mm and $\Delta|\eta_{\rm first EM}|<0.01$.
+The efficiency is about 88\% and the rejection is
+higher than for \texttt{loose++}.
 
 \texttt{Medium++} electrons are \texttt{medium} electrons whose track has at least one hit in the
 first pixel detector layer, a requirement that allows to reject electrons from
 photon conversion. Charged hadrons contamination is reduced by discarding candidates
-whose track has a low fraction of high-threshold TRT hits. In addition, $|\eta_{\rm first EM}|<0.005$ 
+whose track has a low fraction of high-threshold TRT hits. In addition, $\Delta|\eta_{\rm first EM}|<0.005$ 
 and stricter cuts are applied to shower shaper of clusters in $|\eta|<2.01$. The
 efficiency is about 85\% and rejection is about 50$\times 10^3$.
 
 \texttt{Tight} electrons are \texttt{medium++} electrons with additional requirements on the distance
 between the track and the matched cluster ($|\Delta\phi|<0.02$, $|\Delta\eta|<0.005$) and on the $E/p$
 variable. Stricter cuts are imposed on the fraction of high-threshold TRT hits and on the impact parameter
-($|d_0|<$1~mm). The efficiency drops to 75\% and the rejection is higher than the previous one.
+($|d_0|<$1~mm). The efficiency is about 75\% and the rejection is higher than 
+for \texttt{medium++}.
 
 \texttt{Tight++} electrons are \texttt{tight} electrons with asymmetric $\Delta\phi$ cuts, which give
 both better efficiency and rejection.
@@ -207,7 +237,7 @@ both better efficiency and rejection.
 \end{center}\end{figure}
 
 
-\tocless\subsection{Additional requirement and corrections for analyses}\label{sec:REQtrigger}
+\tocless\subsection{Additional requirements}\label{sec:REQtrigger}
 
 For our analyses~\cite{topcommon2013}, electrons in the transition region $1.37<|\eta_{\rm cluster}| <1.52$
 with inactive material are excluded. Electrons are required to satisfy \texttt{tight++} criteria and to

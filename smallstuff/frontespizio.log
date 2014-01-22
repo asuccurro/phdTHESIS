@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.9.1)  8 JAN 2014 17:11
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.9.1)  14 JAN 2014 12:57
 entering extended mode
  %&-line parsing enabled.
 **frontespizio.tex
@@ -385,12 +385,12 @@ Overfull \hbox (19.91858pt too wide) in paragraph at lines 15--16
 
 ] (./frontespizio.aux) ) 
 Here is how much of TeX's memory you used:
- 1531 strings out of 493849
- 19761 string characters out of 1152847
- 73981 words of memory out of 3000000
- 4822 multiletter control sequences out of 15000+50000
+ 1532 strings out of 493849
+ 19769 string characters out of 1152847
+ 75981 words of memory out of 3000000
+ 4823 multiletter control sequences out of 15000+50000
  5456 words of font info for 20 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  25i,9n,24p,264b,274s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on frontespizio.dvi (1 page, 1060 bytes).
+Output written on frontespizio.dvi (1 page, 1520 bytes).

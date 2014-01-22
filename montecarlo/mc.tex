@@ -20,53 +20,58 @@ simulation chain, described in Section~\ref{sec:matrixelement}.
 Despite the theoretical ability to compute fixed order calculations for hard scattering cross sections,
 %this does not allow us to describe a specific final state, plus we still lack the possibility to 
 we still lack the possibility to describe QCD at low energy and, hence, hadron final states formation. 
-{\it Shower algorithms} can associate to an hard event an arbitrary number of partons to constitute
+{\it Shower algorithms} can associate to a hard event an arbitrary number of partons to constitute
 a final state with quarks and gluons (see Section~\ref{sec:partonshower}). 
 The {\it hadronization} of this yet unphysical final state is
-performed by means of phenomenological models of hadron formation, introduced in Section~\ref{sec:hadronization}). 
+performed by means of phenomenological models of hadron formation, introduced in Section~\ref{sec:hadronization}. 
 The last ingredient for a complete picture is the treatment of
-the remnants from the incoming protons from which the hard interacting partons
+the remnants of the incoming protons the hard interacting partons
 came from. For this we rely on the so-called ``underlying event model'', discussed in 
 Section~\ref{sec:underlyingevent}.
 
 Finally, the products from the generated event are passed through a simulation of the ATLAS
-systems and digitized to give an output identical to the real detector one (Section~\ref{sec:MCdetector}).
-At this point objects are reconstructed in the same way for Monte Carlo
+detector geometry and response, and digitized to give an output identical to 
+that of the real detector (Section~\ref{sec:MCdetector}).
+At this point physics objects are reconstructed in the same way for Monte Carlo
 and real data, as discussed in Chapter~\ref{chap:objects}.
  
 
 \section{Phenomenology of pp collisions}\label{sec:MCphenomenology}
 
-Of the interactions making up the processes, for Monte Carlo simulating
-hadron colliders physics the most challenging part is related to the
+The most challenging aspect of the simulation of
+hadron collider physics is the 
+%Of the interactions making up the processes, for Monte Carlo simulating
+%hadron colliders physics the most challenging part is related to the
 description of Quantum Chromodynamics (QCD) phenomenology. Indeed,
 despite its theorethical framework being successful and verified, calculations
 are difficult and often need approximations.
 
 \subsection{Proton structure}
 
-The proton is a bound state of three {\it valence} quarks which carry
-each a fraction $x$ of the proton momentum unpredicted theoretically and described
-by parton distribution functions (PDFs) $f_i(x)$. The probability for a parton $i$
-to carry a momentum fraction between $x$ and $x+dx$ is $f_i(x)dx$ and the following
-condition holds:
-\begin{equation}
-\int_0^1 x \sum  \limits_i f_i(x) dx = 1.
-\end{equation}
-
-PDFs are measured in deep inelastic scattering experiments and 
-are universal, not depending on the particular process used.
+The proton is a bound state of three {\it valence} quarks with each carrying
+a fraction $x$ of the proton momentum. Such momentum fraction is described
+by parton distribution functions (PDFs) $f_i(x,\mu)$ which need to be measured 
+experimentally at a certain transferred momentum $\mu$. 
 It is observed that the valence quarks only carry about half of the proton total
 momentum, the rest being carried by virtual gluons continuatively exchanged 
 by the quarks. These gluons in turn produce virtual $q\bar{q}$ pairs called
 {\it sea} quarks.
+The probability for a parton $i$
+to carry a momentum fraction between $x$ and $x+dx$ is $f_i(x,\mu)dx$ and the following
+condition holds:
+\begin{equation}
+\int_0^1 x \sum  \limits_i f_i(x) dx = 1,
+\end{equation}
+where the sum goes over all the parton flavors considered (typically $u,d,s,c,b,g$).
 
+PDFs are measured in deep inelastic scattering experiments and at hadron colliders and 
+are universal, not depending on the particular process used.
 Various parametrizations are available and the most widely used come from the
-CTEQ and MRST/MSTW collaborations\footnote{See for more information
-the Les Houches Accord PDFs (LHAPDF): \url{http://lhapdf.hepforge.org/}
-and the collaborations pages: \url{http://www.phys.psu.edu/cteq}, 
-\url{http://mstwpdf.hepforge.org/}.}
-The 2008 NLO 68 version of PDFs of valence quarks, gluon and sea quarks 
+CTEQ and MRST/MSTW collaborations~\cite{mrstcoll,mrst,mstwcoll,mstw}\footnote{See for more information
+the Les Houches Accord PDFs (LHAPDF): \url{http://lhapdf.hepforge.org/}.}.
+%and the collaborations pages: \url{http://www.phys.psu.edu/cteq}, 
+%\url{http://mstwpdf.hepforge.org/}.}
+The PDFs of valence quarks, gluon and sea quarks 
 from the MSTW group are shown in Figure~\ref{fig:PDFs} as a function of the 
 momentum fraction for two values of transferred momentum Q$^2$
 at which the proton is probed.
@@ -77,7 +82,7 @@ at which the proton is probed.
   \includegraphics[width=0.75\textwidth]{montecarlo/figures/pdfs2.eps}
 }
 \caption{Proton PDF functions at transfer momentum
- Q$^2$=10$~$GeV (Q$^2$=10000$~$GeV) on the left (right)~\cite{Martin:2009iq}.\label{fig:PDFs}}
+ Q$^2$=10$~$GeV$^2$ (Q$^2$=10000$~$GeV$^2$) on the left (right)~\cite{Martin:2009iq}.\label{fig:PDFs}}
 \end{center}
 \end{figure}
 
@@ -85,7 +90,8 @@ at which the proton is probed.
 
 \subsection{Factorization theorem}\label{sec:factorization}
 
-To treat infinities arising from divergent contributions in loop diagrams,
+To treat infinities arising from divergent contributions in loop diagrams like
+the ones of Figure~\ref{fig:feyndLOOP},
 an arbitrary renormalization scale $\mu_R$ is to be introduced. As a consequence
 from requiring that the physical observables be independent from the choice of $\mu_R$,
 the strong coupling constant $\alphas$ does depend on the energy scale at which the 
@@ -106,30 +112,65 @@ which treats partons as free and non-interacting; when \alphas\ is large instead
 into colorless hadrons, predictions from perturbative calculations become less reliable and soft QCD interactions
 are typically modeled using tunings from experimental data.
 
-The {\it factorization theorem}~\cite{Campbell:2006wx} allows us to separate the 
-two components to compute the cross section as a product of probability functions with
-the short distance cross section $\hat{\sigma}_{\rm ab}$ computable in perturbation
-theory (pQCD, from perturbatve QCD) as a power expansion of the strong coupling constant $\alphas(\mu_R)$:
+\begin{figure}[hbt]
+\begin{center}
+        \myskip
+\resizebox{1.\textwidth}{!}{\input{montecarlo/figures/feyndiag_loops}}
+        \myskip
+	\caption{Example Feynman diagrams for loop contributions
+        resulting in divergent integrals in the theory. \label{fig:feyndLOOP}}
+\end{center}
+\end{figure}
+
+The {\it factorization theorem}~\cite{Campbell:2006wx} 
+allows us to separate 
+in any hard and inclusive process ${\rm pp}\to{\rm X}$
+the soft, non-perturbative component 
+%two components to compute the cross section
+as a product of probability functions 
+(the standard PDFs $f_{a,b}(x_{a,b},\mu_{F})$ 
+for partons $a,b = \{g,u,\bar{u},d,...\}$ 
+ carrying fractions $x_a,x_b$ of the proton longitudinal momenta
+$p_1, p_2$) with
+the short distance partonic cross section $\hat{\sigma}_{{\rm ab}\to{\rm X}}$
+computable in perturbation theory (pQCD, for perturbative QCD):
 
 \begin{equation}
-\begin{split}
+%\begin{split}
   \sigma_{{\rm pp}\to{\rm X}}
-  & = \sum_{a,b}%~\in~{\rm partons}}
+  = \sum_{a,b}%~\in~{\rm partons}}
+  %& = \sum_{a,b}%~\in~{\rm partons}}
   \int_{0}^{1}{\rm d}x_a{\rm d}x_b
   ~ f_a(x_a,\mu_{F}) f_b(x_b,\mu_{F})
-  \hat{\sigma}_{\rm ab}(x_ap_a, x_bp_b,\mu_R,\mu_{F}) \\
-  & = \sum_{a,b}%~\in~{\rm partons}}
-  \int_{0}^{1}{\rm d}x_a{\rm d}x_b
-  ~ f_a(x_a,\mu_{F}) f_b(x_b,\mu_{F})
-  \times {\left[ \hat{\sigma}_{0}(\hat{s}) + \alpha_{S}(\mu_{R}^{2})\hat{\sigma}_{1}(\hat{s},\mu_{F}^{2}) + \dots \right]}. \\
-\end{split}
+  \hat{\sigma}_{{\rm ab}\to{\rm X}}(x_ap_1, x_bp_2,\mu_R^2,\mu_{F}^2),
+%(\hat{s},\mu_R^2,\mu_{F}^2),  
+%(x_ap_a, x_bp_b,\mu_R,\mu_{F}) \\
+%  & = \sum_{a,b}%~\in~{\rm partons}}
+%  \int_{0}^{1}{\rm d}x_a{\rm d}x_b
+%  ~ f_a(x_a,\mu_{F}) f_b(x_b,\mu_{F})
+%  \times {\left[ \hat{\sigma}_{0}(\hat{s}) + \alpha_{S}(\mu_{R}^{2})\hat{\sigma}_{1}(\hat{s},\mu_{F}^{2}) + \dots \right]}. \\
+%\end{split}
 \label{eq:QCDCrossSection}
 \end{equation}
-
-Here, $f_i$ ($i=a,b$) are the standard PDFs for partons $a,b = \{g,u,\bar{u},d,...\}$ carrying fractions $x_a,x_b$ 
-of the proton longitudinal momentum, and $\sigma_{{\rm pp}\to{\rm X}}$ is the partonic scattering cross-section 
-calculated in fixed-order perturbation theory. The $\mu_{F}$ coefficient is newly introduced {\it factorization scale}, 
-$\mu_{R}$ is the renormalization scale for the QCD running coupling. Figure~\ref{fig:hardscatter} shows a pictorial
+where $\hat{\sigma}_{{\rm ab}\to{\rm X}}$ is computable 
+in fixed-order perturbation theory 
+as a power expansion of the strong coupling 
+constant $\alphas$ and as a function of 
+%the invariant mass $\hat{s}=x_a x_b s$ (with $\rts$ being the \cme):
+the kinematic variables and the energy scales:
+\begin{equation}
+\label{eq:QCDPartonicCrossSection}
+\hat{\sigma}_{{\rm ab}}=\sum_{i=0}^{n} \alphas^i \hat{\sigma}_i(x_ap_1, x_bp_2,\mu_R^2,\mu_{F}^2)=\hat{\sigma}_0+\alphas \hat{\sigma}_1+\dots.
+%\hat{\sigma}_{{\rm ab}}=\hat{\sigma}_0(\hat{s})+\sum_i \alphas^i \hat{\sigma}_i(\hat{s},\mu_{F}^2)
+\end{equation}
+%Here, $f_i$ ($i=a,b$) are the standard PDFs for partons $a,b = \{g,u,\bar{u},d,...\}$ carrying fractions $x_a,x_b$ 
+%of the proton longitudinal momentum, and $\sigma_{{\rm pp}\to{\rm X}}$ is the partonic scattering cross-section 
+%calculated in fixed-order perturbation theory. 
+Here the $\mu_{F}$ variable is the newly introduced {\it factorization scale}, 
+an arbitrary choice of the scale at which the distinction between
+soft- and hard-interaction components is made. It is sometimes taken as
+equal to $\mu_{R}$, the renormalization scale for the QCD running coupling. 
+Figure~\ref{fig:hardscatter} shows a pictorial
 representation of the generic pp process.
 
 %which can be thought of as the scale that separates the long and short-distance physics, and $\mu_{R}$ is the renormalization scale for the QCD running coupling. Formally, the cross-section calculated to all orders in perturbation theory is invariant under changes in these parameters, but in practice it is not possible to dispose  of a complete set of higher order corrections. It is then necessary to make a specific choice   for the two scales in order to make cross-section predictions. The usual prescription consists in choosing a central value $\mu_R$ for both scales equal to some sensible energy scale in the process (e.g. \mH for Higgs boson production, \mZ for Drell-Yan events, etc.). A range of variation of the renormalization and factorization scales of $\mu_R/2 \le \mu_{R},\mu_{F} \le 2\cdot\mu_R$ is used to determine the uncertainty in the cross-section calculation due to missing higher-order QCD radiative corrections.
@@ -169,12 +210,13 @@ illustrated in Figure~\ref{fig:collision}: %The core of the event, the hard inte
 %Generally speaking, Monte Carlo simulation is a
 %mixture of various components: 
 it comes with a large library of
-Standard Model and Beyond Standard Model cross section from which the
+Standard Model and Beyond Standard Model cross sections from which the
 hard scattering process is chosen; it has a showering algorithm to 
 generate the dominant pQCD effects, adding the emission of colored partons
-to the hard process enhanced with collinear and soft singularities;
-it implements hadronization for the high energy partons of the final
-state; it describes the underlying event according to some phenomenological
+to the hard process enhanced by collinear and soft singularities;
+it implements hadronization for the low energy partons of the final
+state; it describes the interaction of proton remnants 
+(``underlying event'') according to some phenomenological
 model; it includes libraries for the weak decay of unstable hadrons.
 
 A set of drawings in Figure~\ref{fig:eventevolution} shows the sequence
@@ -239,11 +281,10 @@ Equation~\ref{eq:QCDCrossSection} as:
 \label{eq:matrixelement1}
 \end{equation}
 where we introduced the dependence on the final state phase space $\Phi_{\rm X}$, the parton flux
-$\frac{1}{2x_ax_bs}$ (with $s$ being the \cme\ squared) and the {\it matrix element} $\mathcal{M}_{\rm ab}$,
-which is also written as a sum over Feynman diagrams:
-\begin{equation}\label{eq:matrixelement2}
-\mathcal{M}_{\rm ab} = \sum_i \mathcal{F}^{(i)}_{\rm ab}.
-\end{equation}
+$\frac{1}{2x_ax_bs}$ (with $s$ being the pp \cme\ squared) and the {\it matrix element} $|\mathcal{M}_{\rm ab}|$
+for the event of interest.
+%which is also written as a sum over Feynman diagrams:
+%\begin{equation}\label{eq:matrixelement2}\mathcal{M}_{\rm ab} = \sum_i \mathcal{F}^{(i)}_{\rm ab}.\end{equation}
 
 %presence of collinear and soft divergences in fixed order calculations with a definite final state. Only by summing over different final states these divergences can cancel, thereby allowing the computation of certain (i.e. the collinear and infrared insensitive) inclusive quantities. The only frameworks in which exclusive quantities can be computed must involve the resummation of an infinite class of Feynman graphs. 
 
@@ -251,7 +292,8 @@ which is also written as a sum over Feynman diagrams:
 
 \subsection{Parton shower}\label{sec:partonshower}
 
-Parton shower adds higher order corrections to the hard scatter using an approximation scheme,
+The parton shower algorithm adds higher-order corrections 
+to the hard scatter in an approximative way,
 since real radiative corrections to any inclusive quantity (like the hard cross section as computed at
 fixed order in pQCD) are divergent. The dominant contributions below a cut-off parameter, associated to 
 collinear parton splitting or soft gluon emission, are included iteratively ordered in sequence of, typically, smaller emission angles.
@@ -264,27 +306,30 @@ the parent parton production cross section times
  a splitting factor. Considering e.g. the $q\to gq$ 
 splitting from a tree level process with $n+1$
 final state particles we can graphically represent it as
-in Figure~\ref{fig:factorization}, with the quark $k$ and the
-gluon $l$ being emitted at a small angle $\theta$.
+in Figure~\ref{fig:factorization}, with the quark and the
+gluon (with four-momenta $k$ and $l$ respectively) 
+being emitted at a small angle $\theta$.
 Mathematically we have:
 \begin{equation}
   \big|\mathcal{M}_{n+1}\big|^2{\rm d}\Phi_{n+1} \to 
   \big|\mathcal{M}_{n}\big|^2{\rm d}\Phi_{n} \dfrac{\alphas}{2\pi}\dfrac{{\rm d}t}{t}P_{q,qg}(z)\dfrac{{\rm d}\phi}{2\pi},
 \label{eq:splitting1}
 \end{equation}
-where $\phi$ is the azimuth defined by $\vec{k}$ and$\vec{l}$ around the $\vec{k+l}$
+where $\phi$ is the azimuth defined by $\vec{k}$ and 
+$\vec{l}$ around the $\vec{k}+\vec{l}$
 direction, $z$ is an arbitrary parameter in general defined as a ratio between the
-energy of the particles emitted:
-\begin{equation}
-  \label{eq:zfromk0} z = \frac{k^0}{k^0 + l^0},
-\end{equation}
+energy of the particles emitted,
+$z = k^0/(k^0 + l^0)$,
 and $t$ is the {\it hardness} parameter characterizing the divergence
-and the ordering of the splittings. It has the dimensions of a mass, and 
+and the ordering of the splittings. It has the dimensions of a mass
+squared, and 
 the preference is to take it as $t = E^2\theta^2$. 
 The values for $\phi$, $z$ and $t$ are generated randomly during the Monte
 Carlo simulation process. 
 The function $P_{q,qg}(z)$ is
-the Altarelli-Parisi splitting function, and is the only term that changes in
+the Altarelli-Parisi splitting function
+which describes the probability for a quark to emit a gluon,
+ and is the only term that changes in
 Equation~\ref{eq:splitting1} between $q\to gq$, $g\to gg$ and $g\to q\bar{q}$ 
 splittings.
 
@@ -349,11 +394,11 @@ strongly ordered in angle.
 	\caption{An example of a typical shower final graph~\cite{Ambroglini:2009nz}.\label{fig:showergraph}}
 \end{center}\end{figure}
 
-\subsubsection{Initial and final state radiation}\label{sec:isrfsr}
+\subsubsection{Initial- and final-state radiation}\label{sec:isrfsr}
 
 We discussed up to now the development of parton shower arising
 from the emission from hadrons produced in the hard scattering, i.e. 
-starting in general at an high annihilation scale $Q^2$ and progressively
+starting in general at a high energy scale $Q^2$ and progressively
 reaching the hadronization scale. This process goes under the name of
 {\it final state radiation} (FSR), as it is generated from outgoing
 partons of the hard interaction.
@@ -384,7 +429,7 @@ the rules to conveniently split the phase space of the event into two regions,
 one characterized by hard and large angle emission to be described by ME, the
 other of soft and collinear emission to be described by PS. This is achieved
 in the so-called ``ME and PS matching'', where some resolution parameters are
-introduced with the role of soft and collinear cut-offs for ME. 
+introduced with the role of soft and collinear cut-offs for the ME. 
 
 The baseline idea is to compute the weight of an event using ME and then
 develop PS giving as inputs the ME weight as well as the event kinematics and 
@@ -392,8 +437,7 @@ color flow. A complication arises in this simple approach as the same final
 state can be obtained in multiple ways if ME and PS generated partons are swapped,
 as graphically shown in Figure~\ref{fig:matchfig1}, where the same event 
 has three possible configurations. This issue goes under the name of ``double
-counting'', and the matching scheme aim is to possibly avoid it or, at least, 
-reduce its impact.
+counting'', and the matching scheme's aim is to avoid it.
 
 \begin{figure}[htb]\begin{center}
 	\subfigure{
@@ -486,16 +530,16 @@ specific color assigned to the final state parton, but rather the {\it color flo
 \end{center}\end{figure}
 
 At this point, two possible phenomenological fragmentation models come in the game
-to bound partons into hadrons starting from the color connected final state.
-They both have been tuned using collider measurements over the last decades
-to properly describe the final state hadron multiplicity and need in general
-a large number of parameters.
+to bound partons into hadrons starting from the color-connected final state. 
+%They both have been tuned using collider measurements over the last decades
+%to properly describe the final state hadron multiplicity and need in general
+%a large number of parameters.
 
 The first hadronization scheme is called {\it Lund string model} and ties a quark
 with an antiquark plus a number of intermediate gluons, like
 stretching a string (or a ``color flux tube'') from the quark
 to its color-connected antiquark taking in the gluons that
-lie inbetween them. This can be see as an illustration in 
+lie in between them. This can be see as an illustration in 
 Figure~\ref{fig:had_colorflow} and Figure~\ref{fig:had_string}:
 the first string collects the quark with color $c_1$, the antiquark
 with color $\bar{c}_4$ and all the final state gluons along the path.
@@ -509,11 +553,13 @@ and then color connected quark-antiquark pairs are bounded together.
 Figure~\ref{fig:had_cluster} presents a graphical illustration of the
 concept. Because of {\it preconfinement} (the fact that color connected pairs
 with large invariant masses are Sudakov suppressed in angular ordered showers)
-the cluster can be associated with an hadronic two-body system. 
+the cluster can be associated with a hadronic two-body system. 
 
 During the last decades, different measurements at colliders have
 been used to tune these models to properly describe 
-the hadron multiplicity in the final state.
+the hadron multiplicity in the final state,
+and need in general a large number of parameters.
+
 
 
 \begin{figure}[hbt]\begin{center}
@@ -536,16 +582,16 @@ at low transfered momentum that accompany the main hard process.
 The underlying event is flavor- and color-connected to the hard scattering
 and in real data is in general not separable from the event of interest.
 It is typically observed as jets of particles close to the direction
-of the beam and cannot be modeled with perturbative QCD but is instead
-studied from experimental data on {\it minimum bias} events at low
-momentum.
+of the beam and cannot be modeled with perturbative QCD.
+% but is instead studied from experimental data on {\it minimum bias} events at low momentum.
 
 Besides a backward shower modeling starting from the beam remnants, an
 important contribution to the underlying event are multiple parton interactions,
 i.e. secondary relatively hard collisions between the incoming hadron remnants.
-Phenomenological models are used to simulate the underlying event, and additional
-semi-hard interactions are generated with different primary vertices to account
-for the effect of pile-up.
+Phenomenological models are used to simulate the underlying event
+and are tuned to {\it minimum bias}\footnote{} 
+data from hadron colliders. 
+%, and additional semi-hard interactions are generated with different primary vertices to account for the effect of pile-up.
 
 
 \section{Generators}\label{sec:generators}
@@ -554,8 +600,10 @@ Monte Carlo generators can either be {\it multi-purpose} generators,
 i.e. capable of performing the full simulation chain described in this chapter,
 or {\it specialized} generators, i.e. devoted to a single aspect of the
 simulation. As should be clear after the discussion about the modeling
-of hadronic collisions, there are some choices to be done that might result
-being better suited for some particular events or others. Therefore
+of hadronic collisions, there are some choices to be made that might result
+in some generators 
+being better suited 
+to describe particular processes. Therefore
 the Monte Carlo generators should be chosen according to their performance
 in modeling the event of interest.
 
@@ -566,7 +614,7 @@ that are used in the analyses that are the object of this dissertation.
 \subsubsection*{PYTHIA}
 
 \texttt{PYTHIA}~\cite{PYTHIA} is a multi-purpose Monte Carlo generator
-using ME computed at LO for $2 \to n$ ($n\leq 3$) events and PS with emissions
+using ME computed at LO for $2 \to n$ ($n\leq 3$) processes and PS with emissions
 ordered in $p_T$ instead of angle. The Lund string model is used for hadronization
 and UE simulation is included.
 % as scattering between proton remnants in  $2 \to 2$ ME computed at LO.
@@ -648,12 +696,12 @@ ME at LO and typically interfaced either with \texttt{PYTHIA} or
 
 
 
-\section{ATLAS detector simulation}\label{sec:MCdetector}
+\section{ATLAS detector and trigger simulation}\label{sec:MCdetector}
 
 Events generated with Monte Carlo simulation can be directly
 used at {\it parton level}, i.e. without any further operation on the
-generated partons, or be reconstructed either at {\it truth level}, where
-the particles go through object reconstruction (see Chapter~\ref{chap:objects})
+generated partons, or be reconstructed either at {\it particle level}, where
+the stable particles go through object reconstruction (see Chapter~\ref{chap:objects})
 without interacting in the detector material and the original kinematics is
 maintened, or go through detector simulation~\cite{atlas_sim} and after that through object
 reconstruction, to obtain the so-called {\it reconstructed level}.

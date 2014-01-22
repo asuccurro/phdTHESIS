@@ -1,30 +1,2085 @@
-This is METAFONT, Version 2.718281 (TeX Live 2009/Debian) (base=mf 2013.3.19)  20 NOV 2013 16:08
-**\mode:=localfont; input fmfTThtx
-(fmfTThtx.mf (/usr/share/texmf/metafont/feynmf/feynmf.mf)
-:1:\fmfL(30.04298,18.42389,lb){$\bar {T}$}%
-:1:\fmfL(31.68149,31.47668,lt){$T$}%
-:1:\fmfL(19.68236,29.59659,t){$g$}%
-:1:\fmfL(45.25334,25.09969,b){$H$}%
-:1:\fmfL(41.26,34.77725,rb){$t$}%
-:1:\fmfL(47.32742,44.9445,lt){$W^+$}%
-:1:\fmfL(0.31007,8.60684,rt){$g$}%
-:1:\fmfL(0.30981,41.38832,rb){$g$}%
-:1:\fmfL(62.09624,26.85728,l){$\bar {b}$}%
-:1:\fmfL(61.85002,30.55869,l){$b$}%
-:1:\fmfL(60.63504,37.83788,lb){$b$}%
-:1:\fmfL(59.67683,41.38832,lb){$\bar {\nu }_l$}%
-:1:\fmfL(58.49269,44.86269,lb){$l^+$}%
-:1:\fmfL(48.85596,13.0496,lt){$\bar {t}, \bar {t}, \bar {b}$}%
-:1:\fmfL(50.16798,17.7791,l){$Z, H, W^-$}% [1] ) 
+This is METAFONT, Version 2.718281 (TeX Live 2009/Debian) (base=mf 2013.3.19)  13 JAN 2014 20:52
+**\mode:=dpdfezzz; mag:=1+0/(2*4000); nonstopmode; input fmfTThtx
+(/home/antonella/Documents/phdTHESIS/fmfTThtx.mf
+(/usr/share/texmf/metafont/feynmf/feynmf.mf)
+! Value is too large (18898).
+<recently read> ;
+                 
+beginchar->...rdp:=(EXPR3);w:=hround(charwd*hppp);
+                                                  h:=vround(charht*hppp);d:=...
+l.4 beginchar(1, 60*2.84526pt#, 50*2.84526pt#, 0)
+                                                 ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (15748).
+<recently read> ;
+                 
+beginchar->...charwd*hppp);h:=vround(charht*hppp);
+                                                  d:=vround(chardp*hppp);cha...
+l.4 beginchar(1, 60*2.84526pt#, 50*2.84526pt#, 0)
+                                                 ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+feynmf: 1
+! Value is too large (18898).
+subgraph->...=((EXPR0),(EXPR1));se=sw+((EXPR2),0);
+                                                  nw=sw+(0,(EXPR3));ne=sw+((...
+l.7 subgraph (0, 0, w, h)
+                         ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (15748).
+subgraph->...;se=sw+((EXPR2),0);nw=sw+(0,(EXPR3));
+                                                  ne=sw+((EXPR2),(EXPR3));c=...
+l.7 subgraph (0, 0, w, h)
+                         ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (15748).
+subgraph->...+(0,(EXPR3));ne=sw+((EXPR2),(EXPR3));
+                                                  c=0.5[sw,ne];
+l.7 subgraph (0, 0, w, h)
+                         ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18898).
+subgraph->...+(0,(EXPR3));ne=sw+((EXPR2),(EXPR3));
+                                                  c=0.5[sw,ne];
+l.7 subgraph (0, 0, w, h)
+                         ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (7874).
+subgraph->...ne=sw+((EXPR2),(EXPR3));c=0.5[sw,ne];
+                                                  
+l.7 subgraph (0, 0, w, h)
+                         ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (9449).
+subgraph->...ne=sw+((EXPR2),(EXPR3));c=0.5[sw,ne];
+                                                  
+l.7 subgraph (0, 0, w, h)
+                         ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (6238.12225).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__ib)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vleft->...ngroup.vdistribute(left_gallery,(TEXT2))
+                                                  endgroup
+l.10 vleft (__i0, __i1, __ib, __ia, __i2, __i3)
+                                               ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (9509.6294).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__ia)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vleft->...ngroup.vdistribute(left_gallery,(TEXT2))
+                                                  endgroup
+l.10 vleft (__i0, __i1, __ib, __ia, __i2, __i3)
+                                               ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (12710.84451).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__i2)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vleft->...ngroup.vdistribute(left_gallery,(TEXT2))
+                                                  endgroup
+l.10 vleft (__i0, __i1, __ib, __ia, __i2, __i3)
+                                               ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (15747.7767).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__i3)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vleft->...ngroup.vdistribute(left_gallery,(TEXT2))
+                                                  endgroup
+l.10 vleft (__i0, __i1, __ib, __ia, __i2, __i3)
+                                               ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (17008.08466).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o1)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (17473.15666).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o2)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (17874.04448).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o3)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18209.99542).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o4)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18480.25685).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o5)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (5158.02574).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o6)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18684.07605).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o6)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (6238.12225).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o7)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18820.70038).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o7)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (7327.06552).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o8)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18889.37715).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o8)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (8420.68446).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o9)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18889.38504).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o9)> vforce(point.off.of(path),(SUFFIX0))
+                                                ;off:=off+len/(numv-1); ENDFOR
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (9509.6294).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o10)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18820.7239).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o10)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (10589.72829).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o11)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18684.11504).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o11)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (11657.84529).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o12)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18480.31113).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o12)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (12710.84451).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o13)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (18210.06482).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o13)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (13745.59006).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o14)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (17874.12883).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o14)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (14758.9461).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o15)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (17473.2558).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o15)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (15747.7767).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o16)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (17008.19841).
+vforce->...3);vlist[vlookup(SUFFIX3)]loc:=(EXPR2);
+                                                  endgroup
+<for(__o16)> vforce(point.off.of(path),(SUFFIX0))
+                                                 ;off:=off+len/(numv-1); ENDFOR
+
+vdistribute->...2),$);off:=off+len/(numv-1);endfor
+                                                  .fi.endgroup
+vright->...roup.vdistribute(right_gallery,(TEXT2))
+                                                  endgroup
+l.11 ... __o11, __o12, __o13, __o14, __o15, __o16)
+                                                  ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Arithmetic overflow.
+<for(4)> +
+          vlist[(23)]arc[(EXPR0)]tns*(vlist[(23)]loc-vlist[vlist[(23)]arc[(E...
+<for(23)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(23)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(19)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(20)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(21)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(22)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(23)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(24)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(25)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(26)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(27)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(28)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(29)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(30)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(31)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(32)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(33)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(34)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(35)> +
+           vlist[(28)]arc[(EXPR0)]tns*(vlist[(28)]loc-vlist[vlist[(28)]arc[(...
+<for(28)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(28)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(28)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(4)> +
+          vlist[(29)]arc[(EXPR0)]tns*(vlist[(29)]loc-vlist[vlist[(29)]arc[(E...
+<for(29)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(5)> +
+          vlist[(29)]arc[(EXPR0)]tns*(vlist[(29)]loc-vlist[vlist[(29)]arc[(E...
+<for(29)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(29)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(4)> +
+          vlist[(30)]arc[(EXPR0)]tns*(vlist[(30)]loc-vlist[vlist[(30)]arc[(E...
+<for(30)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(30)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(4)> +
+          vlist[(32)]arc[(EXPR0)]tns*(vlist[(32)]loc-vlist[vlist[(32)]arc[(E...
+<for(32)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(32)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(4)> +
+          vlist[(33)]arc[(EXPR0)]tns*(vlist[(33)]loc-vlist[vlist[(33)]arc[(E...
+<for(33)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(7)> +
+          vlist[(33)]arc[(EXPR0)]tns*(vlist[(33)]loc-vlist[vlist[(33)]arc[(E...
+<for(33)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(33)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(4)> +
+          vlist[(36)]arc[(EXPR0)]tns*(vlist[(36)]loc-vlist[vlist[(36)]arc[(E...
+<for(36)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(36)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(4)> +
+          vlist[(37)]arc[(EXPR0)]tns*(vlist[(37)]loc-vlist[vlist[(37)]arc[(E...
+<for(37)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(7)> +
+          vlist[(37)]arc[(EXPR0)]tns*(vlist[(37)]loc-vlist[vlist[(37)]arc[(E...
+<for(37)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(37)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(11)> +
+           vlist[(38)]arc[(EXPR0)]tns*(vlist[(38)]loc-vlist[vlist[(38)]arc[(...
+<for(38)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(12)> +
+           vlist[(38)]arc[(EXPR0)]tns*(vlist[(38)]loc-vlist[vlist[(38)]arc[(...
+<for(38)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(38)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(4)> +
+          vlist[(39)]arc[(EXPR0)]tns*(vlist[(39)]loc-vlist[vlist[(39)]arc[(E...
+<for(39)> ...vlist[vlist[(EXPR0)]arc[j]]loc)endfor
+                                                  .for.j=vconstr((EXPR0)):if...
+
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Arithmetic overflow.
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Value is too large (6030.00641).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (7265.43129).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (8876.80162).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (5164.65784).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (6629.83173).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (7313.18878).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (5564.14915).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (4345.74126).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (4336.14374).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (9282.40176).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (6030.00641).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (7265.43129).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (10671.85866).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (6186.9714).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (7702.9133).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (7765.82832).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (10797.82806).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (9482.33067).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (11489.38205).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (10787.84164).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (5425.00192).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (7821.02579).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (9891.96957).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (13137.9848).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (9282.40176).
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Arithmetic overflow.
+<for(39)> ...]cnt,vlist[(EXPR0)]poly[j]idx)endfor;
+                                                  fi ENDFOR
+vfreeze->...nt,vlist[i]poly[j]idx)endfor;fi.endfor
+                                                  .if.vtracing:vdump;fi.endg...
+l.51 vfreeze
+            ;
+Uh, oh. A little while ago one of the quantities that I was
+computing got too large, so I'm afraid your answers will be
+somewhat askew. You'll probably have to adopt different
+tactics next time. But I shall try to carry on anyway.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_curly->begingroup.cdraw(curly(EXPR2));
+                                           endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(9)> ...5),(EXPR0)),vlist[(5)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(5)]arc[(EXPR0)]sty...
+<for(5)> ...arc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_plain->begingroup.cdraw(EXPR2);
+                                    endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(2)> ...),(EXPR0)),vlist[(15)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(15)]arc[(EXPR0)]st...
+<for(15)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_plain->begingroup.cdraw(EXPR2);
+                                    endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(2)> ...),(EXPR0)),vlist[(19)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(19)]arc[(EXPR0)]st...
+<for(19)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_plain->begingroup.cdraw(EXPR2);
+                                    endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(17)> ...,(EXPR0)),vlist[(25)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(25)]arc[(EXPR0)]st...
+<for(25)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_plain->begingroup.cdraw(EXPR2);
+                                    endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(19)> ...,(EXPR0)),vlist[(25)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(25)]arc[(EXPR0)]st...
+<for(25)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Value is too large (6623.01385).
+vdraw_arc_label->...nt0.5length((EXPR2))of(EXPR2);
+                                                  if(SUFFIX3)dist=0:LaTeX_te...
+
+vdraw_arc->...);vdraw_arc_label((EXPR4),(SUFFIX5))
+                                                  ;endgroup
+<for(19)> ...,(EXPR0)),vlist[(25)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(25)]arc[(EXPR0)]st...
+<for(25)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+:1:\fmfL(20.90453,6.34038,b){$\bar {T}$}%
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_plain->begingroup.cdraw(EXPR2);
+                                    endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(33)> ...,(EXPR0)),vlist[(26)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(26)]arc[(EXPR0)]st...
+<for(26)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Value is too large (4479.32964).
+vdraw_arc_label->...nt0.5length((EXPR2))of(EXPR2);
+                                                  if(SUFFIX3)dist=0:LaTeX_te...
+
+vdraw_arc->...);vdraw_arc_label((EXPR4),(SUFFIX5))
+                                                  ;endgroup
+<for(33)> ...,(EXPR0)),vlist[(26)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(26)]arc[(EXPR0)]st...
+<for(26)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (5805.98668).
+vdraw_arc_label->...nt0.5length((EXPR2))of(EXPR2);
+                                                  if(SUFFIX3)dist=0:LaTeX_te...
+
+vdraw_arc->...);vdraw_arc_label((EXPR4),(SUFFIX5))
+                                                  ;endgroup
+<for(33)> ...,(EXPR0)),vlist[(26)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(26)]arc[(EXPR0)]st...
+<for(26)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+:1:\fmfL(14.74788,16.2712,lt){$T$}%
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_curly->begingroup.cdraw(curly(EXPR2));
+                                           endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(35)> ...,(EXPR0)),vlist[(28)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(28)]arc[(EXPR0)]st...
+<for(28)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+:1:\fmfL(13.83546,6.06152,rb){$g$}%
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_wiggly->begingroup.cdraw(wiggly(EXPR2));
+                                             endgroup
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(5)> ...),(EXPR0)),vlist[(30)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(30)]arc[(EXPR0)]st...
+<for(30)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+<for(0)> ...ath)..point((EXPR0)+0.5)/dpp.of(path);
+                                                   ENDFOR
+draw_dashes->....point(k+0.5)/dpp.of(EXPR2);endfor
+                                                  .endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(5)> ...),(EXPR0)),vlist[(33)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(33)]arc[(EXPR0)]st...
+<for(33)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+<for(1)> ...ath)..point((EXPR0)+0.5)/dpp.of(path);
+                                                   ENDFOR
+draw_dashes->....point(k+0.5)/dpp.of(EXPR2);endfor
+                                                  .endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(5)> ...),(EXPR0)),vlist[(33)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(33)]arc[(EXPR0)]st...
+<for(33)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+<for(2)> ...ath)..point((EXPR0)+0.5)/dpp.of(path);
+                                                   ENDFOR
+draw_dashes->....point(k+0.5)/dpp.of(EXPR2);endfor
+                                                  .endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(5)> ...),(EXPR0)),vlist[(33)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(33)]arc[(EXPR0)]st...
+<for(33)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Value is too large (6238.9233).
+vdraw_arc_label->...nt0.5length((EXPR2))of(EXPR2);
+                                                  if(SUFFIX3)dist=0:LaTeX_te...
+
+vdraw_arc->...);vdraw_arc_label((EXPR4),(SUFFIX5))
+                                                  ;endgroup
+<for(5)> ...),(EXPR0)),vlist[(33)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(33)]arc[(EXPR0)]st...
+<for(33)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (6976.39986).
+vdraw_arc_label->...nt0.5length((EXPR2))of(EXPR2);
+                                                  if(SUFFIX3)dist=0:LaTeX_te...
+
+vdraw_arc->...);vdraw_arc_label((EXPR4),(SUFFIX5))
+                                                  ;endgroup
+<for(5)> ...),(EXPR0)),vlist[(33)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(33)]arc[(EXPR0)]st...
+<for(33)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+:1:\fmfL(18.75162,22.30615,lt){$H$}%
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_plain->begingroup.cdraw(EXPR2);
+                                    endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(7)> ...),(EXPR0)),vlist[(33)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(33)]arc[(EXPR0)]st...
+<for(33)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_plain->begingroup.cdraw(EXPR2);
+                                    endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(7)> ...),(EXPR0)),vlist[(37)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(37)]arc[(EXPR0)]st...
+<for(37)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_plain->begingroup.cdraw(EXPR2);
+                                    endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(9)> ...),(EXPR0)),vlist[(38)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(38)]arc[(EXPR0)]st...
+<for(38)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Value is too large (5597.33212).
+vdraw_arc_label->...nt0.5length((EXPR2))of(EXPR2);
+                                                  if(SUFFIX3)dist=0:LaTeX_te...
+
+vdraw_arc->...);vdraw_arc_label((EXPR4),(SUFFIX5))
+                                                  ;endgroup
+<for(9)> ...),(EXPR0)),vlist[(38)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(38)]arc[(EXPR0)]st...
+<for(38)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (6108.48892).
+vdraw_arc_label->...nt0.5length((EXPR2))of(EXPR2);
+                                                  if(SUFFIX3)dist=0:LaTeX_te...
+
+vdraw_arc->...);vdraw_arc_label((EXPR4),(SUFFIX5))
+                                                  ;endgroup
+<for(9)> ...),(EXPR0)),vlist[(38)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(38)]arc[(EXPR0)]st...
+<for(38)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+:1:\fmfL(21.46947,18.148,l){$t$}%
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_plain->begingroup.cdraw(EXPR2);
+                                    endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(10)> ...,(EXPR0)),vlist[(38)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(38)]arc[(EXPR0)]st...
+<for(38)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Curve out of range.
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+draw_wiggly->begingroup.cdraw(wiggly(EXPR2));
+                                             endgroup
+<to be read again> 
+                   endgroup
+<to be read again> 
+                   ;
+vdraw_arc->...cantokens("draw_"&(EXPR2))((EXPR4));
+                                                  vdraw_arc_label((EXPR4),(S...
+<for(11)> ...,(EXPR0)),vlist[(38)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(38)]arc[(EXPR0)]st...
+<for(38)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+At least one of the coordinates in the path I'm about to
+digitize was really huge (potentially bigger than 4095).
+So I've cut it back to the maximum size.
+The results will probably be pretty wild.
+
+! Value is too large (10888.89157).
+vdraw_arc_label->...nt0.5length((EXPR2))of(EXPR2);
+                                                  if(SUFFIX3)dist=0:LaTeX_te...
+
+vdraw_arc->...);vdraw_arc_label((EXPR4),(SUFFIX5))
+                                                  ;endgroup
+<for(12)> ...,(EXPR0)),vlist[(38)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(38)]arc[(EXPR0)]st...
+<for(38)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+! Value is too large (11519.10242).
+vdraw_arc_label->...nt0.5length((EXPR2))of(EXPR2);
+                                                  if(SUFFIX3)dist=0:LaTeX_te...
+
+vdraw_arc->...);vdraw_arc_label((EXPR4),(SUFFIX5))
+                                                  ;endgroup
+<for(12)> ...,(EXPR0)),vlist[(38)]arc[(EXPR0)]lbl)
+                                                  ;vlist[(38)]arc[(EXPR0)]st...
+<for(38)> ...rc[j]sty:="";endgroup;fi.fi.fi.endfor
+                                                  ; ENDFOR
+vdraw->...]sty:="";endgroup;fi.fi.fi.endfor;endfor
+                                                  .for.i=polygons:vdraw_labe...
+l.52 vdraw
+          ;
+The equation I just processed has given some variable
+a value of 4096 or more. Continue and I'll try to cope
+with that big value; but it might be dangerous.
+(Set warningcheck:=0 to suppress this message.)
+
+:1:\fmfL(38.90288,31.94073,rb){$W^+$}%
+:1:\fmfL(0.33835,8.62302,rt){$g$}%
+:1:\fmfL(0.3381,41.37636,rb){$g$}%
+:1:\fmfL(62.07935,26.85773,l){$\bar {b}$}%
+:1:\fmfL(61.83348,30.5558,l){$b$}%
+:1:\fmfL(60.62025,37.82875,lb){$b$}%
+:1:\fmfL(59.66336,41.37636,lb){$\bar {\nu }_l$}%
+:1:\fmfL(58.48073,44.84819,lb){$l^+$}%
+:1:\fmfL(34.80801,7.42773,t){$\bar {t}, \bar {t}, \bar {b}$}%
+:1:\fmfL(37.53253,11.9406,lt){$Z, H, W^-$}% [1] ) 
 Here is how much of METAFONT's memory you used:
- 733 strings out of 5275
- 8092 string characters out of 70080
- 55879 words of memory out of 3000000
+ 734 strings out of 5275
+ 8158 string characters out of 70080
+ 102559 words of memory out of 3000000
  1380 symbolic tokens out of 9500
- 13i,67n,90r,26p,146b stack positions out of 300i,300n,1000r,150p,200000b
+ 13i,67n,4r,26p,177b stack positions out of 300i,300n,1000r,150p,200000b
  
 (You used 2w,2h,1d,1i,0l,0k,0e,0p metric file positions
   out of 256w,16h,16d,64i,15000l,2500k,256e,60p)
 
 Font metrics written on fmfTThtx.tfm.
-Output written on fmfTThtx.600gf (1 character, 8980 bytes).
+Output written on fmfTThtx.8000gf (1 character, 48496 bytes).

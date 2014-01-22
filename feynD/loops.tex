@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{feynmf}
+%\usepackage{feynmp}
+\unitlength=1mm
+%when compiling, do
+%latex file.tex
+%mf '\mode:=localfont; input fmf1'
+%latex file.tex
+\usepackage[hdivide={1cm, *, 1cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+
+
+\begin{document}
+
+
+\begin{fmffile}{fmfHiggsTopTprime}
+\begin{fmfgraph*}(30,15)\fmfkeep{higgsTopLoop}
+  \fmfleftn{i}{1} 
+  \fmfrightn{o}{1} 
+  \fmf{dashes,label=$H$}{i1,v1}
+  \fmf{fermion,left,tension=.3,label=$t$}{v1,v2}
+  \fmf{fermion,left,tension=.3,label=$\bar t$}{v2,v1}
+  \fmf{dashes,label=$H$}{v2,o1}
+\end{fmfgraph*}
+\hspace{.5cm}
+\begin{fmfgraph*}(30,15)\fmfkeep{higgsStopLoop}
+  \fmfleftn{i}{1} 
+  \fmfrightn{o}{1} 
+  \fmf{dashes,label=$H$}{i1,v1}
+  \fmf{scalar,left,tension=.3,label=$t'$}{v1,v2}
+  \fmf{scalar,left,tension=.3,label=$\overline{t}'$}{v2,v1}
+  \fmf{dashes,label=$H$}{v2,o1}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+\begin{fmffile}{fmfLoops}
+\begin{fmfgraph*}(30,15)
+  \fmfleftn{i}{1} 
+  \fmfrightn{o}{1} 
+  \fmf{plain}{i1,v1}
+  \fmf{plain,left,tension=.3}{v1,v2}
+  \fmf{plain,left,tension=.3}{v2,v1}
+  \fmf{plain}{v2,o1}
+\end{fmfgraph*}
+\hspace{.5cm}
+\begin{fmfgraph*}(30,15)
+  \fmfleftn{i}{1} 
+  \fmfrightn{o}{1} 
+  \fmf{phantom}{i1,v1}
+  \fmf{plain,left,tension=.3}{v1,v2}
+  \fmf{plain,left,tension=.3}{v2,v1}
+  \fmf{plain}{v2,o1}
+\end{fmfgraph*}
+\hspace{.5cm}
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i1,i2,i3} 
+  \fmfright{o1,o2,o3}
+  \fmf{phantom}{o1,v2,v1,i1}
+  \fmf{phantom}{o2,v4,v3,i2}
+  \fmf{phantom}{o3,v6,v5,i3}
+\fmffreeze
+  \fmf{plain}{i1,v1,v4,o2}
+  \fmf{plain}{i3,v5,v4,o2}
+  \fmf{plain}{v5,v1}
+\end{fmfgraph*}
+\hspace{.5cm}
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i1,i2,i3,i4,i5} 
+  \fmfright{o1,o2,o3,o4,o5}
+  \fmf{phantom}{o1,i1}
+  \fmf{phantom}{o2,v2,v1,i2}
+  \fmf{phantom}{o3,i3}
+  \fmf{phantom}{o4,v4,v3,i4}
+  \fmf{phantom}{o5,i5}
+\fmffreeze
+  \fmf{plain}{i1,v1,v2,o1}
+  \fmf{plain}{i5,v3,v4,o5}
+  \fmf{plain}{v3,v1}
+  \fmf{plain}{v4,v2}
+\end{fmfgraph*}
+\end{fmffile}
+
+
+
+
+\end{document}
