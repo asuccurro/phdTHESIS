@@ -589,9 +589,35 @@ Besides a backward shower modeling starting from the beam remnants, an
 important contribution to the underlying event are multiple parton interactions,
 i.e. secondary relatively hard collisions between the incoming hadron remnants.
 Phenomenological models are used to simulate the underlying event
-and are tuned to {\it minimum bias}\footnote{} 
+and are tuned to {\it minimum bias}\footnote{A ``bias'' in event selection
+is, in general, any kind of assumption made on the final state and therefore
+any kind of cut applied in selecting only these events. In minimum bias events
+only very loose requirements are imposed on the collision data.} % These events are useful to study the UE since} 
 data from hadron colliders. 
 %, and additional semi-hard interactions are generated with different primary vertices to account for the effect of pile-up.
+
+
+\subsection{Pile-up}\label{sec:MCpileup}
+
+Pile-up events from the multiple inelastic scatterings of protons 
+in the same bunch (in-time pile-up) 
+
+
+In addition, on the other hand, the inter-bunch time interval is so short
+that the electronics reading the detector might not keep up with the frequency of collisions, leading to the
+cumulation of events that happened in different beam crossings. This is the effect we refer to as 
+out-of-time pile-up, and a good estimator for it is the average number of pp interactions
+per bunch crossing at the time of the event, $<\mu>$, which recalling Equation~\ref{eq:lumiN} is defined as:
+\begin{equation}\label{eq:mu}
+<\mu> = \dfrac{LA}{nf},
+\end{equation}
+with $L$ being the average instantaneous luminosity over a time period $\Delta t\gg 600$~ns.
+The maximum values reached by the variable $<\mu>$ during the three years of data taking
+are reported in Table~\ref{tab:lhcpar}.
+~\cite{Buckley:2011vq,Cacciari:2007fd}
+
+%, and additional semi-hard interactions are generated with different primary vertices to account for the effect of pile-up.
+
 
 
 \section{Generators}\label{sec:generators}
