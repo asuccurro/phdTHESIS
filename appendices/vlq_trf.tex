@@ -50,20 +50,21 @@ potential loss in acceptance when requiring more that one
 By using the TRF method, no event is cut based on how many
 $b$-taged jets are counted, but instead all the pre-tag events 
 are reweighted.
-The event weight is calculated using the \btag ging efficiency
-(which depends on the jet's $\eta$, $\pt$ and true flavour)
+The event weight is calculated using the
+per-jet  \btag ging efficiency
+(which depends on the jet's $\pt$, $\eta$ and true jet flavour)
 and based on the kinematics and flavour of the 
 jets found in each event.
 This weight can be interpreted as the probability of the 
 given event to contain the desired number of \btag ged jets. 
 
-Given a jet with $\eta$, $\pt$ and flavour $f$, its 
+Given a jet with $\pt$, $\eta$ and flavour $f$, its 
 tagging probability can be written as:
 \begin{equation}
-	\varepsilon \left(f,|\eta|,\pt\right).
+	\varepsilon \left(\pt,|\eta|,f\right).
 \end{equation}
 
-For a given event with $N$ jets, its probability of 
+For instance, for a given event with $N$ jets, the probability of 
 containing exactly one $b$-tagged jet can be computed as:
 \begin{align}
 	P_{=1} &= \sum\limits_{i=1}^N \left( \varepsilon_{i} \prod\limits_{j \neq i} \left( 1 - \varepsilon_{j} \right) \right).\end{align}

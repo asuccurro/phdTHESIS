@@ -593,28 +593,38 @@ and are tuned to {\it minimum bias}\footnote{A ``bias'' in event selection
 is, in general, any kind of assumption made on the final state and therefore
 any kind of cut applied in selecting only these events. In minimum bias events
 only very loose requirements are imposed on the collision data.} % These events are useful to study the UE since} 
-data from hadron colliders. 
+data from hadron colliders. Indeed processes involving IR divergences 
+have free parameters that can (must) be phenomenologically constrained.
+Hadronization models typically have 10 to 30 free parameters, 
+Multi-Parton Interaction (MPI) models usually add at least 5 more
+free parameters. An example of these studies is given in 
+Figure~\ref{fig:minbiastune}, where ATLAS tunes for \texttt{PYTHIA6}
+are compared to minimum bias event data. More details can be found
+in Reference~\cite{Buckley:2011vq}.
+
+\begin{figure}[htb]\begin{center}
+	\subfigure[]{
+  	\includegraphics[width=0.45\textwidth]{montecarlo/figures/py6/ATLAS_MINBIAS_MB20_d06-x01-y01.eps}}
+	\subfigure[]{
+  	\includegraphics[width=0.45\textwidth]{montecarlo/figures/py8/d06-x01-y01.eps}}
+	\caption{Charged particle multiplicity distributions comparing ATLAS
+        data from minimum bias events at a \cme\ of 7~\tev\ 
+        with  \texttt{PYTHIA6} (a) and  \texttt{PYTHIA8} (b) tunes~\cite{Buckley:2011vq}.\label{fig:minbiastune}}
+\end{center}\end{figure}
+
+
+ 
 %, and additional semi-hard interactions are generated with different primary vertices to account for the effect of pile-up.
 
 
 \subsection{Pile-up}\label{sec:MCpileup}
 
-Pile-up events from the multiple inelastic scatterings of protons 
-in the same bunch (in-time pile-up) 
+In-time pile-up events arise from the multiple parton inelastic scatterings 
+of protons in the same bunch of the hadron generating the hard process
+of interest. They mainly consist in soft QCD interactions and are
+modelled in a similar way as the UE~\cite{Buckley:2011vq,Cacciari:2007fd}. 
+Pile-up is also tuned to minimum bias events.
 
-
-In addition, on the other hand, the inter-bunch time interval is so short
-that the electronics reading the detector might not keep up with the frequency of collisions, leading to the
-cumulation of events that happened in different beam crossings. This is the effect we refer to as 
-out-of-time pile-up, and a good estimator for it is the average number of pp interactions
-per bunch crossing at the time of the event, $<\mu>$, which recalling Equation~\ref{eq:lumiN} is defined as:
-\begin{equation}\label{eq:mu}
-<\mu> = \dfrac{LA}{nf},
-\end{equation}
-with $L$ being the average instantaneous luminosity over a time period $\Delta t\gg 600$~ns.
-The maximum values reached by the variable $<\mu>$ during the three years of data taking
-are reported in Table~\ref{tab:lhcpar}.
-~\cite{Buckley:2011vq,Cacciari:2007fd}
 
 %, and additional semi-hard interactions are generated with different primary vertices to account for the effect of pile-up.
 
@@ -639,7 +649,7 @@ that are used in the analyses that are the object of this dissertation.
 
 \subsubsection*{PYTHIA}
 
-\texttt{PYTHIA}~\cite{PYTHIA} is a multi-purpose Monte Carlo generator
+\texttt{PYTHIA}~\cite{PYTHIA,Sjostrand:2007gs} is a multi-purpose Monte Carlo generator
 using ME computed at LO for $2 \to n$ ($n\leq 3$) processes and PS with emissions
 ordered in $p_T$ instead of angle. The Lund string model is used for hadronization
 and UE simulation is included.
@@ -651,10 +661,10 @@ between proton remnants.
 \subsubsection*{HERWIG}
 
 \texttt{HERWIG}~\cite{HERWIG} is a multi-purpose Monte Carlo generator
-using ME computed at LO for $2 \to 2$ events and PS with emissions ordered in angle. 
+using ME computed at LO for $2 \to 2$ processes and PS with emissions ordered in angle. 
 The cluster model is used for hadronization and for the UE description, \texttt{HERWIG}
 is typically interfaced with the external package \texttt{JIMMY}~\cite{jimmy} which
-simulates UE as scattering between proton remnants in  $2 \to 2$ ME computed at LO.
+simulates UE as MPIs in  $2 \to 2$ processes with the ME computed at LO.
 
 
 \subsubsection*{ALPGEN}
@@ -662,18 +672,18 @@ simulates UE as scattering between proton remnants in  $2 \to 2$ ME computed at 
 \texttt{ALPGEN}~\cite{ALPGEN} is a Monte Carlo generator specialized for
 ME computation of $2 \to n$ ($n\leq 9$) events at LO, with cross sections 
 computed using the ALPHA algorithm \cite{ALPGEN_0}. It is interfaced either
-with \texttt{PYTHIA} or \texttt{HERWIG} for PS development and ME/PS matching
-is done in the MLM scheme, where the resolution parameter $p_{T_{\rm min}}$ is
-called {\it jet matching scale}.
-Hadronization and UE are simulated through \texttt{HERWIG}
+with \texttt{PYTHIA} or \texttt{HERWIG} for PS development 
+and hadronization, and ME/PS matching
+is done in the MLM scheme. %, where the resolution parameter $p_{T_{\rm min}}$ is called {\it jet matching scale}.
+UE is simulated through \texttt{HERWIG}
 and hence \texttt{JIMMY}.
 
 The various parton multiplicity samples are then normalized to their LO cross section
 and combined into an inclusive sample, which is finally typically normalized 
 to an inclusive cross section calculated at higher order in pQCD. 
-For the inclusive production of $Z$ and $W$ bosons in pp collisions, the 
-MCFM~\cite{MCFM} and FEWZ~\cite{Gavin:2010az} programs are used to predict 
-cross sections at NLO and NNLO respectively.
+%For the inclusive production of $Z$ and $W$ bosons in pp collisions, the 
+%MCFM~\cite{MCFM} and FEWZ~\cite{Gavin:2010az} programs are used to predict 
+%cross sections at NLO and NNLO respectively.
 
 
 \subsubsection*{MC@NLO}
@@ -681,8 +691,8 @@ cross sections at NLO and NNLO respectively.
 \texttt{MC@NLO}~\cite{mcatnlo} is a Monte Carlo generator simulating ME at
 NLO, where the use of 1-loop corrections introduce the possibility of having
 negative weighted events. Theoretical uncertainties on the inclusive cross
-section is reduced thanks to the use of full NLO corrections, but higher multiplicity
-parton emission is simulated through PS in \texttt{HERWIG} which has
+section is reduced thanks to the use of full NLO corrections, but higher-multiplicity
+parton emission beyond the first one is simulated through PS in \texttt{HERWIG} which has
 a poorer description of hard emissions. 
 Hadronization and UE are also simulated through \texttt{HERWIG}
 (and hence \texttt{JIMMY}).
@@ -705,13 +715,17 @@ scattering model for UE simulation.
 \texttt{POWHEG}~\cite{powheg} is a Monte Carlo generator computing
 ME at NLO and typically interfaced either with \texttt{PYTHIA} or 
 \texttt{HERWIG} for the modeling of PS, hadronization and UE.
-
+The choice made at the level of interfacing the ME with PS
+can lead to large differences in the description of events with
+ high jet multiplicity in the final state between \texttt{POWHEG} 
+and \texttt{MC@NLO}.
 
 \subsubsection*{MADGRAPH}
 
 \texttt{MADGRAPH}~\cite{madgraph} is a Monte Carlo generator 
 specialized for ME computation of $2 \to n$ ($n\leq 6$) events at LO
-interfaced with \texttt{PYTHIA} for the modeling of PS, hadronization and UE.
+interfaced with \texttt{PYTHIA} for the modeling of PS within the
+MLM matching scheme, and the same for hadronization and UE.
 
 
 \subsubsection*{ACERMC}
@@ -727,13 +741,38 @@ ME at LO and typically interfaced either with \texttt{PYTHIA} or
 Events generated with Monte Carlo simulation can be directly
 used at {\it parton level}, i.e. without any further operation on the
 generated partons, or be reconstructed either at {\it particle level}, where
-the stable particles go through object reconstruction (see Chapter~\ref{chap:objects})
-without interacting in the detector material and the original kinematics is
-maintened, or go through detector simulation~\cite{atlas_sim} and after that through object
-reconstruction, to obtain the so-called {\it reconstructed level}.
+the stable particles\footnote{Stable particles are
+defined as to have proper lifetimes longer than 10~ps, excluding
+muons and neutrinos.} are used for reconstruction (see Chapter~\ref{chap:objects})
+without considering any possible interaction in the detector material, 
+or go through detector simulation~\cite{atlas_sim} followed by 
+trigger simulation (which in general uses a trigger selection
+representative of a given data-taking period~\cite{Galster:1622237}) and finally event
+reconstruction, to obtain the so-called {\it reconstructed level} of
+physics objects. The scheme presented in Figure~\ref{fig:outline}
+shows the ATLAS simulation data flow 
+
+\begin{figure}[htb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.9\textwidth]{montecarlo/figures/outline_v3}}
+	\caption{The flow of the ATLAS simulation software, from event generators (top left) through reconstruction (top right).
+        The red path leads to {\it particle level} physics objects, the blue path to
+        {\it reconstructed level} physics objects, while the green path shows the real data
+        flow to physics objects.
+        %Algorithms are placed in square-cornered boxes and persistent data objects are placed in rounded boxes. 
+        %The optional pile-up portion of the chain, used only when events are overlaid, is dashed. 
+        %Generators are used to produce data in HepMC format.  
+        %Monte Carlo truth is saved in addition to energy depositions in the detector (hits). 
+        SDO stands for Simulated Data Object, ROD for Read Out Driver~\cite{atlas_sim}.\label{fig:outline}}
+\end{center}\end{figure}
 
 The detector material, geometry and response %simulation~\cite{atlas_sim} 
 are modeled using the {\tt GEANT4}~\cite{geant} package.
+This code evolves the particles simulating a real environment
+where they can cross volumes of material and leave energy
+deposits or hits. Figure~\ref{fig:atlasdisplay} shows an
+example of a Higgs boson decay event simulated in the detector
+geometry.
 The interaction of particles with ATLAS subsystems is converted
 into detector signals of the same sort of the real read-out and
 at this point the same kind of reconstruction algorithms shape
@@ -741,6 +780,14 @@ the detector output into physical objects. During test-beam periods
 the \texttt{GEANT4} parameters have been tuned to best simulate
 the ATLAS configuration and the performance of detector simulation
 has been extensively checked also with data calibrations.
+
+\begin{figure}[htb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.8\textwidth]{montecarlo/figures/higgs_event_csc}}
+	\caption{Display of a high-$p_T$ $H \to ZZ*\to ee\mu\mu$ decay ($m_H$ = 130~GeV), 
+        after full simulation and reconstruction in the ATLAS detector. Picture from \url{http://www.atlas.ch}. \label{fig:atlasdisplay}}
+\end{center}\end{figure}
+
 
 The detector simulation relies on the usage of two databases: the 
 {\it geometry database} contains the information on the detector volumes
@@ -753,7 +800,7 @@ of ATLAS during a particular data period. Also for this reason, Monte
 Carlo samples are regularly reproduced consistently with {\it data reprocessings}
 or {\it data releases}.  For the analyses presented in this dissertation,
 the Monte Carlo production tagged as \texttt{mc12} is used, performed
-within release 17 of the ATLAS analysis framework \texttt{ATHENA}~\cite{athena}.
+within release 17 of the ATLAS analysis framework \texttt{ATHENA}~\cite{Calafiura:2005zz}.
 
 
 
