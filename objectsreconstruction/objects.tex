@@ -476,23 +476,74 @@ structure (see Figure~\ref{fig:jetshapes}).
 
 
 \tocless\subsection{Jet energy calibration}
-For our analyses~\cite{topcommon2013} jets are reconstructed using the anti-$k_t$
-algorithm with a radius parameter $R=0.4$ (from which the algorithm is often referred to as anti-$k_t$4) 
-using calorimeter energy deposits corrected for effects of non-compensation\footnote{The energy response 
-to hadrons is lower than the response to electrons of the same energy due to the presence of invisible processes.},
+For our analyses~\cite{topcommon2013} jets are 
+reconstructed using the anti-$k_t$
+algorithm with a radius parameter $R=0.4$ (from 
+which the algorithm is often referred to as anti-$k_t$4) 
+using calorimeter energy deposits corrected for effects 
+of non-compensation\footnote{The energy response 
+to hadrons is lower than the response to electrons of the 
+same energy due to the presence of invisible processes.},
 dead detector material and out-of-cluster leakage.
 Other effects affecting jet energy are low momentum particles
 that are deflected by the magnetic field and energy losses in 
 topocluster formation and jet reconstruction~\cite{jes}. 
-
-Of the several energy calibration schemes derived in ATLAS, we will be using the 
+Jet energy, measured at the EM scale,
+is calibrated to the hadronic scale following 
+a calibration scheme.
+Of the several energy calibration schemes 
+derived in ATLAS, we will be using the 
 Local Cluster Weighting (LCW) calibration~\cite{LCW1,LCW2}.
 This scheme exploits properties of the topoclusters shapes 
 to classify the clusters as ``mainly electromagnetic'' or
-``mainly hadronic'' and then derives the calibration from Monte Carlo simulation
-of charged and neutral pion events. The calibration corrections are applied
-before the jet reconstruction algorithm is operated, and after the jet is
-formed a final correction is applied to ensure linearity in response. 
+``mainly hadronic'' and then derives the calibration from 
+Monte Carlo simulation of charged and neutral pion events. 
+The correction factors are $\pt$- and $\eta$-dependent
+and obtained from a Monte Carlo sample of \texttt{MC12a}
+\texttt{PYTHIA} inclusive QCD jet events.
+
+The calibration corrections are applied 
+before the jet reconstruction algorithm is operated, and after 
+the jet is formed a pile-up correction
+is applied in order to subtract the average
+extra energy coming from pp interactions in
+the same or in other bunch crossings.
+This pile-up correction depends on the number of primary vertices in an event ($NPV$),
+on the number of average interactions in 
+a luminosity block ($<\mu>$), and is derived in bins of jet $\eta$ in order to
+account for the different geometries of the detector. The
+correction is applied to bring all objects to a 
+reference point with $\mu=0$ and $NPV = 1$
+
+
+%%%%%%%%%%%%% EM+JES????? start
+
+%First a pile-up correction
+%is applied in order to subtract the average
+%extra energy coming from pp interactions in
+%the same bunch crossing and have an energy
+%measurement independent from the instantaneous
+%luminosity. Using mimimum bias data
+%an offset correction dependent on the number
+%of reconstructed PVs ($N_{\rm PV}$), the bunch
+%spacing (allowing to account for out-of-time
+%pile-up) and the jet $\eta$ (in order to 
+%account for the different geometries of the
+%detector) is obtained. 
+
+%Then a vertex correction is applied to
+%fix the direction of the jet to point 
+%towards the PV instead of the geometrical
+%center of the detector. As a consequence the
+%topocluster kinematic observables 
+%need to be re-computed. 
+
+%Finally the jet energy is corrected.
+
+%%%%%%%%%%%%% EM+JES????? end
+
+
+
 
 %hmmmmmm AAAAAAAAA anche a 8 tev???
 %To subtract contributions from in-time and out-of-time pile-up interactions a correction is applied
@@ -562,6 +613,12 @@ $|\eta|<2.5$ in simulated $t\bar{t}$ events~\cite{btagging}.\label{fig:btageffs}
 The tagging efficiencies in Monte Carlo are corrected for $b$ and $c$ flavours
 with the appropriate $\epsilon_{data}/\epsilon_{MC}$ scale factors,
 determined in bins of jet $\pt$ and $\eta$.
+These efficiency are obtained from di-jet samples with
+muons in the final states using the {\it  $\pt^{\rm rel}$ method},
+which exploits the variable $\pt^{\rm rel}$ (the momentum of the
+muon transverse to the axis of the system formed by the muon and the jet)
+to distinguish muons from a $b$-flavor jet (harder  $\pt^{\rm rel}$ spectrum)
+from muons from $c$- and light-flavor jets~\cite{btagging,ctagging,ltagging}.
 
 \myskip
 \tocless\subsubsection{Tag Rate Function method}\label{sec:trf}
@@ -613,9 +670,9 @@ Finally the \met\ is computed as:
 \begin{equation}\label{eq:met}
 \begin{array}{lcl}
 %E^{\rm miss}_{x,y} & = & E^{\rm RefEle}_{x,y} + E^{\rm RefGamma}_{x,y} + E^{\rm RefJet}_{x,y} + E^{\rm RefMuon}_{x,y} + E^{\rm SoftJet}_{x,y} + E^{\rm CellOut}_{x,y}\\
-E^{\rm miss}_{T} & = & \big|-\sum\vec{p}_T \big| = \sqrt{(E^{\rm miss}_{x})^2 + (E^{\rm miss}_{y})^2}\\
-E^{\rm miss}_{x} & = & -\sum\vec{p}_x\\
-E^{\rm miss}_{y} & = & -\sum\vec{p}_y\\
+E^{\rm miss}_{T} & = & \big|-\sum\vec{p}_T \big| = \sqrt{(E^{\rm miss}_{x})^2 + (E^{\rm miss}_{y})^2} ,\\
+E^{\rm miss}_{x} & = & -\sum\vec{p}_x ,\\
+E^{\rm miss}_{y} & = & -\sum\vec{p}_y .\\
 \end{array}	\end{equation}
 
 %\subsection{Additional requirements for analyses}
