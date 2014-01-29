@@ -3,10 +3,56 @@
 \chapter{Data to Monte Carlo comparison in the preselection region}
 \label{app:datamcpresel}
 
+In this appendix more details are given about the 
+validation of the modeling of the main backgrounds in
+control regions defined at the preselection level 
+(see Section~\ref{sec:presel}). A {\it blinding cut}
+is defined using the $\htfj$ variable defined as the scalar sum of the
+lepton transvers momentum, the first four leading jets transverse momenta
+and the missing transverse energy. Considering the typical hardness of
+vector-like top partners decay events, the region with $\htfj<800\gev$ can
+safely be considered as signal-free. 
+%It is worth noticing here that in the $\TTbar\to Wb+X$ analysis this cut is going to be inverted, obtaining an efficient reduction of background contributions, while in the  $\TTbar\to Ht+X$ analysis the  $H_T$ variable (with a slightly different definition, i.e. all jets are included in the sum and not only the first four) is going to be used to discriminate signal and background in the statistical analysis.
+The preselection requirement of at least one \bjet\ enriches these control
+regions in $\ttbar$+jets background, while  a selection vetoing \bjet s\
+is considered to check the modeling of $W$+jets background.
+Tables~\ref{tab:yieldspreselELE},~\ref{tab:yieldspreselMUON} and~\ref{tab:yieldspreselELEMUON}
+present the yields obtained for data and backgrounds in these two regions,
+for electron and muon channels separately and combined.
+The following sections show the distributions for some variables of interest
+in the same regions again for electron and muon channels separately and combined.
+
+\begin{table}[htb]\centering
+%        \resizebox{1.\textwidth}{!}{
+        \input{vlq_analysis/tables/LatexTable_yields_ELE_noEff.tex}
+%}
+\caption{Yields for data, backgrounds and signal in the electron channel in the two blinded control
+                regions. Uncertainties are only statistical.}\label{tab:yieldspreselELE}
+\end{table}
+
+\begin{table}[htb]\centering
+%        \resizebox{1.\textwidth}{!}{
+        \input{vlq_analysis/tables/LatexTable_yields_MUON_noEff.tex}
+%}
+\caption{Yields for data, backgrounds and signal in the muon  channel in the two blinded control
+                regions. Uncertainties are only statistical.}\label{tab:yieldspreselMUON}
+\end{table}
+
+\begin{table}[htb]\centering
+%        \resizebox{1.\textwidth}{!}{
+        \input{vlq_analysis/tables/LatexTable_yields_ELEMUON_noEff.tex}
+%}
+\caption{Yields for data, backgrounds and signal in the combined electron+muon  channel in the two blinded control
+                regions. Uncertainties are only statistical.}\label{tab:yieldspreselELEMUON}
+\end{table}
+
+
+
+\clearpage 
+
 \section{Data to Monte Carlo comparison vetoing \bjet s}
 \label{app:datamc0tagex}
 
-\newpage
 \subsection{Electron channel}
 
 \begin{figure}[h!]\begin{center}
@@ -28,7 +74,12 @@
   	\includegraphics[width=0.29\textwidth]{vlq_analysis/figures/THESIS_c5_presel_noortho_noyields/ELE/4jetin/0btagex/HTHad_ELE_4jetin0btagex_NOMINAL}}
 	\subfigure[]{
   	\includegraphics[width=0.29\textwidth]{vlq_analysis/figures/THESIS_c5_presel_noortho_noyields/ELE/4jetin/0btagex/HTAll_ELE_4jetin0btagex_NOMINAL}}
-	\caption{ \label{fig:ELE_4jetin0btagex}}
+	\caption[]{Comparison between data and prediction in the
+        electron
+        channel in the blinded control region with at least four jets and
+        no \bjet s
+        \input{appendices/datamc_variablelist.tex}
+         \label{fig:appELE_4jetin0btagex}}
 \end{center}\end{figure}
 
 
@@ -51,11 +102,16 @@
   	\includegraphics[width=0.29\textwidth]{vlq_analysis/figures/THESIS_c5_presel_noortho_noyields/MUON/4jetin/0btagex/LepEta_MUON_4jetin0btagex_NOMINAL}}\\
 	\subfigure[]{
   	\includegraphics[width=0.29\textwidth]{vlq_analysis/figures/THESIS_c5_presel_noortho_noyields/MUON/4jetin/0btagex/Wlep_MassT_MUON_4jetin0btagex_NOMINAL}}
-	\subfigure[]{%AAAAAAAAAAAAAAAAAAAAAA hthad buggata
-  	\includegraphics[width=0.29\textwidth]{vlq_analysis/figures/THESIS_c5_presel_noortho_noyields/MUON/4jetin/0btagex/HTAll_MUON_4jetin0btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.29\textwidth]{vlq_analysis/figures/THESIS_c5_presel_noortho_noyields/MUON/4jetin/0btagex/HTHad_MUON_4jetin0btagex_NOMINAL}}
 	\subfigure[]{
   	\includegraphics[width=0.29\textwidth]{vlq_analysis/figures/THESIS_c5_presel_noortho_noyields/MUON/4jetin/0btagex/HTAll_MUON_4jetin0btagex_NOMINAL}}
-	\caption{\label{fig:MUON_4jetin0btagex}}
+	\caption[]{Comparison between data and prediction in the
+        muon 
+        channel in the blinded control region with at least four jets and
+        no \bjet s
+        \input{appendices/datamc_variablelist.tex}
+	\label{fig:appMUON_4jetin0btagex}}
 \end{center}\end{figure}
 
 
@@ -81,8 +137,13 @@
   	\includegraphics[width=0.29\textwidth]{vlq_analysis/figures/THESIS_c5_presel_noortho_noyields/ELEMUON/4jetin/0btagex/HTHad_ELEMUON_4jetin0btagex_NOMINAL}}
 	\subfigure[]{
   	\includegraphics[width=0.29\textwidth]{vlq_analysis/figures/THESIS_c5_presel_noortho_noyields/ELEMUON/4jetin/0btagex/HTAll_ELEMUON_4jetin0btagex_NOMINAL}}
-	\caption{\label{fig:ELEMUON_4jetin0btagex}}
+	\caption[]{Comparison between data and prediction in the
+        combined electron and muon 
+        channel in the blinded control region with at least four jets and
+        no \bjet s
+        \input{appendices/datamc_variablelist.tex}
+	\label{fig:appELEMUON_4jetin0btagex}}
 \end{center}\end{figure}
 
 
-\input{appendices/datamc_1taginprov}
+\input{appendices/datamc_1tagin}
