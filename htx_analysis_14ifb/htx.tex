@@ -101,6 +101,12 @@ method is used for all the Monte Carlo background samples. Details on
 the method and on the validation checks can be found in Appendix~\ref{app:trf}.
 
 
+
+
+
+
+
+
 \begin{table}[tb]\centering
 \input{htx_analysis_14ifb/Postfit_null_EventsTable_PRETTY.tex}
 \caption{Predicted and observed yields in the combined 
@@ -142,7 +148,7 @@ where the scalar sum over the jets' transverse momenta run only
 over the four leading jets. In the \wbx\ analysis signal region the 
 events were selected with $\HT^{4j} > 800~\gev$. In the \htx\ 
 analysis events in the \chii\ channel with $\HT > 700~\gev$
-are rejected. This cut is somehow over-conservative, as $\HT>\HT^{4j}$
+are rejected. This cut is somehow over-conservative, as $\HT>\htfj$
 and the lower threshold of 700~\gev\ was actually chosen with in mind
 the previous search for fourth generation top quarks performed with
 ATLAS data from pp collisions at a \cme\ of 7~\tev~\cite{ATLAS:2012qe}.
@@ -150,6 +156,34 @@ Table~\ref{tab:Yields_SignalRegion} shows the final expected and
 observed number of events in the three channels, after applying a rescaling
 procedure to the \ttbar\ Monte Carlo simulated sample explained in
 Section~\ref{sec:htxCR}.
+Table~\ref{tab:htxselection} summarises the cuts applied in the event selection.
+
+
+\begin{table}[tb]
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Selection & Requirements \\
+\midrule
+Preselection & One electron or muon  \\
+             & $\met >20\gev$, $\met +m_{\rm T}>60\gev$ \\
+             & $\geq 4$ jets, $\geq 1$ $b$-tagged jets \\
+\midrule
+\chii\ selection & $\geq 6$ jets, =2 $b$-tagged jets \\
+ & orthogonality cut: \\
+ & $\HT < 700~\gev$ \\
+\midrule
+\chiii\ selection & $\geq 6$ jets,  =3 $b$-tagged jets \\
+\midrule
+\chiv\ selection &$\geq 6$ jets,  $\geq 4$ $b$-tagged jets \\
+\bottomrule
+\end{tabular}
+\caption{Summary of event selection requirements.}
+\label{tab:htxselection}
+\end{center}
+\end{table}
+
+
 
 
 \section{Control regions}\label{sec:htxCR}
