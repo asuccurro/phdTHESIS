@@ -612,8 +612,8 @@ energetic \wi\ candidate.
 Following previous studies carried out in 
 the context of the search for $\TTbar\to WbWb$
 analysis performed with the pp collision data
-at the \cme\ of $\sqrt{s}=7\tev$~\cite{ATLAS:2012qe},
-briefly summarized in Appendix~\ref{app:jetmass},
+at the \cme\ of $\sqrt{s}=7\tev$~\cite{ATLAS:2012qe}
+(briefly summarized in Appendix~\ref{app:wbx7tev})
 given the small impact on the sensitivity of 
 that analysis and since it was judged to be a 
 conservative uncertainty at the time, 
@@ -650,6 +650,26 @@ affecting the modelling of the $t\bar{t}$ background from the
 in the \wbx\ analysis: the choice of NLO event generator;
 the modeling of initial and final state radiation from QCD
 precesses; the choice of parton shower and fragmentation models.
+The limited available Monte Carlo statistics in 
+the \tight\ selection result in 
+large bin-to-bin fluctuations and unphysical shape systematics.
+In order to try to get smoother uncertainties 
+the acceptance change is estimated by comparing 
+the alternative \ttbar\ Monte Carlo samples.
+Templates are then normalized to unity and the
+ratio is computed to derive the variation in shape
+and then fitted to a low-order polynomial.
+If the ration is flat, like in the case of
+the NLO generator systematic, the systematic uncertainty
+is taken as normalization only, while 
+for ISR/FSR and fragmentation systematics,
+the fit returns a  first-order polynomial, as shown in Figure~\ref{fig:ttbarmodel_ratios}.
+Finally the nominal template is multiplied by 
+each of the parameterizations obtained and 
+its yield is normalized with the relative 
+acceptance changes found in the first step.
+%The resulting shape systematics can be found in Appendix~\ref{sec:TOPMODEL}.
+
 
 Concerning the NLO event generator choice, the effect of 
 systematics uncertainties on the parton-level modeling of the
@@ -710,7 +730,6 @@ of the detector. Half the difference between these alternate samples is symmetri
 and propagated to the \texttt{MC@NLO} fully-simulated sample, resulting in a
 systematic uncertainty on the $t\bar{t}$ yield in the \tight\ channel of 8.8\%.
 
-\paragraph{Parton-Shower and Fragmentation Models:}
 Finally, systematic uncertainties on the simulation 
 of the parton shower and fragmentation models chosen 
 are studied by comparison of two different hadronisation 
@@ -724,40 +743,22 @@ then symmetrised and propagated to the
 result of a systematic uncertainty on the 
 $t\bar{t}$ yield in the \tight\ selection of 25\%. 
 
-\ifIsINT
-\vspace{1cm}
-The limited available MC statistics in the \tight\ selection result in large bin-to-bin fluctuations and unphysical shape systematics.
-In order to try to get smoother uncertainties the following procedure is followed:
-\begin{enumerate}
-\item estimate acceptance change by comparing the alternative MC samples;
-\item compute ratio of unit-normalized templates from the alternative MC samples (they are statistically-independent) to derive shape
-         distortion, and fit it with a low-order polynomial. In the case of the NLO generator systematic, the ratio is consistent with flat so this
-         uncertainty in taken to affect only normalization (the first bin in the template contains very little statistics in data and MC, so it's not
-         numerically relevant to account for the larger effect); in the case of the ISR/FSR and fragmentation systematics, a first-order polynomial
-         is used for the paramerization. See fits in Fig.~\ref{fig:ttbarmodel_ratios}.
-\item multiply the nominal template by each of the parameterizations obtained in 2) and normalize its yield with the relative acceptance changes found in 1).
-          The resulting shape systematics can be found in Appendix~\ref{sec:TOPMODEL}.
-\end{enumerate}
+\begin{figure}[htb]\begin{center}
+	\subfigure[]{\label{fig:GEN_RATIO}
+  	\includegraphics[width=0.3\textwidth]{wbx_analysis_14ifb/figures/ttbarModRatio/GEN_RATIO.eps}}
+	\subfigure[]{\label{fig:PS_RATIO}
+  	\includegraphics[width=0.3\textwidth]{wbx_analysis_14ifb/figures/ttbarModRatio/PS_RATIO.eps}}
+	\subfigure[]{\label{fig:FRAG_RATIO}
+  	\includegraphics[width=0.3\textwidth]{wbx_analysis_14ifb/figures/ttbarModRatio/FRAG_RATIO.eps}}
+	\caption{Ratio of unit-normalized final discriminant between alternative models:
+(a) \texttt{mc@nlo}/\texttt{PowHeg+Herwig}  to derive the NLO event generator systematic,
+(b) \texttt{AcerMC+lessPS}/\texttt{AcerMC+morePS}  to derive the NLO event generator systematic, and
+(c) \texttt{PowHeg+Herwig}/\texttt{PowHeg+Pythia}  to derive the parton shower+fragmentation systematic.
+All samples used are obtained with the fast detector simulation.
+Also shown are fits to low-order polynomials in order to derive smooth shape systematics.
+\label{fig:ttbarmodel_ratios}}
+\end{center}\end{figure}
 
-%%%%%%%%%%%%%%
-\begin{figure}[htbp]
-\begin{center}
-\begin{tabular}{ccc}
-\includegraphics[width=0.33\textwidth]{wbx_analysis_14ifb/figures/ttbarModRatio/GEN_RATIO.eps} &
-\includegraphics[width=0.33\textwidth]{wbx_analysis_14ifb/figures/ttbarModRatio/PS_RATIO.eps} &
-\includegraphics[width=0.33\textwidth]{wbx_analysis_14ifb/figures/ttbarModRatio/FRAG_RATIO.eps} \\
-(a) & (b) & (c) \\
-\end{tabular}\caption{\small {Ratio of unit-normalized final discriminant between alternative models:
-(a) \texttt{mc@nlo} /\texttt{PowHeg+Herwig}  to derive the NLO event generator systematic,
-(b) \texttt{AcerMC+lessPS} /\texttt{AcerMC+morePS}  to derive the NLO event generator systematic, and
-(c) \texttt{PowHeg+Herwig} /\texttt{PowHeg+Pythia}  to derive the parton shower+fragmentation systematic.
-All samples used are AFII.
-Also shown are fits to low-order polynomials in order to derive smooth shape systematics.}}
-\label{fig:ttbarmodel_ratios}
-\end{center}
-\end{figure}
-%%%%%%%%%%%%%%
-\fi
 
 \subsection{$V$+jets Modelling}
 
@@ -904,3 +905,22 @@ regardless of the value of the vector-like quark branching ratios to $Ht$ and $Z
 \end{center}
 \end{figure}
 
+
+
+\section{Outlook}\label{sec:wbxOutlook}
+
+It has been shown that the search channel, the \tight\ selection,
+suffers from poor statistical population of Monte Carlo simulated
+backgrounds, an issue that resulted in a degradation
+of the final sensitivity. The problem can easily be overcome by
+using larger Monte Carlo samples. Another possible improvement
+might come from an optimization of the cut on the total transverse
+momentum, the $\htfj$ variable, which peaks at about $\htfj\sim 2m_T$
+and can therefore be tightened further for higher mass values of the
+heavy quark. Finally, considering the expected increase in the
+\cme\ of pp collision at the LHC, it might be worth considering 
+jet definitions other thant the anti-$k_T$4, even as simple as
+anti-$k_T$ jets with larger cones, and limit the boosted $W$
+boson reconstruction to single jets. This last option, of course,
+would need detailed studies, while the first two suggestions
+can be implemented straight-forwardly.
