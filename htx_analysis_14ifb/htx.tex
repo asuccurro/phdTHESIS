@@ -2,10 +2,10 @@
 
 \chapter{Search for \TTbar\ decaying to $Ht+X$}\label{chap:htx}
 
-Having presented in Chapter~\ref{chap:vlq} the general features
-common to the two searches for vector-like top partner pairs
-in the single lepton channel that are the object of this dissertation,
-we present in this chapter the search for \TTbar\ pairs with
+%Having presented in Chapter~\ref{chap:vlq} the general features
+%common to the two searches for vector-like top partner pairs
+%in the single lepton channel that are the object of this dissertation,
+We present in this chapter the search for \TTbar\ pairs with
 at least one heavy quark decaying to one Standard Model Higgs boson 
 with a mass $m_H= 125~\gev$ and a top
 quark, shortly called \htx\ analysis.
@@ -14,12 +14,16 @@ Section~\ref{sec:htxEVT} describes the event selection and the
 definition of the three channels used for the statistical analysis.
 In Section~\ref{sec:htxCR} the good modeling of Standard Model backgrounds
 is discussed by identifying a set of ``control regions'' depleted of
-signal contamination.
-Section~\ref{sec:wbxSYS} completes the summary of the 
+signal contamination. The variable chosen to discriminate between
+signal and background, to be used in the statistical analysis,
+is presented in Section~\ref{sec:htxDISCR}.
+Section~\ref{sec:htxSYS} completes the summary of the 
 systematic uncertainties started in Section~\ref{sec:systematics}
-with the the discussion of the uncertainties treated specifically
+with the discussion of the uncertainties treated specifically
 in the context of this search.
-The results are finally presented in Section~\ref{sec:htxRES}.
+The results are finally presented in Section~\ref{sec:htxRES}
+and an outlook on future developments of this search is given
+in Section~\ref{sec:htxOUT}.
 
 \section{Analysis strategy}\label{sec:htxMULT}
 
@@ -47,28 +51,15 @@ Table~\ref{tab:htxjetmult} reports the number of jets and \btag ged jets
 in the possible final states with one heavy vector-like quark decaying
 to a Higgs boson and a top quark, and the other decaying in one
 of the three allowed channels. It can be noticed that the lowest
-\bjet s multiplicity is 2, and corresponds to high jet multiplicities
-($\geq 8$). We remind here that in the \wbx\ analysis an orthogonality
-cut is applied, rejecting events that have $\geq 6$ jets and $\geq 3$
-\btag ged jets. This would still cause an overlap of the two analyses
-in the case of 2 \btag ged jets, and therefore in the \htx\ analysis
-a cut on the $H_T$ variable opposite to the one required in the 
-signal regions of the \wbx\ analysis is applied. 
-Since the definition of the $H_T$ variable is slightly different 
-in the two analyses, the cut applied results conservative (see
-Section~\ref{sec:htxEVT} for more details).
+\bjet s multiplicity is 2, and corresponds to very high jet multiplicities
+($\geq 8$). 
 The corresponding multiplicities for the main irreducible background 
 contribution, \ttbar\ events produced in association with jets,
 start from a baseline of 4 jets, 2 of them \btag ged, from the
 $\ttbar\to W^+bW^-\bar{b}\to qqbbl\nu$, to which the associated 
-jets add up. In particular, to model the \ttbar\ background
-the \texttt{ALPGEN} Monte Carlo generator is chosen, which well
-describes high jet multiplicity regions and allows the separation
-between the heavy-flavor (``\ttbar+HF'') and the light-flavor
-(``\ttbar+light'') components of these events.
+jets add up. 
 
-
-\begin{table}\centering
+\begin{table}[htb]\centering
 \begin{tabular}{lccccccc}\toprule
 & & \multicolumn{2}{c}{$Wb$} & \multicolumn{2}{c}{$Ht$} & \multicolumn{2}{c}{$Zt$} \\\midrule
 & & \#jets & \#\bjet s  & \#jets & \#\bjet s  & \#jets & \#\bjet s \\
@@ -82,6 +73,66 @@ in the final state.\label{tab:htxjetmult}}
 \end{table}
 
 
+The choice is then to opt for an inclusive selection
+of $\geq 6$ jets and consider three different channels
+with different \btag ged jet multiplicities
+in order to increase the search sensitivity.
+Indeed it will be shown that even though the majority
+of the signal lies in the selection with $\geq 4$ \bjet s,
+the additional two channels with lower \btag ged jet multiplicities
+help constraining the dominant background contributions.
+
+Considering the higher mass of the heavy vector-like quark, compared to its
+backgrounds it will transfer more momentum to its decay products.
+Therefore the $\HT$ variable, 
+defined as the scalar sum of the lepton transverse momentum, the missing transverse
+energy \met\ and the transverse momentum of all the jets of the event:
+\begin{equation}\label{eq:htxHT}
+\HT = \pT(l) + \met + \sum_{j = 1}^{\rm N jets}\pT(j),
+\end{equation}
+is a good choice as discriminant variable to perform the statistical 
+analysis on. Indeed as a consequence of its construction the $\HT$ distribution 
+typically peaks at $2 m_{\T}$ and at lower values for the dominant 
+$t\bar{t}$ background, as can be seen in Figure~\ref{fig:htxHTbkg}.
+Furthermore this variable is rather independent of the signal decay 
+mode, as shown in Figure~\ref{fig:htxHTdecays}.
+
+\begin{figure}[h!tb]\begin{center}
+	\subfigure[]{\label{fig:htxHTdecays}
+  	\includegraphics[width=0.45\textwidth]{htx_analysis_14ifb/figures/checks/HTAll_ELEMUON_6jetin4btagin_NOMINAL_decaysVLT}}
+	\subfigure[]{\label{fig:htxHTbkg}
+  	\includegraphics[width=0.45\textwidth]{htx_analysis_14ifb/figures/checks/HTAll_ELEMUON_6jetin4btagin_NOMINAL_VLTtt}}
+	\caption{Comparison of the shape of the $\HT$ distribution in simulation for (a) different $\TT$ decay modes, assuming $m_{\T}=600\gev$,
+and (b) between $t\bar{t}$+jets background (with $t\bar{t}$+light jets and $t\bar{t}$+heavy-flavour jets shown stacked) 
+and $\TT$ signal ($m_{\T}=600\gev$) in the $\T$ doublet scenario.
+The selection used corresponds to the combined $e$+jets and $\mu$+jets channels with $\geq 6$ jets and $\geq 4$ $b$ tags. 
+The last bin in all figures contains the overflow.}
+\end{center}\end{figure}
+
+To model the \ttbar\ background
+the \texttt{ALPGEN} Monte Carlo generator is chosen, which well
+describes high jet multiplicity regions and allows the separation
+between the heavy-flavor (``\ttbar+HF'') and the light-flavor
+(``\ttbar+light'') components of these events.
+Figure~\ref{fig:HT_checks_ttjetsComp} shows a slightly harder
+$\HT$ distribution for the \tthf\ background compared to the
+\ttlf\ one.
+
+\begin{figure}[h!tb]\begin{center}
+	\subfigure[]{
+\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/checks/ttcomp_HTAll_ELEMUON_6jetin2btagex_NOMINAL_mod.eps}}
+	\subfigure[]{
+\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/checks/ttcomp_HTAll_ELEMUON_6jetin3btagex_NOMINAL_mod.eps}}
+	\subfigure[]{
+\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/checks/ttcomp_HTAll_ELEMUON_6jetin4btagin_NOMINAL_mod.eps}}
+	\caption{Comparison of the shape of the $\HT$ distribution in simulation between the $t\bar{t}$+light jets and $t\bar{t}$+heavy-flavour jets backgrounds.
+The selection used corresponds to the combined $e$+jets and $\mu$+jets channels with $\geq 6$ jets and (a) 2 $b$ tags, 
+(b) 3 $b$-tags and (c) $\geq 4$ $b$ tags. The last bin in all figures contains the overflow.\label{fig:HT_checks_ttjetsComp}}
+\end{center}\end{figure}
+
+
+
+
 \section{Event selection}\label{sec:htxEVT}
 
 Following the general ideas developed in Section~\ref{sec:htxMULT}, the
@@ -93,6 +144,15 @@ channel and amounts to 6 jets. Therefore, in the final selection at least 6 jets
 Then, in order to maximize the signal acceptance, considering the fact that the
 \btag ging efficiency is not 100\%, at least 2 of these jets are
 required to be \btag ged.
+We remind here that in the \wbx\ analysis an orthogonality
+cut is applied, rejecting events that have $\geq 6$ jets and $\geq 3$
+\btag ged jets. This would still cause an overlap of the two analyses
+in the case of 2 \btag ged jets, and therefore in the \htx\ analysis
+a cut on the $H_T$ variable opposite to the one required in the 
+signal regions of the \wbx\ analysis is applied. 
+Since the definition of the $H_T$ variable is slightly different 
+in the two analyses, the cut applied results conservative.
+
 As was already hinted in Section~\ref{sec:trf}, 
 applying direct cuts on the events based on the number of \btag ged jets
 can result in a dramatic reduction of statistic population of the Monte
@@ -101,29 +161,19 @@ method is used for all the Monte Carlo background samples. Details on
 the method and on the validation checks can be found in Appendix~\ref{app:trf}.
 
 
-
-
-
-
-
-
 \begin{table}[tb]\centering
-\input{htx_analysis_14ifb/Postfit_null_EventsTable_PRETTY.tex}
+\input{htx_analysis_14ifb/tables/LatexTable_yields_ELEMUON_noEff.tex}
 \caption{Predicted and observed yields in the combined 
-$e$+jets and $\mu$+jets \chii, \chiii\ and \chiv\ channels. 
-The $t\bar{t}$ background prediction is after fitting to data 
-using the full $\HT$ spectrum (see text for details).
+$e$+jets and $\mu$+jets \chii, \chiii\ and \chiv\ channels
+blinded using the cut $\HT<700~\gev$. 
 Also shown is the expected $\TT$ signal in both the doublet 
 and singlet scenarios for $m_{\T}=600~\gev$. 
 The uncertainties shown 
-are post-fit and include the effect of 
-statistical and systematic uncertainties. 
-The uncertainty on the total background is smaller 
-than the sum in quadrature of the uncertainties on the individual background
-sources due to the anti-correlation between the $t\bar{t}$+light 
-jets and $t\bar{t}$+heavy-flavour jets components resulting from 
-the fit.\label{tab:Yields_SignalRegion}}
+are 
+statistical only.
+\label{tab:Yields_blind}}
 \end{table}
+
 
 The final selection is further splitted in different \bjet\ multiplicity 
 channels in order to optimize the search sensitivity, as it can be
@@ -138,24 +188,19 @@ in the \chii\ channel, the choice was done to blind this channel
 from signal and maintain it to exploit the high contamination from
 \ttbar\ background contribution in the containment of systematic
 uncertainties. The blinding cut applied relies on the $\HT$ variable,
-which as will be explained in Section~\ref{sec:htxDISCR} is the 
-chosen final discriminant, defined as:
-\begin{equation}\label{eq:htxHT}
-\HT = \pT(l) + \met + \sum_{j = 1}^{\rm N jets}\pT(j). 
-\end{equation}
-This definition differs from the one in the \wbx\ analysis,
+which was defined in Equation~\ref{eq:htxHT}.
+The \HT\ variable definition differs from the \htfj\ one of the \wbx\ analysis,
 where the scalar sum over the jets' transverse momenta run only
 over the four leading jets. In the \wbx\ analysis signal region the 
-events were selected with $\HT^{4j} > 800~\gev$. In the \htx\ 
+events were selected with $\htfj > 800~\gev$. In the \htx\ 
 analysis events in the \chii\ channel with $\HT > 700~\gev$
 are rejected. This cut is somehow over-conservative, as $\HT>\htfj$
 and the lower threshold of 700~\gev\ was actually chosen with in mind
 the previous search for fourth generation top quarks performed with
 ATLAS data from pp collisions at a \cme\ of 7~\tev~\cite{ATLAS:2012qe}.
-Table~\ref{tab:Yields_SignalRegion} shows the final expected and
-observed number of events in the three channels, after applying a rescaling
-procedure to the \ttbar\ Monte Carlo simulated sample explained in
-Section~\ref{sec:htxCR}.
+Table~\ref{tab:Yields_blind} shows the final expected and
+observed number of events in the three channels, after applying 
+the blinding cut $\HT < 700~\gev$.
 Table~\ref{tab:htxselection} summarises the cuts applied in the event selection.
 
 
@@ -246,8 +291,11 @@ $1.35 \pm 0.11\,{\rm (stat.)}$ for \tthf.
 The $\HT$ distributions in the \chii, \chiii\ and \chiv\ 
 channels corresponding obtained after applying this scaling
 to the \texttt{ALPGEN} prediction are shown in Figure~\ref{fig:HT_afterfit}.
-This rescaled prediction is taken as default from now on.
+This rescaled prediction is taken as default from now on, and
+Figure~\ref{fig:htxCRs} shows the agreement between data and
+backgrond prediction in the three blinded analysis channels.
 
+\input{htx_analysis_14ifb/figures/htxcontrolregions.tex}
 
 Considering that the previously defined control regions do not allow
 to investigate the data to Standard Model backgrounds comparison in
@@ -286,45 +334,8 @@ statistics (10 and 1 data events) for their error to be properly computed.
 \end{center}\end{figure}
 
 
-\section{Final discriminant: event transverse momentum}\label{sec:htxDISCR}
+\section{Final discriminant in the signal region}\label{sec:htxDISCR}
 
-Considering the higher mass of the heavy vector-like quark, compared to its
-backgrounds it will transfer more momentum to its decay products.
-Therefore the $HT$ variable, already introduced in Section~\ref{sec:htxEVT} and
-defined as the scalar sum of the lepton transverse momentum, the missing transverse
-energy \met\ and the transverse momentum of all the jets of the event,
-is a good choice as discriminant variable to perform the statistical 
-analysis on. Indeed as a consequence of its construction the $\HT$ distribution 
-typically peaks at $2 m_{\T}$ and at lower values for the dominant 
-$t\bar{t}$ background, as can be seen in Figure~\ref{fig:htxHTbkg}.
-Furthermore this variable is rather independent of the signal decay 
-mode, as shown in Figure~\ref{fig:htxHTdecays}.
-Figure~\ref{fig:HT_checks_ttjetsComp} instead shows a slightly harder
-$\HT$ distribution for the \tthf\ background compared to the
-\ttlf\ one.
-
-\begin{figure}[h!tb]\begin{center}
-	\subfigure[]{\label{fig:htxHTdecays}
-  	\includegraphics[width=0.45\textwidth]{htx_analysis_14ifb/figures/checks/HTAll_ELEMUON_6jetin4btagin_NOMINAL_decaysVLT}}
-	\subfigure[]{\label{fig:htxHTbkg}
-  	\includegraphics[width=0.45\textwidth]{htx_analysis_14ifb/figures/checks/HTAll_ELEMUON_6jetin4btagin_NOMINAL_VLTtt}}
-	\caption{Comparison of the shape of the $\HT$ distribution in simulation for (a) different $\TT$ decay modes, assuming $m_{\T}=600\gev$,
-and (b) between $t\bar{t}$+jets background (with $t\bar{t}$+light jets and $t\bar{t}$+heavy-flavour jets shown stacked) 
-and $\TT$ signal ($m_{\T}=600\gev$) in the $\T$ doublet scenario.
-The selection used corresponds to the combined $e$+jets and $\mu$+jets channels with $\geq 6$ jets and $\geq 4$ $b$ tags. 
-The last bin in all figures contains the overflow.}
-\end{center}\end{figure}
-\begin{figure}[h!tb]\begin{center}
-	\subfigure[]{
-\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/checks/ttcomp_HTAll_ELEMUON_6jetin2btagex_NOMINAL.eps}}
-	\subfigure[]{
-\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/checks/ttcomp_HTAll_ELEMUON_6jetin3btagex_NOMINAL.eps}}
-	\subfigure[]{
-\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/checks/ttcomp_HTAll_ELEMUON_6jetin4btagin_NOMINAL.eps}}
-	\caption{Comparison of the shape of the $\HT$ distribution in simulation between the $t\bar{t}$+light jets and $t\bar{t}$+heavy-flavour jets backgrounds.
-The selection used corresponds to the combined $e$+jets and $\mu$+jets channels with $\geq 6$ jets and (a) 2 $b$ tags, 
-(b) 3 $b$-tags and (c) $\geq 4$ $b$ tags. The last bin in all figures contains the overflow.\label{fig:HT_checks_ttjetsComp}}
-\end{center}\end{figure}
 
 The three search channels, the \chii, \chiii\ and \chiv\ channels,
 are now unblinded (except for the \chii, which is kept orthogonal to the
@@ -360,6 +371,29 @@ The last bin in all figures contains the overflow. The bottom panel displays the
 and background prediction. The shaded area represents the total post-fit background uncertainty.
 \label{fig:HT_SignalRegion}}
 \end{center}\end{figure}
+
+
+Table~\ref{tab:Yields_SignalRegion} shows the final expected and
+observed number of events in the three channels, after applying the rescaling
+procedure to the \ttbar\ Monte Carlo simulated sample.
+
+\begin{table}[tb]\centering
+\input{htx_analysis_14ifb/Postfit_null_EventsTable_PRETTY.tex}
+\caption{Predicted and observed yields in the combined 
+$e$+jets and $\mu$+jets \chii, \chiii\ and \chiv\ channels. 
+The $t\bar{t}$ background prediction is after fitting to data 
+using the full $\HT$ spectrum (see text for details).
+Also shown is the expected $\TT$ signal in both the doublet 
+and singlet scenarios for $m_{\T}=600~\gev$. 
+The uncertainties shown 
+are post-fit and include the effect of 
+statistical and systematic uncertainties. 
+The uncertainty on the total background is smaller 
+than the sum in quadrature of the uncertainties on the individual background
+sources due to the anti-correlation between the $t\bar{t}$+light 
+jets and $t\bar{t}$+heavy-flavour jets components resulting from 
+the fit.\label{tab:Yields_SignalRegion}}
+\end{table}
 
 %\section{}\label{sec:}
 
@@ -512,6 +546,18 @@ The fraction of $t\bar{t}$+light jet events is adjusted accordingly to preserve 
 prior to any $b$-tagging requirement.
 
 
+\subsection{\tthf\ and \ttlf\ yields}\label{sec:htxNuisance}
+
+Since the prediction for the $t\bar{t}$ background
+in the \chiv\ channel (the most sensitive one) is affected by large
+systematic uncertainties originating from \bjet\ identification, jet energy calibration and
+physics modelling, including the fraction of $t\bar{t}$+heavy-flavour jets, 
+two nuisance parameters are introduced.
+These parameters correspond to  scaling factors on the overall yields of 
+\tthf\ and \ttlf, and by allowing them to be fitted to data during the statistical analysis
+particularly in the \chii\ and \chiii\ channels dominated by background,
+the degrading impact of systematic uncertainties on the sensitivity of the search
+is significantly reduced. 
 
 \subsection{Overall effect of systematic uncertainties}\label{sec:htxALLSYS}
 
@@ -546,22 +592,11 @@ as normalisation and/or shape uncertainties, with their impact on normalisation 
 
 
 
-
 \section{Results}\label{sec:htxRES}
 
 In the \htx\ analysis no significant excess of data over the 
 expected background has been observed in the signal enriched 
 \chiv\ channel of Figure.
-Since the prediction for the $t\bar{t}$ background
-in the \chiv\ channel (the most sensitive one) is affected by large
-systematic uncertainties originating from \bjet\ identification, jet energy calibration and
-physics modelling, including the fraction of $t\bar{t}$+heavy-flavour jets, 
-two nuisance parameters are introduced.
-These parameters correspond to  scaling factors on the overall yields of 
-\tthf\ and \ttlf, and by allowing them to be fitted to data during the statistical analysis
-particularly in the \chii\ and \chiii\ channels dominated by background,
-the degrading impact of systematic uncertainties on the sensitivity of the search
-is significantly reduced. 
 The observed and expected upper limits on the \TTbar\ production cross section 
 times branching fraction as a function of $m_{\T}$ are shown in 
 Figure~\ref{fig:limits1D_htx} for the two chosen benchmark scenarios,
@@ -626,4 +661,11 @@ $BR(\T \to Wb)$ versus $BR(\T \to Ht)$, for different values of the vector-like 
 \label{fig:limits2D_htx}}
 \end{figure}
 %%%%%%%%%%%%%%
+
+
+
+
+
+
+\section{Outlook}\label{sec:htxOUT}
 
