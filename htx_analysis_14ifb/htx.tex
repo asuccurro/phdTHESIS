@@ -228,6 +228,58 @@ Preselection & One electron or muon  \\
 \end{center}
 \end{table}
 
+Since this search is optimized the
+$\T \to Ht$ decay mode of the heavy quark, the theoretical
+scenario to which it is mostly sensitive is the doublet
+model, \TB\ or \XT,
+where the mass-dependent branching ratio of $\T \to Ht$ is
+significantly higher than the others (as was shown in Figure~\ref{fig:vlqBRs}).
+As explained in Section~\ref{sec:MCbkg}, the Monte Carlo signal samples
+are simulated for singlet \T\ with branching ratio of 1/3 for
+every decay mode and then reweighted at analysis level to obtain the
+branching ratios of the desired models. 
+Considering that the mixing between the singlet $\T$ quark and Standard 
+Model quarks is left-handed, while for a doublet \T\ is right-handed,
+a check was performed to make sure the kinematics (and thus the signal acceptance and shape
+of the $\HT$ distribution)
+involved in the search is not affected.
+Two Monte Carlo samples for the doublet scenario, 
+corresponding to $m_{\T}=350$ and $600\gev$, were available and
+have been used in this study. 
+Figure~\ref{fig:HT_checks_SingletvsDoubletComp} compares, for both mass
+points and each of the three analysis channels considered, the yield 
+and shape of the $\HT$ distribution for the 
+predicted signal using the singlet and doublet samples. 
+In both cases the samples were reweighted to reproduce
+the branching ratios corresponding to the doublet model. 
+As it can be appreciated, the shapes of the distributions
+are in reasonable agreement and discrepancies in the yields 
+are below 5\% in the highest-sensitivity channel (\chiv).
+
+%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+\begin{center}
+\subfigure[]{\label{fig:singletdoublet_2b}
+\includegraphics[width=0.32\textwidth]{htx_analysis_14ifb/figures/doubletcomp_HTAll_ELEMUON_6jetin2btagex_NOMINAL.eps}}
+\subfigure[]{\label{fig:singletdoublet_3b}
+\includegraphics[width=0.32\textwidth]{htx_analysis_14ifb/figures/doubletcomp_HTAll_ELEMUON_6jetin3btagex_NOMINAL.eps}}
+\subfigure[]{\label{fig:singletdoublet_4b}
+\includegraphics[width=0.32\textwidth]{htx_analysis_14ifb/figures/doubletcomp_HTAll_ELEMUON_6jetin4btagin_NOMINAL.eps}}
+\caption{
+Comparison of the yields and shape of the $\HT$ distribution in simulation for 
+$\T$ signal using the singlet samples (points) and
+using the doublet samples (full histograms). In both 
+cases the signal has been reweighted to reproduce the 
+branching ratios corresponding 
+to the doublet model. The selection used corresponds 
+to the combined $e$+jets and $\mu$+jets channels
+with $\geq 6$ jets and (a) 2 $b$ tags,  (b) 3 $b$-tags 
+and (c) $\geq 4$ $b$ tags. The comparison is made for two 
+different mass points, $m_{\T}=350$ and $600\gev$.
+The last bin in all figures contains the overflow.
+\label{fig:HT_checks_SingletvsDoubletComp}}
+\end{center}
+\end{figure}
 
 
 
@@ -589,14 +641,15 @@ as normalisation and/or shape uncertainties, with their impact on normalisation 
 
 
 
+\subsection{Impact of profiling}\label{sec:fullprof}
 
-
+\input{htx_analysis_14ifb/fullprofiling.tex}
 
 \section{Results}\label{sec:htxRES}
 
 In the \htx\ analysis no significant excess of data over the 
 expected background has been observed in the signal enriched 
-\chiv\ channel of Figure.
+\chiv\ channel of Figure~\ref{fig:htall4}.
 The observed and expected upper limits on the \TTbar\ production cross section 
 times branching fraction as a function of $m_{\T}$ are shown in 
 Figure~\ref{fig:limits1D_htx} for the two chosen benchmark scenarios,
@@ -664,8 +717,26 @@ $BR(\T \to Wb)$ versus $BR(\T \to Ht)$, for different values of the vector-like 
 
 
 
-
-
-
 \section{Outlook}\label{sec:htxOUT}
+
+It has been shown that for the \htx\ analysis one evident issue
+is the poor modeling of the
+heavy-flavor component of the main Standard Model background, the
+\ttbar+jets background.
+Since this comes from the Monte Carlo generators parameters, 
+studies are needed to identify the corrections to this problem.
+Another issue regards the calibration of \btag ged jets,
+which needs to be improved for analyses such this involving
+high \bjet s multiplicities.
+
+As explained in Section~\ref{sec:fullprof}, 
+the sensitivity of the search can gain much from an
+eventual full profiling of the nuisance parameters, thanks to the
+background-enriched sidebands in the three final search channels.
+Finally, the \htx\ analysis strategy can be easily
+extended, with minor modification, to searches for $B\to Hb+X$.
+A possible addition to the search strategy is attempting
+the reconstruction of the Higgs boson from, eventually,
+boosted \bjet s, somehow similarly to what is done in the
+\wbx\ analysis.
 

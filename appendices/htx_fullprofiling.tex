@@ -1,0 +1,72 @@
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\chapter{\htx\ analysis: background prediction using full profiling}
+\label{app:fullprofiling}
+
+In Section~\ref{sec:fullprof} the impact of a full
+profiling of the \htx\ analysis was studied,
+performing a fit to data considering all nuisance parameters 
+(a total of 38) describing the fundamental
+sources of uncertainty in the analysis, discussed
+in Section~\ref{sec:htxSYS}. This approach allows 
+to correct for potential mismodelings in the 
+background-dominated channels \chii\ and \chiii,
+corrections that can be ported in the \chiv\ channel,
+the most signal-rich, in a physically significant way.
+%%%%%
+\begin{table}[htb]
+\begin{center}
+%\input{htx_analysis_14ifb/figures/fullprof/fitres_null.txt}
+\footnotesize
+\input{appendices/htx_nuisance.tex}
+\caption{\label{tab:fit_null}
+Fitted nuisance parameters to data under the background-only hypothesis. 
+For each nuisance parameter the central value represents the
+best-fit value in units of $\sigma$ of its a-priori uncertainty, 
+whereas the quoted uncertainty indicates by how much is the a-priori uncertainty
+reduced, also in units of $\sigma$. For example, a nuisance parameter 
+measured at the nominal value and not constrained at all by the data would
+be $0\pm 1$.}
+\end{center}
+\end{table}
+%%%%%%
+Table~\ref{tab:fit_null} shows the fitted nuisance 
+parameters (under the background-only hypothesis) 
+for all considered systematic uncertainties. 
+Most nuisance parameters are well within
+$1\sigma$ of their a-priori value (zero) and almost 
+not constrained with respect to their a-priori error (one). 
+
+
+Table~\ref{tab:Yields_SignalRegion_FullProfiling} 
+(~\ref{tab:Yields_SignalRegion_twoparameter})
+show the final predicted yields for backgrounds
+after full profiling of systematic uncertainties
+(after the two-parameter fit).
+These yields are in agreement within $\sim 10\%$,
+and the improvement in the background prediction
+in the \chiv\ channel is evident.
+
+%%%%%
+\begin{table}[htbp]
+\small
+\begin{center}
+\scriptsize
+\input{htx_analysis_14ifb/figures/fullprof/Postfit_null_EventsTable_1.tex}
+\caption{\label{tab:Yields_SignalRegion_FullProfiling} Predicted and observed yields in the combined $e$+jets and $\mu$+jets channels with $\geq 6$ jets 
+as a function $b$-tag multiplicity. The background prediction results from full profiling of all systematic uncertainties in the analysis under the background-only hypothesis. The uncertainties shown are post-fit and include the effect of both statistical and systematic uncertainties.}
+\end{center}
+\end{table}
+%%%%%%
+
+%%%%%
+\begin{table}[htbp]
+\small
+\begin{center}
+\scriptsize
+\input{htx_analysis_14ifb/figures/fullprof/Postfit_null_EventsTable_2.tex}
+\caption{\label{tab:Yields_SignalRegion_twoparameter} Predicted and observed yields in the combined $e$+jets and $\mu$+jets channels with $\geq 6$ jets 
+as a function $b$-tag multiplicity. The background prediction results from the two-parameter fit under the background-only hypothesis. The uncertainties shown are post-fit and include the effect of both statistical and systematic uncertainties.}
+\end{center}
+\end{table}
+%%%%%%
