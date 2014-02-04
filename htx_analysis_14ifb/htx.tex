@@ -160,21 +160,6 @@ Carlo simulated samples. To overcome this problem the Tag Rate Function
 method is used for all the Monte Carlo background samples. Details on
 the method and on the validation checks can be found in Appendix~\ref{app:trf}.
 
-
-\begin{table}[tb]\centering
-\input{htx_analysis_14ifb/tables/LatexTable_yields_ELEMUON_noEff.tex}
-\caption{Predicted and observed yields in the combined 
-$e$+jets and $\mu$+jets \chii, \chiii\ and \chiv\ channels
-blinded using the cut $\HT<700~\gev$. 
-Also shown is the expected $\TT$ signal in both the doublet 
-and singlet scenarios for $m_{\T}=600~\gev$. 
-The uncertainties shown 
-are 
-statistical only.
-\label{tab:Yields_blind}}
-\end{table}
-
-
 The final selection is further splitted in different \bjet\ multiplicity 
 channels in order to optimize the search sensitivity, as it can be
 easily understood that the higher the number of \btag ged jets are
@@ -198,11 +183,10 @@ are rejected. This cut is somehow over-conservative, as $\HT>\htfj$
 and the lower threshold of 700~\gev\ was actually chosen with in mind
 the previous search for fourth generation top quarks performed with
 ATLAS data from pp collisions at a \cme\ of 7~\tev~\cite{ATLAS:2012qe}.
-Table~\ref{tab:Yields_blind} shows the final expected and
+Table~\ref{tab:htxselection} summarises the cuts applied in the event selection,
+while Table~\ref{tab:Yields_blind} shows the final expected and
 observed number of events in the three channels, after applying 
 the blinding cut $\HT < 700~\gev$.
-Table~\ref{tab:htxselection} summarises the cuts applied in the event selection.
-
 
 \begin{table}[tb]
 \begin{center}
@@ -228,8 +212,54 @@ Preselection & One electron or muon  \\
 \end{center}
 \end{table}
 
-Since this search is optimized the
-$\T \to Ht$ decay mode of the heavy quark, the theoretical
+\begin{table}[tb]\centering
+\input{htx_analysis_14ifb/tables/LatexTable_yields_ELEMUON_noEff.tex}
+\caption{Predicted and observed yields in the combined 
+$e$+jets and $\mu$+jets \chii, \chiii\ and \chiv\ channels
+blinded using the cut $\HT<700~\gev$. 
+Also shown is the expected $\TT$ signal in both the doublet 
+and singlet scenarios for $m_{\T}=600~\gev$. 
+The uncertainties shown 
+are 
+statistical only.
+\label{tab:Yields_blind}}
+\end{table}
+
+
+The acceptance  times efficiency for the \chii, \chiii\ and 
+\chiv\ selections are given respectively in 
+Tables~\ref{tab:eff_ch2},~\ref{tab:eff_ch3} and~\ref{tab:eff_ch4}
+separately for each of the allowed \TTbar\ decay modes that can enter
+the selections and as a function of $m_{\T}$.
+From these numbers it is evident that the \chii\ channel is
+poorly sensitive to any \T\ decay mode, as expected,
+while the \chiii\ channel helps to increase the acceptance
+for the decay modes with at least one $\T\to Wb$ and 
+for $\TTbar \to ZtZt$.
+\begin{table}[h!tb]
+\begin{center}%\footnotesize
+\input{htx_analysis_14ifb/tables/LatexTable_acceptance_x_efficiency_ELEMUON_6jetin2btagex.tex}
+\caption{Acceptance times efficiency for different \TTbar\ decay modes as a function of $m_{\T}$ for the \chii\ selection.}
+\label{tab:eff_ch2}
+\end{center}
+%\end{table}
+%\begin{table}
+\begin{center}%\footnotesize
+\input{htx_analysis_14ifb/tables/LatexTable_acceptance_x_efficiency_ELEMUON_6jetin3btagex.tex}
+\caption{Acceptance times efficiency for different \TTbar\ decay modes as a function of $m_{\T}$ for the \chiii\ selection.}
+\label{tab:eff_ch3}
+\end{center}
+%\end{table}
+%\begin{table}
+\begin{center}%\footnotesize
+\input{htx_analysis_14ifb/tables/LatexTable_acceptance_x_efficiency_ELEMUON_6jetin4btagin.tex}
+\caption{Acceptance times efficiency for different \TTbar\ decay modes as a function of $m_{\T}$ for the \chiv\ selection.}
+\label{tab:eff_ch4}
+\end{center}
+\end{table}
+Since this search is optimized for the
+$\T \to Ht$ decay mode of the heavy quark (as can be seen in
+Table~\ref{tab:eff_ch4}), the theoretical
 scenario to which it is mostly sensitive is the doublet
 model, \TB\ or \XT,
 where the mass-dependent branching ratio of $\T \to Ht$ is
@@ -341,7 +371,20 @@ The measured scaling factors in the blinded channels are
 $0.87 \pm 0.02\,{\rm (stat.)}$ for \ttlf\ and 
 $1.35 \pm 0.11\,{\rm (stat.)}$ for \tthf.
 The $\HT$ distributions in the \chii, \chiii\ and \chiv\ 
-channels corresponding obtained after applying this scaling
+channels corresponding to the total background contributions
+before and after the scaling are compared in Figure
+\begin{figure}[htb]\begin{center}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaling_HTAll_ELEMUON_6jetin2btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaling_HTAll_ELEMUON_6jetin3btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaling_HTAll_ELEMUON_6jetin4btagin_NOMINAL}}
+	\caption{Comparison of the  $\HT$  variable shape and normalization for the
+        total backgrounds in the (a) \chii, (b) \chiii, (c) \chiv\ channels, with and
+        without applying the rescaling to the \ttlf\ and \tthf\ contributions. \label{fig:htcomp}}
+\end{center}\end{figure}
+The distributions obtained after applying this scaling
 to the \texttt{ALPGEN} prediction are shown in Figure~\ref{fig:HT_afterfit}.
 This rescaled prediction is taken as default from now on, and
 Figure~\ref{fig:htxCRs} shows the agreement between data and
@@ -686,7 +729,10 @@ This plot reads as follow: taking for instance the $600\gev$
 vector-like top partner, a heavy quark with
 $BR(\T\to Ht)>0.3$ is excluded at $\geq 95\%$ CL,
 regardless of the value of the vector-like quark branching ratios to $Wb$ and $Zt$.  
-
+It was also attempted to perform the \htx\ analysis
+using \B\ quark samples as signals, but the results
+have not been satisfactory enough as can be seen in the
+BR plane of Figure~\ref{fig:limits2D_htxvlb}.
 %A comparison of expected limits for different configurations on the number of channels considered and
 %profiled parameters is presented in App.~\ref{sec:expected_limits_Appendix}. 
 
@@ -716,6 +762,13 @@ $BR(\T \to Wb)$ versus $BR(\T \to Ht)$, for different values of the vector-like 
 %%%%%%%%%%%%%%
 
 
+\begin{figure}[htb]\begin{center}
+	\subfigure{
+  	\includegraphics[width=0.9\textwidth]{htx_analysis_14ifb/figures/vlbBRplane.eps}}
+	\caption{Observed (red filled area) and expected (red dashed line) 95\% CL exclusion in the plane of
+        $BR(\B \to Wt)$ versus $BR(\B \to Hb)$, for different values of the vector-like $\B$ quark mass.
+        \label{fig:limits2D_htxvlb}}
+\end{center}\end{figure}
 
 \section{Outlook}\label{sec:htxOUT}
 
