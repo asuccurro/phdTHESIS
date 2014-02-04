@@ -1,0 +1,29 @@
+
+\begin{figure}[h!tb]\begin{center}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/JetPtB1_ELEMUON_6jetin2btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/JetPtB1_ELEMUON_6jetin3btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/JetPtB1_ELEMUON_6jetin4btagin_NOMINAL}}\\
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/MET_ELEMUON_6jetin2btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/MET_ELEMUON_6jetin3btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/MET_ELEMUON_6jetin4btagin_NOMINAL}}\\
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/Wlep_MassT_ELEMUON_6jetin2btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/Wlep_MassT_ELEMUON_6jetin3btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/Wlep_MassT_ELEMUON_6jetin4btagin_NOMINAL}}\\
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/HTHad_ELEMUON_6jetin2btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/HTHad_ELEMUON_6jetin3btagex_NOMINAL}}
+	\subfigure[]{
+  	\includegraphics[width=0.3\textwidth]{htx_analysis_14ifb/figures/scaled_cr/HTHad_ELEMUON_6jetin4btagin_NOMINAL}}\\
+	\caption{\label{fig:htxCRs}}
+\end{center}\end{figure}
+
