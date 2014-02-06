@@ -1,0 +1,33 @@
+\begin{fmffile}{fmfsingleprod}
+\unitlength=1mm
+  \begin{center}
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$q$}{i1}
+  \fmflabel{$q'$}{i2}
+  \fmflabel{$Q$}{o1}
+  \fmflabel{$q_1$}{o2}
+  \fmf{phantom}{o1,v1,i1}
+  \fmf{phantom}{o2,v2,i2}
+  \fmffreeze
+  \fmf{plain}{o1,v1,i1}
+  \fmf{plain}{o2,v2,i2}
+  \fmf{photon,label=$V*$}{v1,v2}
+\end{fmfgraph*}\hskip1cm
+\begin{fmfgraph*}(30,15)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$q$}{i1}
+  \fmflabel{$q'$}{i2}
+  \fmflabel{$Q$}{o1}
+  \fmflabel{$q_1$}{o2}
+  \fmf{phantom}{o1,v1,v2,i1}
+  \fmf{phantom}{o2,v1,v2,i2}
+%  \fmffreeze
+  \fmf{plain}{o1,v1,o2}
+  \fmf{plain}{i1,v2,i2}
+  \fmf{photon,label=$V*$}{v1,v2}
+\end{fmfgraph*}
+  \end{center}
+\end{fmffile}

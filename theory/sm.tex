@@ -200,17 +200,18 @@ symmetry %containing the color triplets %, described by Quantum ChromoDynamics (
  acting on the gluon field $G_a$; 
 $SU(2)_{L} \otimes U(1)_{Y}$ is the unified {\it electroweak} broken 
 symmetry, %described by Quantum ElectroDynamics (QED), 
-with the weak symmetry $SU(2)_{L}$
+with the symmetry $SU(2)_{L}$
 %containing the left-handed weak isospin doublets 
 acting on the vector boson fields $W_{1,2,3}$ and on the scalar Higgs field $\phi$,
-and the electromagnetic symmetry $U(1)_{Y}$ %containing the right-handed isospin singlets.
+and the symmetry $U(1)_{Y}$ %containing the right-handed isospin singlets.
 acting on the vector boson field $B$ and on the scalar Higgs field $\phi$.
 
 The quantum number $C$, the color charge, is carried only by
 quarks, antiquarks and gluons 
-in three different values labelled ``red'', ``gree'', ``blue''.
+and comes in three different values labelled ``red'', ``gree'', ``blue''.
 The quantum number $I$, the weak isospin, differentiates between left-handed
-($I=1/2$) and right-handed ($I=0$) fermions, with the latter not undergoing weak interactions.
+($I=1/2$) and right-handed ($I=0$) fermions, with the latter 
+not undergoing charged-current weak interactions.
  %The quantum number $L$, the flavor charge, is carried by fermions as
  %{\it lepton number} for leptons and as {\it baryon number} for quarks.
 The quantum number $Y$, the hypercharge, is defined as $Y=2(Q-I_3)$, 
@@ -221,9 +222,13 @@ which is $I_3=+1/2$ for up-type quarks and negatively charged leptons, and
 %These quantum numbers are the generators for the
 
 Gravity is not (yet) included in the model, and even though
-this is a flaw of the SM that is desirable to be fixed in a 
-Grand Unified Theory (GUT), its action on particles is of many order
-of magnitudes lower than the others' and is, therefore, negligible at the
+this is a limitation of the SM that is desirable to be fixed in a 
+Grand Unified Theory (GUT), 
+its action on particles is about $10^{38}$ 
+times weaker than
+the EM strength
+%its action on particles is of many order of magnitudes lower than the others' 
+and is, therefore, negligible at the
 fundamental components scale.
 
 
@@ -287,7 +292,7 @@ $$}, and under the symmetry
 $U(1)_{Y}$ of hypercharge with coupling constant $g'/2$,
 the boson field $B_{\mu\nu}$ and its hypercharge generator $Y$.
 Equation~\ref{eq:lagGauge} is the Lagrangian for the vector bosons 
-dynamics with self-couplings, including trilinear and quadrilinear terms. 
+dynamics with self-interactions, including trilinear and quadrilinear terms. 
 
 
 
@@ -310,8 +315,14 @@ and to a scalar Higgs boson:
 \phi = \begin{pmatrix} \varphi^{+}\\\varphi^{0}
 \end{pmatrix} =
 \dfrac{1}{\sqrt{2}} 
-\begin{pmatrix} \varphi_{1}+i\varphi_{2}\\ \varphi_{3}+i\varphi_{4}\end{pmatrix}.
+\begin{pmatrix} \varphi_{1}+i\varphi_{2}\\ \varphi_{3}+i\varphi_{4}\end{pmatrix},
 \end{equation}
+since, according to the Nambu-Goldstone theorem~\cite{PhysRev.127.965},
+for every broken continuous symmetry a massless and spinless particle, 
+the {\it Goldstone boson}, arises, which can be ``eaten'' by a gauge 
+boson which will in this way acquire mass.
+%become massive and their new, longitudinal polarization is provided by the Goldstone boson.
+
 
 %Three terms, $\varphi^{+}$, $\varphi^{-}$ and $(\varphi^{0}-\bar\varphi^{0})/\sqrt{2}$, give mass to the three massive vector bosons $W^{\pm}$ and $Z$, leaving a massive Higgs scalar boson $(\varphi^{0}+\bar\varphi^{0})/\sqrt{2}$. 
 The potential $V(\phi)$ depends on two parameters, $\mu^2$ and $\lambda$. 
@@ -322,12 +333,12 @@ which corresponds to $|\phi|=0$ and gives as vacuum expectation value
 $\bra{0}\phi \ket{0} = 0$. In the second case (see Figure~\ref{fig:higgs2}) 
 the potential has a non-vanishing vacuum expectation value 
 $\bra{0}\phi \ket{0} = v$ and %the symmetry is spontaneously broken, the minimum not being unique anymore.
-the minimum is not unique anymore. The fundamental vacuum 
+there is no unique minimum. The fundamental vacuum 
 state is no more invariant under $SU(2)_{L} \otimes U(1)_{Y}$, 
 meaning that these two symmetries are now 
-broken\footnote{Instead, the symmetry $U(1)_{elm} \subset SU(2)_{L} \otimes U(1)_{Y}$ 
-is not broken. This means that vacuum is electrically uncharged while 
-it has isospin and hypercharge charges.}: 
+broken\footnote{Instead, the symmetry $U(1)_{EM} \subset SU(2)_{L} \otimes U(1)_{Y}$ 
+is not broken. This means that vacuum is electrically-neutral while 
+it has non-zero isospin and hypercharge charges.}: 
 this is the Spontaneous Symmetry Breaking (SSB) mechanism. 
 The vacuum state is chosen as:
 \begin{figure}[h!tb]\begin{center}
@@ -345,10 +356,14 @@ The vacuum state is chosen as:
 \end{equation}
 where $v = \sqrt{-\mu^{2}/\lambda}$ is 
 the vacuum expectation value. Finally, since
-only the vector bosons got their mass up to now,
+only the vector bosons got their mass up to now
+by directly ``eating'' the Goldston bosons
+(while the fact that $U(1)_{Q}$ is unbroken 
+causes the photon to remain massless),
 the only thing left to do is to introduce 
 the scalar-fermion interaction in order to give
-mass to the fermions. This is done defining:
+mass to the fermions. This is done defining
+an explicit Yukawa coupling $G_{lept}$ that gives:
 \begin{equation}\label{eq:lagYukawa}
 \mathcal{L}_{Yukawa} = -G_{lept}\big[\bar\psi_{R}(\phi^{\dag}\psi_{L}) + (\bar\psi_{L}\phi)\psi_{R}\big] .
 \end{equation}Thus the complete electroweak Lagrangian of the SM, that can be generalized also to quarks (see Table \ref{tab:isospin}), is\begin{equation}\label{eq:lagSM}
@@ -400,29 +415,33 @@ where the Weinberg angle $\theta_{W}$ is defined through\begin{equation}\label{e
 \left \{ \begin{array}{ll}
 \dfrac{g}{\sqrt{(g')^{2}+g^{2}}} = \cos\theta_{W} \\
 \dfrac{g'}{\sqrt{(g')^{2}+g^{2}}} = \sin\theta_{W} \end{array}\right. .
-\end{equation} Masses acquired through the Higgs mechanism are listed in Table \ref{tab:mass}.
+\end{equation} 
+The mass terms that arise from the Higgs mechanisms are finally:
+\begin{align}
+  m_W & =  \dfrac{1}{2}vg \quad \quad \quad & \textnormal{for} & \quad \quad \quad
+  & W^{\pm}_{\mu} & = \dfrac{1}{\sqrt{2}}\left(W^{1}_{\mu} \mp i W^{2}_{\mu}\right), \quad & \\
+  m_Z & =  \dfrac{1}{2}v\sqrt{g^{2}+{g'}^{2}}
+  \quad \quad \quad & \textnormal{for} & \quad \quad \quad
+  & Z_{\mu} & = \dfrac{gW^{3}_{\mu} - g'B_{\mu}}{\sqrt{g^{2}+{g'}^{2}}}, \quad & \\
+  m_{\gamma} & =  0
+  \quad \quad \quad & \textnormal{for} & \quad \quad \quad
+  & A_{\mu} & = \dfrac{g'W^{3}_{\mu} + gB_{\mu}}{\sqrt{g^{2}+{g'}^{2}}}, \quad & 
+\end{align}
+$m_l = v G_{lept}/\sqrt{2}$ for leptons and $m_H = v\sqrt{2\lambda}$ for the Higgs boson. 
+The experimental values for the masses of Standard Model particles
+are listed in Table \ref{tab:mass}.
 
 
 \begin{table}[htb]\centering
-\begin{tabular}{cccc}\toprule
-\multicolumn{4}{c}{Force Carriers} \\ \midrule
-$\gamma $ &$W^{\pm}$ &$Z$ &$g$ \\
-$0$ & $\sqrt{\dfrac{g^{2}v^{2}}{4}} $& $\sqrt{\dfrac{(g^{2}+g'^{2})v^{2}}{4}} $&  $0$ \\
-$0$ & $80.4$ & $91.2$ & $0$ \\\bottomrule\\
-\end{tabular}
-\begin{tabular}{cccccccccc}\toprule
-\multicolumn{10}{c}{Leptons and Quarks} \\ \midrule
-$e$ & $\mu$ &$\tau$ &$\nu$ & $u$ & $d$ & $c$ & $s$ &$ t$ & $b$ \\
-\multicolumn{10}{c}{$\dfrac{v}{\sqrt{2}}g_{f}$} \\
-$0.511\cdot10^{-3} $ & 0.105 & 1.777 & $\sim0$ & 0.0024 & 0.0048 & 1.27 & 0.104 & 171.2 & 4.2 \\\bottomrule
-\end{tabular}\caption{Particle Masses in GeV.}\label{tab:mass} \end{table}
+\input{theory/mass_table.tex}
+\end{table}
 
 
 \subsection{Adding the strong interaction}\label{sec:qcdlagr}
 
 Adding the color transformations $SU(3)_{C}$, the Standard Model is
 finally described by the symmetry group 
-$SU(2)_{L}\otimes U(1)_{Y}\otimes SU(3)_{C}$.
+$SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$.
 In the same way electromagnetic interactions are 
 described by Quantum ElectroDynamics (QED), 
 strong interactions are described by Quantum ChromoDynamics (QCD~\cite{Ecker}).
@@ -437,25 +456,26 @@ The QCD lagrangian only involves quarks and gluons, and reads:
                     -\frac{1}{4}F^{\mu\nu}_{a}F^{a}_{\mu\nu}\\
  D_\mu &=\;\; \partial_\mu + ig_sG_\mu^a T^a\\
   F^{a}_{\mu\nu} &=\;\;  \partial_\mu G_\nu^a - \partial_\nu G_\mu^a - 
-                    gf^{a}_{\ bc}G^b_\mu G^c_\nu
+                    g_sf^{a}_{\ bc}G^b_\mu G^c_\nu
 \end{array} \right.
 \end{equation}
 where $q$ is the quark field and $m_q$ is the quark mass, summed over 
-the six types of quarks, and $a$ runs over the eight degrees of 
+the six flavors ($f$) of quarks, and $a$ runs over the eight degrees of 
 freedom of the gluon field, $T^a$ being the generators
 of the $SU(3)_C$ group. The field tensor $F^{a}_{\mu\nu}$ 
 is derived from the gluon field $G_\mu^a$ and 
 its third term describes the gluon self-interaction, with
-$f^a_{\ bc}$ being the structure constants. 
+$f^a_{\ bc}$ being the structure constants
+of the $SU(3)_{C}$ group. 
 %non-abelian nature  of the QCD, and it describes the
 The strong coupling constant $\alpha_s$ is defined
-as  $\alpha_s=g/4\pi$ and its values, large at
+as  $\alpha_s=g_s/4\pi$ and its values, large at
 low energies (i.e. large distances), and small at high 
 energies (i.e. short distances), determine the 
 peculiar property called {\it asymptotic freedom} which
 explains the confinement of the quarks inside the hadrons
 (see Figure~\ref{fig:alpha_s}). Indeed, at
-small distances $\alpha_s$ is so low that
+small distances $\alpha_s$ is so small that
 the strong interaction can be treated perturbatively
 and quarks and gluons described as free particles.
 On the other hand, a quark cannot be found
@@ -529,7 +549,7 @@ The mass of the top quark resulted consistent with the predicted
 constraints (see Figure~\ref{fig:WtopMass}), 
 thus confirming again the SM as an accurate framework. 
 Figure~\ref{fig:history_mt} shows the evolution in
-time of the top quark measurements and predictions,
+time of the top quark mass measurements and predictions,
 while in Figure~\ref{fig:comb_mt} the best average
 from measurements performed at the Tevatron experiments
 CDF and D0 is given. All the properties that have been
@@ -566,12 +586,13 @@ Then LEP was dismantled, the LHC was built, and in 2012
 the ATLAS and CMS experiments
 observed a new $\sim$125~\gev\ mass boson~\cite{2012gk,Chatrchyan201230}
 with the same spin-parity as the one expected from a Standard Model
-Higgs boson. A precise identification of this new particles, necessary
+Higgs boson~\cite{Aad:2013xqa,CMShiggsspin}. 
+A precise identification of this new particles, necessary
 in order to say the final word about its nature (is it a Higgs boson?
 Is it the Standard Model Higgs boson? Is it a ``new physics'' Higgs boson?),
 is expected to come within the next decades of activity of the LHC and its
 experiments. Up to the time of the writing of this dissertation, the most
 recent results from the ATLAS and CMS experiments measuring the
-properties of the new particle show consistency with a spin-0 Standard
-Model Higgs boson~\cite{Aad:2013xqa,CMShiggsspin}.
+properties of the new particle show consistency with a Standard
+Model Higgs boson~\cite{Aad:2013wqa,CMS-PAS-HIG-13-005}.
 
