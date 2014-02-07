@@ -9,7 +9,7 @@ complex environments that can be described with a mathematical model
 in order to know what to expect from the actual data.
 Monte Carlo methods can describe hadron-hadron collisions,
 using pseudorandom numbers to simulate event-by-event fluctuations, and
-hence help us e.g. understanding the detector response and developing analysis
+hence help us e.g. understand the detector response and develop analysis
 strategies by predicting the sensitivity to the physics under study.
 
 In this chapter, we will first go through a very brief overview of some concepts of the 
@@ -102,7 +102,7 @@ coupling is observed and is, at the leading order:
 \end{equation}
 with $n_f$ being the number of quark flavors of the theory and $\mu$ the energy at which we observe the process.
 
-This means that the coupling $\alphas$ decreases with increasing energy scale (small distances)
+This means that $\alphas$ decreases with increasing energy scale (small distances)
 as a consequence from the factor $11 - \frac{2}{3}n_f$ (the number 11 coming from the self interaction of gluons)
 being positive in the theory with $n_f = 6$,
 while it increases at lower energies (high distances). These two properties goes under the name of
@@ -189,11 +189,14 @@ representation of the generic pp process.
 %and a probabilistic description of the final state by a parton
 %shower Monte Carlo. 
 
-Equation~\ref{eq:QCDCrossSection} refers to a sum of final state and is, therefore, inclusive. The choice for the 
-renormalization and factorization scale values is usually to take them of the order of some typical hard scale 
+Equation~\ref{eq:QCDCrossSection} refers to a sum of final state and is, therefore, inclusive. A common choice for the 
+renormalization and factorization scales is to take them of the order of some typical hard scale 
 entering the process like, e.g., the mass of the top quark for top-anti-top pair production.
 The cross section calculations are done in pQCD are in general either provided at Leading Order (LO) 
-or at Next-to-LO (NLO). NLO calculations include corrections from virtual exchange or emission of a massless parton.
+or at Next-to-LO (NLO). NLO calculations include corrections from virtual exchange or direct 
+emission of a massless parton, and often represent the first meaningful estimation of a
+cross section at a hadron collider,
+owing to their reduced scale dependence as compared to LO.
 
 
 \section{Simulation of pp collisions}\label{sec:MCsimulation}
@@ -210,14 +213,14 @@ illustrated in Figure~\ref{fig:collision}: %The core of the event, the hard inte
 %Generally speaking, Monte Carlo simulation is a
 %mixture of various components: 
 it comes with a large library of
-Standard Model and Beyond Standard Model cross sections from which the
-hard scattering process is chosen; it has a showering algorithm to 
+Standard Model and Beyond Standard Model processes;
+it has a showering algorithm to 
 generate the dominant pQCD effects, adding the emission of colored partons
 to the hard process enhanced by collinear and soft singularities;
 it implements hadronization for the low energy partons of the final
 state; it describes the interaction of proton remnants 
 (``underlying event'') according to some phenomenological
-model; it includes libraries for the weak decay of unstable hadrons.
+model; and it includes libraries for the decay of unstable particles.
 
 A set of drawings in Figure~\ref{fig:eventevolution} shows the sequence
 of the evolution of Monte Carlo event simulation, starting from the
@@ -396,14 +399,14 @@ strongly ordered in angle.
 
 \subsubsection{Initial- and final-state radiation}\label{sec:isrfsr}
 
-We discussed up to now the development of parton shower arising
+Up until now we have discussed the development of the parton shower arising
 from the emission from hadrons produced in the hard scattering, i.e. 
 starting in general at a high energy scale $Q^2$ and progressively
 reaching the hadronization scale. This process goes under the name of
 {\it final state radiation} (FSR), as it is generated from outgoing
 partons of the hard interaction.
 
-Parton shower can of course also happen before the hard interaction, and
+Parton showering can of course also happen before the hard interaction, and
 is called {\it initial state radiation} (ISR) as the incoming partons
 of the hard scattering originate the emission. In this case
 there is an important difference in the shower evolution, that is
@@ -419,25 +422,25 @@ two vertices.
 
 \subsubsection{Matrix element and parton shower matching}\label{sec:matching}
 
-So far, we introduced two powerful ways to describe a QCD event, one relying
+We have introduced two powerful ways to describe a QCD event, one relying
 on our capability to compute the Matrix Elements (ME) in pQCD at the LO and NLO,
 the other exploiting a procedure to develop Parton Showers (PS) including
-soft and collinear emissions. ME can also introduce soft and collinear emissions,
+soft and collinear emissions. ME calculations can also describe soft and collinear emissions,
 but the ME weight is in this case divergent, while in the PS scheme divergences
 are eliminated through the Sudakov form factors. We need therefore to set 
 the rules to conveniently split the phase space of the event into two regions,
-one characterized by hard and large angle emission to be described by ME, the
-other of soft and collinear emission to be described by PS. This is achieved
+one characterized by hard and large-angle emission to be described by ME, the
+other of soft and collinear emission to be described by the PS. This is achieved
 in the so-called ``ME and PS matching'', where some resolution parameters are
-introduced with the role of soft and collinear cut-offs for the ME. 
+introduced with the role of serving as soft and collinear cut-offs for the ME. 
 
-The baseline idea is to compute the weight of an event using ME and then
+The basic idea is to compute the weight of an event using ME and then
 develop PS giving as inputs the ME weight as well as the event kinematics and 
 color flow. A complication arises in this simple approach as the same final
 state can be obtained in multiple ways if ME and PS generated partons are swapped,
 as graphically shown in Figure~\ref{fig:matchfig1}, where the same event 
-has three possible configurations. This issue goes under the name of ``double
-counting'', and the matching scheme's aim is to avoid it.
+has three possible configurations. This issue is referred to as ``double
+counting'', and the aim of the matching scheme is to avoid it.
 
 \begin{figure}[htb]\begin{center}
 	\subfigure{
@@ -450,8 +453,8 @@ counting'', and the matching scheme's aim is to avoid it.
         \label{fig:matchfig1}}
 \end{center}\end{figure}
 
-The main requirements on the matching scheme besides avoiding double counting
-are to perform a smooth transition from the ME and PS regions and to make
+The main requirements on the matching scheme, besides avoiding double counting,
+are also to perform a smooth transition from the ME to the PS regions and to make
 sure the appropriate Sudakov form factors reabsorb the divergencies eventually
 introduced by the ME by reweighting the ME weight.
 
@@ -493,7 +496,7 @@ the final result from the resolution parameters is verified.
 \subsection{Hadronization}\label{sec:hadronization}
 
 When partons reach the hadronization scale energy $Q\sim 1\gev$ after showering,
-they recombine in bound colorless states according to the confinement
+they recombine in colorless bound states according to the confinement
 principle, holding at low momentum. The so-called {\it parton-hadron duality}
 assumes that no high momentum transfer is needed in the recombination,
 as it happens  close in phase space. This is a property of QCD
@@ -529,7 +532,7 @@ specific color assigned to the final state parton, but rather the {\it color flo
         (bottom). Right: example of a color connected shower~\cite{Ambroglini:2009nz}.}
 \end{center}\end{figure}
 
-At this point, two possible phenomenological fragmentation models come in the game
+At this point, two possible phenomenological fragmentation models are typically used
 to bound partons into hadrons starting from the color-connected final state. 
 %They both have been tuned using collider measurements over the last decades
 %to properly describe the final state hadron multiplicity and need in general
@@ -578,7 +581,7 @@ and need in general a large number of parameters.
 \subsection{Underlying event}\label{sec:underlyingevent}
 
 With ``underlying event'' (UE) we refer to the secondary parton interactions 
-at low transfered momentum that accompany the main hard process. 
+at low momentum transfer that accompany the main hard process. 
 The underlying event is flavor- and color-connected to the hard scattering
 and in real data is in general not separable from the event of interest.
 It is typically observed as jets of particles close to the direction
