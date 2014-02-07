@@ -7,29 +7,31 @@ loft is well passed, if it ever existed. The reason is simple,
 as the deeper we want to investigate matter, the highest the energy
 we need. According to the Standard Model, we now know all the
 particles composing ordinary matter present in nature, so if we
-want to see something new, we need to produce it. The way to
+want to see something new, we need to produce it directly. The way to
 do it is suggested by one of the fundamental principles of relativity,
-$E=mc^2$, according to which we can smash massive particles
-and observe what other kind of matter comes out of the
+$E=mc^2$, according to which we can smash particles at very high energy
+and observe what other kind of matter emerges from the
 available energy.
 Soon enough after the discovery of the muon, after observing all
 the observable from cosmic rays, physicists
-started to do that using particle accelerators, the last of
-them in history being the Large Hadron Collider.
+started to do that using particle accelerators, the most
+recent one being the Large Hadron Collider.
 
 The Large Hadron Collider, built to collide protons at a \cme\ of 14~\tev, 
 is the world's highest energy particle accelerator, overcoming the Tevatron
 proton-antiproton collider where the top quark was discovered
 in 1995~\cite{PhysRevLett.74.2422,PhysRevLett.74.2626}.
-The ATLAS experiment is one of the collaborations that take advantage
+The ATLAS experiment is one of the two multi-purpose experiments 
+that take advantage
 of the collisions provided by the Large Hadron Collider,
 and has been conceived to pursuit a challenging physics program with,
 at the head of the list, the discovery of the Higgs boson, achieved
 in 2012~\cite{2012gk}.
 
-In the following Chapter we will briefly describe the main features of 
-the accelerator and with some more details the ATLAS detector, 
-both located at the CERN laboratories in Geneva,
+In this chapter we will briefly describe the main features of 
+the accelerator (Section~\ref{sec:lhc}) and in greater detail 
+the ATLAS detector (Section~\ref{sec:atlas}), 
+both located at the CERN laboratory in Geneva,
 Switzerland.
 
 
@@ -71,18 +73,19 @@ accelerator, the Proton Synchrotron (PS) brings the energy of the protons
 to 25~\gev\ previous to injecting them into the last machine before the LHC,
 the Super Proton Synchrotron (SPS). Protons of 450~\gev\ finally enter the
 LHC where they are boosted to energies of up to 4~\tev.
-The four main LHC experiments are shown on the collider ring.
 
 \begin{figure}[tb]\begin{center}
 	\subfigure{
   	\includegraphics[width=0.8\textwidth]{detector/figures/ring.eps}}
-	\caption{A schematic showing the accelerator complex at CERN.\label{fig:lhcring}}
+	\caption{A schematic showing the accelerator complex at CERN.
+ The four main LHC experiments are shown on the collider ring.
+\label{fig:lhcring}}
 \end{center}\end{figure}
 
 
 \footnotetext{More info at: \url{http://www.atlas.ch/mural/}.}
 
-The LHC is composed of eight arcs 2.7~km long, each of which contains 154 dipole 
+The LHC ring is composed of eight arcs 2.7~km long, each of which contains 154 dipole 
 magnets, whose function is to  bend the beams along the circular trajectory, and
 49 quadrupole magnets, that focus the beam. These superconducting magnets operate
 at a temperature of 1.9~K, maintained by means of liquid Helium vessels.
@@ -99,20 +102,26 @@ After more than one year devoted to repair the damage and consolidate the securi
 on 30th November 2009 the LHC became the world's highest energy particle 
 accelerator\footnote{\url{http://press.web.cern.ch/press/PressReleases/Releases2009/PR18.09E.html}}:
 \begin{quotation}\small
-Geneva, 30 November 2009. CERN's Large Hadron Collider has today become the world’s highest energy particle accelerator, having accelerated its twin beams of protons to an energy of 1.18 TeV in the early hours of the morning. This exceeds the previous world record of 0.98 TeV, which had been held by the US Fermi National Accelerator Laboratory’s Tevatron collider since 2001. It marks another important milestone on the road to first physics at the LHC in 2010.
+``Geneva, 30 November 2009. CERN's Large Hadron Collider has today become the world’s highest energy particle accelerator, having accelerated its twin beams of protons to an energy of 1.18 TeV in the early hours of the morning. This exceeds the previous world record of 0.98 TeV, which had been held by the US Fermi National Accelerator Laboratory’s Tevatron collider since 2001. It marks another important milestone on the road to first physics at the LHC in 2010.''
 \end{quotation}
 
 
 One of the main characteristics for an accelerator is the luminosity, the 
-instantaneous luminosity $\mathcal L$ being defined as 
+instantaneous luminosity $\mathcal L$ being defined by 
 \begin{equation}\label{eq:lumiN}
-\mathcal{L}\times\sigma=\dfrac{dN}{dt}=f\times n\dfrac{N_1\times N_2}{A}\times\sigma.
+\mathcal{L}=f\times n\dfrac{N_1\times N_2}{A},
 \end{equation} 
-Here $dN/dt $ is the event rate of a certain process and $\sigma$ is its cross 
-section. This rate is directly proportional to the the frequency $f$, the number 
+from which the event rate of a certain process can be
+obtained as the product of the process cross section
+and the instantaneous luminosity:
+\begin{equation}\label{eq:evtrate}
+\dfrac{dN}{dt}=\mathcal{L}\times\sigma.
+\end{equation} 
+This rate is then directly proportional to the the frequency $f$, the number 
 of bunches $n$ and the number of particles in the two bunches $N_1, N_2$, and
 inversely proportional to the beam cross-section $A$.
-The instantaneous luminosity is measured by dedicated subdetectors that are
+The instantaneous luminosity at the ATLAS 
+collision point is measured by dedicated subdetectors that are
 described in Section~\ref{sec:forward}.
 
 Integrating over the accelerator active time (a ``fill'', when stable beams are kept
@@ -157,15 +166,15 @@ of produced events $N_{tot}$ to the cross-section:
 \end{center}\end{figure}
 
 In 2010 ATLAS collected about 45~\ipb of pp collision data at \rts=7~\tev, and in
-2011 reached about 5~\ifb of the same data.
+2011 reached about 5~\ifb\ at the same \cme.
 In 2012, with  \rts=8~\tev\ collisions, LHC reached a peak luminosity of 7.7$\times10^{33}$~\cmm2\sm1\ which is
 more than half the design luminosity, as shown in Table~\ref{tab:lhcpar} together
 with other parameters relevant for the accelerator performance. 
-Over 2012, the last
-year of data taking before the long shutdown\footnote{LHC terminated the pp program
+During 2012, the last
+year of data taking before the long shutdown\footnote{LHC terminated the first phase of the pp program
 at the end of 2012, operated proton-heavy ion collisions for two months at the beginning
-of 2013 and then stopped for what is called the first long shutdown. During this two-years
-time the accelerator and the experiments as well will undergo substantial maintenance and 
+of 2013 and then stopped for what is called the first long shutdown. During these two-years
+the accelerator and the experiments will undergo substantial maintenance and 
 upgrade works, in order to be re-operated in 2015 with higher performance at a higher
 \cme\ for particle collisions.},
 ATLAS collected about 20~\ifb\ of pp collision data at \rts=8~\tev.
@@ -183,11 +192,11 @@ the choice of radiation resistance material for the experiment sub-systems. Conc
 instead, the main problematic is \textit{pile-up}.
 
 Pile-up events are distinguished between \textit{in-time} and \textit{out-of-time} pile-up. The first ones come 
-from the multiple inelastic scatterings of protons in the same bunch, as if we consider a cross-section of 80~mb
+from the multiple inelastic collisions of protons in the same bunch, as if we consider a cross-section of 80~mb
 at the nominal luminosity of $10^{34}$~\cmm2\sm1 the number of events per second will be something like
-a billion. This translate, at a collision frequency of one crossing every 25~ns, to about 20 interactions per
+a billion. This translates, at a collision frequency of one crossing every 25~ns, to about 20 interactions per
 crossing that will be detected simultaneously. A useful observable to estimate in-time pile-up is
-the number of reconstructed primary vertices (see Section~\ref{sec:primaryvertex}) $N_{\rm PV}$.
+the number of reconstructed primary vertices (see Section~\ref{sec:primaryvertex}). %$N_{\rm PV}$.
 In addition, on the other hand, the inter-bunch time interval is so short
 that the electronics reading the detector might not keep up with the frequency of collisions, leading to the
 cumulation of events that happened in different beam crossings. This is the effect we refer to as 
@@ -200,9 +209,12 @@ with $L$ being the average instantaneous luminosity over a time period $\Delta t
 The maximum values reached by the variable $<\mu>$ during the three years of data taking
 are reported in Table~\ref{tab:lhcpar}.
 
-Finally, ATLAS makes use of a three-level trigger system (described in Section~\ref{sec:trigger}) to identify
-and record only the events of interest, while the pile-up issues are dealt with at the analysis 
-reconstruction level.
+Finally, ATLAS makes use of a three-level trigger system 
+(described in Section~\ref{sec:trigger}) to identify
+and record only the events of interest. The pile-up issues,
+which also contaminate the ``purity'' of the event,
+cannot be dealt with on-line. Instead, corrections are made
+at the reconstruction level in the analyses.
 
 
 
@@ -211,16 +223,18 @@ reconstruction level.
 ATLAS (A Toroidal LHC ApparatuS)~\cite{Aad:2008zzm} is a general purpose experiment
 aimed at exploring a vast range of physics scenarios and designed to measure the particles
 produced in pp collisions at the LHC at unprecedented energies and instantaneous luminosities. 
-It is the biggest detector of its kind ever built (it's 46~m long and 25~m high) is characterized by
+It is the biggest detector of its kind ever built (about 46~m long and 25~m high)
+and it is characterized by
 a full coverage of the space around the pp interaction point and complete
 containment of the particles produced in the collision. Different subsystems are
 layered concentrically one after the other, each of them pursuing a specific task. 
 Right around the interaction point
-(IP) where the LHC makes protons collide there is the Vertex Detector, reconstructing
-charged particles trajectories that are bent by the first solenoid magnet surrounding
-the Vertex Detector. Particles going through it then encounter the two calorimeter systems,
-the Electromagnetic and the Hadronic one. Muons are the only particles that will pass
-the calorimeters material (beyond neutrinos) and a dedicated Muon Spectrometer is the last
+(IP) where the LHC makes protons collide there is the inner detector, reconstructing
+charged particles trajectories that are bent by the solenoidal magnet surrounding
+it. Particles going through it then encounter the two calorimeter systems, referred to as
+the electromagnetic and hadronic calorimeters. Muons are the only particles 
+(in addition to neutrinos) that will traverse
+the calorimeters material and a dedicated muon spectrometer is the last
 piece of detector, embedded in a huge toroidal magnet. The detector complex is presented
 as a schematic in Figure~\ref{fig:atlas}, and a drawing of particle detection in the various
 subdetector systems is shown in Figure~\ref{fig:detection}. 
@@ -228,7 +242,8 @@ subdetector systems is shown in Figure~\ref{fig:detection}.
 \begin{figure}[htb]\begin{center}
 	\subfigure{
   	\includegraphics[width=0.9\textwidth]{detector/figures/atlas}}
-	\caption{Schematic drawing of the ATLAS experiment. The detector subsystem are indicated as well as the total dimensions.\label{fig:atlas}}
+	\caption{Schematic drawing of the ATLAS experiment. The detector 
+subsystems are indicated as well as the approximate total dimensions.\label{fig:atlas}}
 \end{center}\end{figure}
 
 \begin{figure}[htb]\begin{center}
@@ -265,11 +280,12 @@ is the same as the polar angle $\phi$,
 and the polar angle $\theta$ is measured with respect to the Z axis and
 ranges between 0 and $\pi$. 
 
-Since the interaction initial energy is unknown, being dependent on the parton distribution functions for the proton
-energy, it is useful to define the transverse component of variables of 
-interest\footnote{These quantities transverse initial value will be, indeed, zero, as the protons are accelerated along the Z axis.}  
-like the energy and the momentum, being taken as the projection on the XY plane:
-
+Since the interaction energy of the colliding partons inside
+the proton is unknown, it is useful to define the transverse component of variables of 
+interest\footnote{These quantities transverse initial 
+value will be, indeed, zero, as the protons are accelerated along the Z axis.}  
+like the energy and the momentum, being taken as the projection on the XY plane
+and that, therefore, are boost-invariant along the Z axis:
 \begin{equation}\label{eq:transv}
 \et = E\sin\theta, \qquad \pt = p\sin\theta.
 	\end{equation}
@@ -301,9 +317,9 @@ in terms of polar angle distribution, some pseudorapidity values are reported in
 %AAAAAAAAAAAAAAAAA add barrel forward blabla exact def
 
 
-\begin{table}[htb]\centering\begin{tabular}{cccccccccc}\toprule
-$\theta$ & 0$^{\circ}$ & 5$^{\circ}$ & 10$^{\circ}$ & 20$^{\circ}$ & 30$^{\circ}$ & 45$^{\circ}$ & 60$^{\circ}$ & 80$^{\circ}$ & 90$^{\circ}$ \\
-$\eta$ & $\infty$ & 3.13 & 2.44 & 1.74 & 1.31 & 0.88 & 0.55 & 0.175 & 0\\\bottomrule \end{tabular}
+\begin{table}[htb]\centering\begin{tabular}{ccccccccccc}\toprule
+$\theta$ & 0$^{\circ}$ & 1$^{\circ}$ & 5$^{\circ}$ & 10$^{\circ}$ & 20$^{\circ}$ & 30$^{\circ}$ & 45$^{\circ}$ & 60$^{\circ}$ & 80$^{\circ}$ & 90$^{\circ}$ \\
+$\eta$ & $\infty$ & 4.74 & 3.13 & 2.44 & 1.74 & 1.31 & 0.88 & 0.55 & 0.175 & 0\\\bottomrule \end{tabular}
 \caption{Pseudorapidity vs polar angle values.}\label{tab:etatheta}\end{table}
 
 \subsection{Magnets}\label{sec:magnets}
@@ -331,13 +347,21 @@ Such configuration of the magnets gives a field orthogonal to the muons trajecto
 
 \subsection{Inner detector}\label{sec:innerdet}
 
-The Inner Detector (ID) is the subsystem closest to the IP and tracking charged particles arising from collisions allows for 
-the measurement of their momentum and vertex reconstruction with excellent resolution. At the design choices level, radiation resistance had to
-be taken into account, as well as reducing the amount of material to be placed in front of the calorimeters to avoid spoiling the energy measurement.
-This quantity varies between 0.5 and 2.5~$X_0$ depending on the pseudorapidity region, most of it coming from supporting equipment. This material
+The Inner Detector (ID) is the subsystem closest to the IP. 
+It provides tracking of charged particles arising from collisions 
+allowing for 
+the measurement of their momentum and vertex reconstruction 
+with excellent resolution. In terms of detector design,
+radiation resistance was an important consideration
+as well as reducing the amount of material to be placed 
+in front of the calorimeters to avoid degrading the energy measurement.
+This amount of material making the inner detector
+varies between 0.5 and 2.5~$X_0$ 
+depending on the pseudorapidity region, most of it coming from 
+support equipment. This material
 is responsible for photon conversions and electron bremsstrahlung.
 
-The ID is surrounded by the central solenoid magnet (Section~\ref{sec:magnets}) and is composed by three subsystems, 
+The ID is surrounded by the central solenoidal magnet (Section~\ref{sec:magnets}) and is composed by three subsystems, 
 from the closest to the furthest from the IP: the pixel detector, the SemiConductor Tracker (SCT) and
 the Transition Radiation Tracker (TRT).
 %silicon strip detector and a straw detector (Figures~\ref{fig:innerdet1} and~\ref{fig:innerdet2}).
@@ -355,24 +379,28 @@ the Transition Radiation Tracker (TRT).
 \subsubsection{Pixel detector}
 
 The first subsystem covers the region $|\eta|<2.5$ and  is composed by three cylindrical layers in the barrel region, each of them distant from the beam by
-50.5~mm, 88.5~mm and 122.5~mm respectively, and by three concentric discs in the end-cap region, each of them distant from the beam by
+50.5~mm, 88.5~mm and 122.5~mm respectively, and by three concentric discs in the 
+end-cap region, at a  distance from the center of the detector of
 49.5~mm, 58.0~mm and 65.0~mm respectively.
 Each silicon pixel has a size of 50$\times$400~$\mu$m$^{2}$ and is 250~$\mu$m thick, 
-with in total $\sim$80.4 million readout channels to achieve a very fine granularity.
+resulting in total $\sim$80.4 million readout channels to achieve a very fine granularity.
 The precision is of 10~$\mu$m in $R\phi$ and 115~$\mu$m in Z and $R$ in the barrel and end-cap
-region respectively.
+region, respectively.
 
 The very first layer is called $B-$layer as, thanks to its position really close to the IP,
 allows for the reconstruction of secondary vertices associated with the production of
- short lived particles such as $B-$hadrons. This information is very useful to identify
+ short-lived particles such as $B$ hadrons. This information is very useful to identify
 jets originating from the fragmentation of $b$ quarks.
 
 \subsubsection{Semiconductor tracker}
 
-After the three layers of pixel detectors, come four layers of  silicon strip detectors. The SemiConductor
-Tracker (SCT) also covers the region $|\eta|<2.5$ with a barrel and end-cap design similar to the 
-pixel detector one, being composed by eight silicon strips (two per layer) 128~mm long and 80~$\mu$m large.
-It makes use of $\sim$6.3 millions readout channels and the resolution achieved is of 17~$\mu$m 
+After the three layers of pixel detectors, the SemiConductor
+Tracker (SCT) consists of 
+four layers of  silicon strip detectors. The SCT
+ also covers the region $|\eta|<2.5$ with a barrel and end-cap design similar to that of the 
+pixel detector, being composed by eight silicon strip sensors 
+(two per layer) 128~mm long with an interstrip distance of 80~$\mu$m.
+It consists of $\sim$6.3 millions readout channels and the resolution achieved is of 17~$\mu$m 
 in $R\phi$  and 580~$\mu$m in Z ($R$) in the barrel (end-cap) region.
 
 By allowing for four redundant position measurements\footnote{One of the coupled layers is rotated of $40$mrad with respect
