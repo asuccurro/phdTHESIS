@@ -409,7 +409,7 @@ the SCT contributes mainly to the momentum reconstruction.
 
 %Silicon has a band gap of just 3.6 eV, that is the minimum energy to create an electron/hole pair. Thus a minimum ionising particle creates around 80 electron/hole pairs per $\mu$m through primary and secondary ionisation.
 
-\subsubsection{Transition Radiation Tracker}
+\subsubsection{Transition radiation tracker}
 
 In order to reduce the amount of material in front of the calorimeters, and to reduce the construction costs as well,
 in the third subsystem the semiconductor technology has been substituted with straw detectors.
@@ -423,7 +423,7 @@ end-cap region they are 37~cm long and positioned radially in wheels, with layer
 to layers of straws. The resolution achieved is of 130~$\mu$m in $R\phi$ and Z$\phi$  in the two regions respectively.
 The covered pseudorapidity region is of $|\eta|<2.0$ and the readout is composed by $\sim$351000 channels.
 
-About 36 measurements per track are taken, and since each channel provides two independent thresholds per hit,
+About 36 measurements per track are obtained, and since each channel provides two independent thresholds per hit,
 it is possible to discriminate between electrons and pions, since the former will more likely reach the
 high threshold.
 
@@ -443,10 +443,12 @@ $\sim$50\% for tracks with $\pt\sim$1~\tev.
 Particles leaving the ID and surviving the crossing of the central solenoid magnet
 will face the calorimeter system, depicted in Figure~\ref{fig:calorimeters}.
 The full system is characterized by a coverage
-in pseudorapidity up to $|\eta|<5$ and an almost full coverage in $\phi$. With its 
-22~$X_0$ and 24~$X_0$ radiation lengths of material in the barrel and end-cap regions respectively 
+in pseudorapidity up to $|\eta|<5$ and an almost full coverage in $\phi$. With 
+a thickness of 22~$X_0$ and 24~$X_0$ %radiation lengths of material 
+in the barrel and end-cap regions, respectively, 
 it is also able to stop most of the non-muon particles from the interaction.
-Besides particles energy measurement, the calorimeters provide particle identification
+Besides the measurement of particle energy,
+the calorimeters also provide particle identification
 information, discriminating electrons, photons and jets, and the determination
 of the missing transverse energy.
 
@@ -459,12 +461,12 @@ barrel and extended-barrel hadronic calorimeter uses scintillating tiles.
 The liquid argon is cooled at a temperature of about 88~K, with the use of two sets of cryostats:
 the barrel electromagnetic calorimeter shares the cryostat with the central solenoid;
 the end-cap and forward electromagnetic calorimeter and the hadronic end-cap calorimeter
-share a cryostat in the foward region.
+share a cryostat in the forward region.
 
 \begin{figure}[tb]\begin{center}
 	\subfigure{
   	\includegraphics[width=0.8\textwidth]{detector/figures/caloBarrel}}
-	\caption{Schematic of the calorimeter complex of the ATLAS detector.\label{fig:calorimeters}}
+	\caption{Schematic of the calorimeter system of the ATLAS detector.\label{fig:calorimeters}}
 \end{center}\end{figure}
 
 Particles interact both with the passive and active material, but only the energy released
@@ -488,37 +490,44 @@ produced is proportional to the energy of the first particle originating the sho
 	\subfigure{
   	\includegraphics[width=0.6\textwidth]{detector/figures/photonsmatter}}
 	\caption{Domains in term of photon energy and $Z$ number of the absorber material
-        in which photoelectric eﬀect, Compton scattering and pair production are the 
-        favorite processes for energy loss~\cite{Wigmans}.\label{fig:photonsmatter}}
+        in which photoelectric effect, Compton scattering and pair production are the 
+        dominant processes for energy loss~\cite{Wigmans}.\label{fig:photonsmatter}}
 \end{center}\end{figure}
 
 Also hadrons interact with matter, either ionizing it (if charged) or by nuclear interactions.
 The problem of the latter process is that this energy release is often not directly detectable,
 like in nuclear breakups and excitations, and is therefore called ``invisible energy''.
-Secondary hadrons will be produced, forming the hadronic part of the shower, but sooner
-or later something like $\pi^0\to \gamma\gamma$ will happen and the shower will
-develop electromagnetically further on.
+Secondary hadrons will be produced, forming the hadronic part of the shower.
+A fraction of them will be $\pi$s, eventually 
+$\pi^0$ which will immediately decay $\pi^0\to \gamma\gamma$ 
+and, hence, the shower will also include an
+electromagnetic component.
 
 The average fraction of electromagnetic and hadronic shower components is a characteristic
 of the sampling calorimeter and depends on the choice of the passive and active material
 and on the design. Calorimeters are said to be {\it non-compensating} if, like the ATLAS
 calorimeters, the detection of hadronic showers is less efficient than the one of 
 electromagnetic showers. Calorimeters with a similar response for the two components
-are called  {\it compensating}, while calorimeters more efficient when revealing
-hadronic showers are  {\it over-compensating}.
+are called  {\it compensating}, while calorimeters with higher response to
+hadronic showers rather than to electromagnetic ones 
+are rare and referred to as {\it over-compensating}.
 
 %The distinction between electromagnetic and hadronic calorimeters is due to the different phenomenology of the physics involved. The development of electromagnetic showers from an incident electron or photon is well understood and for particles with equal incident energy the variations in shape and measured energy of the showers are quite small. The size of the shower is linearly dependent on the radiation length $X_{0}$ of the material entered, while the size of hadronic showers depends linearly on the nuclear interaction length\footnote{The nuclear interaction length is the average distance traveled by hadrons before inducing a nuclear reaction.} $\lambda_{int}$ of the material. 
 
-The performance for the energy resolution is parametrized by the following formula:
+The energy resolution of the calorimeter can be 
+parametrized by the following formula:
 \begin{equation}\label{eq:resolution}
 \frac{\sigma_{E}}{E} = \frac{S}{\sqrt{E}}\oplus\frac{N}{E}\oplus C,
 \end{equation} 
-where the terms of the sum correspond, respectively, to a ``stocastic'' term related to how shower develops in the sampling calorimeter; to a ``noise''
-term including the contribution from electronic noise and pile-up energy fluctuation; 
-to a systematic term that depends on calibration, shower containment, inactive material and on the
+where the terms of the sum correspond, 
+respectively, to a ``stocastic'' term 
+related to how the shower develops and is detected 
+in the sampling calorimeter; to a ``noise''
+term including the contribution from electronic noise and pile-up energy fluctuations; 
+to a ``constant'' term that depends on calibration, shower containment, inactive material and on the
 linearity of the response as well. 
 
-The goal energy resolution for the liquid argon calorimeters is~\cite{lar_readiness}:
+The target energy resolution for the ATLAS liquid argon calorimeters is~\cite{lar_readiness}:
 \begin{equation}
 \frac{\sigma_{E}}{E}=\frac{10\%}{\sqrt{E}} \oplus\frac{170\MeV}{E} \oplus 0.7\%,
 \end{equation}
@@ -527,25 +536,35 @@ while for the hadronic barrel calorimeter is~\cite{tile_readiness}:
 \frac{\sigma_{E}}{E}=\frac{50\%}{\sqrt{E}} \oplus 5\%.
 \end{equation}
 Test-beam runs to measure the response of the two calorimeters to electrons
-and single pions respectively have shown results comparable to the goal resolutions.
+and single pions respectively have shown results comparable to the target resolutions.
 
 
 \subsubsection{Electromagnetic calorimeter}\label{sec:emcalbarrel}
 
-The electromagnetic calorimeter, also called LAr calorimeter (from Liquid Argon, the active material),
-can measure electrons and photons energies in the range from 50~\mev\ to 3~\tev.
+The electromagnetic calorimeter, also called LAr calorimeter 
+(for Liquid Argon, the active material),
+can measure electrons and photon energies in the range from 50~\mev\ to 3~\tev.
 In the barrel region it is referred to as EMB (ElectroMagnetic Barrel), is 
 divided into two identical semi-barrels EMBA and EMBC separated at Z=0 by a 6~mm
 gap and covers the pseudorapidity region $|\eta|<1.475$. 
 Two end-cap detectors (EMEC, ElectroMagnetic End-Cap), divided 
 into two coaxial wheels, cover the pseudorapidity 
-regions $1.375<|\eta|<3.2$. A pre-sampler, extended over 
+region $1.375<|\eta|<3.2$. A pre-sampler, extended over 
 $|\eta|<1.8$, stands in front of the EMB and allows for the measurement of
 the energy the particles lost before reaching the EMB i.e. crossing the
 material of the ID, the central solenoid and the cryostat.
 
+The absorbing material is lead shaped into an accordion geometry to achieve
+full symmetry in $\phi$, as shown in the drawing of Figure~\ref{fig:calolar}.
+Signal from the ionization produced in the liquid argon is collected
+by an electrode in the middle of the active material region, fixed into
+a honeycomb structure.
+The thickness of the absorber layers depend on the pseudorapidity in
+order to make particles entering the system with different incident 
+angles cross the same amount of material.
+
 Three longitudinal samples in the EMB are designed for different tasks. The first
-sample, 4.3$X_0$ long, is finely segmented in $\eta$ to precisely measure
+sample, 4.3$X_0$ long, is finely segmented in $\eta$ to measure precisely
 the direction in pseudorapidity of the particles with  thin readout strips
 of $\Delta\eta\times\Delta\phi$ = 0.0031$\times$0.098. This helps for
 photon/$\pi^{0}$ discrimination and as well for separate close-by $\gamma$s
@@ -573,15 +592,6 @@ radial direction.
 \end{center}\end{figure}
 
 
-The absorbing material is lead shaped into an accordion geometry to achieve
-full symmetry in $\phi$, as shown in the drawing of Figure~\ref{fig:calolar}.
-Signal from the ionization produced in the liquid argon is collected
-by an electrode in the middle of the active material region, fixed into
-a honeycomb structure.
-
-The thickness of the absorber layers depend on the pseudorapidity in
-order to make particles entering the system with different incident 
-angles cross the same amount of material.
 
 \subsubsection{Hadronic calorimeters}\label{sec:hadcal}
 
