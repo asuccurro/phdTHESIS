@@ -19,23 +19,25 @@ three main steps: a pre-reconstruction stage where the electronic signals are
 translated into measurements of positions, times, energies; 
 a pattern-recognition step where the measurements
 are assembled into the building blocks of particles, e.g. tracks and energy clusters;
-a particle identification step where the full detector information 
-is combined to match a candidate physics object 
+a particle identification step where the information from relevant 
+sub-detectors
+is combined to reconstruct as accurately as possible 
+a candidate physics object 
 (electrons, muons, jets and the missing transverse energy \met).
 
 The expected signatures for the various particles in terms of interaction
 with the detector system are schematically shown in Figure~\ref{fig:decaychart}:
 only charged particles (as electrons, muons, protons) leave tracks in the Inner
-Detector; electrons create particle showers in the Electromagnetic Calorimeter
-and photons too as soon as they emit electrons or convert; heavy hadrons
-start showering in the Hadronic Calorimeter; muons typically cross the whole
+Detector; electrons and photons create particle showers in 
+the Electromagnetic Calorimeter; hadrons deposit most of their energy
+in the Hadronic Calorimeter; muons typically cross the whole
 detector material reaching the Muon Spectrometer where their track is measured;
-neutrinos pass by completely undetected.
+neutrinos cross completely undetected.
 
 \begin{figure}[tb]\begin{center}
         \subfigure{
   	\includegraphics[width=0.7\textwidth]{objectsreconstruction/figures/particles}}
-	\caption{Drawing illustrating how particles are detected in the ATLAS sub-systems.
+	\caption{Drawing illustrating how particles are detected in the ATLAS subsystems.
 	\label{fig:decaychart}}
 \end{center}\end{figure}
 
@@ -51,13 +53,13 @@ state at a temperature very close to transition back to gaseous state,
 in a way that charged particles passing through would leave tracks of
 small gas bubbles induced by ionization. In modern silicon detectors
 a charged particle is ``seen'' as an electrical signal induced by the
-ionization. Lorentz law describes how moving charged particles
-feel the action of a magnetic field, resulting in a trajectory with a
-bending proportional to their mass and speed. These properties allow
+ionization. Lorentz equation describes how moving charged particles
+feel the action of a magnetic field, resulting in a helicoidal trajectory with a
+radius of curvature proportional to their momentum. These properties allow
 to measure direction and momentum of the charged particles crossing
 the ID layers. Particle trajectories (``tracks'') are 
 also used to identify the interaction vertices.
-The parameters describing a track are: $q/p$, the charge divided by the momentum; $\theta$, or more used $\eta$, the angle
+The parameters describing a track are: $q/p$, the charge divided by the momentum; $\theta$, or more commonly used $\eta$, the angle
 with respect to the Z axis in the $R$Z plane measured from the 
 perigee\footnote{The perigee is the point of the track closest to the origin.}; $\phi_0$, the angle 
 with respect to the X axis in the XY plane measured from the perigee; $d_0$, the impact parameter, 
@@ -67,8 +69,9 @@ These parameters are shown in the double-view drawing of Figure~\ref{fig:trackpa
 \begin{figure}[tb]\begin{center}
 	\subfigure{
   	\includegraphics[width=0.7\textwidth]{objectsreconstruction/figures/tracks}}
-	\caption[bla]{Schematic drawings of the parameters used for track reconstruction in the XY and $R$Z planes (left and right respectively)
-          where the origin is the beam spot, i.e. where the protons collide and interact.
+	\caption[bla]{Schematic drawings of the parameters used for track 
+        reconstruction in the XY and $R$Z planes (left and right respectively)
+          where the origin is the beam spot, i.e. the region in the plane where the protons collide.
 \label{fig:trackpar}}
 \end{center}\end{figure}
 
@@ -112,13 +115,15 @@ are used to seed another PV until no track is left without being assigned to a v
 A PV must have at least two associated tracks and its position must be consistent with 
 the beam collision region in the XY plane. The hard-scatter PV is chosen as the one
 with the highest sum of squared transverse moments of the tracks. The other reconstructed PVs 
-are identified with pile-up interactions. Another kind of vertices, not
+are identified as pile-up interactions. Another kind of vertices, not
 compatible with the requirement of coming from close to the proton collision spot,
-are the secondary vertices, originating from the decay of short-lived particles.
+are the secondary vertices, originating from the decay of long-lived particles.
 These vertices are useful to identify $B$-hadrons and will be described in Section~\ref{sec:btagging}.
 
 As can be expected, high pile-up environments deteriorate the performance of vertex reconstruction,
-as more fake tracks are introduced and nearby interaction might lead to the misreconstruction
+as the higher density of hits in the tracker may increase
+the fraction of misreconstructed tracks and nearby 
+pile-up interactions might lead to the misreconstruction
 of distinct vertices as a single one~\cite{ATLAS-CONF-2012-042}.
 
 %\footnotetext{Of the reconstructed verteces consistently in the beam collision region in the XY plane with at least five associated tracks, the one with the highest number of tracks is taken as the primary one.}
@@ -148,7 +153,7 @@ higher than a certain threshold. Cells with $|E_{\rm cell}|>4\sigma$
 are taken as seeds, and starting from the
 one with the highest $|E_{\rm cell}|/\sigma$ all the neighboring 
 cells with $|E_{\rm cell}| > 2\sigma$ are added to the topocluster.
-When no more cells like these are found, all the neighboring
+When no more cells above these thresholds are found, all the neighboring
 cells, without any cut on $|E_{\rm cell}|$, are added to the topocluster,
 according to the scheme commonly referred to as ``4/2/0''.
 Topoclusters are treated as massless and their energy at the electromagnetic 
@@ -184,7 +189,7 @@ tracks are matched, of all the ones with hits in the silicon detectors
 the track with the smallest $\dr$ with respect to the
 energy cluster is chosen. In addition, the track momentum has to be compatible
 with the cluster energy, which is calibrated to the electromagnetic scale
-derived from Monte Carlo based corrections (to account for dead material losses),
+derived from Monte Carlo-based corrections (to account for dead material losses),
 test-beam studies and calibration from $Z\to ee$ events~\cite{Abat:1900zz}.
 
 In general, electrons can be distinguished from hadrons thanks to various characteristics
@@ -194,13 +199,15 @@ hadronic leakage\footnote{The hadronic leakage is the ratio of the transverse en
 in the first layer of the hadronic calorimeter to the total  transverse energy reconstructed in the 
 EM calorimeter for the cluster.}; the $E/p$ variable (ratio of cluster energy and track momentum) is higher.
 
-Some difficulties arise when dealing with $\pi^0$ and $\eta$ particles, 
+Some difficulties arise in presence of energetic
+$\pi^0$ and $\eta$ particles, 
 which decay into two photons that produce two close 
 showers reconstructed as a single one in the second layer of the EM
-calorimeter, thus resulting in a jet misidentified as an electron.
+calorimeter which may happen to overlap with another track from the fragmentation, 
+thus potentially resulting in a jet misidentified as an electron.
 Other processes leading to the reconstruction of electrons 
-not from the primary interaction are tracks from photon conversion,
-random track overlap or the semi-leptonic decay of a bottom quark into an electron.
+not from the primary interaction are tracks from photon conversion
+or the semi-leptonic decay of a bottom quark into an electron.
 There are then six different electron definitions to help 
 separate real electrons from misidentified ones,
 described in the following ordered from the looser requirements to the tightest.
@@ -210,7 +217,7 @@ Carlo $Z\to ee$ and $W\to e\nu$ events~\cite{eperf} (see Figure~\ref{fig:eleeff}
 \texttt{Loose} electrons lie in the pseudorapidity region $|\eta| < 2.47$ and have 
 low hadronic leakage and requirements on the variables defining the shower shape.
 The identification efficiency is high but the jet rejection is the lowest
-with respect to the other electron defintiotions (about 500).
+with respect to the other electron definitions (about 500).
 
 \texttt{Loose++} electrons are \texttt{loose} electrons whose track has at least one hit in 
 the pixel detector and at least 7 hits in the combined silicon detectors and the
@@ -237,7 +244,7 @@ variable. Stricter cuts are imposed on the fraction of high-threshold TRT hits a
 for \texttt{medium++}.
 
 \texttt{Tight++} electrons are \texttt{tight} electrons with asymmetric $\Delta\phi$ cuts, which give
-both better efficiency (about 80\%) and rejection (about ) with respect to \texttt{tight}.
+both better efficiency (about 80\%) and rejection (about 50$\times 10^3$) with respect to \texttt{tight}.
 
 \begin{figure}[tb]\begin{center}
 	\subfigure[]{\label{fig:eleeffET}
@@ -256,7 +263,7 @@ mass peak.
 
 For our analyses~\cite{topcommon2013}, electrons in the transition region $1.37<|\eta_{\rm cluster}| <1.52$
 with inactive material are excluded. Electrons are required to satisfy \texttt{tight++} criteria and to
- have $\et = E_{\rm cluster}/\cosh\eta_{\rm track} > 25\gev$ and $z_0<2~$mm.
+ have $\et = E_{\rm cluster}/\cosh\eta_{\rm track} > 25\gev$ and $|z_0|<2~$mm.
 In addition, to suppress further the QCD multijet background, 
 isolation cuts are imposed both as calorimeter (using the energy in a cone of size $\Delta R<0.2$, \texttt{EtCone20})
 and track isolation (using the scalar sum of $p_T$s from tracks within a cone of $\Delta R<0.3$, \texttt{PtCone30}). 
@@ -269,7 +276,7 @@ The \texttt{EtCone20} and \texttt{PtCone30} isolation cuts are chosen to give
 In addition, jets (see Section~\ref{sec:jets}) within $\dr =0.2$ of the selected electron are 
 discarded, and if an additional jet with $p_T>25~$\gev\  and $|JVF|>0.5$ is found within $\dr =0.4$,
 then the electron is rejected.
-The electron is matched to the single electron trigger \texttt{EF\_e24vhi\_medium1}
+The selected electron is matched to the single electron trigger \texttt{EF\_e24vhi\_medium1}
 combined with a logical \texttt{OR} to the \texttt{EF\_e60\_medium1} trigger, which
 recovers some efficiency loss on high transverse energy electrons due
 to the isolation cuts of \texttt{EF\_e24vhi\_medium1}. % at $\ET > 80$~GeV.
@@ -278,11 +285,11 @@ The efficiency in selecting electrons can be factorized as:
 \begin{equation}\label{eq:eleeff}
 \varepsilon = \varepsilon_{\rm reco} \cdot\varepsilon_{\rm tight++} \cdot\varepsilon_{\rm isolation} \cdot\varepsilon_{\rm trigger} 
 	\end{equation}
-where the various components represent respectively: the efficiency in recostructing the electron 
+where the various components represent respectively: the efficiency in reconstructing the electron 
 in terms of track-cluster match, track quality and hadronic leakage; the efficiency
 for the \texttt{tight++} identification criteria; the efficiency for the isolation cuts;
 the efficiency from trigger selection. Scale factors to match MC to data
-are derived in bins of $(\eta, \ET)$,
+are derived in bins of $(\ET,\eta)$,
 and the trigger scale factors are separated into four data-taking periods 
 (\texttt{A-B3}, \texttt{B4-D3} without \texttt{C1-C5}, \texttt{C1-C5} and \texttt{D4+}).
 The efficiency scale factors are applied as weights to Monte Carlo events.
@@ -290,7 +297,7 @@ The efficiency scale factors are applied as weights to Monte Carlo events.
 \section{Muons}\label{sec:muons}
 
 As suggested in Figure~\ref{fig:decaychart}, 
-Muons interact with ATLAS sub-detectors typically 
+muons interact with ATLAS sub-detectors typically 
 leaving minimum ionizing particle (mip) signatures in
 all of them, i.e. depositing
 only a very small fraction of their energy in the material. 
@@ -310,9 +317,10 @@ called \texttt{Muid}~\cite{ATLAS-CONF-2011-063} (or ``chain 2'')
 and whose pseudorapidity is limited to $|\eta|<2.5$ by the ID acceptance.
 Starting from $\Delta\eta\times\Delta\phi=0.4\times0.4$ regions where interesting activity has been triggered,
 track segments are searched for in the RPC and TGC and combined into a single track by means of a
-least-square fitting method. These track candidates are hence extrapolated back to the interaction
+least-square fitting method. These track candidates are 
+subsequently extrapolated back to the interaction
 point and their momentum corrected for the mip energy loss in the calorimeter material.
-At this point a \chisq test (checking the difference between the extrapolated track coordinates weighted with
+At this point a \chisq\ test (checking the difference between the extrapolated track coordinates weighted with
 combined covariance matrix) on the matching of the candidate MS track and the tracks reconstructed in 
 the ID is performed to obtain the final muon candidate track. Only ID tracks that satisfy some quality 
 requirements are considered for the matching: they need to have at least two pixel hits, of which at least
@@ -324,14 +332,14 @@ and the number of TRT hits as $N_{\rm TRT_{o}}$ and  $N_{\rm TRT_{h}}$ respectiv
 $N_{\rm TRT_{h}}>5$ and $N_{\rm TRT_{o}}/N_{\rm TRT_{h}}<0.9$ for $|\eta|<1.9$, 
 $N_{\rm TRT_{o}}/N_{\rm TRT_{h}}<0.9$ if $N_{\rm TRT_{h}}>5$ for  $|\eta|\geq1.9$.
 In case no matching is found, no \texttt{combined} 
-muons are reconstructed, while if more candidates arise, the one giving the best \chisq is chosen.
+muons are reconstructed, while if more candidates arise, the one giving the best \chisq\ is chosen.
 The momentum is computed as a weighted average of ID and MS measurements.
 
 Performance studies on muon reconstruction and identification done using 2010 data 
 from $\rts=7$~\tev\ collisions and Monte Carlo $Z\to \mu\mu$ events~\cite{ATLAS-CONF-2011-063} 
 have been recently updated with the data from $\rts=8$~\tev\ pp collisions~\cite{ATLAS-CONF-2013-088}.
 The measured reconstruction efficiency for \texttt{combined} muons
-is of about 98\% unformely in pseudorapidity and 
+is of about 98\% uniformely in pseudorapidity and 
 is shown in Figure~\ref{fig:mueff}. 
 
 
@@ -363,7 +371,7 @@ Muons overlapping with any jet (see Section~\ref{sec:jets}) with $\pt>25$~GeV an
 within a $\Delta R<0.4$ cone are rejected.
 
 In addition to the previous isolation requirements, a ``mini-isolation'' is 
-defined~\cite{topcommon2013} to better deal with the high pile-up present
+defined~\cite{topcommon2013} to reduce the sensitivity to the high pile-up present
 in $\sqrt{s} = $8~TeV collision events.
 The mini-isolation is defined as 
 \begin{equation}\label{eq:miniisol}
@@ -376,9 +384,9 @@ all tracks found in a cone whose radius varies as a function of $\pt^{\mu}$:
 \end{equation}
 The tracks also have to satisfy: $\pt^{track}>1~$GeV; $|d_0| < 10$~mm;
 $|z_0 \sin\theta_{track}| <10$~mm; at least four hits or dead sensors crossed in the silicon detectors.
-The cut on the mini-isolation variable is chosen as $I_{mini}^{\mu}<0.05$
+The cut on the mini-isolation variable is chosen as $I_{mini}^{\mu}<0.05$.
 The performance of the mini-isolation is basically insensitive to pile-up,
-being uniformely of about 97\%, while is slightly underperforming (96\%)
+being uniformely of about 97\%, while is slightly lower (96\%)
 for muons with $\pt^{\mu}<50$~\gev, as 
 shown in Figure~\ref{fig:miniisoleff}.
 
@@ -395,7 +403,7 @@ shown in Figure~\ref{fig:miniisoleff}.
 As is done for electrons, a set of corrections are applied to correct for minor
 discrepancies between Monte Carlo simulation and data events.
 The scale factors to compensate recontruction, isolation and trigger 
-inefficiencies are derived from tag-and-probe measurements
+inefficiencies are derived from tag-and-probe measurements using $Z\to \mu\mu$ events
 and applied to Monte Carlo events. In addition, the muon momentum
 in simulated events is smeared to obtain agreement between the momentum
 resolutions in Monte Carlo and data.
@@ -404,7 +412,7 @@ resolutions in Monte Carlo and data.
 \section{Jets}\label{sec:jets}
 
 With the name ``jet'' we generically refer to the object formed as a consequence
-of parton hadronization from a spray (or {\it jet}) of particles. These particles
+of the hadronization of a spray (or {\it jet}) of partons. The resulting stable particles
 will leave signals both as tracks in the ID and as energy deposits in the calorimeters
 and two type of jets can then be defined using either the former or the latter information:
 track jets and calorimeter jets. In the following, we will only discuss calorimeter jets.
@@ -418,12 +426,12 @@ a set of requirements has been defined for the algorithms to be valid~\cite{Sala
 First of all, the splitting of one particle into two collinear particles 
 or the presence of additional soft emission must not change the 
 result of the algorithm reconstruction.
-The importance of Infrared and Collinear (IRC) safety is evident considering e.g. 
+The importance of this so-called Infrared and Collinear (IRC) safety is evident considering e.g. 
 that a hard parton, as part of the fragmentation process, will undergo many collinear splittings,
 and that QCD events always include emission of some soft particles, perturbatively or not.
 In addition, we want the algorithm result to be invariant under a Lorentz boost along the beam direction,
 to be as insensitive as possible to detector effects like noise or resolution, and to be light in terms
-of computing resourse usage.
+of  usage of computing resourse.
 
 A set of jets algorithm that satisfy these requirements are the sequential recombination
 algorithms~\cite{ref:Cacciari2008,ref:Cacciari2006,ref:fastjet}, which combine topoclusters
@@ -435,14 +443,14 @@ d_{ij}=min(p_{T_i}^{2p},p_{T_j}^{2p})\frac{\Delta R_{ij}^{2}}{R^{2}},
 d_{i}=p_{T_i}^{2p},
 \end{equation}
 where $p_{Ti}$ is the transverse momentum of topocluster $i$, 
-$\Delta R_{ij}$=$\sqrt{(\Delta\eta)^{2}+(\Delta\phi)^{2}}$ the distance 
+$\Delta R_{ij}$=$\sqrt{(\Delta\eta_{ij})^{2}+(\Delta\phi_{ij})^{2}}$ the distance 
 between constituents $i$ and
-$j$, $R$ a parameter of the algorithm that approximately controls the size
+$j$, $R_{ij}$ a parameter of the algorithm that approximately controls the size
 of the jet, and $p$ is a  parameter that defines the type of algorithm as:
 \begin{equation}\label{eq:jetalgp}
 \begin{array}{lcl}
 p = 1 &:& k_t {\rm\ algorithm};\\
-p = 0 &:& {\rm Cambridge/Aachen algorithm};\\
+p = 0 &:& {\rm Cambridge/Aachen\ algorithm};\\
 p = -1 &:& {\rm anti-}k_t {\rm\ algorithm}.
 \end{array}
 \end{equation}
@@ -478,9 +486,10 @@ structure (see Figure~\ref{fig:jetshapes}).
 \tocless\subsection{Jet energy calibration}
 For our analyses~\cite{topcommon2013} jets are 
 reconstructed using the anti-$k_t$
-algorithm with a radius parameter $R=0.4$ (from 
-which the algorithm is often referred to as anti-$k_t$4) 
-using calorimeter energy deposits corrected for effects 
+algorithm with a radius parameter $R=0.4$ 
+(\texttt{AKT4} algorithm) 
+using calorimeter energy deposits corrected for 
+pile-up energy deposits, effects 
 of non-compensation\footnote{The energy response 
 to hadrons is lower than the response to electrons of the 
 same energy due to the presence of invisible processes.},
@@ -514,6 +523,10 @@ a luminosity block ($<\mu>$), and is derived in bins of jet $\eta$ in order to
 account for the different geometries of the detector. The
 correction is applied to bring all objects to a 
 reference point with $\mu=0$ and $NPV = 1$
+
+Finally the jet energy is corrected to the particle
+level using a jet energy scale factor obtained
+from Monte Carlo simulation.
 
 
 %%%%%%%%%%%%% EM+JES????? start
@@ -557,7 +570,7 @@ a lifetime of the order of $10^{-12}$~s and hence can travel about 3~mm before d
 The result is a displaced secondary vertex that, if correctly reconstructed, can
 allow for the identification of the bottom quark. 
 Since this capacity relies on track reconstruction from the ID, its applicability
-is limited by the ID acceptance to the pseudorapidity region $|eta|<2.5$.
+is limited by the ID acceptance to the pseudorapidity region $|\eta|<2.5$.
 
 \begin{figure}[tb]\begin{center}
 	\subfigure{
@@ -569,7 +582,7 @@ This technique is called $b$-tagging~\cite{ref:ATLAS-CONF-2011-102} and is
 widely used in ATLAS analyses with top quarks. There are three types of algorithms,
 and they can be combined to obtain better performance. In general they define a weight
 corresponding to the probability for the jet to be tagged, and a working point is chosen
-as the threshold for this weight to discriminate between $b-$ and not-\bjet s
+as the threshold for this weight to discriminate between $b$- and non-\bjet s
 by finding a good compromise between efficiency (the ratio between tagged
 $b$-jets and true $b$-jets) and light-jet rejection
 (the inverse of the number of light-jets misidentified as $b$-jets).
@@ -579,7 +592,7 @@ based on information from the impact parameters of the tracks
 contained in the jet, $z_0/\sigma_{z_0}$ and $d_0/\sigma_{d_0}$,
 with respect to the reconstructed PV. 
 A likelihood is computed to
-obtain the $b-$tag weight for the jet.
+obtain the $b$-tag weight for the jet.
 
 Other algorithms reconstruct the secondary vertex from the $B$ hadron
 decay, allowing for a better discrimination between \bjet s and light
@@ -587,7 +600,7 @@ jets. The \texttt{SV1} algorithm uses the number of track pairs in
 the secondary vertex, their total invariant mass and the ratio of
 the sum of the energies of tracks from the secondary vertex to the one
 of the total tracks of the jet to compute likelihood ratios, the logarithms
-of which are summed to define the $b-$tag weight of the jet.
+of which are summed to define the $b$-tag weight of the jet.
 
 Finally, the \texttt{JetFitter} algorithm performs a reconstruction
 of the full decay chain of $B$ and $C$ hadrons by using a Kalman filter to determine a 
@@ -610,7 +623,7 @@ chosen (see Figure~\ref{fig:btageffs}).
 $|\eta|<2.5$ in simulated $t\bar{t}$ events~\cite{btagging}.\label{fig:btageffs}}
 \end{center}\end{figure}
 
-The tagging efficiencies in Monte Carlo are corrected for $b$ and $c$ flavours
+The tagging efficiencies in Monte Carlo are corrected for $b$, $c$ and light flavours
 with the appropriate $\epsilon_{data}/\epsilon_{MC}$ scale factors,
 determined in bins of jet $\pt$ and $\eta$.
 These efficiency are obtained from di-jet samples with
@@ -618,7 +631,13 @@ muons in the final states using the {\it  $\pt^{\rm rel}$ method},
 which exploits the variable $\pt^{\rm rel}$ (the momentum of the
 muon transverse to the axis of the system formed by the muon and the jet)
 to distinguish muons from a $b$-flavor jet (harder  $\pt^{\rm rel}$ spectrum)
-from muons from $c$- and light-flavor jets~\cite{btagging,ctagging,ltagging}.
+from muons from $c$- and light-flavor jets~\cite{btagging,ctagging,ltagging}. 
+%The sample used to derive the $\pt^{\rm rel}$ template for 
+%$b$-flavor jets has enhanced heavy-flavour content, while
+The template for light-flavor jets is derived from a data sample
+where another algorithm (\texttt{IP3D+SV1} at the 80\% efficiency working point) 
+is used to veto \btag ged jets.
+
 
 \myskip
 \tocless\subsubsection{Tag Rate Function method}\label{sec:trf}
@@ -631,7 +650,7 @@ Here, no event is rejected based on its $b$-tagging count,
 but instead all the events are 
 kept and weighted according to the
 probability of the given event to contain the desired number of \bjet s.
-Appendix~\ref{app:trf} describes the TRF method in more details.
+Appendix~\ref{app:trf} describes the TRF method in more detail.
 
 \myskip
 \tocless\subsection{Additional requirements}
@@ -659,7 +678,8 @@ finite detector resolution.
 
 The \met\ is computed by first matching each topocluster
 with a high-$\pt$ object,  in the following order: electrons, photons, jets and muons.
-These are respectively the RefEle, RefGamma, RefJet, RefMuon terms, wether the low-$\pt$ jets
+These are respectively the RefEle, RefGamma, RefJet, RefMuon terms, while 
+the low-$\pt$ jets (10$<\pt<20$~\gev)
 are grouped into the SoftJet term. Then, the energies of these objects are
 corrected accordingly to the respective calibration constants. 
 The calorimeter clusters
@@ -672,7 +692,8 @@ Finally the \met\ is computed as:
 %E^{\rm miss}_{x,y} & = & E^{\rm RefEle}_{x,y} + E^{\rm RefGamma}_{x,y} + E^{\rm RefJet}_{x,y} + E^{\rm RefMuon}_{x,y} + E^{\rm SoftJet}_{x,y} + E^{\rm CellOut}_{x,y}\\
 E^{\rm miss}_{T} & = & \big|-\sum\vec{p}_T \big| = \sqrt{(E^{\rm miss}_{x})^2 + (E^{\rm miss}_{y})^2} ,\\
 E^{\rm miss}_{x} & = & -\sum\vec{p}_x ,\\
-E^{\rm miss}_{y} & = & -\sum\vec{p}_y .\\
+E^{\rm miss}_{y} & = & -\sum\vec{p}_y ,\\
 \end{array}	\end{equation}
+where the sums run over all the objects previously listed.
 
 %\subsection{Additional requirements for analyses}

@@ -595,7 +595,10 @@ Phenomenological models are used to simulate the underlying event
 and are tuned to {\it minimum bias}\footnote{A ``bias'' in event selection
 is, in general, any kind of assumption made on the final state and therefore
 any kind of cut applied in selecting only these events. In minimum bias events
-only very loose requirements are imposed on the collision data.} % These events are useful to study the UE since} 
+only very loose requirements are imposed on the collision data, e.g.
+using a simple scintillator trigger (the MBTS, described in Section~\ref{sec:forward}) 
+sensitive to soft particles ($\pt>100~\mev$) 
+in the forward region $2.1<|\eta|<3.8$.} % These events are useful to study the UE since} 
 data from hadron colliders. Indeed processes involving IR divergences 
 have free parameters that can (must) be phenomenologically constrained.
 Hadronization models typically have 10 to 30 free parameters, 
@@ -635,10 +638,12 @@ Pile-up is also tuned to minimum bias events.
 
 \section{Generators}\label{sec:generators}
 
-Monte Carlo generators can either be {\it multi-purpose} generators,
+Monte Carlo generators can be classified as either {\it multi-purpose} generators,
 i.e. capable of performing the full simulation chain described in this chapter,
-or {\it specialized} generators, i.e. devoted to a single aspect of the
-simulation. As should be clear after the discussion about the modeling
+or as {\it specialized} generators, i.e. devoted to a single aspect of the
+simulation which they often describe with higher accuracy than
+typical multi-purpose generators. 
+As should be clear after the discussion about the modeling
 of hadronic collisions, there are some choices to be made that might result
 in some generators 
 being better suited 
@@ -647,7 +652,7 @@ the Monte Carlo generators should be chosen according to their performance
 in modeling the event of interest.
 
 We briefly present in the following sections the main characteristics of the generators
-that are used in the analyses that are the object of this dissertation.
+that are used in the analyses that are the subject of this dissertation.
 
 
 \subsubsection*{PYTHIA}
@@ -670,6 +675,13 @@ is typically interfaced with the external package \texttt{JIMMY}~\cite{jimmy} wh
 simulates UE as MPIs in  $2 \to 2$ processes with the ME computed at LO.
 
 
+\subsubsection*{ACERMC}
+
+\texttt{ACERMC}~\cite{acermc} is a Monte Carlo generator computing
+ME at LO and typically interfaced either with \texttt{PYTHIA} or 
+\texttt{HERWIG} for the modeling of PS, hadronization and UE.
+
+
 \subsubsection*{ALPGEN}
 
 \texttt{ALPGEN}~\cite{ALPGEN} is a Monte Carlo generator specialized for
@@ -678,8 +690,8 @@ computed using the ALPHA algorithm \cite{ALPGEN_0}. It is interfaced either
 with \texttt{PYTHIA} or \texttt{HERWIG} for PS development 
 and hadronization, and ME/PS matching
 is done in the MLM scheme. %, where the resolution parameter $p_{T_{\rm min}}$ is called {\it jet matching scale}.
-UE is simulated through \texttt{HERWIG}
-and hence \texttt{JIMMY}.
+UE is simulated through \texttt{PYTHIA}. 
+%\texttt{HERWIG} and hence \texttt{JIMMY}.
 
 The various parton multiplicity samples are then normalized to their LO cross section
 and combined into an inclusive sample, which is finally typically normalized 
@@ -688,17 +700,6 @@ to an inclusive cross section calculated at higher order in pQCD.
 %MCFM~\cite{MCFM} and FEWZ~\cite{Gavin:2010az} programs are used to predict 
 %cross sections at NLO and NNLO respectively.
 
-
-\subsubsection*{MC@NLO}
-
-\texttt{MC@NLO}~\cite{mcatnlo} is a Monte Carlo generator simulating ME at
-NLO, where the use of 1-loop corrections introduce the possibility of having
-negative weighted events. Theoretical uncertainties on the inclusive cross
-section is reduced thanks to the use of full NLO corrections, but higher-multiplicity
-parton emission beyond the first one is simulated through PS in \texttt{HERWIG} which has
-a poorer description of hard emissions. 
-Hadronization and UE are also simulated through \texttt{HERWIG}
-(and hence \texttt{JIMMY}).
 
 \subsubsection*{SHERPA}
 
@@ -713,6 +714,25 @@ Hadronization is done within \texttt{PYTHIA} and a multiple parton
 scattering model for UE simulation.
 
 
+\subsubsection*{MADGRAPH}
+
+\texttt{MADGRAPH}~\cite{madgraph} is a Monte Carlo generator 
+specialized for ME computation of $2 \to n$ ($n\leq 6$) events at LO
+interfaced with \texttt{PYTHIA} for the modeling of PS within the
+MLM matching scheme, and the same for hadronization and UE.
+
+
+\subsubsection*{MC@NLO}
+
+\texttt{MC@NLO}~\cite{mcatnlo} is a Monte Carlo generator simulating ME at
+NLO, where the use of 1-loop corrections introduce the possibility of having
+negative weighted events. Theoretical uncertainties on the inclusive cross
+section is reduced thanks to the use of full NLO corrections, but higher-multiplicity
+parton emission beyond the first one is simulated through PS in \texttt{HERWIG} which has
+a poorer description of hard emissions. 
+Hadronization and UE are also simulated through \texttt{HERWIG}
+(and hence \texttt{JIMMY}).
+
 \subsubsection*{POWHEG}
 
 \texttt{POWHEG}~\cite{powheg} is a Monte Carlo generator computing
@@ -722,20 +742,6 @@ The choice made at the level of interfacing the ME with PS
 can lead to large differences in the description of events with
  high jet multiplicity in the final state between \texttt{POWHEG} 
 and \texttt{MC@NLO}.
-
-\subsubsection*{MADGRAPH}
-
-\texttt{MADGRAPH}~\cite{madgraph} is a Monte Carlo generator 
-specialized for ME computation of $2 \to n$ ($n\leq 6$) events at LO
-interfaced with \texttt{PYTHIA} for the modeling of PS within the
-MLM matching scheme, and the same for hadronization and UE.
-
-
-\subsubsection*{ACERMC}
-
-\texttt{ACERMC}~\cite{acermc} is a Monte Carlo generator computing
-ME at LO and typically interfaced either with \texttt{PYTHIA} or 
-\texttt{HERWIG} for the modeling of PS, hadronization and UE.
 
 
 
@@ -781,7 +787,8 @@ into detector signals of the same sort of the real read-out and
 at this point the same kind of reconstruction algorithms shape
 the detector output into physical objects. During test-beam periods
 the \texttt{GEANT4} parameters have been tuned to best simulate
-the ATLAS configuration and the performance of detector simulation
+the response of the different 
+ATLAS subsystems and the performance of detector simulation
 has been extensively checked also with data calibrations.
 
 \begin{figure}[htb]\begin{center}
@@ -810,7 +817,7 @@ within release 17 of the ATLAS analysis framework \texttt{ATHENA}~\cite{Calafiur
 \section{Monte Carlo samples corrections}\label{sec:mcweights}
 
 At the end of the full Monte Carlo simulation chain, after the detector simulation
-and event reconstruction steps, the generated samples need some corrections to
+and event reconstruction steps, the generated samples still need some corrections to
 better model data. The main event reweighting is to correct Monte Carlo samples to
 the correct theoretical cross section of the process and to the number of expected
 data events, which comes from the luminosity measurements. As typical in Monte
@@ -824,8 +831,16 @@ w = \dfrac{\sigma\times k}{N}\int \mathcal L dt,
 \end{equation}
 where $\sigma$ is the process theoretical cross section, $N$ is the number of Monte
 Carlo events, $\int \mathcal L dt$ the integrated luminosity and $k$ is the so-called
-$k-$factor, which is a correction to higher orders as, e.g., to bring the accuracy
-of a LO cross section computation to the NLO.
+$k-$factor, which is a correction to 
+the LO cross section to reproduce a higher-order
+(e.g. NLO) calculation.
 
-Furthermore, a weight to account for pile-up effect is to be applied, to match the
-expected number of interactions per bunch crossing $<\mu>$ in real data-taking conditions. 
+In addition, a weight to account for pile-up effect is to 
+be applied, to match the
+expected number of interactions per bunch crossing $<\mu>$
+ in real data-taking conditions. 
+Additional correction are applied in the analyses
+to ensure that the simulation reproduces the efficiency,
+energy scale and resolution of different
+physics objects in data, as will be described in
+Chapter~\ref{chap:objects}.

@@ -29,7 +29,7 @@ in its search channels, and to all non-\ttbar\ Monte Carlo samples
 ($W$+jets, $Z$+jets, diboson, single-top, $\ttbar V$) in the \wbx\ 
 analysis, which requires only one \btag ged jet but drastically
 reduces the background contribution to the signal region through
-tight requirements.
+tight selection requirements.
 
 In this appendix the principle of this method and the various 
 studies performed to validate its usage in the analyses
@@ -47,8 +47,8 @@ commonly chosen working points for the \btag ging algorithms
 have a measured efficiency of 70\%, it is easy to imagine the
 potential loss in acceptance when requiring more that one
 \btag ged jets.
-By using the TRF method, no event is cut based on how many
-$b$-taged jets are counted, but instead all the pre-tag events 
+By using the TRF method, no event is rejected based on 
+the $b$-tagged jet multiplicity, but instead all the pre-tag events 
 are reweighted.
 The event weight is calculated using the
 per-jet  \btag ging efficiency
@@ -102,7 +102,7 @@ can be observed that for the official maps (the left colums) there
 are departures from closure of to up to 40\% in some regions of the light flavor
 map, and on average of 13\%.
 New efficiency maps have been derived using a combination 
-of $t\bar{t}$ \texttt{MC@NLO}, $t\bar{t}$ \texttt{Alpgen}, and 
+of $t\bar{t}$ \texttt{MC@NLO}, $t\bar{t}$ \texttt{ALPGEN}, and 
 \texttt{Protos} $\TT$ Monte Carlo samples.
 The plots on the right column of Figure~\ref{fig:closure} 
 show reasonably good closure for the newly derived efficiency map,
@@ -140,18 +140,6 @@ and the direct \btag ging. The shapes are found to be compatible.
 \end{center}\end{figure}
 
 
-\section{TRF in the \htx\ analysis}
-
-The TRF method is used for all the Monte Carlo backgrounds in the
-\htx\ analysis. The validity of the method is checked by comparing 
-the normalization and shape of final discriminant $H_T$ distribution
-for the most relevant background, the \ttbar\ sample simulated with
-\texttt{ALPGEN}, in different jet and \bjet multiplicity channels,
-using the TRF method and direct \btag ging.
-As it can be seen in these plots, the prediction obtained with the TRF 
-method is accurate up to the statistical error.
-
-
 \section{TRF in the \wbx\ analysis}
 %\section{TRF and \nontt\ background in the \wbx\ analysis}
 
@@ -170,6 +158,19 @@ the TRF method returns non-zero prediction.
 Also to be noted is that in all cases
 the statistical uncertainty on the predicted yield is
 improved by the TRF method.
+
+
+\section{TRF in the \htx\ analysis}
+
+The TRF method is used for all the Monte Carlo backgrounds in the
+\htx\ analysis due to the high \btag\ multiplicity
+(up to $\geq 4$) required. The validity of the method is checked by comparing 
+the normalization and shape of final discriminant $H_T$ distribution
+for the most relevant background, the \ttbar\ sample simulated with
+\texttt{ALPGEN}, in different jet and \bjet multiplicity channels,
+using the TRF method and direct \btag ging.
+As it can be seen in these plots, the prediction obtained with the TRF 
+method is accurate up to the statistical error.
 
 
 \begin{landscape}
