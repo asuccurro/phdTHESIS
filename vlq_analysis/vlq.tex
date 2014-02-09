@@ -182,13 +182,13 @@ left corner of the same plane for \TTbar.
 
 The search in the opposite-charge dilepton channel~\cite{ATLAS-CONF-2013-056} 
 focuses on events where at least one
-heavy quark  (\B\ or \T) decays into a $Z$ boson and a bottom (top) quark. 
+heavy quark  (\B\ or \T) decays into a $Z$ boson and a bottom or top quark. 
 Here the strategy is to identify the $Z$ boson from the opposite-charge lepton
 pair and to reconstruct the heavy quark mass 
 by pairing the $Z$ boson candidate with the highest 
 $p_T$ $b$-jet, used as final discriminating variable in the statistical analysis.
 It is expected of this search to efficiently cover the bottom
-left corners of both the \B\ and \T\ BR planes of
+left corners of both the \B\ and \T\ branching ratio planes of
 Figure~\ref{fig:2dplane}.
 
 
@@ -199,7 +199,7 @@ to reconstruct it from its hadronic channel final state
 particles~\cite{ATLAS-CONF-2013-060} (see Figure~\ref{fig:feyndTTwbx}). The heavy quark invariant mass is 
 then reconstructed pairing the boosted  $W$ boson  with a \bjet\ and this
 distribution is used to perform the statistical analysis. It is evident that this
-search is going to cover the bottom right corner of the \T\  BR plane 
+search is going to cover the bottom right corner of the \T\  branching ratio plane 
 of Figure~\ref{fig:2dplane}.
 
 The other search in the single lepton channel considers final states with high
@@ -208,7 +208,7 @@ into a Higgs boson (assumed to decay into \bbbar) and a top
 quark~\cite{ATLAS-CONF-2013-018} (see Figure~\ref{fig:feyndTThtx}). The distribution
 of the scalar sum of transverse momentum in the event is then used to perform the statistical 
 analysis. This search is mainly sensitive to the top left corner of the \T\  
-BR plane of Figure~\ref{fig:2dplane}.
+branching ratio plane of Figure~\ref{fig:2dplane}.
 
 
 \begin{figure}[hbt]
@@ -226,13 +226,14 @@ BR plane of Figure~\ref{fig:2dplane}.
 
 
 In the following we will discuss in details the two searches for 
-\TT\ performed in the single lepton channels, starting with the
+\TT\ performed in the single lepton channel,
+referred to as \wbx\ and \htx\ respectively, starting with the
 discussion of the common features between the two analyses.
 
 
 \section{Data sample and common event preselection}\label{sec:presel}
 
-The data from pp collision events recorded at the ATLAS experiment during
+The pp collision data recorded by the ATLAS experiment during
 2012 at a \cme\ of $\rts=8\tev$ are considered. Physics object definitions 
 were discussed in Chapter~\ref{chap:objects}.
 Events collected during
@@ -248,12 +249,13 @@ single muon triggers have \pt\ thresholds
 of 24 and 36~\gev\ (Section~\ref{sec:REQtrigger}).
 
 After passing trigger requirements, events with more than one lepton are
-discarded. In addition, the only lepton of the event has to match within $\dr<0.15$ the
-triggered one. As basic preselection, four jets satisfying the conditions
+discarded. In addition, the lepton selected offline is required
+to match within $\dr<0.15$ the corresponding lepton at the
+trigger level. Furthermore, at least four jets satisfying the conditions
 described in Section~\ref{sec:jets} are required, at least one of them
 being tagged as a \bjet.
 
-In order to suppress the multi-jet background from QCD processes,
+In order to suppress the QCD multi-jet background,
 combined cuts on the \met\ and on the tranverse mass of the 
 leptonically-decaying $W$ boson \mt\footnote{$\mt = \sqrt{2 p^\ell_{\rm T} \met (1-\cos\Delta\phi)}$, with
 $p^\ell_{\rm T}$  being the transverse momentum (energy) of the 
@@ -261,9 +263,7 @@ muon (electron) and $\Delta\phi$ the
 azimuthal angle separation between the lepton and the direction of
 the missing transverse momentum.}\ 
 are defined: $\met>20~\gev$ and $\met+\mt>60~\gev$.
-Finally, as basic preselection, events with less than 4 jets with
-$p_T>25\gev$ are rejected, and at least one jet
-has to be \btag ged. These cuts are summarized in
+These cuts constitute the event preselection and are summarized in
 Table~\ref{tab:preselcuts}.
 
 \begin{table}[tb]
@@ -284,7 +284,7 @@ event preselection, common to the \wbx\ and \htx\ analyses.}\label{tab:preselcut
 At this point, a simple consideration about the typical expected jet
 (and \bjet) multiplicity based on counting the parton multiplicities and their 
 flavor is made so as to define an orthogonality
-cut between the two analyses. Table~\ref{tab:jetmult} shows the 
+cut between the two analyses. Table~\ref{tab:jetmult} shows the expected
 number of jets (\bjet s) per decay channel combinations of \TTbar\ pairs, 
 in the case of single lepton selection with at least four jets
 (i.e. one $W$ boson will always decay into lepton and neutrino,
@@ -292,7 +292,7 @@ and $Z$ boson decay to neutrinos is excluded in the $WbZt$ channel) and assuming
 the Higgs boson decays to \bbbar.
 To avoid overlap between selected events from the two analyses, in the
 \wbx\ analysis events with $\geq$6 jets and $\geq$3 \bjet s are 
-rejected\footnote{As will be explained later in Section~\ref{sec:htxEVT}, another orthogonality
+rejected\footnote{As will be explained in Section~\ref{sec:htxEVT}, another orthogonality
 cut will be applied in the low \bjet\ multiplicity channel of the \htx\ analysis.}.
 
 \begin{table}\centering
@@ -325,16 +325,22 @@ cut will contribute to the \wbx\ analysis.}\label{tab:jetmult}
 
 \section{Background and signal modeling}\label{sec:datasets}
 
-All samples are enterely modeled using Monte Carlo simulation with the exception
-of QCD multi-jet events, which are derived using data-driven techniques, and 
-background from $W$ production in association with jets ($W$+jets), which is obtained
-from Monte Carlo at first but then is normalized to data.
+Signal and background samples are 
+modeled using Monte Carlo simulation, with the exception
+of QCD multi-jet background, which is estimated 
+using data-driven techniques (see Section~\ref{sec:qcdbkg}). 
+%, and background from $W$ production in association with jets ($W$+jets), which is obtained
+%from Monte Carlo at first but then is normalized to data.
 
 The main background for both analyses is $t\bar{t}$ 
 production %in association with jets ($t\bar{t}$+jets)
 and different choices for the generator are made
-in the analyses because of the specific needs of having well
-modeled regions.
+in the analyses because of the very different
+topologies for \ttbar\ production being probed by
+each analysis. Indeed, the \wbx\ search will select \ttbar\ events
+with high-\pt\ objects, while the \htx\ search will
+select \ttbar\ events produced in association with
+multiple heavy flavor jets.
 In the case of the $t\bar{t}$+jets background prediction for the \htx\ analysis 
 further corrections to match the data are applied, due to a mismodeling in the
 heavy- and light-flavour content of the simulated sample 
@@ -342,8 +348,13 @@ heavy- and light-flavour content of the simulated sample
 
 Background from $W$+jets 
 and QCD multi-jet events also contributes, the latter
-entering into the event selection via the misidentification of a jet or a photon as an
-electron or the presence of a non-prompt lepton from, e.g., semileptonic $b$- or $c$-hadron decay.
+entering into the event selection via the misidentification 
+of a jet or a photon as an
+electron or the presence of a 
+non-prompt lepton from, e.g., semileptonic $b$- or $c$-hadron decay.
+In the case of $W$+jets background, the kinematics is modeled
+with the simulation, while the overall normalization and flavor content
+is estimated from data (see Section~\ref{sec:Wjetsnorm}).
 Small background contributions originate from single top quark, $Z$+jets, diboson
 ($WW,WZ,ZZ$), and associated $t\bar{t}V$ ($V=W,Z$) and $t\bar{t}H$ production.
 
@@ -361,7 +372,6 @@ interactions and make use of the  {\tt GEANT4}~\cite{geant}
 detector geometry and response simulation~\cite{atlas_sim}
 with the exception of the signal samples, for which a fast simulation of
 the calorimeter response is used.
-
 All simulated samples are then processed through the same reconstruction 
 software as the data and are reweighted to match 
 the instantaneous luminosity profile in data. For more details
@@ -377,7 +387,7 @@ on the Monte Carlo simulation chain see Section~\ref{sec:generators}.
 Simulated samples of $t\bar{t}$ pair production  in association with jets 
 ($t\bar{t}$+jets or simply $t\bar{t}$ in the following)
 are generated with {\tt MC@NLO} v4.01~\cite{mcatnlo_1,mcatnlo_2,mcatnlo_3} using the {\tt CT10} set of parton distribution functions (PDFs)~\cite{ct10},
-with the parton-shower and fragmentation steps being performed by 
+with parton-shower and fragmentation modelled with
 {\tt HERWIG} v6.520~\cite{HERWIG}.
 The top quark mass is assumed to be  $172.5\gev$ and 
 the samples are normalized to approximate next-to-next-to-leading-order 
@@ -390,35 +400,34 @@ the {\tt MSTW} prescription~\cite{mstw2}.
 These samples are used in the \wbx\ analysis.
 
 \subsubsection{$t\bar{t}$ ALPGEN}\label{subsec:alpgen}
-Simulated samples of $t\bar{t}$+jets are generated using
+Additional simulated samples of $t\bar{t}$+jets are generated using
 %and $W/Z$+jets events are generated using
 the {\tt ALPGEN v2.13}~\cite{ALPGEN} leading-order (LO) generator and the 
 {\tt CTEQ6L1} PDF set~\cite{cteq6}, with parton shower and fragmentation  
-modelled through {\tt HERWIG} v6.520~\cite{HERWIG}.
+modelled with {\tt HERWIG} v6.520~\cite{HERWIG}.
 
 Separate samples are generated for $t\bar{t}$+light jets ($t\bar{t}$+light 
-or $t\bar{t}$+LF in the following, from ``light flavour'') 
+or $t\bar{t}$+LF in the following, for ``light flavour'') 
 with up to three additional light partons ($u$, $d$, $s$ quarks or gluons),
 and for $t\bar{t}$+heavy-flavour jets ($t\bar{t}$+HF in the following), 
 including $t\bar{t}b\bar{b}$ and
 $t\bar{t}c\bar{c}$.  
 The MLM parton-jet matching scheme~\cite{mlm} is used
 in order to avoid double-counting  of partonic configurations
-eventually generated both at the matrix-element calculation level
+generated both at the matrix-element calculation level
 and at the parton-shower evolution step.
 An algorithm based on the angular separation
 between the extra heavy quarks is used to remove 
 the overlap between $t\bar{t}Q\bar{Q}$ ($Q=b,c$) 
 generated from the matrix element calculation and 
-from parton-shower evolution in the  $t\bar{t}$+light samples
-is employed: the matrix-element prediction is chosen over the parton-shower one
+from parton-shower evolution in the  $t\bar{t}$+light samples: 
+the matrix-element prediction is chosen over the parton-shower one
 only when $\Delta R(Q,\bar{Q})>0.4$.
 
 %The algorithm used is implemented in the HFOR tool~\cite{hfor}.
 
 Again a top quark mass of $172.5\gev$ is assumed, and normalisation to the
 approximate NNLO theoretical cross section is used.
-
 These samples are used in the \htx\ analysis.
 
 
@@ -481,7 +490,8 @@ theoretical cross sections~\cite{dibosonxs}.
 
 \subsubsection{Signal samples}\label{subsec:MCsignal}
 
-For \T\ signals, samples corresponding to a singlet $T$ quark 
+
+Samples of \TTbar\ signal, corresponding to a singlet $T$ quark 
 decaying to $Wb$, $Zt$ and $Ht$ are generated with the {\tt PROTOS v2.2} 
 LO generator~\cite{AguilarSaavedra:2009es,protos} 
 using the  {\tt MSTW2008} LO PDF set, and interfaced to {\tt PYTHIA} for 
@@ -535,7 +545,7 @@ The same values are used in the graphical representation of Figure~\ref{fig:vlqB
 \resizebox{1.\textwidth}{!}{
 \begin{tabular}{c c c c c}
 \toprule
- $m_{T}$ ($\gev$) & $\sigma(TT)$ (pb) & Scale uncertainties (pb) & PDF+$\alpha_s$ uncertainties (pb) & Total uncertainty (pb)\\
+ $m_{T}$ ($\gev$) & $\sigma(\TTbar)$ (pb) & Scale uncertainties (pb) & PDF+$\alpha_s$ uncertainties (pb) & Total uncertainty (pb)\\
 \midrule
 350 	&  5.083 		&  +0.140/-0.285 		&  + 0.569/-0.488 		&  +0.586/-0.565		\\
 400 	&  2.296 		&  +0.066/-0.130 		&  + 0.269/-0.221 		&  +0.277/-0.257		\\
@@ -559,8 +569,114 @@ of $m_{T}$ as computed by {\tt HATHOR}, and corresponding scale and PDF uncertai
 
 
 
-\subsection{$W$+jets background normalisation}\label{sec:Wjetsnorm}
+\subsection{Multi-jet background}\label{sec:qcdbkg}
 
+QCD multi-jet production can pass the event selection in the electron
+channel via non-prompt electrons from e.g. heavy flavor quark decays, via 
+photons mis-identified as electrons in the case of $\gamma\to e^+ e^-$
+conversion or random track overlap,
+or via jets mis-identified as electrons
+because they left a high amount of energy in the electromagnetic calorimeter
+like in the case of $\pi^0$ and $\eta$ decays into two close-by photons.
+For events in the muon channel the main contributions come from
+non-prompt leptons from semileptonic $b$- and $c$-hadron decays.
+
+Although these kind of events rarely pass the quality cuts 
+required at the lepton reconstruction stage, the production cross section
+is so high (orders  of magnitude more than \ttbar\ production)
+that the contribution to the background from QCD multi-jet events is
+no longer negligible. The QCD multi-jet contribution
+is estimated via data-driven 
+methods, since simulation is not expected to predict this contribution
+with the desired level of accuracy.
+
+The technique used is called ``Matrix Method'' (MM in the following)~\cite{ttbar_3pb}.  
+The basic principle is to divide the data sample into two categories, one
+of events passing the standard selection criteria (``tight'' events), the
+other including also leptons satisfying looser requirements (``loose'' events). 
+%Loose leptons can reasonably  be considered as either {\it real} leptons or {\it fake} leptons, and it can be assumed that most of the real leptons will pass the tight selection. A good evaluation of multi-jet contamination is then that fraction of fake events going through the tight requirements. 
+A pictorial representation of the sampling space 
+is shown in Figure~\ref{fig:mmspace}. Typically tight lepton selection requirements
+are the same as the ones used in the analysis (Sections~\ref{sec:electrons}
+and~\ref{sec:muons}) where then some cuts are either removed or changed
+to obtain the loose sample. In the case of muons, loose muons have the same
+requirements as the preselected  
+muons but without the mini-isolation cut. Loose electrons  have the same
+requirements as the preselected  
+electrons but the \texttt{tight++} requirement is replaced
+by the \texttt{medium++} one, isolation requirements are omitted and
+a condition to veto against conversion is added.
+
+\begin{figure}[htb]\begin{center}
+	\subfigure[]{\label{fig:mmspace}
+  	\includegraphics[width=0.4\textwidth]{vlq_analysis/figures/mm_regions}}
+	\caption{The events passing loose selection criteria can be real or fake leptons.
+        Tighter requirements are added to the loose selection ones to define a sample of
+        tight event which will contain real leptons as well as multi-jet background events.}
+\end{center}\end{figure}
+
+Defining $N^\mathrm{loose}_\mathrm{real}$ ($N^\mathrm{loose}_\mathrm{fake}$) as the number of
+real (fake) leptons events satisfying the loose selection requirements, and
+$N^\mathrm{tight}_\mathrm{real}$ ($N^\mathrm{tight}_\mathrm{fake}$) as the number of
+real (fake) leptons events satisfying the tight selection requirements, we can write:
+
+\begin{eqnarray}
+\label{eqn:intro-mm-Nloose}
+N^\mathrm{loose} & = & N^\mathrm{loose}_\mathrm{real} + N^{loose}_\mathrm{fake}, \\
+\label{eqn:intro-mm-Ntight}
+N^\mathrm{tight} & = & \epsilon_\mathrm{real}N^\mathrm{loose}_\mathrm{real} + \epsilon_\mathrm{fake}N^\mathrm{loose}_\mathrm{fake}.
+\end{eqnarray}
+where $\epsilon_\mathrm{real}$ ($\epsilon_\mathrm{fake}$) is the 
+{\it efficiency} of selecting real (fake) loose leptons as tight leptons, i.e.:
+\begin{eqnarray}
+\label{eqn:intro-mm-real}
+\epsilon_\mathrm{real} & = & \dfrac{N^\mathrm{tight}_\mathrm{real}}{N^\mathrm{loose}_\mathrm{real}}, \\
+\label{eqn:intro-mm-fake}
+\epsilon_\mathrm{fake} & = & \dfrac{N^\mathrm{tight}_\mathrm{fake}}{N^\mathrm{loose}_\mathrm{fake}}.
+\end{eqnarray}
+
+
+The number we are interested in to estimate the background from
+multi-jet events is the amount of fake leptons contaminating the 
+tight selection region, which can be obtained from
+the previous equations as:
+
+\begin{equation}
+N^\mathrm{tight}_\mathrm{fake} = \frac{\epsilon_\mathrm{fake}}{\epsilon_\mathrm{real} - \epsilon_\mathrm{fake}}(N^\mathrm{loose} \epsilon_\mathrm{real} - N^\mathrm{tight}).
+\label{eqn:intro-mm-tight_fake}
+\end{equation}
+
+An important condition for this method to work is that 
+$\epsilon_\mathrm{real} \gg \epsilon_\mathrm{fake}$, which 
+holds for the loose and tight lepton definition used
+as $\epsilon_\mathrm{real}\sim 1$, while $\epsilon_\mathrm{fake}$
+is in general well below 1.
+Efficiencies for fake and real leptons to pass the 
+tight requirement are measured in dedicated control regions, 
+enriched respectively with fake and real leptons.
+The efficiency $\epsilon_\mathrm{fake}$ is measured in control regions
+with small \met\ and \mtw\ (a triangular cut on the
+sum of the two variables is applied), which is
+enriched in multi-jet background. In contrast,
+the efficiency $\epsilon_\mathrm{real}$ is in general measured 
+in regions with high \met\ or \mtw\
+to select leptons from a leptonic decay of a $W$
+boson.
+While $\epsilon_\mathrm{real}$ shows basically
+no dependence on the event topology and has
+a stable value close to unity,  $\epsilon_\mathrm{fake}$ 
+needs to be parametrized 
+as a function of various kinematic variables
+and ranges between 0.2 and 0.5.
+
+In Appendix~\ref{app:qcdmm} the MM used for the estimation
+of multi-jet background in the muon channel is
+described in some more details, as the author of this dissertation
+directly contributed to its development.
+
+
+\subsection{$W$+jets background normalisation}\label{sec:Wjetsnorm}
+ 
 For the $W$+jets background, a normalisation from data for the shapes 
 obtained from the simulation is derived since the simulation 
 overestimates the number of $W$+jets events
@@ -639,110 +755,6 @@ unity the sum:
 
 
 
-\subsection{Multi-jet background}\label{sec:qcdbkg}
-
-QCD multi-jet production can pass the event selection in the electron
-channel as non-prompt electrons from e.g. heavy flavor quark decays, as 
-electrons from photon conversions or as jets mis-identified as electrons
-because they left a high amount of energy in the electromagnetic calorimeter
-like in the case of $\pi^0$ and $\eta$ decays into two close-by photons.
-For events in the muon channel the main contributions come from
-non-prompt leptons from semileptonic $b$- and $c$-hadron decays.
-
-Although these kind of events rarely pass the quality cuts 
-required at the lepton reconstruction stage, the production cross section
-is so high (orders  of magnitude more than \ttbar\ production)
-that the contribution to the background from QCD multi-jet events is
-no longer negligible. The QCD multi-jet contribution
-is estimated via data-driven 
-methods, since simulation is not expected to predict this contribution
-with the desired level of accuracy.
-
-The technique used is called ``Matrix Method'' (MM in the following)~\cite{ttbar_3pb}.  
-The basic principle is to divide the data sample into two categories, one
-of events passing the standard selection criteria (``tight'' events), the
-other including also leptons satisfying looser requirements (``loose'' events).
-Loose leptons can reasonably  be considered as either {\it real} leptons or {\it fake} leptons,
-and it can be assumed that most of the real leptons will pass the tight selection. 
-A good evaluation of multi-jet contamination is then that fraction of fake events going
-through the tight requirements. A pictorial representation of the sampling space 
-is shown in Figure~\ref{fig:mmspace}. Typically tight selection requirements
-are the same as the ones defined to reconstruct the lepton (Sections~\ref{sec:electrons}
-and~\ref{sec:muons}) where then some cuts are either removed or changed
-to obtain the loose sample. In the case of muons, loose muons have the same
-requirements as the preselected  
-muons but without the mini-isolation cut. Loose electrons  have the same
-requirements as the preselected  
-electrons but the \texttt{tight++} requirement is replaced
-by the \texttt{medium++} one, isolation requirements are omitted and
-a condition to veto against conversion is added.
-
-\begin{figure}[htb]\begin{center}
-	\subfigure[]{\label{fig:mmspace}
-  	\includegraphics[width=0.4\textwidth]{vlq_analysis/figures/mm_regions}}
-	\caption{The events passing loose selection criteria can be real or fake leptons.
-        Tighter requirements are added to the loose selection ones to define a sample of
-        tight event which will contain real leptons as well as multi-jet background events.}
-\end{center}\end{figure}
-
-Defining $N^\mathrm{loose}_\mathrm{real}$ ($N^\mathrm{loose}_\mathrm{fake}$) as the number of
-real (fake) leptons events satisfying the loose selection requirements, and
-$N^\mathrm{tight}_\mathrm{real}$ ($N^\mathrm{tight}_\mathrm{fake}$) as the number of
-real (fake) leptons events satisfying the tight selection requirements, we can write:
-
-\begin{eqnarray}
-\label{eqn:intro-mm-Nloose}
-N^\mathrm{loose} & = & N^\mathrm{loose}_\mathrm{real} + N^{loose}_\mathrm{fake}, \\
-\label{eqn:intro-mm-Ntight}
-N^\mathrm{tight} & = & \epsilon_\mathrm{real}N^\mathrm{loose}_\mathrm{real} + \epsilon_\mathrm{fake}N^\mathrm{loose}_\mathrm{fake}.
-\end{eqnarray}
-where $\epsilon_\mathrm{real}$ ($\epsilon_\mathrm{fake}$) is the 
-{\it efficiency} of selecting real (fake) loose leptons as tight leptons, i.e.:
-\begin{eqnarray}
-\label{eqn:intro-mm-real}
-\epsilon_\mathrm{real} & = & \dfrac{N^\mathrm{tight}_\mathrm{real}}{N^\mathrm{loose}_\mathrm{real}}, \\
-\label{eqn:intro-mm-fake}
-\epsilon_\mathrm{fake} & = & \dfrac{N^\mathrm{tight}_\mathrm{fake}}{N^\mathrm{loose}_\mathrm{fake}}.
-\end{eqnarray}
-
-
-The number we are interested in to estimate the background from
-multi-jet events is the amount of fake leptons contaminating the 
-tight selection region, which can be obtained from
-the previous equations as:
-
-\begin{equation}
-N^\mathrm{tight}_\mathrm{fake} = \frac{\epsilon_\mathrm{fake}}{\epsilon_\mathrm{real} - \epsilon_\mathrm{fake}}(N^\mathrm{loose} \epsilon_\mathrm{real} - N^\mathrm{tight}).
-\label{eqn:intro-mm-tight_fake}
-\end{equation}
-
-An important condition for this method to work is that 
-$\epsilon_\mathrm{real} \gg \epsilon_\mathrm{fake}$, which 
-holds as $\epsilon_\mathrm{real}\sim 1$, while $\epsilon_\mathrm{fake}$
-is in general well below 1.
-Efficiencies for fake and real leptons to pass the 
-tight requirement are measured in dedicated control regions, 
-enriched respectively with fake and real leptons.
-The $\epsilon_\mathrm{fake}$ is measured in control regions
-with small \met\ and \mtw\ (a triangular cut on the
-sum of the two variables is applied), which is
-enriched in multi-jet event contributions.
-The $\epsilon_\mathrm{real}$ is in general measured 
-on the contrary in regions with high \met\ or \mtw\
-to select leptons from a leptonic decay of a $W$
-boson.
-While $\epsilon_\mathrm{real}$ shows basically
-no dependence on the event topology and has
-a stable value close to unity,  $\epsilon_\mathrm{fake}$ 
-needs to be parametrized in terms of some observables
-towards which it shows dependency and its values
-vary, typically, between 0.2 and 0.5.
-
-In Appendix~\ref{app:qcdmm} the MM used for the estimation
-of multi-jet background in the muon channel is
-described in some more details, as the author of this dissertation
-directly contributed to its development.
-
 
 \section{Comparison between data and prediction}\label{sec:datamcpresel}
 
@@ -762,10 +774,9 @@ of the distributions (referred to as ``shape and normalization'' systematic unce
 
 The individual sources of systematic uncertainties are treated as uncorrelated, while
 for each source the correlations are 
-kept across processes and channels. Most of the systematic uncertainties
-are common to the two analyses presented with only minor differences, e.g. in the
-\htx\  analysis the systematic uncertainty affecting the jet energy scale is
-split into 9 components, while it has a unique component in the \wbx\  analysis. 
+kept across processes and channels. Most systematic uncertainties
+are common to the two analyses presented with only minor differences
+that are discussed below.
 The full list of systematic uncertainties considered is presented in 
 Table~\ref{tab:SystSummary}, labelling them as  ``normalization-only'' 
 or ``shape and normalization'' systematic uncertainties and indicating the number of components.
@@ -807,7 +818,7 @@ List of systematic uncertainties considered in the two analyses.
 We label as ``N'' (``SN'') uncertainties taken as ``normalization-only'' 
 (both ``shape'' and ``normalization'')
 for all processes and channels. 
-Some of the systematic uncertainties are split into more 
+Some of the systematic uncertainties are split into several 
 components for a more
 accurate treatment. }
 \end{table}
@@ -836,7 +847,7 @@ following the related systematic uncertainties considered are described.
 \label{sec:syst_lepID}
 
 In Sections~\ref{sec:electrons} and~\ref{sec:muons} the reconstruction
-of leptons was introduced, explaining the need of adjusting the
+of leptons was introduced, explaining the need of correcting for small
 differences between data and simulation in the efficiency for
 reconstruction, identification and trigger. This is done by
 applying to Monte Carlo samples some scale factors derived 
@@ -861,16 +872,16 @@ A total uncertainty on the signal and background acceptances of 2\% is estimated
 To check the accuracy of the lepton momentum scale and resolution
 simulated samples of $Z\to \ell^+\ell^-$ and $J/\psi \to \ell^+\ell^-$
 are used to reconstruct the particles masses (for electrons also
- $W\to e\nu$ events are used from  $E/p$  studies).
-The small discrepancies observed between data and simulation are
-corrected adjusting lepton energy scale and resolution in Monte Carlo
-samples only for muons, while for electrons energy resolution corrections
-are also applied only to Monte Carlo samples but energy scale corrections
+ $W\to e\nu$ events are used from  $E/p$  studies). In the case of muons,
+the small discrepancies observed between data and simulation are
+corrected adjusting muon energy scale and resolution in the Monte Carlo
+samples. In the case of electrons, energy resolution corrections
+are applied only to Monte Carlo samples but energy scale corrections
 are applied to data in all detector regions and to simulation only in 
 the calorimeter transition region.
 The systematic uncertainties on these scale factors are varied
 separately and the result on the total yields are are at the 
-sub-percent level and considered therefore ngligible in the analyses.
+sub-percent level and considered therefore negligible in the analyses.
 
 \subsubsection{JVF efficiency}
 \label{sec:syst_jvf}
@@ -878,11 +889,11 @@ sub-percent level and considered therefore ngligible in the analyses.
 Recalling the cut applied on the JVF variable (Section~\ref{sec:jets}) 
 of $|{\rm JVF}|>0.5$, the per-jet efficiency of this requirement
 is estimated in $Z(\to \ell^+\ell^-)$+1-jet events both in data and
-Monte Carlo simulation. Event enriched in hard-scatter jets are selected
+Monte Carlo simulation. Events enriched in hard-scatter jets are selected
 separately from events enriched in jets from pile-up interactions and
 specific efficiency and inefficiency scale factors are measured.
 Scale factors for pileup jets are estimated to be consistent with 1, while
-efficiency for hard-scatter jets goes from $\sim$1.03 for jets with $\pt=25\gev$
+efficiency scale factors for hard-scatter jets goes from $\sim$1.03 for jets with $\pt=25\gev$
 down to $\sim$1.01 for jets with $\pt>150\gev$.
 An overall event weight is obtained as the product of all per-jet scale factors
 and is applied to the Monte Carlo samples.
@@ -899,12 +910,12 @@ has been derived combining the information from both test-beam
 and collision data and Monte Carlo
 simulation~\cite{jes, insitu5,insitu6}.  
 Pile-up activity produces an additional source of systematic 
-uncertainty which depends on the number of primary vertices
+uncertainty that depends on the number of primary vertices
 and on the average number of interactions per bunch crossing $<\mu>$. 
 %The first estimate of the effect of pile-up on the jet energy scale uncertainty was developed in 2011~\cite{insitu6}, and subsequently validated with in situ momentum balance techniques in studies of the 2012 data.
 Momentum balance techniques in $Z$+jets, $\gamma$+jets and 
 multi-jet events are combined to derive a small residual correction
-for jets in the transverse momentum range $20\gev<\pt<\sim1\tev$.
+for jets in the transverse momentum range $20\gev<\pt\lesssim 1\tev$.
 
 The overall variation due to JES systematic uncertainty 
 evaluated in the central detector region 
@@ -918,12 +929,13 @@ the varied $\pt$ of the jets and all the variables involving jets are also
 recomputed.
 
 As can be seen in Table~\ref{tab:SystSummary}, for the \htx\ analysis
-the JES systematic uncertainty is split into 8
+the JES systematic uncertainty is split into eight
 uncorrelated components, each with a different jet $\pt$ and $\eta$
 dependence, which are treated independently.
 The \wbx\ instead uses the total JES uncertainty as a single uncertainty
 resulting from the sum in quadrature of all individual sources.
-
+The reasons for this different treatment are explained in the
+corresponding analysis chapters.
 
 
 \subsubsection{Jet energy resolution}
@@ -934,7 +946,7 @@ with two {\em in-situ} techniques~\cite{jes}
 as a function of the jet transverse momentum and pseudo-rapidity.
 It is consistent in data and Monte Carlo simulation and no corrections
 are needed.
-To account for the systematic uncertainty the quadratic difference 
+To account for the systematic uncertainty, the quadratic difference 
 between the JER in data and in simulated samples is used
 to smear the energy of jets in Monte Carlo simulation and a new
 varied sample is obtained with a different normalisation and 
@@ -956,7 +968,7 @@ in Monte Carlo events $b$ ($c$) jet efficiencies are corrected with scale factor
 of 0.9--1.0 (1.1--1.2) depending on $\pt$, light jet efficiencies are corrected 
 with a  scale factor of $\sim$1.3.
 Every jet in the Monte Carlo simulated events is corrected depending
-on its flavour, $\pt$ and $\eta$
+on its flavour, $\pt$ and $\eta$.
 The uncertainty on these scale factors is 
 between 7\% and 13\% for $b$ jets, between 15\% and 39\% for $c$ jets,
 and $\sim$25\% for light jets.
@@ -965,7 +977,7 @@ As was reported in Table~\ref{tab:SystSummary}, the systematic uncertainty
 on \btag ging (\ctag ging) efficiency is divided into nine (five) independent 
 components that correspond to an eigenvector from the diagonalization of the
 matrix containing the information on the total uncertainty 
-per $\pt$ bin and the bin-to-bin correlations (see~\cite[Appendix P]{VHbb} for
+per $\pt$ bin and the bin-to-bin correlations (see Reference~\cite{VHbb} for
 more details).
 These individual sources of systematic uncertainties 
 are taken as uncorrelated between $b$, $c$ jets, and
@@ -1009,34 +1021,39 @@ searches at the LEP collider~\cite{Read:451614}.
 The fundamental principle of this technique is that, in order to 
 exclude or verify a theory predicting some kind of signal over some other kind
 of background, both ``background only'' and ``signal plus background''
-hypotheses have to be tested. Once a test statistic $Q$ has been chosen
-analysis-wise, two confidence levels (CL) are defined for the two hypotheses:
+hypotheses, denoted by $\mathcal{H}_{b}$ and $\mathcal{H}_{s+b}$ 
+respectively, have to be tested. Once a test statistic $Q$ has been chosen
+for the analysis, two confidence levels (CL) are defined for the two hypotheses:
 \begin{eqnarray}\label{eq:clbclsb}
 \cls{b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{b}),\\
 \cls{s+b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{s+b}),
 \end{eqnarray}
 with $Q_{\rm obs}$ being the observed value in data of the 
-test statistic. It is good to identify well separated test statistic
-distributions in order to be able to clearly distinguish between 
-events consistent with the backgroud only prediction and events
-showing deviations consistent with the signal+background hypothesis.
+test statistic. %It is good to identify well separated test statistic distributions in order to be able to clearly distinguish between  events consistent with the backgroud only prediction and events showing deviations consistent with the signal+background hypothesis.
 
 
-The \cls{s}\ is then defined as the ratio of the two:
+The \cls{s}\ is then defined as the ratio of the two above confidence levels:
 \begin{equation}\label{eq:cls}
 \cls{s} = \cls{s+b}/\cls{b}
 \end{equation}
 and its meaning is given by its relation with the confidence 
 level $CL$ for the exclusion of the signal hypothesis 
-$(1 - \cls{s}) \leq CL$.
+$\cls{s} \leq 1 - CL$. 
 %i.e. values of $\cls{s}<0.05$ 
+For instance, signal hypotheses for which
+$\cls{s} < 0.05$ are deemed to be excluded at the 95\% CL.
+Using $\cls{s}$ instead of $\cls{s+b}$ minimizes the possibility 
+of mistakenly excluding a small signal due 
+to a downward background fluctuation, 
+as this would lead to small values of both $\cls{s+b}$ and $\cls{b}$.
+
 Similarly, the confidence level for excluding the background only
 hypothesis is the $p$-value $1 - \cls{b}$ and the value required to claim 
 discovery is of $\sim 10^{-7}$. The motivation that led to
 the definition of \cls{s} instead of using \cls{s+b}, which also
 corresponds to the confidence level in excluding the signal+background
 hypothesis, is that the latter might wrongly exclude scenarios to
-which the analysis is simply not sensitive to like is the general case
+which the analysis is simply non-sensitive to like is the general case
 for searches for rare events.
 
 \begin{figure}[htb]\begin{center}
@@ -1124,8 +1141,7 @@ Monte Carlo modeling of the \ttbar+HF component.
 
 The systematic uncertainties are treated inside the \mclimit\ 
 package~\cite{mclimitATLAS} developed for ATLAS heavy quark
-searches based on the original \mclimit\ code developed
-by the CDF collaboration~\cite{Heinrich:7587,Junk:8128,Junk:7904}.
+searches based on the original \mclimit\ code~\cite{Heinrich:7587,Junk:8128,Junk:7904}.
 Here the  histograms are interpolated between the nominal and the 
 systematically shifted templates bin-by-bin, with a shift of $+0.5\sigma$
 corresponding to half way between the nominal and the $+1\sigma$ shifted template.
@@ -1136,9 +1152,5 @@ Pseudoexperiments are generated using these interpolated numbers for
 all systematic uncertainties.
 
 
-In absence of data excess over background prediction, 
-signal cross section
-values yielding
-$\cls{s}\leq 0.05$ are considered to be exclude
-at $\geq$95\% CL.
+%In absence of data excess over background prediction, signal cross section values yielding $\cls{s}\leq 0.05$ are considered to be exclude at $\geq$95\% CL.
 
