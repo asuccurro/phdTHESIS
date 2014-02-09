@@ -1,15 +1,14 @@
 % fmfssBBTT.t2 -- generated automatically from fmfssBBTT.log
 % Think twice before editing THIS file!
-\fmfL(21.9359,12.2053,rt){$\bar {T}$}
-\fmfL(18.65475,11.87727,lt){$T$}
-\fmfL(12.55545,15.94566,t){$g$}
-\fmfL(18.21016,19.81696,lt){$H$}
-\fmfL(15.94597,16.16875,r){$t$}
-\fmfL(4.2123,-1.11765,rt){$g$}
-\fmfL(4.2123,31.11838,rb){$g$}
-\fmfL(55.78917,-1.11765,lt){\textcolor {red}{$\bar {t}, \bar {t}$}$, \bar {b}$}
-\fmfL(60.9024,7.52974,l){$Z, H,$ \textcolor {red}{$W^-$}}
-\fmfL(61.97328,17.54538,l){\textcolor {red}{$W^{-}$}}
-\fmfL(60.90216,22.47177,l){\textcolor {blue}{$W^{+}$}}
-\fmfL(58.82033,27.04924,lb){$\bar {b}$}
-\fmfL(55.78917,31.11838,lb){\textcolor {blue}{$W^{+}$}}
+\fmfL(22.78217,24.12604,b){$T$}
+\fmfL(36.06294,26.15665,b){$t$}
+\fmfL(36.82893,17.63997,t){$H$}
+\fmfL(22.7821,5.88918,t){$\bar {T}$}
+\fmfL(-0.93208,7.52641,r){$g$}
+\fmfL(-0.93181,22.48883,r){$g$}
+\fmfL(55.80241,-1.13506,lt){\textcolor {red}{$\bar {t}, \bar {t}$}$, \bar {b}$}
+\fmfL(60.91875,7.52641,l){$Z, H,$ \textcolor {red}{$W^-$}}
+\fmfL(61.99025,12.45964,l){\textcolor {blue}{$W^{+}$}}
+\fmfL(61.99017,17.55565,l){\textcolor {red}{$W^{-}$}}
+\fmfL(58.83551,27.07327,lb){$\bar {b}$}
+\fmfL(55.80241,31.14955,lb){\textcolor {blue}{$W^{+}$}}

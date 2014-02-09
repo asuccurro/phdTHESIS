@@ -3,62 +3,68 @@
 \hskip-5ex
 \subfigure[]{\label{fig:feyndSSBB}
     \begin{fmfgraph*}(60,30)
-      \fmfleft{i1,i2}
+      \fmfleft{i1,i2,i3,i4,i5,i6,i7,i8}
       \fmfright{o1,o2,o3,o4,o5,o6,o7,o8}
-      \fmflabel{$g$}{i1}
-      \fmflabel{$g$}{i2}
+      \fmflabel{$g$}{i6}
+      \fmflabel{$g$}{i3}
       %\fmflabel{$b$}{}
       %%%%
-      \fmf{phantom}{o1,v4,v3,v2,v1,i1}
-      \fmf{phantom}{o2,v4,v3,v2,v1,i1}
-      \fmf{phantom}{o3,v5,v3,v2,v1,i1}
-      \fmf{phantom}{o4,v5,v3,v2,v1,i1}
-      %%%%
-      \fmf{phantom}{o5,v7,v6,v2,v1,i2}
-      \fmf{phantom}{o6,v7,v6,v2,v1,i2}
-      \fmf{phantom}{o7,v8,v6,v2,v1,i2}
-      \fmf{phantom}{o8,v8,v6,v2,v1,i2}
+      \fmf{phantom}{i1,a3,a2,a1,o1}
+      \fmf{phantom}{i2,b3,b2,b1,o2}
+      \fmf{phantom}{i3,c3,c2,c1,o3}
+      \fmf{phantom}{i4,d3,d2,d1,o4}
+      \fmf{phantom}{i5,e3,e2,e1,o5}
+      \fmf{phantom}{i6,f3,f2,f1,o6}
+      \fmf{phantom}{i7,g3,g2,g1,o7}
+      \fmf{phantom}{i8,h3,h2,h1,o8}
+      \fmffreeze
+      \fmf{curly}{i3,c3}
+      \fmf{curly}{i6,f3}
+      \fmf{plain}{c3,f3}
+      \fmffreeze
       %%%%
       \fmflabel{$\bar{b}$}{o1}
-      \fmflabel{\textcolor{red}{$W^{-}$}}{o2}
+      \fmflabel{\textcolor{red}{$W^{-}$}}{o3}
       \fmflabel{\textcolor{blue}{$W^{+}$}}{o4}
       \fmflabel{\textcolor{red}{$W^{-}$}}{o8}
-      \fmflabel{\textcolor{blue}{$W^{+}$}}{o6}
+      \fmflabel{\textcolor{blue}{$W^{+}$}}{o7}
       \fmflabel{$b$}{o5} 
-      \fmf{plain}{o1,v4}
-      \fmf{photon}{o2,v4}
+      \fmf{plain}{o1,b1}
+      \fmf{photon}{o3,b1}
       %%
-      \fmf{photon}{o4,v3}
-      \fmf{plain}{o5,v7}
-      \fmf{photon}{o6,v7}
-      \fmf{photon}{o8,v6}
+      \fmf{photon}{o4,c2}
+      \fmf{plain}{o5,f1}
+      \fmf{photon}{o7,f1}
+      \fmf{photon}{o8,f2}
       %%%
-      \fmf{plain,label=$\bar{B}$}{v2,v3}
-      \fmf{plain,label=$B$}{v2,v6}
-      \fmf{plain,label=$\bar{t}$,l.dist=-7thick}{v4,v3}
-      \fmf{plain,label=$t$}{v7,v6}
-      \fmf{curly}{i1,v1}
-      \fmf{curly}{i2,v1}
-      \fmf{curly,label=$g$,l.dist=-7thick}{v1,v2}
+      \fmf{plain,label=$\bar{B}$}{c2,c3}
+      \fmf{plain,label=$B$}{f2,f3}
+      \fmf{plain,label=$\bar{t}$}{c2,b1}
+      \fmf{plain,label=$t$}{f2,f1}
     \end{fmfgraph*}
-}\hskip5ex
+}\hskip10ex
 \subfigure[]{\label{fig:feyndSSTT}
     \begin{fmfgraph*}(60,30)
-      \fmfleft{i1,i2}
+      \fmfleft{i1,i2,i3,i4,i5,i6,i7,i8}
       \fmfright{o1,o2,o3,o4,o5,o6,o7,o8}
-      \fmflabel{$g$}{i1}
-      \fmflabel{$g$}{i2}
-      %\fmflabel{$b$}{}
-      %%%%
-      \fmf{phantom}{o1,v4,v3,v2,v1,i1}
-      \fmf{phantom}{o2,v4,v3,v2,v1,i1}
-      \fmf{phantom}{o3,v5,v3,v2,v1,i1}
-      \fmf{phantom}{o4,v5,v3,v2,v1,i1}
-      %%%%
-      \fmf{phantom}{o5,v7,v6,v2,v1,i2}
-      \fmf{phantom}{o6,v7,v6,v2,v1,i2}
-      \fmf{phantom}{o7,v8,v6,v2,v1,i2}
-      \fmf{phantom}{o8,v8,v6,v2,v1,i2}
+      \fmflabel{$g$}{i6}
+      \fmflabel{$g$}{i3}
+      \fmf{phantom}{i2,v23,v22,v21,o2}
+      \fmf{phantom}{i6,v63,v62,v61,o6}
+      %\fmffreeze
+      \fmf{phantom}{i1,v13,v12,v11,o1}
+      \fmf{phantom}{i3,v33,v32,v31,o3}
+      \fmf{phantom}{i4,v43,v42,v41,o4}
+      \fmf{phantom}{i5,v53,v52,v51,o5}
+      \fmf{phantom}{i7,v73,v72,v71,o7}
+      \fmf{phantom}{i8,v83,v82,v81,o8}
+      \fmffreeze
+      \fmf{curly}{i3,v33}
+      \fmf{curly}{i6,v63}
+      \fmf{plain,label=$\bar{T}$}{v33,v32}
+      \fmf{plain,label=$T$}{v62,v63}
+      \fmffreeze
+      \fmf{plain}{v33,v63}
       %%%%
       \fmflabel{\textcolor{red}{$\bar{t}, \bar{t}$}$, \bar{b}$}{o1}
       \fmflabel{$Z, H,$ \textcolor{red}{$W^-$}}{o3}
@@ -66,25 +72,20 @@
       %\fmflabel{\textcolor{red}{$W^{-}$}}{o2}
       \fmflabel{\textcolor{blue}{$W^{+}$}}{o8}
       \fmflabel{\textcolor{red}{$W^{-}$}}{o5}
-      \fmflabel{\textcolor{blue}{$W^{+}$}}{o6}
+      \fmflabel{\textcolor{blue}{$W^{+}$}}{o4}
       %\fmflabel{}{o5} 
-      \fmf{plain}{o1,v4}
-      \fmf{photon}{o3,v4}
+      \fmf{plain}{o1,v32}
+      \fmf{photon}{o3,v32}
       %%
       %\fmf{photon}{o4,v3}
-      \fmf{photon}{o5,v7}
-      \fmf{photon}{o6,v7}
-      \fmf{plain}{o7,v8}
-      \fmf{photon}{o8,v8}
+      \fmf{photon}{o5,v51}
+      \fmf{photon}{o4,v51}
+      \fmf{plain}{o7,v71}
+      \fmf{photon}{o8,v71}
       %%%
-      \fmf{plain,label=$\bar{T}$,l.dist=-6thick}{v2,v4}
-      \fmf{plain,label=$T$}{v2,v6}
       %\fmf{plain,label=$\bar{t}$,l.dist=-7thick}{v4,v3}
-      \fmf{plain,label=$t$}{v6,v8}
-      \fmf{dashes,label=$H$,l.dist=-6thick}{v7,v6}
-      \fmf{curly}{i1,v1}
-      \fmf{curly}{i2,v1}
-      \fmf{curly,label=$g$,l.dist=-7thick}{v1,v2}
+      \fmf{plain,label=$t$}{v62,v71}
+      \fmf{dashes,label=$H$}{v62,v51}
     \end{fmfgraph*}
 }
 \end{fmffile}

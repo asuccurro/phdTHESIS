@@ -4,7 +4,7 @@
 
 Starting from this chapter, and continuing in Chapter~\ref{chap:wbx} 
 and Chapter~\ref{chap:htx}, we are going to describe two 
-searches for pair production of vector-like top 
+searches for pair production of vector-like top quark 
 partners (\TTbar) performed in the 
 single-lepton\footnote{In the following, with the 
 word ``lepton'' we will 
@@ -12,15 +12,15 @@ refer to either an electron or a muon, assumed to
 originate from the decay of a $W$ boson or a $\tau$ lepton.}
 %with its associated neutrino, which is considered to be the only particle contributing to the transverse missing energy \met.}
  channel. These analyses
-are optimized for different final states and are thus complementary.
-The first search focuses on  vector-like top partner decay channels with high 
+are optimized for different \T\ quark decay modes and are thus complementary.
+The first search focuses on  \T\ quark decay channels with high 
 branching ratio to 
 a $W$ boson and a bottom quark, while the second search is optimized for events with 
-high BR to a Higgs boson and a top quark. 
+high branching ratio to a Higgs boson and a top quark. 
 %and is performed using the full dataset of pp collisions at the \cme\ of \rts=8~\tev\ collected during 2012 at the ATLAS detector, consinsting in 20.34~\ifb, while
-%search for vector-like top partners with high BR to $Ht$
+%search for vector-like top partners with high branching ratio to $Ht$
 %uses a partial dataset of the same data, amounting to 14.3~\ifb.
-The analyses are performed using part
+The analyses are performed using most
 of the dataset of pp collisions at
 \rts=8~\tev\ collected during 2012
 by the ATLAS detector, corresponding to an integrated luminosity of  14.3~\ifb.
@@ -32,13 +32,13 @@ describes the strategy for vector-like quark searches adopted
 by the Exotics group of the ATLAS collaboration.
 Section~\ref{sec:presel}
 summarises the common event preselection for data and few general concepts in the
-analyses design. Section~\ref{sec:datasets}
-describes the Monte Carlo samples used in the searches, which
-are in general common to both analyses with only few exceptions that are reported,
-and how the multi-jet background from QCD events is
-obtained. 
+design of the analyses. Section~\ref{sec:datasets}
+describes the Monte Carlo samples used, which
+are in general common to both analyses with only few exceptions,
+and how the multi-jet background is estimated. 
 Finally, Section~\ref{sec:systematics} 
-describes the general treatment of systematic uncertainties.
+describes the general treatment of systematic uncertainties
+and Section~\ref{sec:cls} explains the concepts of the statistical analysis.
 %The two analyses are then presented in details in Chapter~\ref{chap:wbx} 
 %(\TTbar\ pairs decaying to \wbx\ ) and in Chapter~\ref{chap:htx}
 %(\TTbar\ pairs decaying to \htx\ ). The final results are presented 
@@ -47,19 +47,19 @@ describes the general treatment of systematic uncertainties.
 \section{General strategy for vector-like quark pairs searches}\label{sec:strategy}
 
 The phenomenology for vector-like quarks was described in Section~\ref{sec:THvlq}.
-Here we will briefly review the concepts on which
-the strategy for the searches has been built. Table~\ref{tab:vlqdecays} collects the 
+Here we will briefly review the basic concepts on which
+the strategy for the searches has been built. Table~\ref{tab:vlqdecays} summarizes the 
 decay modes for vector-like quarks in the singlet and doublet models. It is evident
 from the richness of the possible decay modes, combined with the unpredicted mass
-of the heavy objects that could span from few hundreds \gev s (down to the values exluded by
-previous searches) up to  $\sim 1$~\tev\ (since we focus on pair production of vector-like
-quarks, which is favoured up to this mass scale)% as shown in Figure~\ref{fig:vlqxsec}), 
+of the heavy objects that could span from few hundreds \gev s up to  
+$\sim 1$~\tev\footnote{This mass interval derives from the results of previous searches,
+which excluded low mass values, and from the fact that we focus on pair production of vector-like
+quarks, which is favoured up to the $\sim 1$~\tev\ mass scale.}% as shown in Figure~\ref{fig:vlqxsec}), 
 that is impossible to cover it with a single inclusive search.
 
 \begin{table}[htb]\centering
-\begin{tabular}{|lc|lc|}\toprule
-\hskip2ex VLQ &  Decay & \hskip2ex VLQ  & Decay \\ 
-\hskip1ex Singlets &  modes & \hskip1ex Doublets & modes\\
+\begin{tabular}{|cc|cc|}\toprule
+Singlet & Decay modes & Doublet & Decay modes\\
 & & &\\
 $T(+2/3)$ & $W^+b,\, Ht,\, Zt$ & \multirow{2}{*}{$\quad\bigg(\begin{array}{c}T \\ B\end{array}\bigg)$} & $W^+b,\, Ht,\, Zt$\\ 
 & & & $ W^-t,\, Hb,\, Zb$\\
@@ -80,28 +80,37 @@ $Y(-4/3)$ & $W^-b$ & \multirow{2}{*}{$\quad\bigg(\begin{array}{c}B \\ Y\end{arra
 %        quarks in proton-proton collisions at $\sqrt{s}=8$~TeV~\cite{Aguilar-Saavedra:2013qpa}.}
 %\end{center}\end{figure}
 
-The BR of vector-like top and bottom partners 
-(\T\ and \B, respectively) to the allowed decay modes depends
+The branching ratio of vector-like top and bottom partners 
+%(\T\ and \B, respectively) 
+to the allowed decay modes depends
 on the mass of the heavy quark and on the considered model (in our case, singlet or doublet
 scenario), as shown in Figure~\ref{fig:vlqBRs}.
-Considering that the exotic heavy quark $Y$ ($X$)
-decay into one of the \T\ (\B) decay channels
-and that the searches that are presented are not
+Considering that the exotic heavy quark $Y$ decays
+exclusively into $W^{-}b$, one of the allowed
+decay modes of the \T\ quark, and since
+the searches that are presented are not
 sensitive to the charge of the vector-like quark,
-with \T\ (\B) we will in general refer both to
-\T\ and $Y$ (\B\ and $X$). 
+the results presented for the  \T\ quark are
+valid also for the $Y$ quark. A similar
+argument applies to the \B\ and $X$ quarks. 
+%Considering that the exotic heavy quark $Y$ ($X$)
+%decay into one of the \T\ (\B) decay channels
+%and that the searches that are presented are not
+%sensitive to the charge of the vector-like quark,
+%with \T\ (\B) we will in general refer both to
+%\T\ and $Y$ (\B\ and $X$). 
 Each decay mode has specific features that allow to define powerful, optimized searches.
-Therefore in order to exploit this opportunity and at the same time stay as model independent
+Therefore in order to exploit this potential and at the same time stay as model independent
 as possible, different searches for vector-like quarks 
-are performed, each of them sensitive to specific channels.
+are performed, each of them being sensitive to specific decay modes.
 These searches can eventually be combined to maximize 
 the overall sensitivity.
 To ensure a comprehensive coverage of the phase space, a two-dimensional plane is defined 
 (Figure~\ref{fig:2dplane}) as follows:
-along the Y axes is the BR of the decay 
-modes with a Higgs boson in the final state; along the X axis is the BR 
+along the Y axis is the branching ratio of the decay 
+modes with a Higgs boson in the final state; along the X axis is the branching ratio 
 of the decay modes with a $W$ boson in the final state.
-The BR to the channel with a $Z$ boson in the final state is then fixed by the 
+The branching ratio to the channel with a $Z$ boson in the final state is then fixed by the 
 unitarity requirement BR($T/B\to  Zt/b$) = 1 - BR($T/B\to Ht/b$) - BR($T/B\to Wb/t$).
 A plane of this kind is defined for every vector-like quark mass point considered 
 in the analysis. Each point of each plane therefore represents a 
@@ -115,13 +124,16 @@ analyses probing the different signatures.
   	\includegraphics[width=0.47\textwidth]{vlq_analysis/figures/fig_02a.eps}}
 	\subfigure[]{\label{fig:vlbBRs}
   	\includegraphics[width=0.47\textwidth]{vlq_analysis/figures/fig_02b.eps}}
-	\caption{Branching ratio of vector-like top (a) and bottom (b) partners as a function of the heavy quark mass $m_T$ and $m_B$ respectively~\cite{ATLAS-CONF-2013-056} for singlet and doublet models.\label{fig:vlqBRs}}
+	\caption{Branching ratios for the decay of vector-like top (a) and bottom (b) partners as a function of the heavy quark mass $m_T$ and $m_B$ respectively~\cite{ATLAS-CONF-2013-056} for singlet and doublet models.\label{fig:vlqBRs}}
 \end{center}\end{figure}
 
 \begin{figure}[h!bt]\begin{center}
-	\subfigure{
-        \input{vlq_analysis/plane}}
-       	\caption{Two dimensional plane used to represend the comprehensive scan of model mixing. Searches 
+	\subfigure[]{
+        \input{vlq_analysis/planeT}}
+	\subfigure[]{
+        \input{vlq_analysis/planeB}}
+       	\caption{Two dimensional plane used to represent the comprehensive scan of model mixing, for (a) \T\ quark
+        and (b) \B\ quark. Searches 
         with a Higgs boson in the final state cover the top left corner; searches with a $Z$ boson in the 
         final state cover the bottom left corner; searches with a $W$ boson in the final state cover the 
         bottom right corner. The shaded area labelled as ``forbidden'' is the unphysical region where
@@ -130,8 +142,8 @@ analyses probing the different signatures.
 
 
 As of the date of the writing of this dissertation, four complementary 
-and quasi model-independent analyses have been performed by the Exotics working
-group on the partial dataset of 14.3~\ifb\ of pp collision data at 
+and quasi model-independent searches have been performed by the ATLAS Exotics working
+group using 14.3~\ifb\ of pp collision data at 
 $\sqrt{s}=8\tev$.  Briefly summarized below are
 two analyses that investigated multi-lepton channels and two that probed 
 single-lepton channels.
@@ -145,10 +157,10 @@ either through the Standard Model process or a beyond-SM source such as
 pair production of scalar color-octets (sgluons) or gluinos, with subsequent 
 decays to top quark pairs.
 The approach of this search is to select via restrictive cuts (that also
-impose a veto on a $Z\to l\bar{l}$ boson) the eventual signal
+impose a veto on a $Z\to \ell^+\ell^-$ boson) the eventual signal
 and compare the final counts with the expected yields from background sources.
-Figure~\ref{fig:feyndSS} shows how the decays of \BB\ and \TT\ 
-can contribute to the same-sign dilepton signature. From this it is easy to
+Figure~\ref{fig:feyndSS} illustrates typical decays of \BB\ and \TT\ 
+that contribute to the same-sign dilepton signature. From this it is easy to
 understand that this search will be mainly covering the bottom right corner
 of the \BBbar\ two dimensional plane of Figure~\ref{fig:2dplane} and the top 
 left corner of the same plane for \TTbar.
@@ -201,7 +213,8 @@ BR plane of Figure~\ref{fig:2dplane}.
 
 \begin{figure}[hbt]
 \begin{center}
-        \myskip\input{vlq_analysis/figures/feyndiag_TT_HtX}\myskip
+        %\myskip\input{vlq_analysis/figures/feyndiag_TT_HtX}\myskip
+        \myskip\input{vlq_analysis/figures/feyndiag_TT_vlq}\myskip
 	\caption{Feynman diagrams for the $\TTbar\to Ht+X$
         decay entering the high jet and \bjet\ multiplicity final states.
         Assuming the single lepton condition, in this picture all the bosons 

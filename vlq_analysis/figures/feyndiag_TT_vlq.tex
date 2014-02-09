@@ -1,0 +1,88 @@
+\begin{fmffile}{fmfTThtxwbx}
+\unitlength=1mm
+\hskip-5ex
+\subfigure[]{\label{fig:feyndTThtx}
+\begin{fmfgraph*}(60,50)
+  \fmfleft{i1,i2,i3,i4,i5,i6,i7,i8}
+  \fmfright{o1,o2,o3,o4,o5,o6,o7,o8}
+  \fmflabel{$g$}{i3}
+  \fmflabel{$g$}{i6}
+  %\fmflabel{$b$}{}
+%%%%
+  \fmf{phantom}{i1,v11,v12,v13,v14,o1}
+  \fmf{phantom}{i2,v21,v22,v23,v24,o2}
+  \fmf{phantom}{i3,v31,v32,v33,v34,o3}
+  \fmf{phantom}{i4,v41,v42,v43,v44,o4}
+  \fmf{phantom}{i5,v51,v52,v53,v54,o5}
+  \fmf{phantom}{i6,v61,v62,v63,v64,o6}
+  \fmf{phantom}{i7,v71,v72,v73,v74,o7}
+  \fmf{phantom}{i8,v81,v82,v83,v84,o8}
+  \fmffreeze
+  \fmflabel{$\bar{t}, \bar{t}, \bar{b}$}{o1}
+  \fmflabel{$Z, H, W^-$}{v33}
+  \fmf{plain}{o1,v32}
+  %\fmf{photon,label=$Z, H, W^-$}{o3,v32}
+  \fmf{photon}{o3,v32}
+  \fmf{plain,label=$t$}{v62,v73}
+  \fmflabel{$b$}{o6}
+  \fmf{photon,label=$W^+$}{v74,v73}
+  \fmf{plain}{o8,v74,o7}
+  \fmflabel{$l^+$}{o8}
+  \fmflabel{$\bar{\nu}_l$}{o7}
+  \fmf{plain}{o6,v73}
+
+  \fmf{dashes,label=$H$}{v62,v53}
+  \fmf{plain}{o5,v53,o4}
+  \fmflabel{$b$}{o5}
+  \fmflabel{$\bar{b}$}{o4}
+  %\fmf{photon,label=$H$}{v10,v11}
+  %\fmf{plain}{v9,v10,v12}
+  %\fmflabel{$b$}{v9}
+  %\fmflabel{$\bar{b}$}{v12}
+  \fmf{plain,label=$T$}{v62,v61}
+  \fmf{plain,label=$\bar{T}$}{v32,v31}
+  \fmf{curly}{i3,v31}
+  \fmf{curly}{i6,v61}
+  \fmf{plain}{v31,v61}
+\end{fmfgraph*}
+}\hskip10ex
+\subfigure[]{\label{fig:feyndTTwbx}
+\begin{fmfgraph*}(60,50)
+      \fmfleft{i1,i2,i3,i4,i5,i6,i7,i8}
+      \fmfright{o1,o2,o3,o4,o5,o6,o7,o8}
+      \fmflabel{$g$}{i6}
+      \fmflabel{$g$}{i3}
+      %\fmflabel{$b$}{}
+      %%%%
+      \fmf{phantom}{i1,v11,v12,v13,o1}
+      \fmf{phantom}{i2,v21,v22,v23,o2}
+      \fmf{phantom}{i3,v31,v32,v33,o3}
+      \fmf{phantom}{i4,v41,v42,v43,o4}
+      \fmf{phantom}{i5,v51,v52,v53,o5}
+      \fmf{phantom}{i6,v61,v62,v63,o6}
+      \fmf{phantom}{i7,v71,v72,v73,o7}
+      \fmf{phantom}{i8,v81,v82,v83,o8}
+      \fmffreeze
+      \fmf{curly}{i3,v31}
+      \fmf{curly}{i6,v61}
+      \fmf{plain}{v31,v61}
+      \fmffreeze
+      %%%%
+      \fmflabel{$b$}{o8}
+      \fmflabel{$l^+$}{o6}
+      \fmflabel{$\nu$}{o5}
+      \fmf{plain}{o8,v62}
+      \fmf{plain}{o6,v53,o5}
+      \fmf{photon,label=$W^+$}{v62,v53}
+      \fmflabel{$\bar{b}$}{o4}
+      \fmflabel{$q$}{o2}
+      \fmflabel{$q$}{o1}
+      \fmf{plain}{o4,v32}
+      \fmf{plain}{o1,v23,o2}
+      \fmf{photon,label=$W^-$}{v23,v32}
+      %%
+      \fmf{plain,label=$\bar{T}$}{v32,v31}
+      \fmf{plain,label=$T$}{v62,v61}
+    \end{fmfgraph*}
+}
+\end{fmffile}

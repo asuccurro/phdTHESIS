@@ -1,0 +1,40 @@
+\begin{fmffile}{fmfTTwbx}
+\unitlength=1mm
+\begin{fmfgraph*}(60,50)
+      \fmfleft{i1,i2,i3,i4,i5,i6,i7,i8}
+      \fmfright{o1,o2,o3,o4,o5,o6,o7,o8}
+      \fmflabel{$g$}{i6}
+      \fmflabel{$g$}{i3}
+      %\fmflabel{$b$}{}
+      %%%%
+      \fmf{phantom}{i1,v11,v12,v13,o1}
+      \fmf{phantom}{i2,v21,v22,v23,o2}
+      \fmf{phantom}{i3,v31,v32,v33,o3}
+      \fmf{phantom}{i4,v41,v42,v43,o4}
+      \fmf{phantom}{i5,v51,v52,v53,o5}
+      \fmf{phantom}{i6,v61,v62,v63,o6}
+      \fmf{phantom}{i7,v71,v72,v73,o7}
+      \fmf{phantom}{i8,v81,v82,v83,o8}
+      \fmffreeze
+      \fmf{curly}{i3,v31}
+      \fmf{curly}{i6,v61}
+      \fmf{plain}{v31,v61}
+      \fmffreeze
+      %%%%
+      \fmflabel{$b$}{o8}
+      \fmflabel{$l^+$}{o6}
+      \fmflabel{$\nu$}{o5}
+      \fmf{plain}{o8,v62}
+      \fmf{plain}{o6,v53,o5}
+      \fmf{photon,label=$W^+$}{v62,v53}
+      \fmflabel{$\bar{b}$}{o4}
+      \fmflabel{$q$}{o2}
+      \fmflabel{$q$}{o1}
+      \fmf{plain}{o4,v32}
+      \fmf{plain}{o1,v23,o2}
+      \fmf{photon,label=$W^+$}{v62,v53}
+      %%
+      \fmf{plain,label=$\bar{T}$}{v32,v31}
+      \fmf{plain,label=$T$}{v62,v61}
+    \end{fmfgraph*}
+\end{fmffile}
