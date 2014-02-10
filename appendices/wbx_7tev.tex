@@ -1,62 +1,66 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
-\chapter{Search for $T\bar{T}\to WbWb$ with pp collisions at \rts = 7~\tev}\label{app:wbx7tev}
+\chapter{Search for $T\bar{T}\to WbWb$ at \rts = 7~\tev}\label{app:wbx7tev}
 
-Using 4.7\ifb\ of the data collected by the ATLAS experiment
-in 2011 from pp collisions at a \cme\ of \rts = 7~\tev
+Using 4.7~\ifb\ of the data collected by the ATLAS experiment
+in 2011 from pp collisions at a \cme\ of \rts = 7~\tev,
 the first quasi-model independent search for heavy vector-like
 top quarks was performed~\cite{ATLAS:2012qe}. Originally designed for searches
-of chiral fourth-generation top partners, this 
+for chiral fourth-generation top partners, this 
 analysis is optimized for the $T\bar{T}\to WbWb$ 
 decay channel.
-
-\section{Analysis}
+The \wbx\ search discussed in this dissertation 
+represents basically the update to the 8~\tev\ dataset
+of the original published search at  7~\tev.
 
 The analysis strategy as well as the event selection is
 basically identical to what is described in Chapter~\ref{chap:wbx},
 with minor differences mainly due to the different datasets
 used (2011 data from pp collisions at \rts = 7~\tev~\cite{topCommonObjects2012}
 versus 2012 data from pp collisions at \rts = 8~\tev~\cite{topCommonObjects2013}).
-The \wbx\ search is, indeed, the upgrade of this analysis.
 Small differences include also minor variations in the recontruction
-of the boosted $W$ bosons (see also Figure~\ref{fig:7tevmwhad}): for the 7~\tev\ (8~\tev) analysis
-the mass window is between 60\gev and 110 (120)\gev\ and \wii\ 
-has $\pt(jj)>150 (200)\gev$. 
-
-
+of the boosted $W$ bosons: for the 7~\tev\ (8~\tev) analysis
+the mass window is between 60~\gev and 110 (120)~\gev\ and \wii\ 
+has $\pt(jj)>150 (200)\gev$. The effect of these choices can
+be observed in Figure~\ref{fig:7tevmwhad}, where the distributions
+of the two types of $W$ boson candidates are compared for the 7~\tev\ and 8~\tev\ analyses.
+In particular the harder cut on the \pt\ of the dijet system for the  \wii\ 
+in the 8~\tev\ analysis allows a better mass reconstruction and more background
+rejection.
 \begin{figure}[h!tb]\begin{center}
 	\subfigure[]{\label{fig:7tevmwhadI}
-          	\includegraphics[width=0.47\textwidth]{appendices/figures/wbwb/fig_01a}}
+          	\includegraphics[width=0.42\textwidth]{appendices/figures/wbwb/fig_01a}}
 	\subfigure[]{\label{fig:8tevmwhadI}
-                \includegraphics[width=0.45\textwidth]{wbx_analysis_14ifb/figures/confnoteplots/VLQAna_WbX_WpreselType2_M_ELEMUON_preselW_NOMINAL.eps}}\\
+                \includegraphics[width=0.40\textwidth]{wbx_analysis_14ifb/figures/confnoteplots/VLQAna_WbX_WpreselType1_M_ELEMUON_preselW_NOMINAL.eps}}\\
 	\subfigure[]{\label{fig:7tevmwhadII}
-          	\includegraphics[width=0.47\textwidth]{appendices/figures/wbwb/fig_01b}}
+          	\includegraphics[width=0.42\textwidth]{appendices/figures/wbwb/fig_01b}}
 	\subfigure[]{\label{fig:8tevmwhadII}
-                \includegraphics[width=0.45\textwidth]{wbx_analysis_14ifb/figures/confnoteplots/VLQAna_WbX_WpreselType2_M_ELEMUON_preselW_NOMINAL.eps}}
+                \includegraphics[width=0.40\textwidth]{wbx_analysis_14ifb/figures/confnoteplots/VLQAna_WbX_WpreselType2_M_ELEMUON_preselW_NOMINAL.eps}}
 	\caption[bla]{Distribution of the reconstructed mass for 
         (a-b) \wi\ and (c-d) \wii\ candidates
         for the combined electron and muon channels after preselection,
-        prior to apply the mass window cut, for the 7\tev\ (a-c) and 8\tev\ (b-d) analyses.
+        prior to apply the mass window cut, for the 7~\tev\ (a-c) and 8~\tev\ (b-d) analyses.
         %\input{wbx_analysis_14ifb/figures/confnoteplots/commoncaption.tex}
         \label{fig:7tevmwhad}}
 \end{center}\end{figure}
-
 Table~\ref{tab:wbx7tevselection} summarises and compares the event selections
-of the two analyses. Figure~\ref{fig:78tevDRlnu} shows the
+of the two analyses. 
+Figure~\ref{fig:78tevDRlnu} shows the
 distributions for the $\Delta R(\ell,\nu)$ variable in the
-two analyses, which easily justifies the different cut choice
-in the new search. The discriminating variable used 
+two analyses, which has a tighter cut 
+in the 8~\tev\  search. The discriminating variable used 
 to build the binned log-likelihood ratio, in the same 
-way as presented for the 8\tev\ search, is reconstructed
+way as presented for the 8~\tev\ search, is reconstructed
 as described in Section~\ref{sec:wbxDISCR}. Figure~\ref{fig:7tevmreco}
-show the distributions in the two search channels.
-The results that were obtained are reported in the following section.
+show the distributions in the two search channels, while Table~\ref{tab:yields7tev}
+reports the yields observed and expected in the \loose\ and \tight\ selections.
 
-\begin{table}[htb]
-\begin{center}
+
+\begin{table}[!htb]
+\begin{center}\small
 \begin{tabular}{p{3cm}cc}
 \toprule
-Selection & 7\tev & 8\tev \\
+Selection & 7~\tev & 8~\tev \\
 \midrule
 %\multirow{10}{*}{Preselection} & \multicolumn{2}{c}{One electron or muon$^{(*)}$}  \\\cmidrule{2-3}
 \ldelim\{{12}{12ex}[\hskip4ex Preselection] & \multicolumn{2}{c}{One electron or muon$^{(+)}$}  \\\cmidrule{2-3}
@@ -91,16 +95,15 @@ Selection & 7\tev & 8\tev \\
 \multicolumn{3}{c}{\footnotesize (x) The boosted $W$ reconstruction for 7\tev\ and 8\tev analyses is slightly different, see text.}\\
 \bottomrule
 \end{tabular}
-\caption{Summary of event selection requirements for the 7\tev\ and 8\tev analyses.}
+\caption{Comparison of event selection requirements for the 7~\tev\ and 8~\tev analyses.}
 \label{tab:wbx7tevselection}
 \end{center}
 \end{table}
-
-\begin{figure}[h!bt]\begin{center}
+\begin{figure}[!hbt]\begin{center}
 	\subfigure[]{\label{fig:7tevDRlnu}
-                \includegraphics[width=0.47\textwidth]{appendices/figures/wbwb/figaux_08}}
+                \includegraphics[width=0.4\textwidth]{appendices/figures/wbwb/figaux_08}}
 	\subfigure[]{\label{fig:8tevDRlnu}
-                \includegraphics[width=0.44\textwidth]{wbx_analysis_14ifb/figures/confnoteplots/VLQAna_WbX_DRLepMet_ELEMUON_cutflow1234_NOMINAL.eps}}
+                \includegraphics[width=0.38\textwidth]{wbx_analysis_14ifb/figures/confnoteplots/VLQAna_WbX_DRLepMet_ELEMUON_cutflow1234_NOMINAL.eps}}
         \caption[bla]{Distribution of $\Delta R(\ell,\nu)$ in the (a) 7~\tev\ and
         (b) 8~\tev\ analysis after applying all previous selection requirements (see text for details),
         except for the requirements on $\Delta R(\ell,\nu)$ in the
@@ -108,30 +111,63 @@ Selection & 7\tev & 8\tev \\
         %\input{wbx_analysis_14ifb/figures/confnoteplots/commoncaption.tex}
         \label{fig:78tevDRlnu}}
 \end{center}\end{figure}
-\begin{figure}[h!tb]\begin{center}
+
+
+\begin{figure}[!htb]\begin{center}
 	\subfigure[]{
   	\includegraphics[width=0.45\textwidth]{appendices/figures/wbwb/fig_02a}}
 	\subfigure[]{
   	\includegraphics[width=0.45\textwidth]{appendices/figures/wbwb/fig_02b}}
 	\caption{Reconstructed mass distribution in the (a) \loose\ and (b) \tight\ 
-        channel for the 7\tev\ analysis.\label{fig:7tevmreco}}
+        channel for the 7~\tev\ analysis.\label{fig:7tevmreco}}
 \end{center}\end{figure}
 
+\begin{table}
+\begin{center}
+\begin{tabular}{lD{,}{\,\pm\,}{-1}D{,}{\,\pm\,}{-1}}
+\toprule
+ &  \multicolumn{1}{c}{{\loose} selection} & \multicolumn{1}{c}{{\tight} selection}  \\
+\midrule
+$t\bar{t}$  \rule{0pt}{2.6ex} \rule[-1.2ex]{0pt}{0pt} & 94 , 26 & 4.2 , 2.9 \\
+$W$+jets   & 5.4 , 4.2     & 2.0 , 1.4\\
+$Z$+jets   & 0.5 , 0.4     & 0.2 , 0.2 \\
+Single top & 7.2 , 1.7     & 1.1 , 0.5 \\
+Dibosons   & 0.1 , 0.1     & 0.04 , 0.04  \\
+Multi-jet  & 5.9 , 8.4     & 3.8 , 3.2 \\
+\midrule
+Total background  \rule{0pt}{2.6ex} \rule[-1.2ex]{0pt}{0pt} & 113 , 30 & 11.3 , 4.8 \\
+Data& \multicolumn{1}{c}{$\;\;\;\,122$} & \multicolumn{1}{c}{$\;\;\;\,11$}  \\
+\midrule
+$t^\prime\bar{t^\prime}(500\GeV)$\rule{0pt}{2.6ex} \rule[-1.2ex]{0pt}{0pt}  \\
+$Wb$ : $Zt$ : $Ht$ = 1.0 : 0.0 : 0.0 \rule{0pt}{2.6ex} \rule[-1.2ex]{0pt}{0pt} & 47.4 , 6.3 & 28.2 , 3.6 \\
+$Wb$ : $Zt$ : $Ht$ = 0.5 : 0.0 : 0.5 \rule{0pt}{2.6ex} \rule[-1.2ex]{0pt}{0pt} & 25.4 , 3.6 & 11.2 , 1.5 \\
+\bottomrule
+\end{tabular}
+\caption{Number of observed events, integrated over the whole mass spectrum, compared to the SM expectation for
+the combined $e$+jets and $\mu$+jets channels after the {\sl loose} and {\sl tight} selections.
+The expected signal yields assuming $m_{t^\prime}=500\gev$ for different values of
+$BR(t^\prime \to Wb)$, $BR(t^\prime \to Zt)$ and $BR(t^\prime \to Ht)$
+are also shown.
+ The case of $BR(t^\prime \to Wb)=1$
+corresponds to a fourth-generation $t^\prime$ quark. The quoted
+uncertainties include both statistical and systematic contributions.\label{tab:yields7tev}}
+\end{center}
+\end{table}
 
 
-\section{Results}
 
-The Branching Ratio plane was originally proposed in
+The scan in the branching ratio plane was originally proposed in
 this analysis, with the aim of generalizing the
-search for a fourth generation chiral top partner $t'$.
-The strategy for building it is, therefore, the same as presented in
-Section~\ref{sec:strategy}.
+search for a fourth generation chiral top partner $t'$. 
+%The strategy for building it is, therefore, the same as presented in Section~\ref{sec:strategy}.
 The obtained
 exclusion for vector-like $T$ for different models is
 shown in Figure~\ref{fig:7tevwbwb}.
 The 95\% CL limits obtained for a
 fourth generation chiral top partner
 as a function of its mass are shown in Figure~\ref{fig:7tevCL}.
+A fourth-generation $t'$ quark (and an exotic $Y$ quark as well) with mass 
+lower than $656\gev$ was excluded at 95\% confidence level.
 
 
 \begin{figure}[h!tb]\begin{center}
@@ -145,8 +181,8 @@ The weak-isospin singlet and doublet points are shown as plain circle and star s
 \begin{figure}[h!tb]\begin{center}
 	\subfigure{
   	\includegraphics[width=0.7\textwidth]{appendices/figures/wbwb/fig_03}}
-	\caption{Observed (solid line) and expected (dashed line) 95\% CL upper limits on the \TTbar\ 
-        cross-section as a function of the \T\ quark mass. The surrounding shaded bands correspond 
+	\caption{Observed (solid line) and expected (dashed line) 95\% CL upper limits on the $t'\bar{t}'$
+        cross-section as a function of the $t'$ quark mass. The surrounding shaded bands correspond 
         to the $\pm$1 and $\pm$2 standard deviations around the expected limit. 
         The thin red line and band show the theoretical prediction and its $\pm$1 standard deviation uncertainty. \label{fig:7tevCL}}
 \end{center}\end{figure}
