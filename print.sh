@@ -1,3 +1,4 @@
+lpr -P HP-LaserJet-P4010 -o sides=two-sided-long-edge -o page-ranges=85-240 -o fit-to-page -o page-left=50 -o page-right=70 -o page-bottom=-100 main.ps
 lpr -P HP_HP_Color_LaserJet_4700 -o sides=two-sided-long-edge -o page-ranges=93-94 -o fit-to-page -o page-left=50 -o page-right=70 -o page-bottom=-100 toprint.ps
 
 #lpr -P HP_HP_Color_LaserJet_4700 -o sides=two-sided-long-edge -o media=A4 -o scaling=80 -o page-ranges=93-94 main.ps
