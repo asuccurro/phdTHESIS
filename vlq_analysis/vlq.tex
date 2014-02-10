@@ -193,8 +193,9 @@ Figure~\ref{fig:2dplane}.
 
 
 The searches in the single lepton channel are focused on \TT\ 
-decays and are optimized for two distinctive signatures. One search
-exploits the boosted kinematics of the $W$ boson from \T\ decays into $Wb$
+decays and are optimized for two distinctive signatures. One search,
+optimized for events with high branching ratio to $Wb$,
+exploits the boosted kinematics of the $W$ boson from \T\ decays 
 to reconstruct it from its hadronic channel final state 
 particles~\cite{ATLAS-CONF-2013-060} (see Figure~\ref{fig:feyndTTwbx}). The heavy quark invariant mass is 
 then reconstructed pairing the boosted  $W$ boson  with a \bjet\ and this
@@ -202,7 +203,8 @@ distribution is used to perform the statistical analysis. It is evident that thi
 search is going to cover the bottom right corner of the \T\  branching ratio plane 
 of Figure~\ref{fig:2dplane}.
 
-The other search in the single lepton channel considers final states with high
+The other search in the single lepton channel,
+optimized for events with high branching ratio to $Ht$, considers final states with high
 jet and \bjet\ multiplicities as a result of the decay of at least one heavy quark
 into a Higgs boson (assumed to decay into \bbbar) and a top 
 quark~\cite{ATLAS-CONF-2013-018} (see Figure~\ref{fig:feyndTThtx}). The distribution
@@ -426,7 +428,7 @@ only when $\Delta R(Q,\bar{Q})>0.4$.
 
 %The algorithm used is implemented in the HFOR tool~\cite{hfor}.
 
-Again a top quark mass of $172.5\gev$ is assumed, and normalisation to the
+Again a top quark mass of $172.5\gev$ is assumed, and normalization to the
 approximate NNLO theoretical cross section is used.
 These samples are used in the \htx\ analysis.
 
@@ -675,9 +677,9 @@ described in some more details, as the author of this dissertation
 directly contributed to its development.
 
 
-\subsection{$W$+jets background normalisation}\label{sec:Wjetsnorm}
+\subsection{$W$+jets background normalization}\label{sec:Wjetsnorm}
  
-For the $W$+jets background, a normalisation from data for the shapes 
+For the $W$+jets background, a normalization from data for the shapes 
 obtained from the simulation is derived since the simulation 
 overestimates the number of $W$+jets events
 by up to $\sim$20\%, depending on the jet multiplicity.
@@ -735,16 +737,17 @@ to be fitted from data ($F_{c\bar{c},2}, F_{c,2}, F_{light,2}$).
 This is achieved splitting Equation~\ref{eq:nwt} 
 for positively- and negatively-charged lepton events. 
 The flavor scale factors
-are obtained as $K_x = F^{\rm data}_x/F^{\rm MC}_x$, where
-$F^{\rm MC}_x$ are the flavor fractions from simulation.
+are obtained as $K_{x,i} = F^{\rm data}_{x,i}/F^{\rm MC}_{x,i}$, where
+$F^{\rm MC}_{x,i}$ are the flavor fractions from simulation.
 The scale factors obtained for $W+2$jets events 
-are then extrapolated to the
-signal region with at least 4 jets by renormalizing to
-unity the sum: 
-\begin{equation}\label{eq:sfwn}
-%\sum_{\rm x\ flavor} K_{x, {\rm 2\ jets}} F_{x, i\ {\rm jets}}^{\rm MC} = A, \qquad \neq 1 {\rm\ if\ } i \neq 2.
-\sum_{x = b\bar{b}, c\bar{c}, c, light} K_{x,2} F_{x, i}^{\rm MC} = A, \qquad \neq 1 {\rm\ if\ } i \neq 2.
-\end{equation}
+are then applied to  $W$+jets events
+with at least 4 jets by renormalizing to unity the sum of the
+flavor fractions $K_{x,2}F^{\rm MC}_{x,4}$.
+
+%\begin{equation}\label{eq:sfwn}
+%%\sum_{\rm x\ flavor} K_{x, {\rm 2\ jets}} F_{x, i\ {\rm jets}}^{\rm MC} = A, \qquad \neq 1 {\rm\ if\ } i \neq 2.
+%\sum_{x = b\bar{b}, c\bar{c}, c, light} K_{x,2} F_{x, i}^{\rm MC} = A, \qquad \neq 1 {\rm\ if\ } i \neq 2.
+%\end{equation}
 
 %Events are categorised in terms of  multiplicity of $b$ and $c$ 
 %jets and scale factors are

@@ -841,7 +841,7 @@ passed to the next trigger level.
 
 \subsection{Level 2 trigger}\label{sec:lvl2}
 
-Starting from the RoI, the Level 2 trigger (L2) will reduce the 75~kHz to
+Starting from the RoI, the Level 2 trigger (L2, running on computer farms) will reduce the 75~kHz to
 3.5~kHz of events with an average decision time of 40~ms. At this
 stage the information from the trackers is incorporated to the RoI
 to build candidate object (electrons, photons, muons) and 
@@ -850,8 +850,9 @@ quick enough to respect the limit on the decision time.
 
 \subsection{Event filter}\label{sec:lvl3}
 
-The last trigger, Level 3, is called Event Filter (EF) since
-at this point the physics objects are built using the same
+The last trigger, Level 3, is also performed on computer farms like L2 and
+is referred to as Event Filter (EF).
+At this point the physics objects are built using the same
 algorithms as the off-line reconstruction, with looser selections. With an execution time
 amounting to 4~s, the EF reduces the event rate to the goal value
 of 200~Hz.
@@ -879,25 +880,23 @@ needs of the individual subsystems.
 
 For the searches presented in this dissertation, all ATLAS subsystems
 are needed as the physics objects used in the analyses are reconstructed
-using the information from the full detector.
-The table reported in Figure~\ref{fig:dq2012}
-gives the fraction of data considered good for physics analyses 
-for the full 2012 dataset of pp collisions at \rts=8~\tev.
+using the information from the full detector. 
+%The table reported in Figure~\ref{fig:dq2012}
+%gives the fraction of data considered good for physics analyses 
+%for the full 2012 dataset of pp collisions at \rts=8~\tev.
 The data quality efficiency for the data 
 recorded between April and October 2012 (``Period A'' to ``Period G'')
-was slightly lower, about 94-95\%. In the end 
-of these data a total
-integrated luminosity of 14.3~\ifb\ 
-satisfies data quality and single lepton trigger.
+was about 94-95\%\footnote{Data Quality information: \url{https://twiki.cern.ch/twiki/bin/view/AtlasPublic/RunStatsPublicResults2010}.}. 
+Finally, a total integrated luminosity of 14.3~\ifb\ 
+satisfies data quality and single lepton trigger and is
+used for the analyses.
 
-\begin{figure}[htb]\begin{center}
-	\subfigure{
-  	\includegraphics[width=0.7\textwidth]{detector/figures/DQ-eff-table2012pp-AprilDecember2012}}
-	\caption[bla]{Performance of ATLAS subsystems during stable beam conditions
-        for the full pp data taking at \rts=8~\tev (``Period A'' to ``Period L''),
-        leading to a total of 95.5\% of data good for analyses. The table is
-        taken from ATLAS public pages\footnotemark.\label{fig:dq2012}}
-\end{center}\end{figure}
-
-
-\footnotetext{Data Quality information: \url{https://twiki.cern.ch/twiki/bin/view/AtlasPublic/RunStatsPublicResults2010}}
+%\begin{figure}[htb]\begin{center}
+%	\subfigure{
+%  	\includegraphics[width=0.7\textwidth]{detector/figures/DQ-eff-table2012pp-AprilDecember2012}}
+%	\caption[bla]{Performance of ATLAS subsystems during stable beam conditions
+%        for the full pp data taking at \rts=8~\tev (``Period A'' to ``Period L''),
+%        leading to a total of 95.5\% of data good for analyses. The table is
+%        taken from ATLAS public pages\footnotemark.\label{fig:dq2012}}
+%\end{center}\end{figure}
+%\footnotetext{Data Quality information: \url{https://twiki.cern.ch/twiki/bin/view/AtlasPublic/RunStatsPublicResults2010}}
