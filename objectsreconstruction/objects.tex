@@ -487,58 +487,57 @@ structure (see Figure~\ref{fig:jetshapes}).
 
 
 \tocless\subsection{Jet energy calibration}\label{sec:jescalib}
-For our analyses~\cite{topcommon2013} jets are 
+For our analyses~\cite{topcommon2013} jets 
+Jets used in the analyses described in this dissertation are 
 reconstructed using the anti-$k_t$
 algorithm with a radius parameter $R=0.4$ 
 (\texttt{AKT4} algorithm) 
-using calorimeter energy deposits corrected for 
-pile-up energy deposits, effects 
-of non-compensation\footnote{The energy response 
-to hadrons is lower than the response to electrons of the 
-same energy due to the presence of invisible processes.},
-dead detector material and out-of-cluster leakage.
-Other effects affecting jet energy are low momentum particles
-that are deflected by the magnetic field and energy losses in 
-topocluster formation and jet reconstruction~\cite{jes}. 
-Jet energy, measured at the EM scale,
-is calibrated to the hadronic scale following 
-a calibration scheme.
-Of the several energy calibration schemes 
-derived in ATLAS, we will be using the 
-Local Cluster Weighting (LCW) calibration~\cite{LCW1,LCW2}.
+using topoclusters (see Section~\ref{sec:clusters})
+that have been corrected using the Local Cluster Weighting 
+(LCW) calibration scheme~\cite{LCW1,LCW2}.
 This scheme exploits properties of the topoclusters shapes 
 to classify the clusters as ``mainly electromagnetic'' or
-``mainly hadronic'' and then derives the calibration from 
-Monte Carlo simulation of charged and neutral pion events. 
-The correction factors are $\pt$- and $\eta$-dependent
-and obtained from a Monte Carlo sample of \texttt{MC12a}
-\texttt{PYTHIA} inclusive QCD jet events.
+``mainly hadronic''.
+Based on this classification energy corrections are derived 
+from single pion Monte Carlo samples, accounting for the 
+effects of non-compensation\footnote{The energy response 
+to hadrons is lower than the response to electrons of the 
+same energy due to the presence of invisible processes.}, 
+signal losses due to noise 
+threshold effects, and energy lost in non-instrumented regions.
 
-The calibration corrections are applied 
-before the jet reconstruction algorithm is operated, and after 
-the jet is formed a pile-up correction
-is applied in order to subtract the average
-extra energy coming from pp interactions in
-the same or in other bunch crossings.
+% and out-of-cluster leakage.
+%Other effects affecting jet energy are low momentum particles
+%that are deflected by the magnetic field and energy losses in 
+%topocluster formation and jet reconstruction~\cite{jes}. 
+
+Once the jet is reconstructed, a 
+pile-up correction is applied in 
+order to subtract the average extra 
+energy in the jet originating from pp 
+interactions in the same or in other bunch crossings. 
 This pile-up correction depends on the number of primary vertices in an event ($NPV$),
 on the number of average interactions in 
 a luminosity block ($<\mu>$), and is derived in bins of jet $\eta$ in order to
-account for the different geometries of the detector. The
-correction is applied to bring all objects to a 
-reference point with $\mu=0$ and $NPV = 1$
+account for the different geometry of the detector. The
+correction is applied to bring all jets to a 
+reference point corresponding to $\mu=0$ and $NPV = 1$
 
 Finally the jet energy is corrected to the particle
-level using a jet energy scale factor obtained
-from a Monte Carlo sample which does not include
+level using a orrection factor (referred to as 
+{\it jet energy response} obtained from a QCD 
+dijet \texttt{PYTHIA} Monte Carlo sample
+which does not include
 multiple pp interactions, as these have been already
 corrected for.
+
 The jets used for the calibration are isolated jets\footnote{Here an
 isolated jet is a jet which does not have any other
 jet with $\pt>7\gev$
 around a $\Delta R$ cone of 2.5$R$, where $R$ is
 the jet algorithm paramenter, i.e., for the \texttt{AKT4}, 0.4}
 reconstructed in the calorimeter and matched to
-a truth-level jet (also isolated) within $\Delta R<0.3$
+a (also isolated) truth-level jet within $\Delta R<0.3$
 The simulated jet energy response 
 is the ratio between the energy measured in the LC jets ($E_{\rm LC}^j$)
 and the truth jet energy ($E_{\rm truth}^j$). It is measured in bins of
@@ -546,10 +545,10 @@ the truth jet energy and of the calorimeter jet pseudorapidity $\eta_{\rm det}$
 and a bin-by-bin fit is performed to obtain a
 calibration function in terms of $E_{\rm LC}^j$
 binned in $\eta_{\rm det}$.
-The calorimeter jet response is
+The jet response correction is
 shown in Figure~\ref{fig:corr_jet}
 as a function of $\eta_{\rm det}$
-for some values of the jet energy.
+for different values of the jet energy.
 
 
 %%%%%%%%%%%%% EM+JES????? start
