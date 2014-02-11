@@ -14,25 +14,44 @@ We refer to Section~\ref{sec:qcdbkg}
 for the description of the general approach of the
 Matrix Method and will present here the improvements we
 made in the estimation by introducing a parametrization of
-the $\epsilon_\mathrm{fake}$ as a function of the lepton
+the $\epsilon_\mathrm{fake}$ as a function of the leading jet
 transverse momentum and of the minimum of the $\Delta R$ separation
 between the muon and the jets,  min$\Delta R(\mu,j)$.
 These parametrizations for the fake efficiencies 
 are combined with the parametrization
-in terms of muon pseudorapidity, which was used before.
+in terms of muon pseudorapidity (see Figure~\ref{fig:etaDep}), which was used before.
 
-
-The idea is that an increase in leading jet $p_T$ corresponds 
-to higher hadronic activity nearby the lepton, 
-which results in the fact that the event will no 
-longer satisfy the tight selection requirement of 
-isolation $\min\Delta R(\mu,j)>0.4$. This means a lower 
-$\epsilon_\mathrm{fake}$. For the same reason we expect 
-the fake efficiency to be lower for muons closer to jets.
+The idea behind the introduction of the leading jet \pt\ and 
+min$\Delta R(\mu,j)$ dependency for $\epsilon_\mathrm{fake}$ 
+(Figure~\ref{fig:ljptmindrDep})
+is that an increase in leading jet \pt\ (as happens in the
+analyses of interest) corresponds 
+to higher hadronic activity nearby the lepton.
+This results in the fact that the event will no 
+longer satisfy the selection requirement of 
+isolation ($\min\Delta R(\mu,j)>0.4$) which leads to a lower 
+$\epsilon_\mathrm{fake}$ (see Figure~\ref{fig:MMLJpT}). 
+For the same reason we expect 
+the fake efficiency to be lower for muons closer to jets (see Figure~\ref{fig:MMminDR}).
 We also expect these effects to increase with the number of 
-jets in the event, a dependence that should be entering
+jets in the event, a dependence that actually enters
 in the $\epsilon_\mathrm{fake}$ parametrization as a function
-of $\min\Delta R(\mu,j)$ (see Figure~\ref{fig:etaDep} and~\ref{fig:ljptmindrDep}). 
+of $\min\Delta R(\mu,j)$.
+
+\begin{figure}[!htb]\centering
+	\subfigure[]{\label{fig:MMetaR}
+\includegraphics[width=.45\textwidth]{appendices/figures/mujets_mmB/fit_h_lep_eta_muon_real_untagged}}
+	\subfigure[]{\label{fig:MMetaF}
+\includegraphics[width=.45\textwidth]{appendices/figures/mujets_mmB/fit_h_lep_eta_muon_fake_untagged}}
+\caption{Lepton $\eta$ dependency of $\epsilon_\mathrm{real}$ (a) and $\epsilon_\mathrm{fake}$ (b).}\label{fig:etaDep}
+\end{figure} 
+\begin{figure}[!htb]\centering
+        \subfigure[]{\label{fig:MMLJpT}
+        \includegraphics[width=.45\textwidth]{appendices/figures/mujets_mmB/fit_h_lep_LJpT_rb_muon_fake_untagged}}
+        \subfigure[]{\label{fig:MMminDR}
+        \includegraphics[width=.45\textwidth]{appendices/figures/mujets_mmB/fit_h_lep_minDR_muon_fake_untagged}}
+\caption{Parametrization of $\epsilon_\mathrm{fake}$ as a function of the leading jet $p_T$ (a) and of the minimum $\Delta R$ between muon and jets (b). }\label{fig:ljptmindrDep}
+\end{figure} 
 
 The muons are selected as ``tight'' if they pass the standard selection 
 that was used in 2011 top analyses~\cite{topCommonObjects2012} 
@@ -98,14 +117,6 @@ used in that case to exploit the higher statistics, like it's done for
 $\epsilon_\mathrm{real}$ where again the \btag ged events show 
 no significant differences and more statistics 
 for the estimation is available.
-
-\begin{figure}\centering
-\includegraphics[width=.45\textwidth]{appendices/figures/mujets_mmB/fit_h_lep_eta_muon_real_untagged}\includegraphics[width=.45\textwidth]{appendices/figures/mujets_mmB/fit_h_lep_eta_muon_fake_untagged}
-\caption{Lepton $\eta$ dependency of $\epsilon_\mathrm{real}$ (left plot) and $\epsilon_\mathrm{fake}$ (right plot).}\label{fig:etaDep}
-\end{figure} \begin{figure}\centering
-\includegraphics[width=.45\textwidth]{appendices/figures/mujets_mmB/fit_h_lep_LJpT_rb_muon_fake_untagged}\includegraphics[width=.45\textwidth]{appendices/figures/mujets_mmB/fit_h_lep_minDR_muon_fake_untagged}
-\caption{Parametrization of $\epsilon_\mathrm{fake}$ as a function of the leading jet $p_T$ (left plot) and of the minimum $\Delta R$ between muon and jets (right plot). }\label{fig:ljptmindrDep}
-\end{figure} 
 
 \begin{table}\centering
 \begin{tabular}{l c c }
