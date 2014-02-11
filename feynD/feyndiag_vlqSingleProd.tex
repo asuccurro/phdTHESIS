@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{feynmf}
+%\usepackage{feynmp}
+\unitlength=1mm
+%when compiling, do
+%latex file.tex
+%mf '\mode:=localfont; input fmf1'
+%latex file.tex
+%\usepackage[hdivide={1cm, *, 1cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{fmffile}{fmfsingleprod}
+
+\begin{figure}
+\begin{fmfgraph*}(60,30)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$q$}{i1}
+  \fmflabel{$q'$}{i2}
+  \fmflabel{$Q$}{o1}
+  \fmflabel{$q_1$}{o2}
+  \fmf{phantom}{o1,v1,i1}
+  \fmf{phantom}{o2,v2,i2}
+  \fmffreeze
+  \fmf{plain}{o1,v1,i1}
+  \fmf{plain}{o2,v2,i2}
+  \fmf{photon,label=$V*$}{v1,v2}
+\end{fmfgraph*}
+\begin{fmfgraph*}(60,30)
+  \fmfleft{i1,i2}
+  \fmfright{o1,o2}
+  \fmflabel{$q$}{i1}
+  \fmflabel{$q'$}{i2}
+  \fmflabel{$Q$}{o1}
+  \fmflabel{$q_1$}{o2}
+  \fmf{phantom}{o1,v1,v2,i1}
+  \fmf{phantom}{o2,v1,v2,i2}
+%  \fmffreeze
+  \fmf{plain}{o1,v1,o2}
+  \fmf{plain}{i1,v2,i2}
+  \fmf{photon,label=$V*$}{v1,v2}
+\end{fmfgraph*}
+\end{figure}
+
+\end{fmffile}
+\end{document}

@@ -1,0 +1,77 @@
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{.45\textwidth}{.45\textwidth}
+%\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.6\textwidth}
+
+\begin{pgfscope}
+\pgfsetendarrow{\pgfarrowlargepointed{6pt}}
+\pgfsetlinewidth{1.5pt}
+
+\begin{pgftranslate}{\pgfpoint{0.05\textwidth}{0.05\textheight}}
+%\begin{pgftranslate}{\pgfpoint{0.1\textwidth}{0.15\textheight}}
+  {
+    %\color{black}
+    \color{black!50!red}
+    \pgfputat{\pgfxy(3.5,-0.5)}{\pgfbox[left,base]{BR($T\to Wb$)}}
+  }
+  {
+    \begin{pgfrotateby}{\pgfdegree{90}}
+      {
+        \color{black!50!red}
+        \pgfputat{\pgfxy(3.5,0.4)}{\pgfbox[left,base]{BR($T\to Ht$)}}
+      }
+    \end{pgfrotateby}
+  }
+  {
+    \pgfsetlinewidth{1.5pt}
+    \color{gray!30!white}%\color{light-gray}
+    \pgfmoveto{\pgfxy(5,0)}
+    \pgflineto{\pgfxy(5,5)}
+    \pgflineto{\pgfxy(0,5)}
+    %\pgfstroke
+    \pgffill
+  }
+  {
+    %\color{black}
+    \pgfputlabelrotated{0.5}{\pgfxy(0,5)}{\pgfxy(5,0)}{8pt}{\pgfbox[center,base]{Forbidden}}
+  }
+  \begin{pgfscope}
+    \pgfmoveto{\pgfxy(5,0)}
+    \pgflineto{\pgfxy(0,0)}
+    \pgflineto{\pgfxy(0,5)}
+    {
+      \color{yellow!30!white}
+      \pgfclip
+      \pgfcircle[fill]{\pgfxy(.5,4)}{35pt}
+    }
+    {
+      \pgfputat{\pgfxy(0.15,3.6)}{\pgfbox[left,base]{\large{\color{black!70!red}$Ht$}}}
+    }
+    {
+      \color{yellow!30!white}
+      \pgfcircle[fill]{\pgfxy(.6,.6)}{35pt}
+    }
+    {
+      \pgfputat{\pgfxy(0.15,.4)}{\pgfbox[left,base]{\large{\color{black!70!red}$Zt$}}}
+    }
+    {
+      \color{yellow!30!white}%\color{light-gray}
+      \pgfcircle[fill]{\pgfxy(4,0)}{35pt}
+    }
+    {
+      \pgfputat{\pgfxy(3.2,0.4)}{\pgfbox[left,base]{\large{\color{black!70!red}$Wb$}}}
+    }
+  \end{pgfscope}
+  {
+    %\color{black}
+    \pgfsetendarrow{\pgfarrowlargepointed{6pt}}
+    \pgfsetlinewidth{1.5pt}
+    \pgfline{\pgfxy(0,0)}{\pgfxy(5.5,0)}
+    \pgfstroke
+    %\pgfsetendarrow{\pgfarrowlargepointed{6pt}}
+    %\pgfsetlinewidth{1.5pt}
+    \pgfline{\pgfxy(0,0)}{\pgfxy(0,5.5)}
+    \pgfstroke
+  }
+
+\end{pgftranslate}
+\end{pgfscope}
+\end{pgfpicture}
