@@ -526,7 +526,27 @@ reference point with $\mu=0$ and $NPV = 1$
 
 Finally the jet energy is corrected to the particle
 level using a jet energy scale factor obtained
-from Monte Carlo simulation.
+from a Monte Carlo sample which does not include
+multiple pp interactions, as these have been already
+corrected for.
+The jets used for the calibration are isolated jets\footnote{Here an
+isolated jet is a jet which does not have any other
+jet with $\pt>7\gev$
+around a $\Delta R$ cone of 2.5$R$, where $R$ is
+the jet algorithm paramenter, i.e., for the \texttt{AKT4}, 0.4}
+reconstructed in the calorimeter and matched to
+a truth-level jet (also isolated) within $\Delta R<0.3$
+The simulated jet energy response 
+is the ratio between the energy measured in the LC jets ($E_{\rm LC}^j$)
+and the truth jet energy ($E_{\rm truth}^j$). It is measured in bins of
+the truth jet energy and of the calorimeter jet pseudorapidity $\eta_{\rm det}$
+and a bin-by-bin fit is performed to obtain a
+calibration function in terms of $E_{\rm LC}^j$
+binned in $\eta_{\rm det}$.
+The calorimeter jet response is
+shown in Figure~\ref{fig:corr_jet}
+as a function of $\eta_{\rm det}$
+for some values of the jet energy.
 
 
 %%%%%%%%%%%%% EM+JES????? start
@@ -623,20 +643,32 @@ chosen (see Figure~\ref{fig:btageffs}).
 $|\eta|<2.5$ in simulated $t\bar{t}$ events~\cite{btagging}.\label{fig:btageffs}}
 \end{center}\end{figure}
 
-The tagging efficiencies in Monte Carlo are corrected for $b$, $c$ and light flavours
+The tagging efficiencies in Monte Carlo are corrected for 
+$b$, $c$ and light flavours~\cite{btagging,ctagging,ltagging}
 with the appropriate $\epsilon_{data}/\epsilon_{MC}$ scale factors,
 determined in bins of jet $\pt$ and $\eta$.
-These efficiency are obtained from di-jet samples with
+These efficiency are obtained for \bjet s from di-jet samples with
 muons in the final states using the {\it  $\pt^{\rm rel}$ method},
 which exploits the variable $\pt^{\rm rel}$ (the momentum of the
 muon transverse to the axis of the system formed by the muon and the jet)
 to distinguish muons from a $b$-flavor jet (harder  $\pt^{\rm rel}$ spectrum)
-from muons from $c$- and light-flavor jets~\cite{btagging,ctagging,ltagging}. 
+from muons from $c$- and light-flavor jets. 
 %The sample used to derive the $\pt^{\rm rel}$ template for 
 %$b$-flavor jets has enhanced heavy-flavour content, while
-The template for light-flavor jets is derived from a data sample
-where another algorithm (\texttt{IP3D+SV1} at the 80\% efficiency working point) 
-is used to veto \btag ged jets.
+%The template for light-flavor jets is derived from a data sample
+%where another algorithm (\texttt{IP3D+SV1} at the 80\% efficiency working point) 
+%is used to veto \btag ged jets.
+The $c$-tagging efficiency, i.e. the efficiency with which jets from $C$ hadrons
+are tagged by the \btag ging algorithm, is measured in samples of jets
+with $D^*$ mesons, where the yields of $D^*$ mesons before and after \btag ging
+are compared.
+The scale factors for light-flavour jets, also referred to as 
+{\it mistag rate}, are derived from the fraction of \btag ged jets originating 
+from light flavour. The mistag rate is measured in an inclusive jet sample, using the
+{\it negative tag method}, where the impact parameter significance sign of tracks
+(for ``impact parameter based'' \btag ging algorithms) or the decay 
+length significance sign of secondary vertices
+(for ``secondary vertex based'' \btag ging algorithms) is reversed.
 
 
 \myskip
