@@ -1,0 +1,10 @@
+\documentclass[a4paper,10pt,twoside, openright]{book}
+\usepackage[]{pdfpages}
+
+\begin{document}
+
+\includepdf[pages={1}]{main}
+\includepdf[pages={7-8}]{main}
+
+
+\end{document}
