@@ -45,6 +45,13 @@ keepspaces=false, keywordstyle=\tiny\color{blue}, showstringspace=false}
 \includegraphics[width=0.6\paperwidth,height=0.6\paperheight]{#1}
         \hfill \vfill
      }}}
+\newcommand\FullBackgroundPicture[1]{%
+   \setbeamertemplate{background}{%
+   \parbox[c][\paperheight]{\paperwidth}{%
+     \centering \vfill 
+\includegraphics[width=0.8\paperwidth,height=0.8\paperheight]{#1}
+\vfill 
+     }}}
 
 %\setbeamertemplate{headline}{%
 %}
@@ -160,20 +167,55 @@ keepspaces=false, keywordstyle=\tiny\color{blue}, showstringspace=false}
 \date{Bellaterra, 28th of February, 2014}
 
 
+\def\cccolor{\usebeamercolor[fg]{head/foot boxes}}
+
 \begin{document}
+
 
 \frame{
 
 \vspace{-.8cm}
 
-
 \maketitle\centering
 
 \vspace{-.8cm}
-
-
-
 }
+
+
+
+\begin{frame}\frametitle{Four questions, one dissertation}
+
+%{\large\bfseries
+%\usebeamercolor[fg]{head/foot boxes}
+%\dots one thesis\dots
+%}
+
+%\myskip
+
+%\pause
+\centering
+  \begin{minipage}{.5\textwidth}\centering
+
+%\myskip
+
+\begin{itemize}[<+->]
+\item {\cccolor \LARGE Why?} {\scriptsize bother with ``new physics''}
+\item {\cccolor \LARGE Where?} {\scriptsize is all happening}
+\item {\cccolor \LARGE What?} {\scriptsize are we looking at}
+\item {\cccolor \huge How?} {\scriptsize}
+\end{itemize}
+
+\end{minipage}
+
+%\pause
+%\flushright
+%{\large\bfseries
+%\usebeamercolor[fg]{head/foot boxes}
+%\dots no solution! (yet)
+%}
+
+
+\end{frame}
 
 %\begin{frame}\frametitle{Content}
 %\end{frame}
@@ -184,8 +226,17 @@ keepspaces=false, keywordstyle=\tiny\color{blue}, showstringspace=false}
 %\end{frame}
 
 %----------------------------------
-\section{Introduction}
+%\section{Introduction}
 %----------------------------------
+%\begin{frame}\frametitle{Standard Model as an effective theory}
+%\scriptsize\centering
+%\end{frame}
+
+
+%----------------------------------
+\section{Theoretical framework}
+%----------------------------------
+
 
 \begin{frame}\frametitle{Standard Model as an effective theory}
 \scriptsize\centering
@@ -195,15 +246,40 @@ keepspaces=false, keywordstyle=\tiny\color{blue}, showstringspace=false}
 
 
 
-
-%----------------------------------
-\section{Theoretical framework}
-%----------------------------------
-
-
 %----------------------------------
 \section{The ATLAS experiment at the LHC}
 %----------------------------------
+
+\BackgroundPicture{../detector/figures/ring}
+
+\begin{frame}\frametitle{The LHC complex}
+\footnotesize\centering
+\begin{minipage}{.35\textwidth}
+
+\begin{itemize}
+\item 
+\end{itemize}
+\end{minipage}\begin{minipage}{.6\textwidth}\centering\pause
+\hspace{2cm}\begin{beamercolorbox}[wd=.99\textwidth,rounded=true,shadow=true]{whiteboxcolor}\centering\tiny
+	\begin{tabular}{lll}\toprule
+        Parameter                       & designed      &   2012\\ \midrule
+        Beam energy (\tev/c)            & 7             & 4    \\
+        Beta function $\beta*$ (m)      & 0.55          & 0.6  \\
+        Max. No. bunches/beam           & 2808          &1380  \\
+        Max. No. protons/bunch          & 1.15$\times10^{11}$ & 1.7$\times10^{11}$ \\
+        Bunch spacing (ns)              & 25            & 50 \\
+        Peak luminosity (\cmm2\sm1)     & 1$\times10^{34}$& 7.7$\times10^{33}$\\
+        Emittance $\varepsilon_{n}$ ($\mu$rad)&3.75     & 2.5   \\
+        Max. $<\mu>$                    & 19            & 37       \\\bottomrule
+        \end{tabular}
+\end{beamercolorbox}
+
+\end{minipage}
+
+\myskip
+
+\end{frame}
+
 
 \BackgroundPicture{../detector/figures/atlas}
 
@@ -265,72 +341,286 @@ need a good understanding of incoming hadrons
 
 \end{frame}
 
-
+%%%% EVENT1
+\FullBackgroundPicture{../montecarlo/figures/event1}
 \begin{frame}\frametitle{Modelling of hadron collisions}
-\centering\myskip
-\includegraphics[height=0.8\textheight]{../montecarlo/figures/event1}
 
 \begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
+
+\centering\myskip
+%\includegraphics[height=0.8\textheight]{../montecarlo/figures/event1}
+
+$E(p_1)=4\tev$ \hspace{.3\paperwidth} $E(p_2)=4\tev$
+
+\vspace{.3\paperheight}
+
+Quarks are distributed according to PDFs inside the proton\\
+{\LARGE $\Downarrow$}\\
+intial energy unknown
 
 \end{frame}
 
 
+%%%% EVENT1
+\FullBackgroundPicture{../montecarlo/figures/event2}
 \begin{frame}\frametitle{Hard scattering of two partons}
+%\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
 \centering\myskip
-\includegraphics[height=0.8\textheight]{../montecarlo/figures/event2}
+%\includegraphics[height=0.8\textheight]{../montecarlo/figures/event2}
 
-\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
+
+\vspace{.4\paperheight}
+
+{\cccolor asymptotic freedom}: high energy $\longleftrightarrow$ low \alphas\\
+{\LARGE $\Downarrow$}\\
+(fixed order) pQCD
 
 \end{frame}
 
+%%%% EVENT1
+\FullBackgroundPicture{../montecarlo/figures/event3}
+\begin{frame}\frametitle{Parton showering}
+%\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
+\centering\myskip
+%\includegraphics[height=0.8\textheight]{../montecarlo/figures/event3}
+
+\vspace{.4\paperheight}
+
+%real radiative corrections to any inclusive quantity
+
+QCD emission: $q\to gq$, $g\to gg$, $g\to q\bar{q}$\\
+{\LARGE $\Downarrow$}\\
+higher-order corrections 
+
+\end{frame}
+
+%%%% EVENT1
+\FullBackgroundPicture{../montecarlo/figures/event4}
 \begin{frame}\frametitle{Parton showering}
 \centering\myskip
-\includegraphics[height=0.8\textheight]{../montecarlo/figures/event3}
+%\includegraphics[height=0.8\textheight]{../montecarlo/figures/event4}
 
-\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
+\vspace{.4\paperheight}
+
+%real radiative corrections to any inclusive quantity
+
+QCD emission: $q\to gq$, $g\to gg$, $g\to q\bar{q}$\\
+{\LARGE $\Downarrow$}\\
+higher-order corrections 
+
+%\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
 
 \end{frame}
 
-\begin{frame}\frametitle{Parton showering}
-\centering\myskip
-\includegraphics[height=0.8\textheight]{../montecarlo/figures/event4}
-
-\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
-
-\end{frame}
-
+%%%% EVENT1
+\FullBackgroundPicture{../montecarlo/figures/event5}
 \begin{frame}\frametitle{Hadronization}
 \centering\myskip
-\includegraphics[height=0.8\textheight]{../montecarlo/figures/event5}
+%\includegraphics[height=0.8\textheight]{../montecarlo/figures/event5}
 
-\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
+
+\vspace{.4\paperheight}
+
+%\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
 
 \end{frame}
 
+%%%% EVENT1
+\FullBackgroundPicture{../montecarlo/figures/event6}
 \begin{frame}\frametitle{Final particle decays}
 \centering\myskip
-\includegraphics[height=0.8\textheight]{../montecarlo/figures/event6}
+%\includegraphics[height=0.8\textheight]{../montecarlo/figures/event6}
 
-\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
+
+\vspace{.4\paperheight}
+
+%\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
 
 \end{frame}
 
+%%%% EVENT1
+\FullBackgroundPicture{../montecarlo/figures/event7}
 \begin{frame}\frametitle{Underlying event simulation}
 \centering\myskip
-\includegraphics[height=0.8\textheight]{../montecarlo/figures/event7}
+%\includegraphics[height=0.8\textheight]{../montecarlo/figures/event7}
 
-\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
+
+\vspace{.4\paperheight}
+
+%\begin{flushright}\tiny Drawings from~\cite{Gieseke}\end{flushright}
 
 \end{frame}
 
+%%%% EVENT1
+\BackgroundPicture{pics/emptyIMG}
 
 %----------------------------------
 \section{Event reconstruction}
 %----------------------------------
 
+\begin{frame}\frametitle{Physics objects puzzle}
+\centering\myskip
+
+\includegraphics[height=0.85\textheight, width=1.\textwidth]{../detector/figures/detection}
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{One lepton}
+\centering\myskip
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Many jets}
+\centering\myskip
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Missing transverse energy}
+\centering\myskip
+
+\end{frame}
+
+
+
 %----------------------------------
 \section{Searches for vector-like top partner pairs in the single lepton channel}
 %----------------------------------
+
+\begin{frame}\frametitle{One lepton}
+\centering\myskip
+
+\end{frame}
+
+
+\begin{frame}\frametitle{Model Independent Strategy $\;$\small started Oct 2012~\cite{ATLAS:2012qe}}
+\footnotesize\centering
+
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.6\textwidth}
+
+\begin{pgfscope}
+\onslide<1->{
+    \pgfsetendarrow{\pgfarrowlargepointed{6pt}}
+    \pgfsetlinewidth{1.5pt}
+    \usebeamercolor[fg]{head/foot boxes}
+    \begin{pgftranslate}{\pgfpoint{0.07\textwidth}{0.15\textheight}}
+\pgfline{\pgfxy(0,0)}{\pgfxy(5.5,0)}
+\pgfstroke
+\pgfputat{\pgfxy(3.5,-0.5)}{\pgfbox[left,base]{BR($T\to Wb$)}}
+    \usebeamercolor[fg]{normal text}
+\pgfcircle[fill]{\pgfxy(6.8,4.1)}{2pt}
+\pgfputat{\pgfxy(7,4)}{\pgfbox[left,base]{Build a 2-dim plane}}
+\pgfputat{\pgfxy(7,3.7)}{\pgfbox[left,base]{to scan model mixing}}
+%    \end{pgftranslate}
+%\end{pgfscope}
+}
+%\pause
+\onslide<2->{
+%\begin{pgfscope}
+    \pgfsetendarrow{\pgfarrowlargepointed{6pt}}
+    \pgfsetlinewidth{1.5pt}
+    \usebeamercolor[fg]{head/foot boxes}
+%    \begin{pgftranslate}{\pgfpoint{0.1\textwidth}{0.15\textheight}}
+    \usebeamercolor[fg]{head/foot boxes}
+\pgfline{\pgfxy(0,0)}{\pgfxy(0,5.5)}
+\pgfstroke
+    \begin{pgfrotateby}{\pgfdegree{90}}
+\pgfputat{\pgfxy(3.5,0.4)}{\pgfbox[left,base]{BR($T\to Ht$)}}
+    \end{pgfrotateby}
+%    \end{pgftranslate}
+%\end{pgfscope}
+}
+%\pause
+\onslide<3->{
+%\begin{pgfscope}
+    \pgfsetlinewidth{1.5pt}
+    \color{light-gray}
+%    \begin{pgftranslate}{\pgfpoint{0.1\textwidth}{0.15\textheight}}
+%\pgfline{\pgfxy(5,0)}{\pgfxy(0,5)}
+%\pgfstroke
+\pgfmoveto{\pgfxy(5,0)}
+\pgflineto{\pgfxy(5,5)}
+\pgflineto{\pgfxy(0,5)}
+%\pgfstroke
+\pgffill
+    \color{gray}
+\pgfputlabelrotated{0.5}{\pgfxy(0,5)}{\pgfxy(5,0)}{8pt}{\pgfbox[center,base]{Forbidden}}
+    \usebeamercolor[fg]{normal text}
+\pgfcircle[fill]{\pgfxy(6.8,3.3)}{2pt}
+\pgfputat{\pgfxy(7,3.2)}{\pgfbox[left,base]{Sum of BRs is 1$^{(a)}$}}
+%\pgfputat{\pgfxy(5.2,0.7)}{\pgfbox[left,base]{\scriptsize $^{(a)}$BR($T\to  Zt/b$) = 1 - BR($T\to Ht/b$) - BR($T\to Wb/t$)}}
+\pgfputat{\pgfxy(5.9,-0.9)}{\pgfbox[left,base]{\scriptsize $^{(a)}$BR($T\to  Zt$) = 1 - BR($T\to Ht$) - BR($T\to Wb$)}}
+%\pgfputat{\pgfxy(8.755,-0.7)}{\pgfbox[left,base]{\scriptsize - BR($T\to Wb$)}}
+
+%    \end{pgftranslate}
+%\end{pgfscope}
+}
+%\pause
+\onslide<4->{
+%\begin{pgfscope}
+    \pgfsetlinewidth{1.5pt}
+%    \begin{pgftranslate}{\pgfpoint{0.1\textwidth}{0.15\textheight}}
+    \usebeamercolor[fg]{normal text}
+\pgfcircle[fill]{\pgfxy(6.8,2.8)}{2pt}
+\pgfputat{\pgfxy(7,2.7)}{\pgfbox[left,base]{Different analyses are}}
+\pgfputat{\pgfxy(7,2.4)}{\pgfbox[left,base]{sensitive to different areas}}
+    \usebeamercolor[fg]{head/foot boxes}
+\begin{pgfscope}
+\pgfmoveto{\pgfxy(5,0)}
+\pgflineto{\pgfxy(0,0)}
+\pgflineto{\pgfxy(0,5)}
+\pgfclip
+\pgfcircle[fill]{\pgfxy(.5,4)}{35pt}
+{\usebeamercolor[bg]{normal text}
+%\pgfputat{\pgfxy(0.,3.5)}{\begin{pgfrotateby}{\pgfdegree{-45}}\pgfbox[left,base]{$T(B)\to Ht(b)$}\end{pgfrotateby}}
+\pgfputat{\pgfxy(0.2,3.6)}{\pgfbox[left,base]{\large$Ht$}}
+}
+}
+\onslide<5->{
+%\pause
+\pgfcircle[fill]{\pgfxy(.6,.6)}{35pt}
+{\usebeamercolor[bg]{normal text}
+%\pgfputat{\pgfxy(0.2,.4)}{\pgfbox[left,base]{$T(B)\to Zt(b)$}}
+\pgfputat{\pgfxy(0.2,.4)}{\pgfbox[left,base]{\large$Zt$}}
+}
+}
+\onslide<6->{
+%\pause
+\pgfcircle[fill]{\pgfxy(4,0)}{35pt}
+{\usebeamercolor[bg]{normal text}
+%\pgfputat{\pgfxy(3.,0.4)}{\pgfbox[left,base]{$T(B)\to Wb(t)$}}
+\pgfputat{\pgfxy(3.2,0.4)}{\pgfbox[left,base]{\large$Wb$}}
+}
+}
+\end{pgfscope}
+\onslide<7->{
+\pgfcircle[fill]{\pgfxy(6.8,2.)}{2pt}
+\pgfputat{\pgfxy(7,1.9)}{\pgfbox[left,base]{Set exclusion using}}
+\pgfputat{\pgfxy(7,1.6)}{\pgfbox[left,base]{$CL_{s}$ technique~\cite{Junk:1999kv,Read:2002hq}}}
+%\pgfcircle[fill]{\pgfxy(6.8,1.2)}{2pt}
+}
+
+\onslide<8->{
+\pgfdeclareimage[interpolate=true,width=.45\textwidth]{wbwb7tev}{../appendices/figures/wbwb/fig_04}
+\pgfputat{\pgfxy(0.0,0.0)}{\pgfbox[left,base]{\pgfuseimage{wbwb7tev}}}
+\pgfcircle[fill]{\pgfxy(6.8,0.7)}{2pt}
+{\usebeamercolor[fg]{normal text}
+\pgfputat{\pgfxy(7,0.6)}{\pgfbox[left,base]{Updating 7~TeV results}}
+}
+}
+    \end{pgftranslate}
+\end{pgfscope}
+\end{pgfpicture}
+
+\end{frame}
+
+
 
 %----------------------------------
 \section{Search for \TTbar\ decaying to $Wb+X$}
@@ -375,6 +665,24 @@ BACKUP SLIDES}
 \end{frame}
 
 
+\begin{frame}\frametitle{LHC parameters}
+\centering\myskip
+\begin{table}\centering
+	\begin{tabular}{lllll}\toprule
+        Parameter                       & designed      &       2010 &  2011     &   2012\\ \midrule
+        Beam energy (\tev/c)            & 7             & 3.5        & 3.5       & 4    \\
+        Beta function $\beta*$ (m)      & 0.55          & 2.0/3.5    & 1.5/1.0   & 0.6  \\
+        Max. No. bunches/beam           & 2808          & 368        & 1380      &1380  \\
+        Max. No. protons/bunch          & 1.15$\times10^{11}$ & 1.2$\times10^{11}$ & 1.45$\times10^{11}$ & 1.7$\times10^{11}$ \\
+        Bunch spacing (ns)              & 25            & 150       & 75/50        & 50 \\
+        Peak luminosity (\cmm2\sm1)     & 1$\times10^{34}$& 2.1$\times10^{32}$& 3.7$\times10^{33}$& 7.7$\times10^{33}$\\
+        Emittance $\varepsilon_{n}$ ($\mu$rad)&3.75     &   2.0      & 2.4      & 2.5   \\
+        Max. $<\mu>$                    & 19            & 4             & 17         & 37       \\
+	\bottomrule\end{tabular}\caption{Overview of some parameters for the LHC performance comparing the design values with their time
+        evolution during the first long run operation in 2010-2013~\cite{Lamont}.}\label{tab:lhcpar}
+\end{table}
+
+\end{frame}
 
 
 
