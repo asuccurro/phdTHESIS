@@ -30,7 +30,7 @@
 
 %%% nice tables
 \usepackage{booktabs}
-\usepackage{multirow}
+\usepackage{multirow,bigdelim}
 \usepackage{dcolumn}
 
 \usepackage{fancybox}
@@ -325,6 +325,64 @@ BACKUP SLIDES}
 \end{table}
 
 \end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}\frametitle{\wbx\ 7~\tev\ vs 8~\tev}
+\footnotesize\centering
+
+\begin{table}[!htb]
+\begin{center}\small
+\begin{tabular}{p{3cm}cc}
+\toprule
+Selection & 7~\tev & 8~\tev \\
+\midrule
+%\multirow{10}{*}{Preselection} & \multicolumn{2}{c}{One electron or muon$^{(*)}$}  \\\cmidrule{2-3}
+\ldelim\{{12}{12ex}[\hskip4ex Preselection] & \multicolumn{2}{c}{One electron or muon$^{(+)}$}  \\\cmidrule{2-3}
+             & $\met >35(20)\gev$ for electron & $\met >20\gev$ \\
+             &  (muon) channel & \\\cmidrule{2-3}
+             & \multicolumn{2}{c}{$\met +m_{\rm T}>60\gev$} \\\cmidrule{2-3}
+             & $\geq 3$ jets for \wi & \multirow{2}{*}{$\geq 4$ jets$^{(*)}$}\\
+             & $\geq 4$ jets for \wii & \\\cmidrule{2-3}
+             & \multicolumn{2}{c}{$\geq 1$ $b$-tagged jets$^{(**)}$} \\\cmidrule{2-3}
+             & & orthogonality cut:\\
+             & & reject events with $\geq 6$ jets \\
+             & & and $\geq 3$ $b$-tagged jets \\
+\midrule
+%\end{tabular}
+%\begin{tabular}{lll}
+%\multirow{6}{*}{\loose\ selection} & \multicolumn{2}{c}{ Preselection } \\
+\ldelim\{{6}{6ex}[\loose\ selection] & \multicolumn{2}{c}{ Preselection } \\
+                  & \multicolumn{2}{c}{$\geq 1~W_{\rm had}$ candidates$^{(\rm x)}$} \\
+                  & $\htfj>750\gev$ & $\htfj>800\gev$ \\
+                  & \multicolumn{2}{c}{ $\pt(b_1) > 160\gev$}\\
+                  & $\pt(b_2) >60\gev$ & $\pt(b_2) >80\gev$ \\
+                  & $\Delta R(\ell,\nu)<1.4$ & $\Delta R(\ell,\nu)<1.2$ \\
+\midrule
+%\multirow{3}{*}{\tight\  selection} & \multicolumn{2}{c}{ \loose\ selection} \\
+\ldelim\{{3}{3ex}[\tight\  selection] & \multicolumn{2}{c}{ \loose\ selection} \\
+     	      & \multicolumn{2}{c}{ min$\Delta R(\ell,b)>1.4$}\\
+              & \multicolumn{2}{c}{ min$\Delta R(W_{\rm had},b)>1.4$} \\
+\bottomrule
+\multicolumn{3}{c}{\footnotesize (+) Leptons have different $p_T$ thresholds and triggers. Both follow {\it topcommon} prescriptions.}\\
+\multicolumn{3}{c}{\footnotesize (*) Jets in 7\tev\ (8\tev) analyses are calibrated at the EM+JES (LC+JES) scale.}\\
+\multicolumn{3}{c}{\footnotesize (*) The $b$-tagging algorithm and working point for 7\tev\ and 8\tev analyses are the same: MV1, 70\%.}\\
+\multicolumn{3}{c}{\footnotesize (x) The boosted $W$ reconstruction for 7\tev\ and 8\tev analyses is slightly different, see text.}\\
+\bottomrule
+\end{tabular}
+\caption{Comparison of event selection requirements for the 7~\tev\ and 8~\tev analyses.}
+\label{tab:wbx7tevselection}
+\end{center}
+\end{table}
+
+\end{frame}
+
+
 
 
 
