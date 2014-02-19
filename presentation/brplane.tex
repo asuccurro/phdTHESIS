@@ -1,0 +1,124 @@
+
+\begin{frame}\frametitle{Model Independent Strategy}
+\footnotesize\centering
+
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.6\textwidth}
+
+\begin{pgfscope}
+\onslide<1->{
+    \pgfsetendarrow{\pgfarrowlargepointed{6pt}}
+    \pgfsetlinewidth{1.5pt}
+    \usebeamercolor[fg]{head/foot boxes}
+    \begin{pgftranslate}{\pgfpoint{0.07\textwidth}{0.15\textheight}}
+\pgfline{\pgfxy(0,0)}{\pgfxy(5.5,0)}
+\pgfstroke
+\pgfputat{\pgfxy(3.5,-0.5)}{\pgfbox[left,base]{BR($T\to Wb$)}}
+    \usebeamercolor[fg]{normal text}
+\pgfcircle[fill]{\pgfxy(6.8,4.1)}{2pt}
+\pgfputat{\pgfxy(7,4)}{\pgfbox[left,base]{Build a 2-dim plane}}
+\pgfputat{\pgfxy(7,3.7)}{\pgfbox[left,base]{to scan model mixing}}
+%    \end{pgftranslate}
+%\end{pgfscope}
+}
+%\pause
+\onslide<2->{
+%\begin{pgfscope}
+    \pgfsetendarrow{\pgfarrowlargepointed{6pt}}
+    \pgfsetlinewidth{1.5pt}
+    \usebeamercolor[fg]{head/foot boxes}
+%    \begin{pgftranslate}{\pgfpoint{0.1\textwidth}{0.15\textheight}}
+    \usebeamercolor[fg]{head/foot boxes}
+\pgfline{\pgfxy(0,0)}{\pgfxy(0,5.5)}
+\pgfstroke
+    \begin{pgfrotateby}{\pgfdegree{90}}
+\pgfputat{\pgfxy(3.5,0.4)}{\pgfbox[left,base]{BR($T\to Ht$)}}
+    \end{pgfrotateby}
+%    \end{pgftranslate}
+%\end{pgfscope}
+}
+%\pause
+\onslide<3->{
+%\begin{pgfscope}
+    \pgfsetlinewidth{1.5pt}
+    \color{light-gray}
+%    \begin{pgftranslate}{\pgfpoint{0.1\textwidth}{0.15\textheight}}
+%\pgfline{\pgfxy(5,0)}{\pgfxy(0,5)}
+%\pgfstroke
+\pgfmoveto{\pgfxy(5,0)}
+\pgflineto{\pgfxy(5,5)}
+\pgflineto{\pgfxy(0,5)}
+%\pgfstroke
+\pgffill
+    \color{gray}
+\pgfputlabelrotated{0.5}{\pgfxy(0,5)}{\pgfxy(5,0)}{8pt}{\pgfbox[center,base]{Forbidden}}
+    \usebeamercolor[fg]{normal text}
+\pgfcircle[fill]{\pgfxy(6.8,3.3)}{2pt}
+\pgfputat{\pgfxy(7,3.2)}{\pgfbox[left,base]{Sum of BRs is 1$^{(a)}$}}
+%\pgfputat{\pgfxy(5.2,0.7)}{\pgfbox[left,base]{\scriptsize $^{(a)}$BR($T\to  Zt/b$) = 1 - BR($T\to Ht/b$) - BR($T\to Wb/t$)}}
+\pgfputat{\pgfxy(5.9,-0.9)}{\pgfbox[left,base]{\scriptsize $^{(a)}$BR($T\to  Zt$) = 1 - BR($T\to Ht$) - BR($T\to Wb$)}}
+%\pgfputat{\pgfxy(8.755,-0.7)}{\pgfbox[left,base]{\scriptsize - BR($T\to Wb$)}}
+
+%    \end{pgftranslate}
+%\end{pgfscope}
+}
+%\pause
+\onslide<4->{
+%\begin{pgfscope}
+    \pgfsetlinewidth{1.5pt}
+%    \begin{pgftranslate}{\pgfpoint{0.1\textwidth}{0.15\textheight}}
+    \usebeamercolor[fg]{normal text}
+\pgfcircle[fill]{\pgfxy(6.8,2.8)}{2pt}
+\pgfputat{\pgfxy(7,2.7)}{\pgfbox[left,base]{Different analyses are}}
+\pgfputat{\pgfxy(7,2.4)}{\pgfbox[left,base]{sensitive to different areas}}
+    \usebeamercolor[fg]{head/foot boxes}
+\begin{pgfscope}
+\pgfmoveto{\pgfxy(5,0)}
+\pgflineto{\pgfxy(0,0)}
+\pgflineto{\pgfxy(0,5)}
+\pgfclip
+\pgfcircle[fill]{\pgfxy(.5,4)}{35pt}
+{\usebeamercolor[bg]{normal text}
+%\pgfputat{\pgfxy(0.,3.5)}{\begin{pgfrotateby}{\pgfdegree{-45}}\pgfbox[left,base]{$T(B)\to Ht(b)$}\end{pgfrotateby}}
+\pgfputat{\pgfxy(0.2,3.6)}{\pgfbox[left,base]{\large$Ht$}}
+}
+}
+\onslide<5->{
+%\pause
+\pgfcircle[fill]{\pgfxy(.6,.6)}{35pt}
+{\usebeamercolor[bg]{normal text}
+%\pgfputat{\pgfxy(0.2,.4)}{\pgfbox[left,base]{$T(B)\to Zt(b)$}}
+\pgfputat{\pgfxy(0.2,.4)}{\pgfbox[left,base]{\large$Zt$}}
+}
+}
+\onslide<6->{
+%\pause
+\pgfcircle[fill]{\pgfxy(4,0)}{35pt}
+{\usebeamercolor[bg]{normal text}
+%\pgfputat{\pgfxy(3.,0.4)}{\pgfbox[left,base]{$T(B)\to Wb(t)$}}
+\pgfputat{\pgfxy(3.2,0.4)}{\pgfbox[left,base]{\large$Wb$}}
+}
+}
+\end{pgfscope}
+\onslide<7->{
+\pgfcircle[fill]{\pgfxy(6.8,2.)}{2pt}
+\pgfputat{\pgfxy(7,1.9)}{\pgfbox[left,base]{Set exclusion using}}
+\pgfputat{\pgfxy(7,1.6)}{\pgfbox[left,base]{$CL_{s}$ technique~\cite{Junk:1999kv,Read:2002hq}}}
+%\pgfcircle[fill]{\pgfxy(6.8,1.2)}{2pt}
+}
+
+\onslide<8->{
+\pgfdeclareimage[interpolate=true,width=.45\textwidth]{wbwb7tev}{../appendices/figures/wbwb/fig_04}
+\pgfputat{\pgfxy(0.0,0.0)}{\pgfbox[left,base]{\pgfuseimage{wbwb7tev}}}
+\pgfcircle[fill]{\pgfxy(6.8,1.2)}{2pt}
+{\usebeamercolor[fg]{normal text}
+\pgfputat{\pgfxy(7,1.1)}{\pgfbox[left,base]{First published results at 7~TeV}}
+}
+\pgfputat{\pgfxy(7,0.7)}{\pgfbox[left,base]{{\it Phys.Lett.} {\bf B718} (2012)~\cite{ATLAS:2012qe}}}
+}
+    \end{pgftranslate}
+\end{pgfscope}
+\end{pgfpicture}
+
+\end{frame}
+

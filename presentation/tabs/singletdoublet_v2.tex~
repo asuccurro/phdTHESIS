@@ -1,0 +1,23 @@
+\begin{tabular}{cc}\toprule
+Singlet & Decay modes\\ 
+& \\
+$T(+2/3)$ & $W^+b,\, Ht,\, Zt$ \\
+& \\
+$B(-1/3)$ & $ W^-t,\, Hb,\, Zb$ \\
+& \\
+$X(+5/3)$ & $W^+t$\\
+& \\
+$Y(-4/3)$ & $W^-b$ \\
+& \\\midrule
+Doublet & Decay modes\\
+ &\\
+ \multirow{2}{*}{$\bigg(\begin{array}{c}T \\ B\end{array}\bigg)$} & $W^+b,\, Ht,\, Zt$\\ 
+ & $ W^-t,\, Hb,\, Zb$\\
+ & \\
+\multirow{2}{*}{$\bigg(\begin{array}{c}T \\ X\end{array}\bigg)$} & $Ht,\, Zt$\\
+ & $W^+t$\\
+ &\\
+ \multirow{2}{*}{$\bigg(\begin{array}{c}B \\ Y\end{array}\bigg)$} & $Hb,\, Zb$\\
+ & $W^-b$\\
+\bottomrule
+\end{tabular}
