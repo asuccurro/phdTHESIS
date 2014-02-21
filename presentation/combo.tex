@@ -89,6 +89,44 @@ aaaa
 
 \end{frame}
 
+
 \FullBackgroundPicture{pics/emptyIMG}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}\frametitle{Comparison to CMS results}
+\centering\footnotesize
+
+Inclusive \TTbar\ searches {\cccolor CMS-PAS-B2G-12-015~\cite{CMS-PAS-B2G-12-015}}
+\myskip
+
+\begin{minipage}{.6\textwidth}
+\includegraphics[width=.8\textwidth]{pics/cms/triangle}
+\end{minipage}\begin{minipage}{.4\textwidth}\centering
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.6\textwidth}
+   \begin{pgftranslate}{\pgfpoint{-0.05\textwidth}{-0.15\textheight}}
+\pgfdeclareimage[interpolate=true,width=1.\textwidth]{tabTT}{pics/cms/tableTT}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[bg]{head/foot boxes}
+ \pgfputat{\pgfxy(0.0,0.0)}{\pgfbox[left,base]{\pgfuseimage{tabTT}}}
+ \pgfrect[stroke]{\pgfxy(0.2,3.4)}{\pgfxy(5,0.25)}
+ \pgfputat{\pgfxy(-1.2,3.4)}{\pgfbox[left,base]{\cccolor ``doublet''}}
+ \pgfputat{\pgfxy(-1.2,3.1)}{\pgfbox[left,base]{\cccolor 790 obs}}
+ \pgfrect[stroke]{\pgfxy(0.2,1.4)}{\pgfxy(5,0.25)}
+ \pgfputat{\pgfxy(-1.2,1.4)}{\pgfbox[left,base]{\cccolor ``singlet''}}
+ \pgfputat{\pgfxy(-1.2,1.1)}{\pgfbox[left,base]{\cccolor 670 obs}}
+ \pgfrect[stroke]{\pgfxy(0.2,0.)}{\pgfxy(5,0.25)}
+ \pgfputat{\pgfxy(-1.2,0.)}{\pgfbox[left,base]{\cccolor ``chiral''}}
+ \pgfputat{\pgfxy(-1.2,-0.3)}{\pgfbox[left,base]{\cccolor 740 obs}}
+ \pgfrect[stroke]{\pgfxy(4,-0.05)}{\pgfxy(1,5.)}
+\end{pgftranslate}
+\end{pgfpicture}
+
+\end{minipage}
+
+
+\end{frame}
+
 
 
