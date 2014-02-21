@@ -207,23 +207,30 @@ Introduce the scaling factors as {\cccolor nuisance parameters}
 \begin{frame}\frametitle{Most relevant systematic uncertainties}
 \centering\footnotesize
 
-\begin{tabular}{l*{3}{c}}
+{\cccolor \dots before fitting the nuisance parameters}
+
+\resizebox{1.\textwidth}{!}{
+\begin{tabular}{l*{10}{c}}
 \toprule
- & $\T\bar{\T}$ ($600\gev$) & $t\bar{t}$ & Non-$t\bar{t}$\\
+ & \TTbar & $t\bar{t}$H (125) & $t\bar{t}$-HF & $t\bar{t}$-Light & $W$+jets & $Z$+jets & Single top & Diboson & $t\bar{t}$$V$ & Multijet\\
 \midrule
-Total [\%] & +14/-15 & +59/-59 & +42/-35\\
+Total [\%]& +21.9/-24.0 & +25.2/-30.0 & +57.3/-58.4 & +42.0/-44.1 & +60.0/-61.0 & +65.2/-66.2 & +31.7/-32.9 & +68.2/-70.2 & +37.6/-38.8 & +50.0/-50.0\\
 \midrule
-Main contributions [\%] &&&\\
-Jet energy scale & +6.6/-8.4 & +15/-15 & +33/-22\\  
-$t\bar{t}$ modelling: NLO MC generator & -- & +48/-48 & --\\  
-$t\bar{t}$ modelling: PS and fragm & -- & +25/-25 & --\\  
-$t\bar{t}$ modelling: ISR/FSR & -- & +8.8/-8.8 & --\\   
+\multicolumn{10}{c}{Main contributions [\%]}\\
+BTAGBREAK8 & +20.4/-22.7 & +18.7/-21.6 & +15.8/-17.8 & +12.2/-13.1 & +13.5/-15.0 & +13.0/-13.9 & +15.9/-17.8 & +22.0/-27.4 & +16.4/-18.6 & --\\
+JES ``baseline'' & +3.1/-3.1 & +7.3/-7.3 & +10.5/-10.5 & +13.7/-13.7 & +18.1/-18.1 & +18.2/-18.2 & +19.9/-19.9 & +5.2/-5.2 & +8.4/-8.4 & --\\
+ttbar iqopt2 & -- & -- & +6.9/-6.9 & +20.1/-20.1 & -- & -- & -- & -- & -- & --\\
+ttbar ktfac & -- & -- & +7.5/-9.2 & +13.8/-17.0 & -- & -- & -- & -- & -- & --\\
+ttbar qfac & -- & -- & +0.7/-0.7 & +1.6/-1.6 & -- & -- & -- & -- & -- & --\\
+ttbarHF & -- & -- & +50.0/-50.0 & +13.0/-13.0 & -- & -- & -- & -- & -- & --\\
 \bottomrule
 \end{tabular}
+}
 
-\includegraphics[width=.33\textwidth]{pics/GEN_RATIO.pdf}
-\includegraphics[width=.33\textwidth]{pics/FRAG_RATIO.pdf}
-\includegraphics[width=.33\textwidth]{pics/PS_RATIO.pdf}
+\includegraphics[width=.33\textwidth]{pics/6jetin4btagin_ELEMUON_ttbar-HF_JESBREAK1}
+\includegraphics[width=.33\textwidth]{pics/6jetin4btagin_ELEMUON_ttbar-Light_JESBREAK1}
+
+
 
 \end{frame}
 
