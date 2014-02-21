@@ -14,12 +14,34 @@
 \end{minipage}\begin{minipage}{.5\textwidth}\centering
 \myskip
 
-The searches are orthogonal\\
+The search channels do {\cccolor not overlap}\\
 $\Downarrow$\\
 can be combined in the statistical analysis\\
 (consistent {\cccolor syst unc} treatment)
 
-\includegraphics[width=.9\textwidth]{pics/combo/lim_singlet_comb.pdf}
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.9\textwidth}
+   \begin{pgftranslate}{\pgfpoint{0.05\textwidth}{-0.02\textheight}}
+\pgfdeclareimage[interpolate=true,width=.9\textwidth]{singlethtx}{pics/lim_singlet.pdf}
+\pgfdeclareimage[interpolate=true,width=.9\textwidth]{singletcomb}{pics/combo/lim_singlet_comb.pdf}
+%\pgfputat{\pgfxy(0.0,0.0)}{\pgfbox[left,base]{\pgfuseimage{mindr}}}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[bg]{head/foot boxes}
+\pgfputat{\pgfxy(0.0,0.0)}{\pgfbox[left,base]{\pgfuseimage{singlethtx}}}
+\pgfline{\pgfxy(3.35,0.1)}{\pgfxy(3.35,5.1)}
+\pgfstroke
+\only<1>{
+ \pgfputat{\pgfxy(1,5.2)}{\pgfbox[left,base]{\cccolor \htx\ only: 640~\gev}}
+}
+\onslide<2->{
+\pgfputat{\pgfxy(0.0,0.0)}{\pgfbox[left,base]{\pgfuseimage{singletcomb}}}
+\pgfline{\pgfxy(3.5,0.1)}{\pgfxy(3.5,5.1)}
+\pgfstroke
+ \pgfputat{\pgfxy(1,5.2)}{\pgfbox[left,base]{\cccolor combination: 670~\gev}}
+}
+   \end{pgftranslate}
+
+\end{pgfpicture}
 
 \end{minipage}
 
@@ -30,13 +52,24 @@ can be combined in the statistical analysis\\
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\frametitle{Results}
+\begin{frame}\frametitle{Combined results}
 \centering\footnotesize
 
-\begin{minipage}{.3\textwidth}\centering
+\begin{minipage}{.35\textwidth}\centering
 
-aaaa
-\end{minipage}\begin{minipage}{.7\textwidth}\centering
+Individual analyses probe different areas
+
+\begin{itemize}[<+->]
+\item \wbx\ analysis alone very optimized for the bottom right corner
+\item \htx\ gives general good coverage, brings complete exclusion up to {\cccolor 450~\gev\ } and almost excludes 650~\gev\ singlets
+\item full combination reaches complete exclusion up to almost {\cccolor 600~\gev\ } and excludes 650~\gev\ singlets
+\end{itemize}
+
+\onslide<4->{
+\dots but there's more from {\cccolor ATLAS Exotics}!
+}
+
+\end{minipage}\begin{minipage}{.65\textwidth}\centering
 
 \begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.6\textwidth}
    \begin{pgftranslate}{\pgfpoint{0.0\textwidth}{-0.15\textheight}}
@@ -70,7 +103,7 @@ aaaa
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\frametitle{ATLAS BR coverage}
+\begin{frame}\frametitle{ATLAS ``worst case scenario'' coverage}
 \centering\footnotesize
 
 %\includegraphics[width=0.8\textwidth]{pics/ATLAS_VLQ_TT_june2013_step4}
@@ -82,10 +115,17 @@ aaaa
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\frametitle{ATLAS BR coverage}
+\begin{frame}\frametitle{ATLAS ``worst case scenario'' coverage}
 \centering\footnotesize
 
 %\includegraphics[width=0.8\textwidth]{pics/ATLAS_VLQ_BB_june2013_step2}
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.6\textwidth}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[fg]{head/foot boxes}
+\onslide<2->{
+ \pgfrect[stroke]{\pgfxy(6.5,3.8)}{\pgfxy(1,0.8)}
+}
+\end{pgfpicture}
 
 \end{frame}
 
