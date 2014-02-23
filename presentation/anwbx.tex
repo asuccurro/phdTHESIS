@@ -21,14 +21,18 @@ like $$\ttbar\to WbWb$$
 different {\cccolor boosted kinematics}\\
 {\LARGE $\Downarrow$}\\
 reconstruct the $W$ boson from hadronic decay\\
-{\LARGE $\swarrow\searrow$}\\
-\begin{minipage}{.3\textwidth}\centering
-merged jets\\
-\wi
-\end{minipage}\begin{minipage}{.3\textwidth}\centering
-close-by jets\\
-\wii
-\end{minipage}
+{\cccolor $\Delta R \sim \dfrac{2m}{\pt}$ }\\
+{\LARGE $\Downarrow$}\\
+reconstruct heavy quark mass
+
+%{\LARGE $\swarrow\searrow$}\\
+%\begin{minipage}{.3\textwidth}\centering
+%merged jets\\
+%\wi
+%\end{minipage}\begin{minipage}{.3\textwidth}\centering
+%close-by jets\\
+%\wii
+%\end{minipage}
 
 \end{minipage}
 
@@ -53,27 +57,26 @@ close-by jets\\
 \myskip
 
 \hskip-3ex
+\includegraphics[width=.5\textwidth]{pics/boost1j}\\
+
 \begin{tabular}{p{.05cm} c}
 %\toprule
-\ldelim\{{5}{5ex}[] & \\
-                      & one jet \\
+\ldelim\{{3}{3ex}[]   & one jet \\
                       & $\pt>250\gev$ \\
                       & $60<M<120\gev$ \\
-& \\
 \end{tabular}
 
 \myskip
 
 \hskip-3ex
+\includegraphics[width=.5\textwidth]{pics/boost2j}\\
 \begin{tabular}{c p{.05cm}}
 %\toprule
- & \rdelim\}{7}{7ex}[]\\
- no \wi & \\
+ no \wi & \rdelim\}{5}{5ex}[]\\
  di-jet system &\\
  $\dr(j,j)<0.8$&  \\
  $\pt>200\gev$&  \\
  $60<M<120\gev$&  \\
-& \\
 \end{tabular}
 }
 
@@ -103,7 +106,7 @@ $p_X, p_Y$ from \met, $p_Z$ from $M_W^2 = (P_l + P_{\nu})^2$
 \begin{tabular}{ll}
 \toprule
 \multicolumn{2}{c}{\loose\ selection}\\
- SR0 & Preselection  \\
+ SR0 & Preselection + Ortho Cut (*) \\
  SR1 & +\hskip5ex$\geq 1~W_{\rm had}$ candidates \\
  SR2 & +\hskip5ex$\htfj>800\gev$ \\
  SR3 & +\hskip5ex $\pt(b_1) > 160\gev$\\
@@ -136,6 +139,7 @@ $p_X, p_Y$ from \met, $p_Z$ from $M_W^2 = (P_l + P_{\nu})^2$
 \pgfdeclareimage[interpolate=true,width=.95\textwidth]{mindrl}{pics/VLQAna_WbX_MinDRlb_ELEMUON_cutflow12345_NOMINAL.pdf}
 \pgfdeclareimage[interpolate=true,width=.95\textwidth]{mindrw}{pics/VLQAna_WbX_MinDRWb_ELEMUON_cutflow123456_NOMINAL.pdf}
 %\pgfputat{\pgfxy(0.0,0.0)}{\pgfbox[left,base]{\pgfuseimage{mindr}}}
+\pgfputat{\pgfxy(-6.5,0.0)}{\pgfbox[left,base]{(*) reject events with $\geq$6 jets and $\geq$3 \bjet s}}
  \pgfsetlinewidth{1.pt}
  \usebeamercolor[bg]{head/foot boxes}
 \only<1>{
@@ -151,7 +155,7 @@ $p_X, p_Y$ from \met, $p_Z$ from $M_W^2 = (P_l + P_{\nu})^2$
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{htall}}}
  {\usebeamercolor[fg]{head/foot boxes}
- \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
+ \pgfline{\pgfxy(2.72,0.)}{\pgfxy(2.72,5.5)} }
 }
 \only<3>{
 % \pgfrect[stroke]{\pgfxy(-6,3.1)}{\pgfxy(5,0.35)}
@@ -159,7 +163,8 @@ $p_X, p_Y$ from \met, $p_Z$ from $M_W^2 = (P_l + P_{\nu})^2$
  \pgfstroke
  \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{jetptb1}}}
  {\usebeamercolor[fg]{head/foot boxes}
- \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
+ \pgfline{\pgfxy(2.1,0.)}{\pgfxy(2.1,5.5)} 
+ }
 }
 \only<4>{
  \pgfrect[stroke]{\pgfxy(-6,2.45)}{\pgfxy(5,0.35)}
@@ -167,7 +172,7 @@ $p_X, p_Y$ from \met, $p_Z$ from $M_W^2 = (P_l + P_{\nu})^2$
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{drlep}}}
  {\usebeamercolor[fg]{head/foot boxes}
- \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
+ \pgfline{\pgfxy(2.4,0.)}{\pgfxy(2.4,5.5)} }
 }
 \only<5>{
  \pgfrect[stroke]{\pgfxy(-6,1.15)}{\pgfxy(5,0.35)}
@@ -175,7 +180,7 @@ $p_X, p_Y$ from \met, $p_Z$ from $M_W^2 = (P_l + P_{\nu})^2$
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{mindrl}}}
  {\usebeamercolor[fg]{head/foot boxes}
- \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
+ \pgfline{\pgfxy(2.7,0.)}{\pgfxy(2.7,5.5)} }
 }
 \only<6>{
  \pgfrect[stroke]{\pgfxy(-6,0.8)}{\pgfxy(5,0.35)}
@@ -183,7 +188,7 @@ $p_X, p_Y$ from \met, $p_Z$ from $M_W^2 = (P_l + P_{\nu})^2$
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{mindrw}}}
  {\usebeamercolor[fg]{head/foot boxes}
- \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
+ \pgfline{\pgfxy(2.7,0.)}{\pgfxy(2.7,5.5)} }
 }
    \end{pgftranslate}
 
