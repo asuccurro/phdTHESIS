@@ -140,45 +140,56 @@ $p_X, p_Y$ from \met, $p_Z$ from $M_W^2 = (P_l + P_{\nu})^2$
  \usebeamercolor[bg]{head/foot boxes}
 \only<1>{
  \pgfrect[stroke]{\pgfxy(-6,3.82)}{\pgfxy(5,0.35)}
- %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{nwhad}}}
+ {\usebeamercolor[fg]{head/foot boxes}
+ \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
 }
 \only<2>{
  \pgfrect[stroke]{\pgfxy(-6,3.46)}{\pgfxy(5,0.35)}
  %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{htall}}}
+ {\usebeamercolor[fg]{head/foot boxes}
+ \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
 }
 \only<3>{
  \pgfrect[stroke]{\pgfxy(-6,3.1)}{\pgfxy(5,0.35)}
  %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{jetptb1}}}
+ {\usebeamercolor[fg]{head/foot boxes}
+ \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
 }
 \only<4>{
  \pgfrect[stroke]{\pgfxy(-6,2.74)}{\pgfxy(5,0.35)}
- %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
- \pgfstroke
-\pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{jetptb2}}}
+ \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{jetptb2}}}
+ {\usebeamercolor[fg]{head/foot boxes}
+ \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
 }
 \only<5>{
  \pgfrect[stroke]{\pgfxy(-6,2.45)}{\pgfxy(5,0.35)}
  %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{drlep}}}
+ {\usebeamercolor[fg]{head/foot boxes}
+ \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
 }
 \only<6>{
  \pgfrect[stroke]{\pgfxy(-6,1.15)}{\pgfxy(5,0.35)}
  %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{mindrl}}}
+ {\usebeamercolor[fg]{head/foot boxes}
+ \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
 }
 \only<7>{
  \pgfrect[stroke]{\pgfxy(-6,0.8)}{\pgfxy(5,0.35)}
  %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{mindrw}}}
+ {\usebeamercolor[fg]{head/foot boxes}
+ \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
 }
    \end{pgftranslate}
 
@@ -197,6 +208,7 @@ $p_X, p_Y$ from \met, $p_Z$ from $M_W^2 = (P_l + P_{\nu})^2$
 
 \begin{minipage}{.5\textwidth}\centering
 
+{\it (before unblinding)}\\
 Check agreement between data and background prediction
 
 {\Large$\Downarrow$}
@@ -242,7 +254,7 @@ Data & \multicolumn{3}{c}{$250$}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\frametitle{Yields in signal region}
+\begin{frame}\frametitle{Signal to background discrimination}
 \centering\scriptsize
 
 \begin{minipage}{.6\textwidth}\centering
@@ -285,16 +297,18 @@ $T$ Singlet      & 41;4 & 20.3;2.2 \\
 
 \myskip
 
+\end{minipage}\begin{minipage}{.4\textwidth}\centering
+
+\myskip
+
 \footnotesize
 Discriminating variable $\Rightarrow$ {\cccolor $T$ reconstructed mass}\\
 {\large$\Downarrow$}\\
 Pair \bjet s and $W$ boson candidates in order to get\\
 min$\Delta(M_{\rm lep},M_{\rm had})$
 
-\end{minipage}\begin{minipage}{.4\textwidth}\centering
-
-\includegraphics[width=.8\textwidth]{pics/VLQAna_WbX_1W_MWb_4_ELEMUONloose_1W_NOMINAL_VLTtt.pdf}\\
-\includegraphics[width=.8\textwidth]{pics/VLQAna_WbX_1W_MWb_4_ELEMUONtight_1W_NOMINAL_VLTtt.pdf}
+%\includegraphics[width=.8\textwidth]{pics/VLQAna_WbX_1W_MWb_4_ELEMUONloose_1W_NOMINAL_VLTtt.pdf}\\
+\includegraphics[width=.9\textwidth]{pics/VLQAna_WbX_1W_MWb_4_ELEMUONtight_1W_NOMINAL_VLTtt.pdf}
 \end{minipage}
 
 \end{frame}
