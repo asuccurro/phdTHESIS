@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="booooost.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -74,7 +74,10 @@
                    sodipodi:rx="102.04324"
                    sodipodi:ry="7.1280203"
                    d="m 295.62527,420.21933 a 102.04324,7.1280203 0 1 1 -204.086482,0 102.04324,7.1280203 0 1 1 204.086482,0 z"
-                   transform="matrix(0.83217337,-0.14804107,-0.13536883,1.415385,153.54874,-239.07768)" />
+                   transform="matrix(0.83217337,-0.14804107,-0.13536883,1.415385,153.54874,-239.07768)"
+                   inkscape:export-filename="/home/antonella/Documents/phdTHESIS/presentation/pics/boost1j.png"
+                   inkscape:export-xdpi="90"
+                   inkscape:export-ydpi="90" />
                 <path
                    sodipodi:type="arc"
                    style="fill:#e3dbdb;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
@@ -84,9 +87,15 @@
                    sodipodi:rx="102.04324"
                    sodipodi:ry="7.1280203"
                    d="m 295.62527,420.21933 a 102.04324,7.1280203 0 1 1 -204.086482,0 102.04324,7.1280203 0 1 1 204.086482,0 z"
-                   transform="matrix(0.81038702,-0.24245413,0.02292504,1.4218482,133.22354,-258.27629)" />
+                   transform="matrix(0.81038702,-0.24245413,0.02292504,1.4218482,133.22354,-258.27629)"
+                   inkscape:export-filename="/home/antonella/Documents/phdTHESIS/presentation/pics/boost1j.png"
+                   inkscape:export-xdpi="90"
+                   inkscape:export-ydpi="90" />
                 <g
-                   id="g3020">
+                   id="g3020"
+                   inkscape:export-filename="/home/antonella/Documents/phdTHESIS/presentation/pics/boost1j.png"
+                   inkscape:export-xdpi="90"
+                   inkscape:export-ydpi="90">
                   <path
                      sodipodi:nodetypes="ccc"
                      inkscape:connector-curvature="0"
@@ -105,7 +114,10 @@
                      sodipodi:type="arc" />
                 </g>
                 <g
-                   id="g3121">
+                   id="g3121"
+                   inkscape:export-filename="/home/antonella/Documents/phdTHESIS/presentation/pics/boost2j.png"
+                   inkscape:export-xdpi="90"
+                   inkscape:export-ydpi="90">
                   <g
                      transform="translate(131.75811,-54.364215)"
                      id="g3109">

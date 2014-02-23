@@ -1,3 +1,14 @@
+\begin{frame}\frametitle{Available signatures}
+\centering\myskip
+
+\begin{minipage}{.4\textwidth}\centering
+\scriptsize
+\end{minipage}\begin{minipage}{.6\textwidth}\centering
+\end{minipage}
+
+\end{frame}
+
+
 \begin{frame}\frametitle{Allowed decay modes}
 \centering\myskip
 
@@ -75,203 +86,25 @@ Jet multiplicity & $\geq 4$ jets\\
 \begin{frame}\frametitle{Background and signal modelling}
 \centering\myskip
 
-\begin{minipage}{.5\textwidth}\centering
-\scriptsize
-Yields in the preselection region ``blinded'' as:\\
-$\htfj<800\gev$ (*)
-\myskip
-
-  \input{tabs/blinded_presel_high_qcd.tex}
-
-\myskip
-(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
-\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
-
-\begin{itemize}
-\item QCD multi-jet events have high cross-section
-\item Data-drive estimation
-\item Matrix-method       
-\end{itemize}
-
-\includegraphics[width=0.4\textwidth]{../vlq_analysis/figures/mm_regions}
-
-$$N^\mathrm{tight}_\mathrm{fake} = \frac{\epsilon_\mathrm{fake}}{\epsilon_\mathrm{real} - \epsilon_\mathrm{fake}}(N^\mathrm{loose} \epsilon_\mathrm{real} - N^\mathrm{tight})$$
-
-\end{minipage}
-\end{frame}
-
-
-\begin{frame}\frametitle{Background and signal modelling}
-\centering\myskip
-
 \begin{minipage}{.5\textwidth}\footnotesize\centering
 \scriptsize
 Yields in the preselection region ``blinded'' as:\\
 $\htfj<800\gev$ (*)
 \myskip
 
-  \input{tabs/blinded_presel_high_singletop.tex}
+  \input{tabs/blinded_presel}
 
 \myskip
 (*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
-\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
 
-\begin{itemize}
-\item $s$-channel and $Wt$ production generated with {\tt MC@NLO}+{\tt HERWIG}
-\item $t$-channel generated with {\tt ACERMC}+{\tt PYTHIA}
-\item $m_t = 172.5\gev$
-\item NNLO theoretical cross sections
-\end{itemize}
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.01\textwidth}
+\begin{pgfscope}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[bg]{head/foot boxes}
+ \pgfrect[stroke]{\pgfxy(0,4.15)}{\pgfxy(6,0.35)}
+\end{pgfscope}
+\end{pgfpicture}
 
-\end{minipage}
-\end{frame}
-
-
-\begin{frame}\frametitle{Background and signal modelling}
-\centering\myskip
-
-\begin{minipage}{.5\textwidth}\footnotesize\centering
-\scriptsize
-Yields in the preselection region ``blinded'' as:\\
-$\htfj<800\gev$ (*)
-\myskip
-
-  \input{tabs/blinded_presel_high_dib.tex}
-
-\myskip
-(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
-\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
-
-\begin{itemize}
-\item Diboson production generated with {\tt HERWIG}
-\item NLO theoretical cross section
-\end{itemize}
-
-\end{minipage}
-
-
-
-\end{frame}
-
-
-\begin{frame}\frametitle{Background and signal modelling}
-\centering\myskip
-
-\begin{minipage}{.5\textwidth}\footnotesize\centering
-\scriptsize
-Yields in the preselection region ``blinded'' as:\\
-$\htfj<800\gev$ (*)
-\myskip
-
-  \input{tabs/blinded_presel_high_zj.tex}
-
-\myskip
-(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
-\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
-
-\begin{itemize}
-\item $Z$ boson production in association with jets generated with up to five additional partons with {\tt ALPGEN}+{\tt HERWIG}
-\item Samples generated separately for $Z$+light jets, $Zb\bar{b}$+jets, and $Zc\bar{c}$+jets 
-\item Inclusive NNLO theoretical cross section
-\end{itemize}
-
-\end{minipage}
-
-
-
-\end{frame}
-
-
-\begin{frame}\frametitle{Background and signal modelling}
-\centering\myskip
-
-\begin{minipage}{.5\textwidth}\footnotesize\centering
-\scriptsize
-Yields in the preselection region ``blinded'' as:\\
-$\htfj<800\gev$ (*)
-\myskip
-
-  \input{tabs/blinded_presel_high_wj.tex}
-
-\myskip
-(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
-\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
-
-
-\begin{itemize}
-\item $W$ boson production in association with jets generated with up to five additional partons with {\tt ALPGEN}+{\tt HERWIG}
-\item Samples generated separately for $W$+light jets, $Wb\bar{b}$+jets, $Wc\bar{c}$+jets, and $Wc$+jets
-\item Normalized to data-driven prediction
-\end{itemize}
-
-\end{minipage}
-\end{frame}
-
-
-\begin{frame}\frametitle{Background and signal modelling}
-\centering\myskip
-
-\begin{minipage}{.5\textwidth}\footnotesize\centering
-\scriptsize
-Yields in the preselection region ``blinded'' as:\\
-$\htfj<800\gev$ (*)
-\myskip
-
-  \input{tabs/blinded_presel_high_ttv.tex}
-
-\myskip
-(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
-\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
-
-\begin{itemize}
-\item $t\bar{t}$ produced in association with a $W$ or $Z$ boson generated with {\tt MADGRAPH}+{\tt PYTHIA}
-\item $m_t = 172.5\gev$
-\item NLO theoretical cross section
-\end{itemize}
-
-\end{minipage}
-\end{frame}
-
-
-\begin{frame}\frametitle{Background and signal modelling}
-\centering\myskip
-
-\begin{minipage}{.5\textwidth}\footnotesize\centering
-\scriptsize
-Yields in the preselection region ``blinded'' as:\\
-$\htfj<800\gev$ (*)
-\myskip
-
-  \input{tabs/blinded_presel_high_tth.tex}
-
-\myskip
-(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
-\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
-
-\begin{itemize}
-\item $t\bar{t}$ produced in association with a Higgs boson generated with {\tt PYTHIA}
-\item $m_t = 172.5\gev$, $m_H=125\gev$
-\item Higgs decay modes considered: $H\to b\bar{b}$, $c\bar{c}$, $gg$, $W^+W^-$
-\item NLO theoretical cross section
-\end{itemize}
-
-\end{minipage}
-\end{frame}
-
-
-\begin{frame}\frametitle{Background and signal modelling}
-\centering\myskip
-
-\begin{minipage}{.5\textwidth}\footnotesize\centering
-\scriptsize
-Yields in the preselection region ``blinded'' as:\\
-$\htfj<800\gev$ (*)
-\myskip
-
-  \input{tabs/blinded_presel_high_ttj.tex}
-
-\myskip
-(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
 \end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
 
 \only<1>{
@@ -305,6 +138,7 @@ are $\sim$3-8\% higher than \texttt{MC@NLO}
 
 \end{frame}
 
+
 \begin{frame}\frametitle{Background and signal modelling}
 \centering\myskip
 
@@ -314,10 +148,193 @@ Yields in the preselection region ``blinded'' as:\\
 $\htfj<800\gev$ (*)
 \myskip
 
-  \input{tabs/blinded_presel_high_vlt.tex}
+  \input{tabs/blinded_presel}
 
 \myskip
 (*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.01\textwidth}
+\begin{pgfscope}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[bg]{head/foot boxes}
+ \pgfrect[stroke]{\pgfxy(0,3.5)}{\pgfxy(6,0.7)}
+\end{pgfscope}
+\end{pgfpicture}
+
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+
+\begin{itemize}
+\item $W$ and $Z$ boson production in association with jets generated with up to five additional partons with {\tt ALPGEN}+{\tt HERWIG}
+\end{itemize}
+
+$W$+jets:
+\begin{itemize}
+\item Samples generated separately for $W$+light jets, $Wb\bar{b}$+jets, $Wc\bar{c}$+jets, and $Wc$+jets
+\item Normalized to data-driven prediction
+\end{itemize}
+
+$Z$+jets:
+\begin{itemize}
+\item Samples generated separately for $Z$+light jets, $Zb\bar{b}$+jets, and $Zc\bar{c}$+jets 
+\item Inclusive NNLO theoretical cross section
+\end{itemize}
+
+\end{minipage}
+\end{frame}
+
+
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.01\textwidth}
+\begin{pgfscope}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[bg]{head/foot boxes}
+ \pgfrect[stroke]{\pgfxy(0,3.27)}{\pgfxy(6,0.35)}
+\end{pgfscope}
+\end{pgfpicture}
+
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+\begin{itemize}
+\item QCD multi-jet events have high cross-section
+\item Data-drive estimation
+\item Matrix-method       
+\end{itemize}
+
+\includegraphics[width=0.4\textwidth]{../vlq_analysis/figures/mm_regions}
+
+$$N^\mathrm{tight}_\mathrm{fake} = \frac{\epsilon_\mathrm{fake}}{\epsilon_\mathrm{real} - \epsilon_\mathrm{fake}}(N^\mathrm{loose} \epsilon_\mathrm{real} - N^\mathrm{tight})$$
+
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.01\textwidth}
+\begin{pgfscope}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[bg]{head/foot boxes}
+ \pgfrect[stroke]{\pgfxy(0,2.7)}{\pgfxy(6,0.6)}
+\end{pgfscope}
+\end{pgfpicture}
+
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+Single top:
+\begin{itemize}
+\item $s$-channel and $Wt$ production generated with {\tt MC@NLO}+{\tt HERWIG}
+\item $t$-channel generated with {\tt ACERMC}+{\tt PYTHIA}
+\item $m_t = 172.5\gev$
+\item NNLO theoretical cross sections
+\end{itemize}
+
+Diboson:
+
+\begin{itemize}
+\item Diboson production generated with {\tt HERWIG}
+\item NLO theoretical cross section
+\end{itemize}
+
+\end{minipage}
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.01\textwidth}
+\begin{pgfscope}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[bg]{head/foot boxes}
+ \pgfrect[stroke]{\pgfxy(0,2.15)}{\pgfxy(6,0.6)}
+\end{pgfscope}
+\end{pgfpicture}
+
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+$t\bar{t}V$:
+\begin{itemize}
+\item $t\bar{t}$ produced in association with a $W$ or $Z$ boson generated with {\tt MADGRAPH}+{\tt PYTHIA}
+\item $m_t = 172.5\gev$
+\item NLO theoretical cross section
+\end{itemize}
+
+$t\bar{t}H$:
+\begin{itemize}
+\item $t\bar{t}$ produced in association with a Higgs boson generated with {\tt PYTHIA}
+\item $m_t = 172.5\gev$, $m_H=125\gev$
+\item Higgs decay modes considered: $H\to b\bar{b}$, $c\bar{c}$, $gg$, $W^+W^-$
+\item NLO theoretical cross section
+\end{itemize}
+
+\end{minipage}
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.01\textwidth}
+\begin{pgfscope}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[bg]{head/foot boxes}
+ \pgfrect[stroke]{\pgfxy(0,1.2)}{\pgfxy(6,0.35)}
+\end{pgfscope}
+\end{pgfpicture}
+
 \end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
 
 \begin{itemize}
@@ -328,18 +345,6 @@ $\htfj<800\gev$ (*)
 \item $m_H=125\gev$, all Higgs boson decay modes are considered
 \item NNLO theoretical cross section
 \end{itemize}
-
-\tiny
-\begin{tabular}{c c c c}
-\toprule
- $m_{T}$ ($\gev$) & $BR(T \to Wb)$ & $BR(T \to Zt)$ & $BR(T \to Ht)$\\
- & \multicolumn{3}{c}{Singlet} \\
-600 	&  0.494 	&  0.194 	&  0.312	\\
-\midrule
-&  \multicolumn{3}{c}{Doublet} \\
-600 	& 0.000 	&  0.383 	&  0.617 	\\ 	
-\bottomrule
-\end{tabular}
 
 \end{minipage}
 

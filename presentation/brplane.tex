@@ -6,6 +6,7 @@
 \begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.6\textwidth}
 
 \begin{pgfscope}
+\pgfdeclareimage[interpolate=true,width=.45\textwidth]{tab}{pics/tabBRs}
 \onslide<1->{
     \pgfsetendarrow{\pgfarrowlargepointed{6pt}}
     \pgfsetlinewidth{1.5pt}
@@ -40,7 +41,7 @@
     \pgfcircle[fill]{\pgfxy(5.,0)}{3pt}
     \pgfcircle[fill]{\pgfxy(2.5,1.5)}{3pt}
     \pgfcircle[fill]{\pgfxy(0.,3.)}{3pt}
-
+    \pgfputat{\pgfxy(5.5,4.7)}{\pgfbox[left,base]{\pgfuseimage{tab}}}
 }
 %\pause
 \onslide<3->{
@@ -121,16 +122,6 @@
 \pgfputat{\pgfxy(7,1.9)}{\pgfbox[left,base]{Set exclusion using}}
 \pgfputat{\pgfxy(7,1.6)}{\pgfbox[left,base]{$CL_{s}$ technique~\cite{Junk:1999kv,Read:2002hq}}}
 %\pgfcircle[fill]{\pgfxy(6.8,1.2)}{2pt}
-}
-
-\onslide<8->{
-\pgfdeclareimage[interpolate=true,width=.45\textwidth]{wbwb7tev}{../appendices/figures/wbwb/fig_04}
-\pgfputat{\pgfxy(0.0,0.0)}{\pgfbox[left,base]{\pgfuseimage{wbwb7tev}}}
-\pgfcircle[fill]{\pgfxy(6.8,1.2)}{2pt}
-{\usebeamercolor[fg]{normal text}
-\pgfputat{\pgfxy(7,1.1)}{\pgfbox[left,base]{First published results at 7~TeV}}
-}
-\pgfputat{\pgfxy(7,0.7)}{\pgfbox[left,base]{{\it Phys.Lett.} {\bf B718} (2012)~\cite{ATLAS:2012qe}}}
 }
     \end{pgftranslate}
 \end{pgfscope}
