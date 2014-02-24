@@ -42,7 +42,10 @@
 {\usebeamercolor[bg]{head/foot boxes}\pgfcircle[fill]{\pgfxy(3.0,3.5)}{10pt}}
 \pgfputat{\pgfxy(2.85,3.4)}{\pgfbox[left,base]{\large$\nu_{\tau}$}}
 %%%%%%%%%%%% WHY
-
+{ \pgfsetlinewidth{1.pt}
+  \usebeamercolor[fg]{head/foot boxes}
+  \pgfrect[stroke]{\pgfxy(3.6,3.)}{\pgfxy(2,4)}
+}
 }
 \onslide<1->{
 \pgfputat{\pgfxy(7.,4.)}{\pgfbox[left,base]{\pgfuseimage{pie}}}
