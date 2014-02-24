@@ -49,7 +49,7 @@
             -#1*1.75*\yScale*(sin((\x+\eyeX)/\xScale))-\eyeY});
 \end{tikzpicture}%
 }%
-
+\usepackage{pgf-pie}
 
 
 \input{../commands.tex}
@@ -169,7 +169,8 @@ keepspaces=false, keywordstyle=\tiny\color{blue}, showstringspace=false}
 \setbeamersize{text margin left=.2cm,text margin right=.2cm} 
 
 
-
+\newcolumntype{x}[1]{%
+>{\centering\arraybackslash}m{#1}}%
 
 
 
@@ -228,21 +229,48 @@ keepspaces=false, keywordstyle=\tiny\color{blue}, showstringspace=false}
 
 %\pause
 \centering
-  \begin{minipage}{.5\textwidth}\centering
+  \begin{minipage}{.6\textwidth}\centering
 
 %\myskip
 
 \begin{itemize}[<+->]
-\item {\cccolor \LARGE Why?} {\scriptsize interested with ``new physics''}
-\item {\cccolor \LARGE Where?} {\scriptsize is all happening}
-\item {\cccolor \LARGE What?} {\scriptsize we observe}
+\item {\cccolor \LARGE Why?} {\scriptsize interested in ``new physics''} %{\tiny $\qquad \sim$10\%}%pp.5-25}
+\item {\cccolor \LARGE Where?} {\scriptsize is all happening} %{\tiny $\qquad \sim$10\%}% pp.27-46}
+\item {\cccolor \LARGE What?} {\scriptsize we observe} %{\tiny $\qquad \sim$10\%}% pp.47-75}
 \end{itemize}
 
-\onslide<4->{ and above all
+\myskip
+\onslide<4->{ and above all\dots
+
+\myskip
 \begin{itemize}
-\item {\cccolor \huge How?} {\scriptsize we search through}
+\item {\cccolor \huge How?} {\small we search through } %{\tiny $\qquad \sim$75\%}% pp.79-226} 
 \end{itemize}
 }
+
+\end{minipage}\begin{minipage}{.4\textwidth}\centering
+
+\myskip
+
+\hskip-10ex
+%\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.6\textwidth}
+\begin{tikzpicture}
+\onslide<1->{
+%\pie[radius=1.8,explode=0.1]{10/ Why? , 10/ Where? , 13/ What?, 67/ How?}
+\pie[radius=1.8,explode=0.1,color={structure!10!white}]{10/ Why? }
+}
+\onslide<2->{
+%\pie[radius=1.8,explode=0.1]{10/ Why? , 10/ Where? , 13/ What?, 67/ How?}
+\pie[radius=1.8,explode=0.1,color={structure!10!white, structure!30!white}]{10/ Why?, 10/ Where? }
+}
+\onslide<3->{
+\pie[radius=1.8,explode=0.1,color={structure!10!white, structure!30!white, structure!50!white}]{10/ Why? , 10/ Where? , 13/ What?}
+}
+\onslide<4->{
+\pie[radius=1.8,explode=0.1,color={structure!10!white, structure!30!white,structure!50!white,structure!70!white}]{10/ Why? , 10/ Where? , 13/ What?, 67/ How?}
+}
+\end{tikzpicture}
+%\end{pgfpicture}
 
 \end{minipage}
 
