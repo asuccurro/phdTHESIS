@@ -57,15 +57,78 @@
 
 
 \begin{frame}\frametitle{Many jets}
-\centering
+\centering\footnotesize
 
 \begin{minipage}{.5\textwidth}\centering
 
-\includegraphics[width=.78\textwidth]{pics/Sketch_PartonParticleCaloJet.png}
+\includegraphics[width=.78\textwidth]{pics/Sketch_PartonParticleCaloJet.png}\\
+%\resizebox{1.\textwidth}{!}{from \url{http://cms.web.cern.ch/news/jets-cms-and-determination-their-energy-scale}}
 
-\resizebox{1.\textwidth}{!}{from \url{http://cms.web.cern.ch/news/jets-cms-and-determination-their-energy-scale}}
+\begin{itemize}
+\item Combine calorimeter clusters using anti-$k_t$ algorithm with $R=0.4$
+\end{itemize}
+$d_{ij}=min(\dfrac{1}{k_{t_i}^{2}},\dfrac{1}{k_{t_j}^{2}})\frac{\Delta R_{ij}^{2}}{R^{2}}$
+\begin{itemize}
+\item LC clusters energy
+\item Pile-up and JES correction
+\end{itemize}
+{\cccolor \bfseries +}\\
+\begin{itemize}
+\item $\pt>25\gev$, $|\eta|<2.5$
+\item JVF$>0.5$
+\item jet-electron overlap removal
+\end{itemize}
+
+
 \end{minipage}\begin{minipage}{.5\textwidth}\centering
-\includegraphics[width=.78\textwidth]{pics/antikt}
+\includegraphics[width=.78\textwidth]{pics/antikt}\\
+\includegraphics[width=.9\textwidth]{pics/corr_jet_lcw}
+
+\end{minipage}
+
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{\btag ging}
+\centering\footnotesize
+
+\begin{minipage}{.3\textwidth}\centering
+
+$b$ quark $\Rightarrow$ $B$ hadron ($\lambda\sim 10^{-12}$~s)\\
+{\large$\Downarrow$}\\
+travels about 3~mm\\ before decaying
+
+\includegraphics[width=.8\textwidth]{../objectsreconstruction/figures/Picture-b-tagging-2.png}
+
+\end{minipage}\begin{minipage}{.7\textwidth}\centering
+
+\includegraphics[width=1.\textwidth]{../objectsreconstruction/figures/btageffs.png}
+
+\end{minipage}
+
+\myskip
+
+\begin{minipage}{.4\textwidth}\centering
+
+
+various algorithms exploit ID track info to identify \bjet s
+
+\begin{itemize}
+\item \texttt{\cccolor MV1} algorithm @ 70\% efficiency, $\sim 130$ rejection
+\end{itemize}
+
+\end{minipage}\begin{minipage}{.6\textwidth}\centering
+
+Events are selected through \\a cut on the \btag-weight computed\\
+{\large$\Downarrow$}\\
+with 70\% efficiency, high multiplicities will suffer
+
+\begin{itemize}
+\item {\cccolor TagRateFunction} method
+\end{itemize}
+
 
 \end{minipage}
 
