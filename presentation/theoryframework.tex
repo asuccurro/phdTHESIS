@@ -42,7 +42,7 @@ $q$ & 0 & $\pm$1 & 0 & 0\\ \midrule%\bottomrule\toprule
 \pgfdeclareimage[interpolate=true,width=.4\textwidth]{pie}{pics/piematter}
 \pgfdeclareimage[interpolate=true,width=.42\textwidth]{gut}{pics/gut}
 \pgfdeclareimage[interpolate=true,width=.3\textwidth]{loop}{pics/loop1}
-\onslide<1->{
+\onslide<4->{
    \begin{pgftranslate}{\pgfpoint{0.\textwidth}{0.\textheight}}
 \input{pgf3generations.tex}
 %%%%%%%%%%%% WHY
@@ -50,7 +50,7 @@ $q$ & 0 & $\pm$1 & 0 & 0\\ \midrule%\bottomrule\toprule
   \usebeamercolor[fg]{head/foot boxes}
   \pgfrect[stroke]{\pgfxy(3.6,3.)}{\pgfxy(2.7,4)}
   \usebeamercolor[fg]{normal text}
-  \pgfputat{\pgfxy(3.6,5.)}{\pgfbox[left,base]{\small\begin{tabular}{c} why only\\ 3 generations?\\ \\QCD limit:\\ 9 flavors\\ EW precision:\\ 3 neutrinos\\w/ $m_{\nu\nu}<m_Z$\end{tabular}}}
+  \pgfputat{\pgfxy(3.6,5.)}{\pgfbox[left,base]{\small\begin{tabular}{c} why only\\ 3 generations?\\ \\QCD limit:\\ 9 families\\ EW precision:\\ 3 neutrinos\\w/ $m_{\nu\nu}<m_Z$\end{tabular}}}
 }
    \end{pgftranslate}
 }
@@ -64,7 +64,7 @@ $q$ & 0 & $\pm$1 & 0 & 0\\ \midrule%\bottomrule\toprule
 \pgfputat{\pgfxy(1.7,0.4)}{\pgfbox[left,base]{\small $H \qquad\qquad t \qquad\qquad H$ }}
    \end{pgftranslate}
 }
-\onslide<4->{
+\onslide<1->{
 \pgfputat{\pgfxy(0.5,0.1)}{\pgfbox[left,base]{\pgfuseimage{gut}}}
 \pgfputat{\pgfxy(3.,2.1)}{\pgfbox[left,base]{\small \cccolor GUT theories? Gravity?}}
 }

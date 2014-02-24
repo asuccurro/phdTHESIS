@@ -385,4 +385,36 @@ $t\bar{t}$+heavy-flavour fractions &  - & -& N & 1\\
 \bottomrule
 \end{tabular}
 
+
+\end{frame}
+
+\begin{frame}\frametitle{Statistical analysis}
+\centering\myskip\scriptsize
+
+
+\cls{s}\ method~\cite{cls,cls_2}:
+
+\begin{itemize}
+\item ``background only'' hypothesis $\mathcal{H}_{b}$
+\item ``signal plus background'' hypothesis $\mathcal{H}_{s+b}$ 
+\end{itemize}
+
+\begin{eqnarray*}
+\cls{b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{b}),\\
+\cls{s+b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{s+b}),
+\end{eqnarray*}
+$Q_{\rm obs} = $ observed value in data of the 
+test statistic $Q$
+
+$$\cls{s} = \cls{s+b}/\cls{b}$$
+
+
+{\cccolor Exclude} signal hypothesis if $\cls{s} \leq 1 - CL$ 
+
+%$\cls{s} < 0.05$ are deemed to be excluded at the 95\% CL.
+%Using $\cls{s}$ instead of $\cls{s+b}$ minimizes the possibility  of mistakenly excluding a small signal due to a downward background fluctuation, as this would lead to small values of both $\cls{s+b}$ and $\cls{b}$.
+
+%Similarly, the confidence level for excluding the background only hypothesis is the $p$-value $1 - \cls{b}$ and the value required to claim discovery is of $\sim 10^{-7}$. The motivation that led to the definition of \cls{s} instead of using \cls{s+b}, which also corresponds to the confidence level in excluding the signal+background hypothesis, is that the latter might wrongly exclude scenarios to which the analysis is simply non-sensitive to like is the general case for searches for rare events.
+
+
 \end{frame}
