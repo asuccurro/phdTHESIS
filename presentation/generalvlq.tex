@@ -199,17 +199,25 @@ $\htfj<800\gev$ (*)
 \end{pgfscope}
 \end{pgfpicture}
 
-\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize
+\centering
 
 \begin{itemize}
 \item QCD multi-jet events have high cross-section
-\item Data-drive estimation
-\item Matrix-method       
+\item Jets are misidentified as leptons
+\item Data-driven estimation (Matrix-method)
 \end{itemize}
 
 \includegraphics[width=0.4\textwidth]{../vlq_analysis/figures/mm_regions}
 
-$$N^\mathrm{tight}_\mathrm{fake} = \frac{\epsilon_\mathrm{fake}}{\epsilon_\mathrm{real} - \epsilon_\mathrm{fake}}(N^\mathrm{loose} \epsilon_\mathrm{real} - N^\mathrm{tight})$$
+\myskip
+
+\begin{minipage}{.7\textwidth}\footnotesize
+$N^\mathrm{loose}  =  N^\mathrm{loose}_\mathrm{real} + N^{loose}_\mathrm{fake}$ \\\myskip
+$N^\mathrm{tight}  =  \epsilon_\mathrm{real}N^\mathrm{loose}_\mathrm{real} + \epsilon_\mathrm{fake}N^\mathrm{loose}_\mathrm{fake}$
+\end{minipage}
+
+%N^\mathrm{tight}_\mathrm{fake} = \frac{\epsilon_\mathrm{fake}}{\epsilon_\mathrm{real} - \epsilon_\mathrm{fake}}(N^\mathrm{loose} \epsilon_\mathrm{real} - N^\mathrm{tight})$$
 
 \end{minipage}
 \end{frame}
@@ -344,6 +352,7 @@ $\htfj<800\gev$ (*)
 \begin{frame}\frametitle{Systematic uncertainties - Shape and Norm}
 \centering\myskip\scriptsize
 
+\resizebox{!}{.28\textwidth}{
 \begin{tabular}{lcccc}
 \toprule
 Systematic uncertainty & \multicolumn{2}{c}{ \wbx\  } & \multicolumn{2}{c}{ \htx\  }\\
@@ -351,19 +360,19 @@ Systematic uncertainty & \multicolumn{2}{c}{ \wbx\  } & \multicolumn{2}{c}{ \htx
 \midrule
 Luminosity                  &  N & 1 &  N & 1\\
 Lepton ID+reco+trigger      &  N & 1 &  N & 1\\
-Jet vertex fraction efficiency & SN & 1 & SN & 1\\
 \rowcolor{TabLight}Jet energy scale            & SN & 1 & SN & 8\\
 Jet energy resolution       & SN & 1 & SN & 1\\
 %Jet mass scale               & - & -\\
 %Jet mass resolution      & - & -\\
+Jet vertex fraction efficiency & SN & 1 & SN & 1\\
 \rowcolor{TabLight}$b$-tagging efficiency      & SN & 9 & SN & 9\\
 $c$-tagging efficiency      & SN & 5 & SN & 5\\
-Light jet-tagging efficiency    & SN & 1 & SN & 1\\
+Light jet-tagging efficiency    & SN & 1 & SN & 1\\\midrule
 $t\bar{t}$ cross section    &  N & 1 &  N & 1\\
 $t\bar{t}V$ cross section   &  N & 1 &  N & 1\\
 $t\bar{t}H$ cross section   & - & - &  N & 1\\
-Single top cross section    &  N & 1 &  N & 1\\
 Dibosons cross section      &  N & 1 &  N & 1\\
+Single top cross section    &  N & 1 &  N & 1\\\midrule
 $W$+jets normalization      &  N & 5 &  - & -\\
 $Z$+jets normalization      &  N & 1 &  - & -\\
 $V$+jets normalization      &  - & - &  N & 1\\
@@ -374,7 +383,7 @@ $t\bar{t}$+heavy-flavour fractions &  - & -& N & 1\\
 %$\TT$ modelling        & - & -\\
 \bottomrule
 \end{tabular}
-
+}
 
 \end{frame}
 

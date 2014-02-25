@@ -108,10 +108,19 @@
 \end{pgfscope}
 \onslide<5->{
 \usebeamercolor[fg]{normal text}
-\pgfcircle[fill]{\pgfxy(6.8,2.)}{2pt}
-\pgfputat{\pgfxy(7,1.9)}{\pgfbox[left,base]{Set exclusion using $CL_{s}$ }}
-\pgfputat{\pgfxy(7,1.6)}{\pgfbox[left,base]{in each point of the plane}}
+%\pgfcircle[fill]{\pgfxy(6.8,2.)}{2pt}
+%\pgfputat{\pgfxy(7,1.9)}{\pgfbox[left,base]{Set exclusion using $CL_{s}$ }}
+%\pgfputat{\pgfxy(7,1.6)}{\pgfbox[left,base]{in each point of the plane}}
 %\pgfcircle[fill]{\pgfxy(6.8,1.2)}{2pt}
+\pgfputat{\pgfxy(5.3,1.)}{\pgfbox[left,base]{\begin{tabular}{c c c} 
+Set strategy & \multirow{2}{*}{$\Rightarrow$} & Check good bkg \\
+($S/B$)      &                                & modeling \\
+             &                                &  $\Downarrow$\\
+Test \cls{b} and & \multirow{2}{*}{$\Leftarrow$} & \multirow{2}{*}{Look at data} \\
+\cls{s+b} hypotheses & &\\
+\multicolumn{3}{c}{$\nwarrow$} \\
+\multicolumn{3}{c}{\it for each point of the BR plane}\\
+\end{tabular}}}
 }
     \end{pgftranslate}
 \end{pgfscope}
