@@ -1,0 +1,371 @@
+\begin{frame}\frametitle{Allowed decay modes}
+\centering\myskip
+
+\begin{minipage}{.4\textwidth}\centering
+\scriptsize
+  \input{tabs/singletdoublet_v2.tex}
+\end{minipage}\begin{minipage}{.6\textwidth}\centering
+  \includegraphics[width=0.95\textwidth]{../vlq_analysis/figures/fig_02a.pdf}
+\end{minipage}
+
+\end{frame}
+
+
+
+\input{brplane.tex}
+
+
+
+\begin{frame}\frametitle{Preselection}
+\centering\myskip
+
+\begin{minipage}{.6\textwidth}\centering\footnotesize
+Two searches using common analysis framework:
+\begin{minipage}{.5\textwidth}\centering
+\begin{itemize}
+\item \wbx
+\end{itemize}
+\scriptsize
+\cccolor 
+
+ATLAS-CONF-2013-060~\cite{ATLAS-CONF-2013-060}
+\end{minipage}\begin{minipage}{.5\textwidth}\centering
+\begin{itemize}
+\item \htx
+\end{itemize}
+\scriptsize
+\cccolor 
+
+ATLAS-CONF-2013-018~\cite{ATLAS-CONF-2013-018}
+\end{minipage}
+
+\myskip
+
+\begin{tabular}{ll}
+\toprule
+Preselection stage & Requirements \\
+\midrule
+Single lepton & One electron or muon\\
+              & matching trigger  \\\midrule
+%\\
+QCD rejection & $\met >20\gev$\\
+              & $\met +m_{\rm T}>60\gev$ \\\midrule
+%\\
+Jet multiplicity & $\geq 4$ jets\\
+                 & $\geq 1$ $b$-tagged jets \\
+\bottomrule\end{tabular}
+
+\myskip
+{\bfseries\cccolor + ``orthogonality'' requirements} 
+
+\myskip
+
+\end{minipage}\begin{minipage}{.4\textwidth}\centering
+\vskip-5ex
+\includegraphics[width=0.9\textwidth]{pics/feyn_wbwb}\\
+\vskip-2ex
+\includegraphics[width=0.9\textwidth]{pics/feyn_htX}
+\end{minipage}
+
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel_high_qcd.tex}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+\begin{itemize}
+\item QCD multi-jet events have high cross-section
+\item Data-drive estimation
+\item Matrix-method       
+\end{itemize}
+
+\includegraphics[width=0.4\textwidth]{../vlq_analysis/figures/mm_regions}
+
+$$N^\mathrm{tight}_\mathrm{fake} = \frac{\epsilon_\mathrm{fake}}{\epsilon_\mathrm{real} - \epsilon_\mathrm{fake}}(N^\mathrm{loose} \epsilon_\mathrm{real} - N^\mathrm{tight})$$
+
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel_high_singletop.tex}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+\begin{itemize}
+\item $s$-channel and $Wt$ production generated with {\tt MC@NLO}+{\tt HERWIG}
+\item $t$-channel generated with {\tt ACERMC}+{\tt PYTHIA}
+\item $m_t = 172.5\gev$
+\item NNLO theoretical cross sections
+\end{itemize}
+
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel_high_dib.tex}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+\begin{itemize}
+\item Diboson production generated with {\tt HERWIG}
+\item NLO theoretical cross section
+\end{itemize}
+
+\end{minipage}
+
+
+
+\end{frame}
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel_high_zj.tex}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+\begin{itemize}
+\item $Z$ boson production in association with jets generated with up to five additional partons with {\tt ALPGEN}+{\tt HERWIG}
+\item Samples generated separately for $Z$+light jets, $Zb\bar{b}$+jets, and $Zc\bar{c}$+jets 
+\item Inclusive NNLO theoretical cross section
+\end{itemize}
+
+\end{minipage}
+
+
+
+\end{frame}
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel_high_wj.tex}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+
+\begin{itemize}
+\item $W$ boson production in association with jets generated with up to five additional partons with {\tt ALPGEN}+{\tt HERWIG}
+\item Samples generated separately for $W$+light jets, $Wb\bar{b}$+jets, $Wc\bar{c}$+jets, and $Wc$+jets
+\item Normalized to data-driven prediction
+\end{itemize}
+
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel_high_ttv.tex}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+\begin{itemize}
+\item $t\bar{t}$ produced in association with a $W$ or $Z$ boson generated with {\tt MADGRAPH}+{\tt PYTHIA}
+\item $m_t = 172.5\gev$
+\item NLO theoretical cross section
+\end{itemize}
+
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel_high_tth.tex}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+\begin{itemize}
+\item $t\bar{t}$ produced in association with a Higgs boson generated with {\tt PYTHIA}
+\item $m_t = 172.5\gev$, $m_H=125\gev$
+\item Higgs decay modes considered: $H\to b\bar{b}$, $c\bar{c}$, $gg$, $W^+W^-$
+\item NLO theoretical cross section
+\end{itemize}
+
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel_high_ttj.tex}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+\only<1>{
+\begin{itemize}
+\item $t\bar{t}$ pair production in association with jets generated with {\tt MC@NLO}+{\tt HERWIG}
+\item $m_t = 172.5\gev$
+\item NNLO theoretical cross section
+\end{itemize}
+
+but\\
+{\tt MC@NLO} does not model well high-jet multiplicity regions!
+
+\begin{itemize}
+\item Additional samples generated with {\tt ALPGEN}+{\tt HERWIG}
+\item Separate samples are generated for $t\bar{t}$+light jets with up to three additional light partons,
+and for $t\bar{t}$+heavy-flavour jets including $t\bar{t}b\bar{b}$ and $t\bar{t}c\bar{c}$ 
+\item $m_t = 172.5\gev$
+\item NNLO theoretical cross section
+\end{itemize}
+}
+
+\only<2>{
+Yields for \ttbar\ predicted with \texttt{ALPGEN}
+are $\sim$3-8\% higher than \texttt{MC@NLO}
+
+\includegraphics[width=0.8\textwidth]{pics/Njets25_ELEMUON_4jetin1btagin_NOMINAL}
+
+}
+
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}\frametitle{Background and signal modelling}
+\centering\myskip
+
+\begin{minipage}{.5\textwidth}\footnotesize\centering
+\scriptsize
+Yields in the preselection region ``blinded'' as:\\
+$\htfj<800\gev$ (*)
+\myskip
+
+  \input{tabs/blinded_presel_high_vlt.tex}
+
+\myskip
+(*) $\htfj = \pT(l) + \met + \sum_{j = 1}^{\rm 4}\pT(j)$
+\end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
+
+\begin{itemize}
+\item \TTbar\ singlet production generated with {\tt PROTOS}+{\tt PYTHIA}
+\item Branching ratio to each decay mode  ($Wb$, $Zt$ and $Ht$) is set to  1/3
+\item Events are reweighted at the analysis level in order to reproduce any desired branching ratio configuration
+\item $m_{T}$ values generated from $350\gev$ to $850\gev$ in steps of $50\gev$
+\item $m_H=125\gev$, all Higgs boson decay modes are considered
+\item NNLO theoretical cross section
+\end{itemize}
+
+\end{minipage}
+
+
+\end{frame}
+
+\begin{frame}\frametitle{Systematic uncertainties - Shape and Norm}
+\centering\myskip\scriptsize
+
+\begin{tabular}{lcccc}
+\toprule
+Systematic uncertainty & \multicolumn{2}{c}{ \wbx\  } & \multicolumn{2}{c}{ \htx\  }\\
+ & Status  & Components & Status  & Components\\
+\midrule
+Luminosity                  &  N & 1 &  N & 1\\
+Lepton ID+reco+trigger      &  N & 1 &  N & 1\\
+Jet vertex fraction efficiency & SN & 1 & SN & 1\\
+\rowcolor{TabLight}Jet energy scale            & SN & 1 & SN & 8\\
+Jet energy resolution       & SN & 1 & SN & 1\\
+%Jet mass scale               & - & -\\
+%Jet mass resolution      & - & -\\
+\rowcolor{TabLight}$b$-tagging efficiency      & SN & 9 & SN & 9\\
+$c$-tagging efficiency      & SN & 5 & SN & 5\\
+Light jet-tagging efficiency    & SN & 1 & SN & 1\\
+$t\bar{t}$ cross section    &  N & 1 &  N & 1\\
+$t\bar{t}V$ cross section   &  N & 1 &  N & 1\\
+$t\bar{t}H$ cross section   & - & - &  N & 1\\
+Single top cross section    &  N & 1 &  N & 1\\
+Dibosons cross section      &  N & 1 &  N & 1\\
+$W$+jets normalization      &  N & 5 &  - & -\\
+$Z$+jets normalization      &  N & 1 &  - & -\\
+$V$+jets normalization      &  - & - &  N & 1\\
+Multijet normalization      &  - & - &  N & 1\\
+\rowcolor{TabLight}$t\bar{t}$ modelling        & SN & 3 & SN & 3\\
+$V$+jets modelling         & SN & 1 &  - & -\\
+$t\bar{t}$+heavy-flavour fractions &  - & -& N & 1\\
+%$\TT$ modelling        & - & -\\
+\bottomrule
+\end{tabular}
+
+\end{frame}

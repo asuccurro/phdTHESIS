@@ -1,0 +1,23 @@
+
+\begin{tikzpicture}
+[
+    pie chart,
+    slice type={comet}{blu},
+    slice type={legno}{rosso},
+    slice type={coltello}{giallo},
+    slice type={sedia}{viola},
+    slice type={caffe}{verde},
+    pie values/.style={font={\small}},
+    scale=2
+]
+
+    \pie{2008}{73/comet,13/legno,7/sedia,7/coltello}
+    \pie[xshift=2.2cm,values of coltello/.style={pos=1.1}]%
+        {2009}{52/comet,23/legno,17/sedia,3/coltello,5/caffe}
+    \pie[xshift=4.4cm,values of caffe/.style={pos=1.1}]%
+        {2010}{56/comet,26/legno,9/sedia,7/coltello,2/caffe}
+
+    \legend[shift={(0cm,-1cm)}]{{Comet (Pordenone)}/comet, {Wood and furniture (Livenza)}/legno, {Knife (Maniago)}/coltello}
+    \legend[shift={(3cm,-1cm)}]{{Chair (Manzano)}/sedia, {Coffee (Trieste)}/caffe}
+
+\end{tikzpicture}
