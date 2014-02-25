@@ -1,0 +1,54 @@
+
+\begin{frame}\frametitle{Electron}
+\footnotesize\centering
+
+\includegraphics[width=.9\textwidth,height=0.5\textheight]{pics/Zee}
+
+\begin{minipage}{.5\textwidth}\centering
+\begin{itemize}
+\item $|\eta|<2.47$ ID track $\leftrightarrow$ EM deposit
+\item $E_{\rm calo}$ consistent with $p_{\rm T, ID}$
+\item calibrated with $Z\to ee$ events
+\end{itemize}
+\end{minipage}\begin{minipage}{.5\textwidth}\centering
+{\cccolor \bfseries +}\\
+\begin{itemize}
+\item excluded $1.37< |\eta|< 1.52$
+%\item $\et = E_{\rm cluster}/\cosh\eta_{\rm track} > 25\gev$, $|z_0|<2~$mm.
+\item $\et > 25\gev$, $|z_0|<2~$mm
+\item isolation cuts {\scriptsize\texttt{EtCone20}, \texttt{PtCone30}}
+\item electron-jet overlap removal
+\item {\scriptsize\texttt{EF\_e24vhi\_medium1} $||$ \texttt{EF\_e60\_medium1}}
+\end{itemize}
+\end{minipage}
+
+\end{frame}
+
+
+\begin{frame}\frametitle{Muon}
+\footnotesize\centering
+
+\includegraphics[width=.9\textwidth,height=0.5\textheight]{pics/Zmumu}
+
+\begin{minipage}{.5\textwidth}\centering
+\begin{itemize}
+\item \texttt{Muid}: MS track $\leftrightarrow$ ID track ($|\eta|<2.47$)
+\item $p_{\rm T,MS}$ corrected for mip loss
+\item $p_{\rm T}$ weighted average MS $\leftrightarrow$ ID
+\item calibrated with $Z\to \mu\mu$ events
+\end{itemize}
+
+\end{minipage}\begin{minipage}{.5\textwidth}\centering
+{\cccolor \bfseries +}\\
+\begin{itemize}
+\item $\pt > 25\gev$, $|z_0|<2~$mm
+\item isolation cut \texttt{PtCone20}
+\item mini-isolation cut
+\item \texttt{EF\_mu24i\_tight} $||$ \texttt{EF\_mu36\_tight}
+\end{itemize}
+
+\end{minipage}
+
+\end{frame}
+
+
