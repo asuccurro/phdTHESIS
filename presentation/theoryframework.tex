@@ -4,14 +4,10 @@
 
 \begin{minipage}{.55\textwidth}\centering
 
-
-\includegraphics[width=0.8\textwidth]{pics/W_vs_top}
-
 \resizebox{1.\textwidth}{!}{\tiny
-\begin{tabular}{c x{.15\textwidth} x{.15\textwidth} x{.15\textwidth} x{.15\textwidth}}\toprule
-           & \multicolumn{2}{c}{Leptons}&\multicolumn{2}{c}{Quarks} \\ 
-Fermion    & \multicolumn{2}{c}{spin 1/2}& \multicolumn{2}{c}{spin 1/2}\\
-generation & $q=-1$ & $q=0$ &$q=2/3$ &$q=-1/3$ \\ \midrule
+\begin{tabular}{c x{.12\textwidth} x{.12\textwidth} x{.12\textwidth} x{.12\textwidth}}\toprule
+Fermions   & \multicolumn{2}{c}{Leptons}&\multicolumn{2}{c}{Quarks} \\ 
+generation & $q=-1$ & $q=0$ &$q=\frac{2}{3}$ &$q=-\frac{1}{3}$ \\ \midrule
 I & $e^{-}$ & $\nu_{e}$ & $u$ & $d$ \\
 II & $\mu^{-}$ & $\nu_{\mu}$ & $c$ & $s$ \\
 III & $\tau^{-}$ & $\nu_{\tau}$ & $t$ & $b$ \\ \midrule%\bottomrule\toprule
@@ -23,6 +19,39 @@ $q$ & 0 & $\pm$1 & 0 & 0\\ \midrule%\bottomrule\toprule
 \bottomrule
 \end{tabular}
 }
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.5\textwidth}
+
+\begin{pgfscope}
+\pgfdeclareimage[interpolate=true,width=.75\textwidth]{wtop}{pics/W_vs_top}
+\pgfputat{\pgfxy(.8,-0.2)}{\pgfbox[left,base]{\pgfuseimage{wtop}}}
+ \pgfsetlinewidth{1.pt}
+ \usebeamercolor[fg]{head/foot boxes}
+\only<2>{
+ \pgfrect[stroke]{\pgfxy(2,5.48)}{\pgfxy(1.7,0.57)}
+ \begin{pgfrotateby}{\pgfdegree{30}}
+ \pgfputat{\pgfxy(3.,4.3)}{\pgfbox[left,base]{\scriptsize\bf\begin{tabular}{c} ``who ordered\\ that??''\\\tiny [I.I.Rabi]\\\end{tabular}}}
+ \end{pgfrotateby}
+}
+\only<3>{
+ \pgfrect[stroke]{\pgfxy(4.6,5.75)}{\pgfxy(1.7,0.3)}
+}
+ \usebeamercolor[bg]{head/foot boxes}
+ \pgfsetlinewidth{.7pt}
+\only<4>{
+\pgfline{\pgfxy(4.85,5.3)}{\pgfxy(5.,2.3)}
+\pgfline{\pgfxy(3.6,4.4)}{\pgfxy(5.,2.3)}
+}
+\only<5>{
+\pgfline{\pgfxy(4.85,5.3)}{\pgfxy(4.5,2.3)}
+\pgfline{\pgfxy(3.6,4.4)}{\pgfxy(4.5,2.3)}
+\pgfline{\pgfxy(2.2,3.6)}{\pgfxy(4.5,2.3)}
+}
+
+\end{pgfscope}
+\end{pgfpicture}
+
+%\includegraphics[width=0.8\textwidth]{pics/W_vs_top}
 
 
 \end{minipage}\begin{minipage}{.45\textwidth}\centering
