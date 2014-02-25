@@ -11,46 +11,37 @@
 \begin{frame}\frametitle{One lepton}
 \footnotesize\centering
 
+\includegraphics[width=.5\textwidth,height=0.5\textheight]{pics/Zee}
+\includegraphics[width=.5\textwidth,height=0.5\textheight]{pics/Zmumu}
+
 \begin{minipage}{.5\textwidth}\centering
-\includegraphics[width=.9\textwidth,height=0.3\textheight]{pics/Zee}
 
 \begin{itemize}
-\item $|\eta|<2.47$ ID track $\leftrightarrow$ EM deposit
-\item $E_{\rm calo}$ consistent with $p_{\rm T, ID}$
+\item $|\eta|<2.5$ ID track $\leftrightarrow$ EM deposit
 \item calibrated with $Z\to ee$ events
 \end{itemize}
-{\cccolor \bfseries +}\\
-\begin{itemize}
-\item excluded $1.37< |\eta|< 1.52$
-%\item $\et = E_{\rm cluster}/\cosh\eta_{\rm track} > 25\gev$, $|z_0|<2~$mm.
-\item $\et > 25\gev$, $|z_0|<2~$mm
-\item isolation cuts {\scriptsize\texttt{EtCone20}, \texttt{PtCone30}}
-\item electron-jet overlap removal
-\item {\scriptsize\texttt{EF\_e24vhi\_medium1} $||$ \texttt{EF\_e60\_medium1}}
-\end{itemize}
-
 
 \end{minipage}\begin{minipage}{.5\textwidth}\centering
 
-
 \begin{itemize}
-\item \texttt{Muid}: MS track $\leftrightarrow$ ID track ($|\eta|<2.47$)
-\item $p_{\rm T,MS}$ corrected for mip loss
-\item $p_{\rm T}$ weighted average MS $\leftrightarrow$ ID
+\item \texttt{Muid}: MS track $\leftrightarrow$ ID track ($|\eta|<2.5$)
 \item calibrated with $Z\to \mu\mu$ events
 \end{itemize}
-{\cccolor \bfseries +}\\
-\begin{itemize}
-\item $\pt > 25\gev$, $|z_0|<2~$mm
-\item isolation cut \texttt{PtCone20}
-\item mini-isolation cut
-\item \texttt{EF\_mu24i\_tight} $||$ \texttt{EF\_mu36\_tight}
-\end{itemize}
-
-\includegraphics[width=.78\textwidth,height=0.3\textheight]{pics/Zmumu}
 
 \end{minipage}
 
+\begin{minipage}{.5\textwidth}\centering
+{\cccolor \bfseries \large +}\\
+\begin{itemize}
+\item $\pt (\et) > 25\gev$, $|z_0|<2~$mm
+\item match to the lepton triggering the event
+\end{itemize}
+\end{minipage}
+
+\begin{itemize}
+\item exclude electrons in $1.37< |\eta|< 1.52$
+\item electron-jet overlap removal
+\end{itemize}
 
 \end{frame}
 
@@ -69,8 +60,8 @@
 \end{itemize}
 $d_{ij}=min(\dfrac{1}{k_{t_i}^{2}},\dfrac{1}{k_{t_j}^{2}})\frac{\Delta R_{ij}^{2}}{R^{2}}$
 \begin{itemize}
-\item LC clusters energy
-\item Pile-up and JES correction
+\item LocalCluster calibration of energy
+\item Pile-up and particle-level $E$ corrections
 \end{itemize}
 {\cccolor \bfseries +}\\
 \begin{itemize}
@@ -96,44 +87,30 @@ $d_{ij}=min(\dfrac{1}{k_{t_i}^{2}},\dfrac{1}{k_{t_j}^{2}})\frac{\Delta R_{ij}^{2
 \begin{frame}\frametitle{\btag ging}
 \centering\footnotesize
 
-\begin{minipage}{.3\textwidth}\centering
+\begin{minipage}{.5\textwidth}\centering
 
 $b$ quark $\Rightarrow$ $B$ hadron ($\lambda\sim 10^{-12}$~s)\\
 {\large$\Downarrow$}\\
-travels about 3~mm\\ before decaying
+travels about 3~mm before decaying
 
-\includegraphics[width=.8\textwidth]{../objectsreconstruction/figures/Picture-b-tagging-2.png}
+\includegraphics[width=.5\textwidth]{../objectsreconstruction/figures/Picture-b-tagging-2.png}
 
-\end{minipage}\begin{minipage}{.7\textwidth}\centering
+\end{minipage}\begin{minipage}{.5\textwidth}\centering
 
-\includegraphics[width=1.\textwidth]{../objectsreconstruction/figures/btageffs.png}
+\includegraphics[width=.8\textwidth]{pics/blighteff}
 
 \end{minipage}
 
 \myskip
 
-\begin{minipage}{.4\textwidth}\centering
-
-
-various algorithms exploit ID track info to identify \bjet s
+various algorithms exploit ID track info to assign a ``\btag-weight'' to the jets
 
 \begin{itemize}
-\item \texttt{\cccolor MV1} algorithm @ 70\% efficiency, $\sim 130$ rejection
+\item \texttt{\cccolor MV1} algorithm @ 70\% efficiency, $\sim 130$ light-jet rejection, $\sim 5$ $c$-jet rejection
 \end{itemize}
 
-\end{minipage}\begin{minipage}{.6\textwidth}\centering
-
-Events are selected through \\a cut on the \btag-weight computed\\
-{\large$\Downarrow$}\\
-with 70\% efficiency, high multiplicities will suffer
-
-\begin{itemize}
-\item {\cccolor TagRateFunction} method
-\end{itemize}
-
-
-\end{minipage}
-
+multi-variate algorithm combining info from {\cccolor impact parameters} (\texttt{IP3D}) \\
+and the {\cccolor reconstructed secondary vertex} (\texttt{SV1})
 
 \end{frame}
 
@@ -142,19 +119,26 @@ with 70\% efficiency, high multiplicities will suffer
 \begin{frame}\frametitle{Missing transverse energy}
 \centering\myskip
 
-\begin{minipage}{.5\textwidth}\centering
 
-\includegraphics[width=.9\textwidth]{pics/real_et}\\
-{\tiny from \url{http://tomwhyntie.wordpress.com/research/}}
+\begin{minipage}{.6\textwidth}\centering
+\includegraphics[width=.9\textwidth]{pics/MET-photon-ATLAS.jpg}\\
 
-\end{minipage}\begin{minipage}{.5\textwidth}\centering
+\end{minipage}\begin{minipage}{.4\textwidth}\centering
+
+Invisible particles\\
+{\footnotesize (neutrinos and\dots who knows!)}\\
+{\Large$\Downarrow$}\\
+Quantify the $E$ imbalance in the transverse plane
+
 \end{minipage}
+
 $$\begin{array}{lcl}
 %E^{\rm miss}_{x,y} & = & E^{\rm RefEle}_{x,y} + E^{\rm RefGamma}_{x,y} + E^{\rm RefJet}_{x,y} + E^{\rm RefMuon}_{x,y} + E^{\rm SoftJet}_{x,y} + E^{\rm CellOut}_{x,y}\\
 E^{\rm miss}_{T} & = & \big|-\sum\vec{p}_T \big| = \sqrt{(E^{\rm miss}_{x})^2 + (E^{\rm miss}_{y})^2} ,\\
 E^{\rm miss}_{x} & = & -\sum\vec{p}_x ,\\
 E^{\rm miss}_{y} & = & -\sum\vec{p}_y ,\\
 \end{array}$$
+
 
 
 \end{frame}
