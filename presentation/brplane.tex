@@ -86,41 +86,31 @@
 \pgflineto{\pgfxy(0,0)}
 \pgflineto{\pgfxy(0,5)}
 \pgfclip
-\pgfcircle[fill]{\pgfxy(.5,4)}{35pt}
+\pgfcircle[fill]{\pgfxy(.5,4)}{55pt}
 {\usebeamercolor[bg]{normal text}
 %\pgfputat{\pgfxy(0.,3.5)}{\begin{pgfrotateby}{\pgfdegree{-45}}\pgfbox[left,base]{$T(B)\to Ht(b)$}\end{pgfrotateby}}
-\pgfputat{\pgfxy(0.2,3.6)}{\pgfbox[left,base]{\large$Ht$}}
+\pgfputat{\pgfxy(0.05,3.2)}{\pgfbox[left,base]{\large$Ht+X$}}
 }
 {
     \usebeamercolor[bg]{head/foot boxes}
     \pgfcircle[fill]{\pgfxy(0.,3.)}{3pt}
 }
 }
-\onslide<5->{
-%\pause
-\pgfcircle[fill]{\pgfxy(.6,.6)}{35pt}
-{\usebeamercolor[bg]{normal text}
-%\pgfputat{\pgfxy(0.2,.4)}{\pgfbox[left,base]{$T(B)\to Zt(b)$}}
-\pgfputat{\pgfxy(0.2,.4)}{\pgfbox[left,base]{\large$Zt$}}
-}
-}
-\onslide<6->{
-%\pause
 \pgfcircle[fill]{\pgfxy(4,0)}{35pt}
 {\usebeamercolor[bg]{normal text}
 %\pgfputat{\pgfxy(3.,0.4)}{\pgfbox[left,base]{$T(B)\to Wb(t)$}}
-\pgfputat{\pgfxy(3.2,0.4)}{\pgfbox[left,base]{\large$Wb$}}
+\pgfputat{\pgfxy(2.9,0.2)}{\pgfbox[left,base]{\large$Wb+X$}}
 }
 {
     \usebeamercolor[bg]{head/foot boxes}
     \pgfcircle[fill]{\pgfxy(5.,0)}{3pt}
 }
-}
 \end{pgfscope}
-\onslide<7->{
+\onslide<5->{
+\usebeamercolor[fg]{normal text}
 \pgfcircle[fill]{\pgfxy(6.8,2.)}{2pt}
-\pgfputat{\pgfxy(7,1.9)}{\pgfbox[left,base]{Set exclusion using}}
-\pgfputat{\pgfxy(7,1.6)}{\pgfbox[left,base]{$CL_{s}$ technique~\cite{Junk:1999kv,Read:2002hq}}}
+\pgfputat{\pgfxy(7,1.9)}{\pgfbox[left,base]{Set exclusion using $CL_{s}$ }}
+\pgfputat{\pgfxy(7,1.6)}{\pgfbox[left,base]{in each point of the plane}}
 %\pgfcircle[fill]{\pgfxy(6.8,1.2)}{2pt}
 }
     \end{pgftranslate}
