@@ -155,23 +155,66 @@ $q$ & 0 & $\pm$1 & 0 & 0\\ \midrule%\bottomrule\toprule
 \end{frame}
 
 
-\begin{frame}\frametitle{Available signatures}
-\centering\myskip
+\begin{frame}\frametitle{Heavy quark production}
+\centering
 
-\begin{minipage}{.4\textwidth}\centering
+\includegraphics[width=0.2\textwidth]{../theory/figures/toppairprod/qqbdiag}
+\includegraphics[width=0.65\textwidth]{../theory/figures/toppairprod/ggdiag}
+
+\myskip
+
+\begin{minipage}{.5\textwidth}\centering
 \scriptsize
-\end{minipage}\begin{minipage}{.6\textwidth}\centering
+
+{\cccolor \bf Pair production} analogous to \ttbar:\\
+$gg,q \bar q \to Q \bar Q \quad\quad (Q=T,B,X,Y)$\\
+{\large$\Downarrow$}\\
+``universal'': depends only on \alphas\ and $m_Q$\\
+
+\myskip
+
+\includegraphics[width=0.7\textwidth]{pics/singleprod}
+
+\myskip
+
+{\cccolor \bf Single production}:\\
+$q q' \xrightarrow{V*} q_1Q \quad\quad (V=W,Z)$\\
+{\large$\Downarrow$}\\
+depends on couplings with $W$ and $Z$ bosons~\cite{Aguilar-Saavedra:2013qpa,Atre:2011ae}
+
+\end{minipage}\begin{minipage}{.5\textwidth}\centering
+
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.6\textwidth}
+\pgfdeclareimage[interpolate=true,width=.9\textwidth]{xsec8}{pics/ja/fig4a}
+\pgfputat{\pgfxy(0.1,0.)}{\pgfbox[left,base]{\pgfuseimage{xsec8}}}
+ {
+   \pgfsetlinewidth{1.5pt}
+   \usebeamercolor[fg]{head/foot boxes}
+   \pgfline{\pgfxy(2.68,0.4)}{\pgfxy(2.68,2.9)}
+ }
+\end{pgfpicture}
 \end{minipage}
 
 \end{frame}
 
 
-\begin{frame}\frametitle{Available signatures}
+\begin{frame}\frametitle{Decay modes and available signatures}
 \centering\myskip
 
-\begin{minipage}{.4\textwidth}\centering
+
+\begin{minipage}{.55\textwidth}\centering
 \scriptsize
-\end{minipage}\begin{minipage}{.6\textwidth}\centering
+
+\resizebox{1.\textwidth}{!}{
+  \input{tabs/singletdoublet_v3.tex}
+}
+
+\end{minipage}\begin{minipage}{.45\textwidth}\centering
+
+  \includegraphics[width=1.\textwidth, height=0.6\textwidth]{../vlq_analysis/figures/fig_02a.pdf}\\
+  \includegraphics[width=1.\textwidth, height=0.6\textwidth]{../vlq_analysis/figures/fig_02b.pdf}
+
+
 \end{minipage}
 
 \end{frame}
