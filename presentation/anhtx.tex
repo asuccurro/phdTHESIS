@@ -58,8 +58,6 @@ $\geq 6$ jets, $\geq 4$ \bjet s
 
 \begin{minipage}{.5\textwidth}\centering\scriptsize
 
-maximize signal acceptance
-
 \myskip
 
 \begin{tabular}{ll}
@@ -78,19 +76,23 @@ maximize signal acceptance
 \end{tabular}
 
 \myskip
-$\rightarrow$ \btag ging by {\cccolor TRF} in MC $\leftarrow$
 
 \end{minipage}\begin{minipage}{.5\textwidth}\centering
 
-\includegraphics[width=.8\textwidth]{pics/htx_unscaled/HTAll_ELEMUON_6jetin4btagin_NOMINAL.pdf}
-%HTAll_ELEMUON_6jetin2btagex_NOMINAL.pdf  HTAll_ELEMUON_6jetin3btagex_NOMINAL.pdf  
+%\includegraphics[width=.8\textwidth]{pics/htx_unscaled/HTAll_ELEMUON_6jetin4btagin_NOMINAL.pdf}
+
+Consider three \bjet s multiplicities:
+\begin{itemize}
+\item maximize signal acceptance
+\item insight on the heavy- and light-flavor components
+\end{itemize}
+
+each channel has a very different fraction of \tthf\ and \ttlf
+
+
 
 \end{minipage}
 
-heavy flavor component not well predicted\\ 
-$\Downarrow$ \\ 
-simultaneous fit to data of \HT\ variable\\
-(good to have {\cccolor background enriched} channels)
 
 \end{frame}
 
@@ -101,6 +103,10 @@ simultaneous fit to data of \HT\ variable\\
 \begin{frame}\frametitle{Scale of \ttbar\ components}
 \centering\footnotesize
 
+heavy flavor component not well predicted\\ 
+$\Downarrow$ \\ 
+simultaneous fit to data of \HT\ variable\\
+%(good to have {\cccolor background enriched} channels)
 
  \ttlf: $0.87 \pm 0.02\,{\rm (stat.)} \qquad$  \tthf: $1.35 \pm 0.11\,{\rm (stat.)}$
 
@@ -164,27 +170,34 @@ at most two jets with $\pt>60\gev$, $\HT<1.2\tev$
 \begin{frame}\frametitle{Most relevant systematic uncertainties}
 \centering\footnotesize
 
+\ttbar\ modeling systematics:
+\begin{itemize}
+\item iqopt2:
+\item ktfac:
+\item qfac:
+\end{itemize}
 
-\resizebox{1.\textwidth}{!}{
-\begin{tabular}{l*{10}{c}}
-\toprule
- & \TTbar & $t\bar{t}$H (125) & $t\bar{t}$-HF & $t\bar{t}$-Light & $W$+jets & $Z$+jets & Single top & Diboson & $t\bar{t}$$V$ & Multijet\\
+\myskip
+
+{
+\scriptsize
+\begin{tabular}{l*{4}{c}}\toprule
+ & \TTbar & $t\bar{t}$-HF & $t\bar{t}$-Light \\
 \midrule
-Total [\%]& +21.9/-24.0 & +25.2/-30.0 & +57.3/-58.4 & +42.0/-44.1 & +60.0/-61.0 & +65.2/-66.2 & +31.7/-32.9 & +68.2/-70.2 & +37.6/-38.8 & +50.0/-50.0\\
+Total [\%]& +21.9/-24.0 & +57.3/-58.4 & +42.0/-44.1 \\
 \midrule
-\multicolumn{10}{c}{Main contributions [\%]}\\
-BTAGBREAK8 & +20.4/-22.7 & +18.7/-21.6 & +15.8/-17.8 & +12.2/-13.1 & +13.5/-15.0 & +13.0/-13.9 & +15.9/-17.8 & +22.0/-27.4 & +16.4/-18.6 & --\\
-JES ``baseline'' & +3.1/-3.1 & +7.3/-7.3 & +10.5/-10.5 & +13.7/-13.7 & +18.1/-18.1 & +18.2/-18.2 & +19.9/-19.9 & +5.2/-5.2 & +8.4/-8.4 & --\\
-ttbar iqopt2 & -- & -- & +6.9/-6.9 & +20.1/-20.1 & -- & -- & -- & -- & -- & --\\
-ttbar ktfac & -- & -- & +7.5/-9.2 & +13.8/-17.0 & -- & -- & -- & -- & -- & --\\
-ttbar qfac & -- & -- & +0.7/-0.7 & +1.6/-1.6 & -- & -- & -- & -- & -- & --\\
-ttbarHF & -- & -- & +50.0/-50.0 & +13.0/-13.0 & -- & -- & -- & -- & -- & --\\
+\multicolumn{4}{c}{Main contributions [\%]}\\
+BTAGBREAK8 & +20.4/-22.7 & +15.8/-17.8 & +12.2/-13.1 \\
+JES ``baseline'' & +3.1/-3.1 & +10.5/-10.5 & +13.7/-13.7 \\
+ttbar iqopt2 & -- & +6.9/-6.9 & +20.1/-20.1 \\
+ttbar ktfac & -- & +7.5/-9.2 & +13.8/-17.0 \\
+ttbar qfac & -- & +0.7/-0.7 & +1.6/-1.6 \\
+ttbarHF & -- &+50.0/-50.0 & +13.0/-13.0 \\
 \bottomrule
 \end{tabular}
 }
 
-\includegraphics[width=.33\textwidth]{pics/6jetin4btagin_ELEMUON_ttbar-HF_JESBREAK1}
-\includegraphics[width=.33\textwidth]{pics/6jetin4btagin_ELEMUON_ttbar-Light_JESBREAK1}
+\myskip
 
 Introduce the scaling factors as {\cccolor nuisance parameters}\\
 {\Large $\Downarrow$}\\

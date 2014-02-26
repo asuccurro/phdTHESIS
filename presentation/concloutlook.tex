@@ -1,11 +1,36 @@
 
-\begin{frame}\frametitle{Conclusions and outlook}
+\begin{frame}\frametitle{Summary}
 \footnotesize\centering
-
-{\it both searches are being updated with the full {\cccolor 20~\ifb} statistics}
 
 \begin{minipage}{.3\textwidth}\centering
 \includegraphics[width=.8\textwidth]{pics/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow1234567_NOMINAL.pdf}
+\end{minipage}\begin{minipage}{.7\textwidth}\centering
+
+\myskip
+Best up-to-date 95\% CL obs limit on \\
+chiral $T$ and vector-like $Y$ (740~\gev)
+
+\end{minipage}
+
+\begin{minipage}{.7\textwidth}\centering
+
+\myskip
+Best up-to-date 95\% CL obs limit on doublet $T$
+
+\end{minipage}\begin{minipage}{.3\textwidth}\centering
+\includegraphics[width=.8\textwidth]{pics/htx_final/HTAll_6jetin4btagin_ELEMUON.pdf}
+\end{minipage}
+
+\end{frame}
+
+
+\begin{frame}\frametitle{Conclusions and short-term outlook}
+\footnotesize\centering
+
+{\it all ATLAS searches are being updated with the full {\cccolor 20~\ifb} statistics}\\ plus two new channels: $B\bar{B}\to Wt+X$ and $B\bar{B}\to Hb+X$
+
+\begin{minipage}{.3\textwidth}\centering
+\includegraphics[width=.7\textwidth]{pics/VLQAna_WbX_1W_MWb_4_ELEMUON_cutflow1234567_NOMINAL.pdf}
 \end{minipage}\begin{minipage}{.7\textwidth}\centering
 \begin{tabular}{l}
 \buuu poor MC bkgs statistical population in the \tight\ channel\\
@@ -14,10 +39,6 @@
 \yeee possible optimization of the {\cccolor\htfj\ cut}\\
 \yeee explorable option: larger anti-$k_{t}$ {\cccolor jets}\\
 \end{tabular}
-
-\myskip
-Best up-to-date 95\% CL obs limit on \\
-chiral $T$ and vector-like $Y$ (740~\gev)
 
 \end{minipage}
 
@@ -32,27 +53,34 @@ chiral $T$ and vector-like $Y$ (740~\gev)
 \yeee easily optimizable for a {\cccolor$B\bar{B}\to Hb+X$} analysis\\
 \end{tabular}
 
-\myskip
-Best up-to-date 95\% CL obs limit on doublet $T$
-
 \end{minipage}\begin{minipage}{.3\textwidth}\centering
-\includegraphics[width=.8\textwidth]{pics/htx_final/HTAll_6jetin4btagin_ELEMUON.pdf}
+\includegraphics[width=.7\textwidth]{pics/htx_final/HTAll_6jetin4btagin_ELEMUON.pdf}
 \end{minipage}
 
 \end{frame}
 
-\begin{frame}\frametitle{Outlook}
+\begin{frame}\frametitle{``Long''-term outlook}
 \small\centering
 
-\begin{minipage}{.7\textwidth}\centering
 
-{\it all four} ATLAS searches are being updated\\ with the full {\cccolor 20~\ifb} statistics,\\ plus two new channels: $B\bar{B}\to Wt+X$ and $B\bar{B}\to Hb+X$
-
-\end{minipage}
+\begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.35\textwidth}
+%   \begin{pgftranslate}{\pgfpoint{0.05\textwidth}{-0.12\textheight}}
+%   \end{pgftranslate}
+\pgfdeclareimage[interpolate=true,width=.45\textwidth]{xsec13}{pics/ja/fig4b}
+\pgfdeclareimage[interpolate=true,width=.45\textwidth]{xsec8}{pics/ja/fig4a}
+\pgfputat{\pgfxy(0.0,0.)}{\pgfbox[left,base]{\pgfuseimage{xsec8}}}
+\pgfputat{\pgfxy(6.5,0.)}{\pgfbox[left,base]{\pgfuseimage{xsec13}}}
+ {\usebeamercolor[fg]{head/foot boxes}
+ \pgfline{\pgfxy(7.9,0.4)}{\pgfxy(7.9,3.05)}
+ \pgfline{\pgfxy(7.,3.05)}{\pgfxy(7.9,3.05)}
+ \pgfline{\pgfxy(0.5,2.86)}{\pgfxy(1.42,2.86)}
+ \pgfline{\pgfxy(1.42,0.4)}{\pgfxy(1.42,2.9)}
+ }
+\end{pgfpicture}
 
 \myskip
 
-\begin{minipage}{.6\textwidth}\centering
+\begin{minipage}{.4\textwidth}\centering
 LHC Run-II: \\
 \myskip
 \begin{tabular}{l}
@@ -61,8 +89,7 @@ LHC Run-II: \\
 \buuu higher pile-up\\
 \end{tabular}
 
-
-\myskip
+\end{minipage}\begin{minipage}{.6\textwidth}\centering
 
 To-do:\\
 \begin{itemize}
@@ -70,16 +97,11 @@ To-do:\\
 \item design searches for single production
 \end{itemize}
 
-\myskip
+\end{minipage}
 
 \begin{flushright}\scriptsize
 plots from~\cite{Aguilar-Saavedra:2013qpa}
 \end{flushright}
-
-\end{minipage}\begin{minipage}{.4\textwidth}\centering
-\includegraphics[width=.85\textwidth]{pics/ja/fig4a}\\
-\includegraphics[width=.85\textwidth]{pics/ja/fig4b}
-\end{minipage}
 
 \end{frame}
 
