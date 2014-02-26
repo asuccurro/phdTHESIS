@@ -446,9 +446,9 @@ Data & \multicolumn{3}{c}{$250$}\\
 
 \ttbar\ modeling systematics:
 \begin{itemize}
-\item Generator:
-\item Parton shower and fragmentation:
-\item Initial- and final-state radiation:
+\item Generator: \texttt{MC@NLO} vs \texttt{POWHEG}, both interfaced with \texttt{HERWIG}
+\item Parton shower and fragmentation: same parton level generator (\texttt{POWHEG}) different hadronization models (\texttt{HERWIG}, \texttt{PYTHIA})
+\item Initial- and final-state radiation: dedicated \texttt{ACERMC+PYTHIA} samples with varied parameters
 \end{itemize}
 
 \begin{tabular}{l*{3}{c}}
@@ -472,24 +472,39 @@ $t\bar{t}$ modelling: ISR/FSR & -- & +8.8/-8.8 & --\\
 \centering\myskip\scriptsize
 
 
+\begin{minipage}{.5\textwidth}\centering
+
 \cls{s}\ method~\cite{cls,cls_2}:
 
 \begin{itemize}
 \item ``background only'' hypothesis $\mathcal{H}_{b}$
 \item ``signal plus background'' hypothesis $\mathcal{H}_{s+b}$ 
+\item test statistic $Q$
+\item $Q_{\rm obs} = $ observed value
 \end{itemize}
 
+\vskip-5ex
 \begin{eqnarray*}
-\cls{b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{b}),\\
-\cls{s+b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{s+b}),
+\cls{b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{b})\\
+\cls{s+b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{s+b})\\
+\cls{s} &=& \cls{s+b}/\cls{b}
 \end{eqnarray*}
-$Q_{\rm obs} = $ observed value in data of the 
-test statistic $Q$
 
-$$\cls{s} = \cls{s+b}/\cls{b}$$
-
-
+\footnotesize
 {\cccolor Exclude} signal hypothesis if $\cls{s} \leq 1 - CL$ 
+
+\end{minipage}\begin{minipage}{.5\textwidth}\centering
+
+Test statistic: Log-Likelihood Ratio
+
+$$LLR = -2\log \dfrac{\mathcal{L}({\rm data}|\mathcal{H}_{s+b})}{\mathcal{L}({\rm data}|\mathcal{H}_{b})}$$
+
+with $\mathcal{L}$ binned likelihoods from discriminating variable distribution
+
+\includegraphics[width=0.9\textwidth]{pics/LLRtight_500GeV_stat}
+
+\end{minipage}
+
 
 %$\cls{s} < 0.05$ are deemed to be excluded at the 95\% CL.
 %Using $\cls{s}$ instead of $\cls{s+b}$ minimizes the possibility  of mistakenly excluding a small signal due to a downward background fluctuation, as this would lead to small values of both $\cls{s+b}$ and $\cls{b}$.
