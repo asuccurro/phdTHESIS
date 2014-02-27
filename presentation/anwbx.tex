@@ -471,29 +471,24 @@ $t\bar{t}$ modelling: ISR/FSR & -- & +8.8/-8.8 & --\\
 \begin{itemize}
 \item ``background only'' hypothesis $\mathcal{H}_{b}$
 \item ``signal plus background'' hypothesis $\mathcal{H}_{s+b}$ 
-\item test statistic $Q$
-\item $Q_{\rm obs} = $ observed value
+\item Test statistic: Log-Likelihood Ratio
 \end{itemize}
 
-\vskip-5ex
-\begin{eqnarray*}
-\cls{b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{b})\\
-\cls{s+b} &=& P(Q \leq Q_{\rm obs}|\mathcal{H}_{s+b})\\
-\cls{s} &=& \cls{s+b}/\cls{b}
-\end{eqnarray*}
+$$LLR = -2\log \dfrac{\mathcal{L}({\rm data}|\mathcal{H}_{s+b})}{\mathcal{L}({\rm data}|\mathcal{H}_{b})}$$
+
+with $\mathcal{L}$ binned likelihoods from discriminating variable distribution
+
+$$\cls{s} = \mathbf{\textcolor{red}{\cls{s+b}}/\textcolor{blue}{\cls{b}}}$$
 
 \footnotesize
 {\cccolor Exclude} signal hypothesis at $\geq$ 95\% CL if $\cls{s} \leq 0.05$ 
 
 \end{minipage}\begin{minipage}{.5\textwidth}\centering
 
-Test statistic: Log-Likelihood Ratio
+\vskip-10ex
+\includegraphics[width=0.9\textwidth]{pics/LLRtight_500GeV}\\
+\includegraphics[width=0.9\textwidth]{pics/LLRtight_500GeV_log_fill}
 
-$$LLR = -2\log \dfrac{\mathcal{L}({\rm data}|\mathcal{H}_{s+b})}{\mathcal{L}({\rm data}|\mathcal{H}_{b})}$$
-
-with $\mathcal{L}$ binned likelihoods from discriminating variable distribution
-
-\includegraphics[width=0.9\textwidth]{pics/LLRtight_500GeV_stat}
 
 \end{minipage}
 
