@@ -21,7 +21,6 @@ like $$\ttbar\to WbWb$$
 different {\cccolor boosted kinematics}\\
 {\LARGE $\Downarrow$}\\
 reconstruct the $W$ boson from hadronic decay\\
-{\cccolor $\Delta R \sim \dfrac{2m}{\pt}$ }\\
 {\LARGE $\Downarrow$}\\
 reconstruct heavy quark mass
 
@@ -63,6 +62,8 @@ reconstruct heavy quark mass
 
 %$$\Rightarrow$$
 %$$\Leftarrow$$
+{\cccolor $\Delta R \sim \dfrac{2m}{\pt}$ }\\
+
 { \footnotesize
 \myskip
 
@@ -147,7 +148,7 @@ consider the two jets with highest \btag-weight\\
 \end{minipage}
 
 \vskip-1ex
-Pair \bjet s and $W$ boson candidates in order to get min$\Delta(M_{\rm lep},M_{\rm reco})$\\
+Pair \bjet s and $W$ boson candidates in order to get min$\Delta(M_{\rm lep},M_{\rm had})$\\
 {\large$\Downarrow$}\\
 %Discriminating variable: {\cccolor $T$ reconstructed mass}\\
 %\includegraphics[width=.8\textwidth]{pics/VLQAna_WbX_1W_MWb_4_ELEMUONloose_1W_NOMINAL_VLTtt.pdf}\\
@@ -213,7 +214,8 @@ Pair \bjet s and $W$ boson candidates in order to get min$\Delta(M_{\rm lep},M_{
  \pgfline{\pgfxy(1.8,0.)}{\pgfxy(1.8,5.5)} }
 }
 \only<2>{
- \pgfrect[stroke]{\pgfxy(-6,3.46)}{\pgfxy(5,0.35)}
+% \pgfrect[stroke]{\pgfxy(-6,3.46)}{\pgfxy(5,0.35)}
+ \pgfrect[stroke]{\pgfxy(-6,2.74)}{\pgfxy(5,1.05)}
  %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
 \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{htall}}}
@@ -221,15 +223,6 @@ Pair \bjet s and $W$ boson candidates in order to get min$\Delta(M_{\rm lep},M_{
  \pgfline{\pgfxy(2.72,0.)}{\pgfxy(2.72,5.5)} }
 }
 \only<3>{
-% \pgfrect[stroke]{\pgfxy(-6,3.1)}{\pgfxy(5,0.35)}
- \pgfrect[stroke]{\pgfxy(-6,2.74)}{\pgfxy(5,0.7)}
- \pgfstroke
- \pgfputat{\pgfxy(0.0,-0.8)}{\pgfbox[left,base]{\pgfuseimage{jetptb1}}}
- {\usebeamercolor[fg]{head/foot boxes}
- \pgfline{\pgfxy(2.1,0.)}{\pgfxy(2.1,5.5)} 
- }
-}
-\only<4>{
  \pgfrect[stroke]{\pgfxy(-6,2.45)}{\pgfxy(5,0.35)}
  %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
@@ -237,7 +230,7 @@ Pair \bjet s and $W$ boson candidates in order to get min$\Delta(M_{\rm lep},M_{
  {\usebeamercolor[fg]{head/foot boxes}
  \pgfline{\pgfxy(2.4,0.)}{\pgfxy(2.4,5.5)} }
 }
-\only<5>{
+\only<4>{
  \pgfrect[stroke]{\pgfxy(-6,1.15)}{\pgfxy(5,0.35)}
  %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
@@ -245,7 +238,7 @@ Pair \bjet s and $W$ boson candidates in order to get min$\Delta(M_{\rm lep},M_{
  {\usebeamercolor[fg]{head/foot boxes}
  \pgfline{\pgfxy(2.7,0.)}{\pgfxy(2.7,5.5)} }
 }
-\only<6>{
+\only<5>{
  \pgfrect[stroke]{\pgfxy(-6,0.8)}{\pgfxy(5,0.35)}
  %\pgfline{\pgfxy(1.55,1.5)}{\pgfxy(1.55,3.5)} 
  \pgfstroke
@@ -270,7 +263,6 @@ Pair \bjet s and $W$ boson candidates in order to get min$\Delta(M_{\rm lep},M_{
 
 \begin{minipage}{.5\textwidth}\centering
 
-{\it (before unblinding)}\\
 Check agreement between data and background prediction
 
 {\Large$\Downarrow$}
@@ -491,7 +483,7 @@ $t\bar{t}$ modelling: ISR/FSR & -- & +8.8/-8.8 & --\\
 \end{eqnarray*}
 
 \footnotesize
-{\cccolor Exclude} signal hypothesis if $\cls{s} \leq 1 - CL$ 
+{\cccolor Exclude} signal hypothesis at 95\% CL if $\cls{s} \leq 0.05$ 
 
 \end{minipage}\begin{minipage}{.5\textwidth}\centering
 
@@ -552,34 +544,6 @@ $m_{\T}>505\,(630)\gev$
 
 \end{frame}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\frametitle{\dots updating 7~\tev\ results}
-\centering\footnotesize
-
-\begin{minipage}{.5\textwidth}\centering
-First model-independent search\\
-
-{\cccolor {\it Phys.Lett.} {\bf B718} (2012)~\cite{ATLAS:2012qe}}
-
-\includegraphics[width=1.\textwidth]{../appendices/figures/wbwb/fig_04}
-
-\end{minipage}\begin{minipage}{.5\textwidth}\centering
-
-\myskip\scriptsize
-
-8~\tev\ analysis: tighter cuts, higher mass points
-
-\myskip
-\includegraphics[width=1.\textwidth]{pics/lim_Scan2D_tight_Bin1.pdf}
-
-\end{minipage}
-
-
-
-\end{frame}
 
 
 

@@ -80,6 +80,11 @@ keepspaces=false, keywordstyle=\tiny\color{blue}, showstringspace=false}
 \includegraphics[width=0.8\paperwidth,height=0.7\paperheight]{#1}
 \vfill 
      }}}
+\newcommand\VeryFullBackgroundPicture[1]{%
+   \setbeamertemplate{background}{%
+   \parbox[c][\paperheight]{\paperwidth}{%
+\includegraphics[width=1.\paperwidth,height=1.\paperheight]{#1}
+     }}}
 
 %\setbeamertemplate{headline}{%
 %}
