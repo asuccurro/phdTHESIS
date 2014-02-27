@@ -1,5 +1,5 @@
 
-\begin{frame}\frametitle{A successfull theory}
+\begin{frame}\frametitle{A successful theory}
 \scriptsize\centering
 
 \begin{minipage}{.55\textwidth}\centering
@@ -23,8 +23,9 @@ $q$ & 0 & $\pm$1 & 0 & 0\\ \midrule%\bottomrule\toprule
 \begin{pgfpicture}{0.0\textwidth}{0.0\textheight}{1.\textwidth}{.5\textwidth}
 
 \begin{pgfscope}
-\pgfdeclareimage[interpolate=true,width=.75\textwidth]{wtop}{pics/W_vs_top}
-\pgfputat{\pgfxy(.8,-0.2)}{\pgfbox[left,base]{\pgfuseimage{wtop}}}
+%\pgfdeclareimage[interpolate=true,width=.75\textwidth]{wtop}{pics/W_vs_top}
+\pgfdeclareimage[interpolate=true,width=.75\textwidth]{higgsatlas}{pics/HiggsComb_P0_2012July.png}%higgsatlas}
+%\pgfputat{\pgfxy(.8,-0.2)}{\pgfbox[left,base]{\pgfuseimage{wtop}}}
  \pgfsetlinewidth{1.pt}
  \usebeamercolor[fg]{head/foot boxes}
 \only<2>{
@@ -36,16 +37,9 @@ $q$ & 0 & $\pm$1 & 0 & 0\\ \midrule%\bottomrule\toprule
 \only<3>{
  \pgfrect[stroke]{\pgfxy(4.6,5.75)}{\pgfxy(1.7,0.3)}
 }
- \usebeamercolor[bg]{head/foot boxes}
- \pgfsetlinewidth{.7pt}
-\only<4>{
-\pgfline{\pgfxy(4.85,5.3)}{\pgfxy(5.,2.3)}
-\pgfline{\pgfxy(3.6,4.4)}{\pgfxy(5.,2.3)}
-}
-\only<5>{
-\pgfline{\pgfxy(4.85,5.3)}{\pgfxy(4.5,2.3)}
-\pgfline{\pgfxy(3.6,4.4)}{\pgfxy(4.5,2.3)}
-\pgfline{\pgfxy(2.2,3.6)}{\pgfxy(4.5,2.3)}
+\onslide<4->{
+\pgfputat{\pgfxy(.8,-0.4)}{\pgfbox[left,base]{\pgfuseimage{higgsatlas}}}
+\pgfrect[stroke]{\pgfxy(.6,3.55)}{\pgfxy(1.7,0.3)}
 }
 
 \end{pgfscope}
@@ -85,7 +79,8 @@ $q$ & 0 & $\pm$1 & 0 & 0\\ \midrule%\bottomrule\toprule
   \usebeamercolor[fg]{head/foot boxes}
   \pgfrect[stroke]{\pgfxy(3.6,3.)}{\pgfxy(2.7,4)}
   \usebeamercolor[fg]{normal text}
-  \pgfputat{\pgfxy(3.5,5.)}{\pgfbox[left,base]{\footnotesize\begin{tabular}{c} why only\\ 3 generations?\\ \\QCD limit:\\ 9 families\\ EW precision:\\ 3 neutrinos\\w/ $m_{\nu\nu}<m_Z$\\ \\baryon-antibaryon\\asymmetry?\end{tabular}}}
+  \pgfputat{\pgfxy(3.5,5.)}{\pgfbox[left,base]{\footnotesize\begin{tabular}{c} why only\\ 3 generations?\\ \\naturalness?\\ \\baryon-antibaryon\\asymmetry?\end{tabular}}}
+  %\pgfputat{\pgfxy(3.5,5.)}{\pgfbox[left,base]{\footnotesize\begin{tabular}{c} why only\\ 3 generations?\\ \\QCD limit:\\ 9 families\\ EW precision:\\ 3 neutrinos\\w/ $m_{\nu\nu}<m_Z$\\ \\baryon-antibaryon\\asymmetry?\end{tabular}}}
 }
    \end{pgftranslate}
 }
@@ -199,21 +194,18 @@ depends on couplings with $W$ and $Z$ bosons~\cite{Aguilar-Saavedra:2013qpa,Atre
 
 
 \begin{frame}\frametitle{Decay modes and available signatures}
-\centering\myskip
-
-
-\begin{minipage}{.55\textwidth}\centering
+\centering
 \scriptsize
 
-\resizebox{1.\textwidth}{!}{
+\begin{minipage}{.65\textwidth}\centering
+\begin{itemize}
+\item Chiral $t'\to Wb$ 100\%
+\item Vector-like $T(+2/3)$, $B(-1/3)$, $X(+5/3)$, $Y(-4/3)$
+\end{itemize}
+Decay modes depending on {\it quantum numbers}\dots
+\myskip
+
   \input{tabs/singletdoublet_v3.tex}
-}
-
-\end{minipage}\begin{minipage}{.45\textwidth}\centering
-
-  \includegraphics[width=1.\textwidth, height=0.6\textwidth]{../vlq_analysis/figures/fig_02a.pdf}\\
-  \includegraphics[width=1.\textwidth, height=0.6\textwidth]{../vlq_analysis/figures/fig_02b.pdf}
-
 
 \end{minipage}
 

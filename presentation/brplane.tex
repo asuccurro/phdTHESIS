@@ -21,9 +21,6 @@
 \pgfputat{\pgfxy(7,3.7)}{\pgfbox[left,base]{to scan model mixing}}
 %    \end{pgftranslate}
 %\end{pgfscope}
-}
-%\pause
-\onslide<2->{
 %\begin{pgfscope}
     \pgfsetendarrow{\pgfarrowlargepointed{6pt}}
     \pgfsetlinewidth{1.5pt}
@@ -37,8 +34,6 @@
     \end{pgfrotateby}
 %    \end{pgftranslate}
 %\end{pgfscope}
-}
-\onslide<3->{
     \usebeamercolor[bg]{head/foot boxes}
     \pgfcircle[fill]{\pgfxy(5.,0)}{3pt}
     \pgfcircle[fill]{\pgfxy(2.5,1.5)}{3pt}
@@ -46,7 +41,13 @@
     \pgfputat{\pgfxy(5.5,4.7)}{\pgfbox[left,base]{\pgfuseimage{tab}}}
 }
 %\pause
-\onslide<4->{
+\only<1>{
+\usebeamercolor[fg]{normal text}
+\pgfputat{\pgfxy(5.,0.5)}{\pgfbox[left,base]{Chiral}}
+\pgfputat{\pgfxy(2.5,2.)}{\pgfbox[left,base]{Singlet}}
+\pgfputat{\pgfxy(0.2,3.5)}{\pgfbox[left,base]{Doublet}}
+}
+\onslide<2->{
 %\begin{pgfscope}
     \pgfsetlinewidth{1.5pt}
     \color{light-gray}
@@ -74,7 +75,7 @@
 %\end{pgfscope}
 }
 %\pause
-\onslide<5->{
+\onslide<3->{
 %\begin{pgfscope}
     \pgfsetlinewidth{1.5pt}
 %    \begin{pgftranslate}{\pgfpoint{0.1\textwidth}{0.15\textheight}}
@@ -108,7 +109,7 @@
     \pgfcircle[fill]{\pgfxy(5.,0)}{3pt}
 }
 \end{pgfscope}
-\onslide<6->{
+\onslide<4->{
 \usebeamercolor[fg]{normal text}
 %\pgfcircle[fill]{\pgfxy(6.8,2.)}{2pt}
 %\pgfputat{\pgfxy(7,1.9)}{\pgfbox[left,base]{Set exclusion using $CL_{s}$ }}

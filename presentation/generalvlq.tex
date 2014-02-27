@@ -122,8 +122,8 @@ and for $t\bar{t}$+heavy-flavour jets including $t\bar{t}b\bar{b}$ and $t\bar{t}
 \item NNLO theoretical cross section
 \end{itemize}
 
-Yields for \ttbar\ predicted with \texttt{ALPGEN}
-are $\sim$3-8\% higher than \texttt{MC@NLO}
+%Yields for \ttbar\ predicted with \texttt{ALPGEN}
+%are $\sim$3-8\% higher than \texttt{MC@NLO}
 
 %\includegraphics[width=0.8\textwidth]{pics/Njets25_ELEMUON_4jetin1btagin_NOMINAL}
 
@@ -160,18 +160,18 @@ $\htfj<800\gev$ (*)
 
 
 \begin{itemize}
-\item $W$ and $Z$ boson production in association with jets generated with up to five additional partons with {\tt ALPGEN}+{\tt HERWIG}
+\item Up to five additional partons, {\tt ALPGEN}+{\tt HERWIG}
 \end{itemize}
 
 $W$+jets:
 \begin{itemize}
-\item Samples generated separately for $W$+light jets, $Wb\bar{b}$+jets, $Wc\bar{c}$+jets, and $Wc$+jets
+\item Separate $W$+light jets, $Wb\bar{b}$+jets, $Wc\bar{c}$+jets, and $Wc$+jets
 \item Normalized to data-driven prediction
 \end{itemize}
 
 $Z$+jets:
 \begin{itemize}
-\item Samples generated separately for $Z$+light jets, $Zb\bar{b}$+jets, and $Zc\bar{c}$+jets 
+\item Separate $Z$+light jets, $Zb\bar{b}$+jets, and $Zc\bar{c}$+jets 
 \item Inclusive NNLO theoretical cross section
 \end{itemize}
 
@@ -246,7 +246,7 @@ $\htfj<800\gev$ (*)
 \begin{pgfscope}
  \pgfsetlinewidth{1.pt}
  \usebeamercolor[bg]{head/foot boxes}
- \pgfrect[stroke]{\pgfxy(0,2.7)}{\pgfxy(6,0.6)}
+ \pgfrect[stroke]{\pgfxy(0,3.)}{\pgfxy(6,0.3)}
 \end{pgfscope}
 \end{pgfpicture}
 
@@ -254,17 +254,10 @@ $\htfj<800\gev$ (*)
 
 Single top:
 \begin{itemize}
-\item $s$-channel and $Wt$ production generated with {\tt MC@NLO}+{\tt HERWIG}
-\item $t$-channel generated with {\tt ACERMC}+{\tt PYTHIA}
+\item $s$-channel and $Wt$: {\tt MC@NLO}+{\tt HERWIG}
+\item $t$-channel: {\tt ACERMC}+{\tt PYTHIA}
 \item $m_t = 172.5\gev$
 \item NNLO theoretical cross sections
-\end{itemize}
-
-Diboson:
-
-\begin{itemize}
-\item Diboson production generated with {\tt HERWIG}
-\item NLO theoretical cross section
 \end{itemize}
 
 \end{minipage}
@@ -290,26 +283,33 @@ $\htfj<800\gev$ (*)
 \begin{pgfscope}
  \pgfsetlinewidth{1.pt}
  \usebeamercolor[bg]{head/foot boxes}
- \pgfrect[stroke]{\pgfxy(0,2.15)}{\pgfxy(6,0.6)}
+ \pgfrect[stroke]{\pgfxy(0,2.15)}{\pgfxy(6,0.9)}
 \end{pgfscope}
 \end{pgfpicture}
 
 \end{minipage}\begin{minipage}{.5\textwidth}\footnotesize\centering
 
+Diboson:
+
+\begin{itemize}
+\item {\tt HERWIG}
+\end{itemize}
+
 $t\bar{t}V$:
 \begin{itemize}
-\item $t\bar{t}$ produced in association with a $W$ or $Z$ boson generated with {\tt MADGRAPH}+{\tt PYTHIA}
+\item {\tt MADGRAPH}+{\tt PYTHIA}
 \item $m_t = 172.5\gev$
-\item NLO theoretical cross section
 \end{itemize}
 
 $t\bar{t}H$:
 \begin{itemize}
-\item $t\bar{t}$ produced in association with a Higgs boson generated with {\tt PYTHIA}
+\item {\tt PYTHIA}
 \item $m_t = 172.5\gev$, $m_H=125\gev$
-\item Higgs decay modes considered: $H\to b\bar{b}$, $c\bar{c}$, $gg$, $W^+W^-$
-\item NLO theoretical cross section
+\item Higgs decays: $H\to b\bar{b}$, $c\bar{c}$, $gg$, $W^+W^-$
 \end{itemize}
+
+NLO theoretical cross sections
+
 
 \end{minipage}
 \end{frame}

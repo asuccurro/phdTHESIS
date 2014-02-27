@@ -18,30 +18,28 @@
 
 \begin{itemize}
 \item $|\eta|<2.5$ ID track $\leftrightarrow$ EM deposit
-\item calibrated with $Z\to ee$ events
 \end{itemize}
 
 \end{minipage}\begin{minipage}{.5\textwidth}\centering
 
 \begin{itemize}
 \item \texttt{Muid}: MS track $\leftrightarrow$ ID track ($|\eta|<2.5$)
-\item calibrated with $Z\to \mu\mu$ events
 \end{itemize}
 
 \end{minipage}
 
 \begin{minipage}{.5\textwidth}\centering
+
+\begin{itemize}
+\item calibrated with $Z\to ee (\mu\mu)$ events
+\end{itemize}
 {\cccolor \bfseries \large +}\\
 \begin{itemize}
+\item isolated
 \item $\pt (\et) > 25\gev$, $|z_0|<2~$mm
 \item match to the lepton triggering the event
 \end{itemize}
 \end{minipage}
-
-\begin{itemize}
-\item exclude electrons in $1.37< |\eta|< 1.52$
-\item electron-jet overlap removal
-\end{itemize}
 
 \end{frame}
 
@@ -66,8 +64,7 @@ $d_{ij}=min(\dfrac{1}{k_{t_i}^{2}},\dfrac{1}{k_{t_j}^{2}})\frac{\Delta R_{ij}^{2
 {\cccolor \bfseries +}\\
 \begin{itemize}
 \item $\pt>25\gev$, $|\eta|<2.5$
-\item JVF$>0.5$
-\item jet-electron overlap removal
+\item coming from primary vertex
 \end{itemize}
 
 
@@ -103,14 +100,13 @@ travels about 3~mm before decaying
 
 \myskip
 
-various algorithms exploit ID track info to assign a ``\btag-weight'' to the jets
+
+multi-variate algorithm combining info from {\cccolor impact parameters}\\
+and the {\cccolor reconstructed secondary vertex} 
 
 \begin{itemize}
-\item \texttt{\cccolor MV1} algorithm @ 70\% efficiency, $\sim 130$ light-jet rejection, $\sim 5$ $c$-jet rejection
+\item 70\% efficiency, $\sim 130$ light-jet rejection, $\sim 5$ $c$-jet rejection
 \end{itemize}
-
-multi-variate algorithm combining info from {\cccolor impact parameters} (\texttt{IP3D}) \\
-and the {\cccolor reconstructed secondary vertex} (\texttt{SV1})
 
 \end{frame}
 
