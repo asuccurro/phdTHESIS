@@ -103,9 +103,9 @@ each channel has a very different fraction of \tthf\ and \ttlf
 \begin{frame}\frametitle{Scale of \ttbar\ components}
 \centering\footnotesize
 
-correct heavy flavor component \\ 
+use background enriched regions ({\cccolor low \HT}) to correct heavy flavor component \\ 
 $\Downarrow$ \\ 
-simultaneous fit to data of \HT\ variable\\
+simultaneous fit of \tthf\ and \ttlf\ scaling factors\\
 %(good to have {\cccolor background enriched} channels)
 
  \ttlf: $0.87 \pm 0.02\,{\rm (stat.)} \qquad$  \tthf: $1.35 \pm 0.11\,{\rm (stat.)}$
@@ -137,17 +137,19 @@ Maximum yields discrepancy below 5\%
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\frametitle{Comparison data vs prediction}
-\centering\footnotesize
+\centering\scriptsize
 
 Blinding cut: $\HT<700\gev$
 
 {\Large$\Downarrow$}
 
-Define special blinded regions to check \HT\ modeling:
+Define special blinded regions to check modeling of high \HT\ tail:
 
 \myskip
 
 at most two jets with $\pt>60\gev$, $\HT<1.2\tev$
+
+\myskip
 
 \begin{minipage}{.45\textwidth}\centering
  2 \btag ged jets\\
@@ -172,8 +174,8 @@ at most two jets with $\pt>60\gev$, $\HT<1.2\tev$
 
 \ttbar\ modeling systematics:
 \begin{itemize}
-\item Vary the factorization and renormalization scales
-\item Varying the factorization scale check the change in $\sigma(\ttbar+bb)/\sigma(\ttbar+jj)$
+\item Assign a 50\% uncertainty on \tthf\ fraction
+\item Vary the factorization and renormalization scales in \texttt{ALPGEN}
 \end{itemize}
 
 \myskip
@@ -186,12 +188,12 @@ at most two jets with $\pt>60\gev$, $\HT<1.2\tev$
 Total [\%]& +21.9/-24.0 & +57.3/-58.4 & +42.0/-44.1 \\
 \midrule
 \multicolumn{4}{c}{Main contributions [\%]}\\
-BTAGBREAK8 & +20.4/-22.7 & +15.8/-17.8 & +12.2/-13.1 \\
-JES ``baseline'' & +3.1/-3.1 & +10.5/-10.5 & +13.7/-13.7 \\
+ttbarHF & -- &+50.0/-50.0 & +13.0/-13.0 \\
+ttbar qfac & -- & +0.7/-0.7 & +1.6/-1.6 \\
 ttbar iqopt2 & -- & +6.9/-6.9 & +20.1/-20.1 \\
 ttbar ktfac & -- & +7.5/-9.2 & +13.8/-17.0 \\
-ttbar qfac & -- & +0.7/-0.7 & +1.6/-1.6 \\
-ttbarHF & -- &+50.0/-50.0 & +13.0/-13.0 \\
+BTAGBREAK8 & +20.4/-22.7 & +15.8/-17.8 & +12.2/-13.1 \\
+JES ``baseline'' & +3.1/-3.1 & +10.5/-10.5 & +13.7/-13.7 \\
 \bottomrule
 \end{tabular}
 }
@@ -200,7 +202,7 @@ ttbarHF & -- &+50.0/-50.0 & +13.0/-13.0 \\
 
 Introduce the scaling factors as {\cccolor nuisance parameters}\\
 {\Large $\Downarrow$}\\
-total uncertainty on \tthf\ reduced by $\sim 20$\% 
+total uncertainty on background reduced by almost a factor of 2 
 %{\cccolor \dots before fitting the nuisance parameters}
 
 \end{frame}
